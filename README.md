@@ -23,3 +23,11 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## References
+
+- [React](https://beta.reactjs.org)
+- [NextJS](https://nextjs.org/docs/getting-started)
+- [CSS Modules](https://github.com/css-modules/css-modules)
+- [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
+-
