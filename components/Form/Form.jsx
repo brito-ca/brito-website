@@ -1,7 +1,9 @@
+import styles from '../../styles/Form.module.css'
+
 const Form = () => {
     return (
         <>
-            <h1>Form</h1>
+            <h1 className={styles.formTitle}>Form</h1>
         </>
     )
 }
