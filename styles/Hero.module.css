@@ -1,0 +1,74 @@
+.hero_container {
+    display: flex;
+    position: absolute;
+    width: 507px;
+    height: 401px;
+    left: 149px;
+    top: 319px;
+}
+
+.welcome_container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 8px;
+    gap: 8px;
+
+    position: absolute;
+    left: 0%;
+    right: 4.54%;
+    top: 0.12%;
+    bottom: 81.42%;
+}
+
+.welcome_text {
+    /* WELCOME TO BRITO */
+    width: 468px;
+    height: 58px;
+    margin: 0;
+
+    /* Display/1 */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 49px;
+    line-height: 58px;
+
+    /* identical to box height, or 116% */
+    
+
+    /* Primary/3 */
+    color: #022777;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.intro_text {
+    /* BRAZILIAN IT OTTAWA is non-profit group of IT Brazilians professionals located in Ottawa. Our main objective is empowering the community, assisting with networking, and continuous learning with lectures and workshops. */
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 25.94%;
+    bottom: 0%;
+    margin: 0;
+
+    /* Body/B1 */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+
+    /* or 114% */
+    display: flex;
+    align-items: flex-end;
+    text-align: justify;
+
+    /* Neutral/3 */
+    color: #525252;
+}
+
+
