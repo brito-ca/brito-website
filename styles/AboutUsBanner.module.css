@@ -1,0 +1,26 @@
+.title{
+    width: 202px;
+    height: 58px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 58px;
+    text-align: center;
+    color: #022777;
+}
+
+.description{
+    width: 1151px;
+    height: 128px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: justify;
+    color: #525252;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}

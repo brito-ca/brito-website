@@ -1,0 +1,7 @@
+.icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 179.7px 106.91px 179.7px 84px;
+}
