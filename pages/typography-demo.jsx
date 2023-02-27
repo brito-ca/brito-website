@@ -94,6 +94,86 @@ const TypographyDemo = () => {
           </button>
         </div>
       </div>
+
+      <br />
+      <div>
+        Margin
+        <br />
+        margin
+        <br />
+        <div style={{ border: "1px solid black", display: "inline-flex" }}>
+          <div style={{ border: "1px solid red" }} className="margin">
+            Someting
+          </div>
+        </div>
+        <br />
+        no-margin
+        <br />
+        <div style={{ border: "1px solid black", display: "inline-flex" }}>
+          <div style={{ border: "1px solid red" }} className="no-margin">
+            Someting
+          </div>
+        </div>
+        <br />
+        horizontal-margin
+        <br />
+        <div style={{ border: "1px solid black", display: "inline-flex" }}>
+          <div
+            style={{ border: "1px solid red" }}
+            className="horizontal-margin"
+          >
+            Someting
+          </div>
+        </div>
+        <br />
+        vertical-margin
+        <br />
+        <div style={{ border: "1px solid black", display: "inline-flex" }}>
+          <div style={{ border: "1px solid red" }} className="vertical-margin">
+            Someting
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <div>
+        Padding
+        <br />
+        padding
+        <br />
+        <div style={{ border: "1px solid black", display: "inline-flex" }}>
+          <div style={{ border: "1px solid red" }} className="padding">
+            Someting
+          </div>
+        </div>
+        <br />
+        no-padding
+        <br />
+        <div style={{ border: "1px solid black", display: "inline-flex" }}>
+          <div style={{ border: "1px solid red" }} className="no-padding">
+            Someting
+          </div>
+        </div>
+        <br />
+        horizontal-padding
+        <br />
+        <div style={{ border: "1px solid black", display: "inline-flex" }}>
+          <div
+            style={{ border: "1px solid red" }}
+            className="horizontal-padding"
+          >
+            Someting
+          </div>
+        </div>
+        <br />
+        vertical-padding
+        <br />
+        <div style={{ border: "1px solid black", display: "inline-flex" }}>
+          <div style={{ border: "1px solid red" }} className="vertical-padding">
+            Someting
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

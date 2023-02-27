@@ -157,7 +157,7 @@ button.secundary:active {
 
 button.secundary.outline {
   color: #0d712e;
-  background-color: #EEEFF4;
+  background-color: #eeeff4;
   border-color: #0d712e;
 }
 
@@ -167,8 +167,8 @@ button.secundary.outline:hover {
 }
 
 button.secundary.outline:active {
-  color: #00450E;
-  border-color: #00450E;
+  color: #00450e;
+  border-color: #00450e;
 }
 
 button:disabled {
@@ -181,6 +181,38 @@ button.outline:disabled {
   color: #989799;
   background-color: #f5f5f5;
   border: 1px solid #989799;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.margin {
+  margin: 16px;
+}
+
+.horizontal-margin {
+  margin: 0 16px;
+}
+
+.vertical-margin {
+  margin: 16px 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.padding {
+  padding: 16px;
+}
+
+.horizontal-padding {
+  padding: 0 16px;
+}
+
+.vertical-padding {
+  padding: 16px 0;
 }
 
 /* https://www.browserstack.com/guide/what-are-css-and-media-query-breakpoints */
