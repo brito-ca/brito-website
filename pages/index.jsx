@@ -2,6 +2,8 @@ import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
 import Header from '@/components/Header/Header';
 import Banner from '@/components/Banner/Banner';
+import labels from '@/constants/labels.en';
+
 
 export default function Home() {
   return (
@@ -14,8 +16,15 @@ export default function Home() {
       </Head>
       <main className={styles.container}>
         <Header />
-        <Banner title='Our mission' />
-        <Banner title='Our Vision' />
+        <section>
+        <Banner title={labels.ourMission.title} description={labels.ourMission.description}/>
+        
+        <Banner title={labels.ourVision.title} description={labels.ourVision.description}/>
+        </section>
+        <section>
+        <Banner title={labels.joinUs.title} description={labels.joinUs.description}/>
+        </section>
+
         <div className={styles.title}>Home</div>
       </main>
     </>
