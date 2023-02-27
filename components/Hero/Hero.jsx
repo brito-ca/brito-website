@@ -5,9 +5,7 @@ const Hero = (props) => {
     return (
         <div>
             <div className={styles.hero_container}>
-                <div className={styles.welcome_box}>
-                    <p className={styles.welcome_text}>{title}</p>
-                </div>
+                <h1 className={styles.welcome_text}>{title}</h1>
                 <p className={styles.intro_text}>{text}</p>
             </div>
         </div>
