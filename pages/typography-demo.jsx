@@ -1,3 +1,11 @@
+const Box = () => {
+  return (
+    <div
+      style={{ width: 50, height: 50, background: "gray", border: "1px solid" }}
+    ></div>
+  );
+};
+
 const TypographyDemo = () => {
   return (
     <div>
@@ -136,6 +144,7 @@ const TypographyDemo = () => {
       </div>
 
       <br />
+
       <div>
         Padding
         <br />
@@ -172,6 +181,74 @@ const TypographyDemo = () => {
           <div style={{ border: "1px solid red" }} className="vertical-padding">
             Someting
           </div>
+        </div>
+      </div>
+
+      <br />
+
+      <div>
+        Flex
+        <br />
+        flex-row-start
+        <div
+          style={{ width: "50%", border: "1px solid red" }}
+          className="flex-row-start"
+        >
+          <Box />
+          <Box />
+          <Box />
+          <Box />
+        </div>
+        <br />
+        flex-row-end
+        <div
+          style={{ width: "50%", border: "1px solid red" }}
+          className="flex-row-end"
+        >
+          <Box />
+          <Box />
+          <Box />
+          <Box />
+        </div>
+        flex-row-center
+        <div
+          style={{ width: "50%", border: "1px solid red" }}
+          className="flex-row-center"
+        >
+          <Box />
+          <Box />
+          <Box />
+          <Box />
+        </div>
+        flex-row-space-between
+        <div
+          style={{ width: "50%", border: "1px solid red" }}
+          className="flex-row-space-between"
+        >
+          <Box />
+          <Box />
+          <Box />
+          <Box />
+        </div>
+        flex-row-space-around
+        <div
+          style={{ width: "50%", border: "1px solid red" }}
+          className="flex-row-space-around"
+        >
+          <Box />
+          <Box />
+          <Box />
+          <Box />
+        </div>
+        flex-row-space-evenly
+        <div
+          style={{ width: "50%", border: "1px solid red" }}
+          className="flex-row-space-evenly"
+        >
+          <Box />
+          <Box />
+          <Box />
+          <Box />
         </div>
       </div>
     </div>
