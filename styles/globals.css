@@ -52,24 +52,24 @@ h5.uppercase {
   text-transform: uppercase;
 }
 
-.body1 {
+.b1 {
   font-size: 32px;
 }
 
-.body2 {
+.b2 {
   font-size: 24px;
 }
 
-.body3 {
+.b3 {
   font-size: 24px;
   font-weight: 500;
 }
 
-.body4 {
+.b4 {
   font-size: 24px;
 }
 
-.body5 {
+.b5 {
   font-size: 24px;
   font-weight: 300;
 }
@@ -112,23 +112,23 @@ h5.uppercase {
     font-size: 24px;
   }
 
-  .body1 {
+  .b1 {
     font-size: 28px;
   }
 
-  .body2 {
+  .b2 {
     font-size: 18px;
   }
 
-  .body3 {
+  .b3 {
     font-size: 16px;
   }
 
-  .body4 {
+  .b4 {
     font-size: 16px;
   }
 
-  .body5 {
+  .b5 {
     font-size: 14px;
   }
 
