@@ -1,4 +1,27 @@
-.formTitle {
-    font-size: 40px;
-    color: blueviolet;
+.formContainer {
+    /* Secondary/3 */
+    background: #0B6128;
 }
+
+.title {
+    /* Want to join Brito's network? */
+
+    /* Headline/H3 */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+
+    text-align: center;
+
+    /* Temporary untill figure it out better option to top marging */
+    padding-top: 90px;
+
+    /* Primary/4 */
+    color: #F5F5FA;
+}
+
+.label {    
+    margin: 0;
+}
+

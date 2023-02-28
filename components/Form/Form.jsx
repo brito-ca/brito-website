@@ -3,8 +3,16 @@ import styles from '../../styles/Form.module.css'
 const Form = () => {
     return (
         <>
-            <h1 className={styles.formTitle}>Form</h1>
-        </>
+        <hr />
+        <div className={styles.formContainer}>
+            <h3 className={styles.title}>Want to join Brito's network?</h3>
+            <form>
+        <p className={styles.label}>Your name</p>
+        <input type="text" />
+      
+            </form>
+        </div>
+        </>        
     )
 }
 
