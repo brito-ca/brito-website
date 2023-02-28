@@ -25,6 +25,17 @@
   --neutral-medium-light: #c7c8d0;
   --neutral-light: #f2f2f7;
   --neutral-white: #ffffff;
+
+  --base-font-size: 16px;
+  --spacing-unit: 16px;
+
+  --margin-sm: calc(0.5 * var(--spacing-unit));
+  --margin-md: var(--spacing-unit);
+  --margin-lg: calc(2 * var(--spacing-unit));
+
+  --padding-sm: calc(0.5 * var(--spacing-unit));
+  --padding-md: var(--spacing-unit);
+  --padding-lg: calc(2 * var(--spacing-unit));
 }
 
 * {
@@ -33,7 +44,7 @@
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: var(--base-font-size);
 }
 
 html,
@@ -109,7 +120,7 @@ a {
 
 button {
   color: var(--neutral-white);
-  padding: 8px 33.5px;
+  padding: var(--padding-sm) var(--padding-lg);
   border-radius: 40px;
   border: 1px solid;
   line-height: 24px;
@@ -188,15 +199,15 @@ button.outline:disabled {
 }
 
 .margin {
-  margin: 16px;
+  margin: var(--margin-sm);
 }
 
 .horizontal-margin {
-  margin: 0 16px;
+  margin: 0 var(--margin-sm);
 }
 
 .vertical-margin {
-  margin: 16px 0;
+  margin: var(--margin-sm) 0;
 }
 
 .no-padding {
@@ -204,15 +215,15 @@ button.outline:disabled {
 }
 
 .padding {
-  padding: 16px;
+  padding: var(--padding-md);
 }
 
 .horizontal-padding {
-  padding: 0 16px;
+  padding: 0 var(--padding-md);
 }
 
 .vertical-padding {
-  padding: 16px 0;
+  padding: var(--padding-md) 0;
 }
 
 .flex-row-start {
