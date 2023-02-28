@@ -1,5 +1,4 @@
 .formContainer {
-    /* Secondary/3 */
     background: #0B6128;
 }
 
@@ -13,15 +12,9 @@
     font-size: 40px;
 
     text-align: center;
+    color: #fff;
 
     /* Temporary untill figure it out better option to top marging */
     padding-top: 90px;
-
-    /* Primary/4 */
-    color: #F5F5FA;
-}
-
-.label {    
-    margin: 0;
 }
 
