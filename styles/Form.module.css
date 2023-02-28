@@ -1,16 +1,14 @@
 .formContainer {
-    background: #0B6128;
+    background: var( --secundary-green);
 }
 
 .title {
-    font-family: 'Roboto';
-    font-weight: 700;
     font-size: 40px;
 
     text-align: center;
-    color: #fff;
+    color: var(--primary-white);
 
-    /* Temporary untill figure it out better option to top marging */
+    /* Temporary untill figure it out a better option to top marging */
     padding-top: 90px;
 }
 
@@ -18,21 +16,14 @@
     width: 115px;
     height: 24px;
 
-/* Body/B2 */
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
 
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 24px;
-/* identical to box height, or 133% */
+    display: flex;
+    align-items: center;
 
-display: flex;
-align-items: center;
-
-/* Primary/4 */
-
-color: #F5F5FA;
+    color:var(--primary-white);
 
 
 /* Inside auto layout */
