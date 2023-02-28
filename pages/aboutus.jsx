@@ -5,15 +5,15 @@ import styles from '@/styles/AboutUs.module.css'
 const AboutUs = () => {
     return (
         <main>
-            <AboutUsBanner className={styles.text}
+            <AboutUsBanner
                 title='About us'
                 description='Brazilian IT Ottawa (BRITO) is a group of Brazilian professionals with a career focused in 
                 Information Technology living in the National Capital Region, from different backgrounds, 
                 areas of expertise and willingness to help each other by sharing knowledge and experiences, 
                 building a social and professional network.'
             />
-            <div className={styles.icons}>
-                <Icon
+            <div className={styles.container}>
+                <Icon className={styles.icon.one}
                     iconPath='/credibility.png'
                     iconWidth={62.15}
                     iconHeight={75.96}
@@ -21,7 +21,7 @@ const AboutUs = () => {
                     description='Years in operation'
                 />
 
-                <Icon
+                <Icon className={styles.icon.two}
                     iconPath='/network.png'
                     iconWidth={69.06}
                     iconHeight={65.6}
@@ -29,7 +29,7 @@ const AboutUs = () => {
                     description='Network events'
                 />
 
-                <Icon
+                <Icon className={styles.icon.two}
                     iconPath='/participants.png'
                     iconWidth={82.87}
                     iconHeight={41.43}

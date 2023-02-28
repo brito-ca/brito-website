@@ -4,7 +4,7 @@ import styles from '@/styles/Icon.module.css'
 const Icon = (props) => {
     const { iconPath, iconWidth, iconHeight, value, description} = props;
     return (
-        <div className={styles.block}>
+        <div className={styles.icon}>
             <Image
                 src={iconPath}
                 alt={description}

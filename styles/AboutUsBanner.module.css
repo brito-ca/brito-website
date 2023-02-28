@@ -1,26 +1,33 @@
-.title{
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    /* About us */
     width: 202px;
     height: 58px;
+    /* Display/1 */
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 50px;
     line-height: 58px;
+    /* identical to box height, or 116% */
     text-align: center;
-    color: #022777;
 }
 
-.description{
+.description {
     width: 1151px;
     height: 128px;
+    /* Body/B1 */
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
     line-height: 32px;
+    /* or 114% */
     text-align: justify;
-    color: #525252;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
 }
