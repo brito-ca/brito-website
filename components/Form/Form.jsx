@@ -14,18 +14,21 @@ const Form = () => {
                 <h3 className={styles.title}>Want to join Brito's network?</h3>
                 <form action="" method="post">
                     {/* Needs to implement * character to mandatory fields */ }
-                    <label for="full-name">Your full name</label>
+                    <label className={styles.labelForm}>Your full name</label>
                     <input
+                        className={styles.inputForm}
                         placeholder="E.g. Amanda costa"
                         value={fullName}
                     />
-                    <label>Your expertise</label>
+                    <label className={styles.labelForm}>Your expertise</label>
                     <input
+                        className={styles.inputForm}
                         placeholder='E.g. UX Designer'
                         value={expertise}
                     />
-                    <label>Your company</label>
+                    <label className={styles.labelForm}>Your company</label>
                     <input
+                        className={styles.inputForm}
                         placeholder='E.g. TD bank'
                         value={expertise}
                     />
