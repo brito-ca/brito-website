@@ -33,7 +33,7 @@
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 2rem;
 }
 
 html,
@@ -52,27 +52,27 @@ h5 {
 }
 
 .display {
-  font-size: 58px;
+  font-size: 3.625rem;
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 4rem;
 }
 
 h2 {
-  font-size: 56px;
+  font-size: 3.5rem;
 }
 
 h3 {
-  font-size: 46px;
+  font-size: 2.875rem;
 }
 
 h4 {
-  font-size: 38px;
+  font-size: 2.375rem;
 }
 
 h5 {
-  font-size: 28px;
+  font-size: 1.75rem;
 }
 
 .uppercase {
@@ -80,30 +80,30 @@ h5 {
 }
 
 .body1 {
-  font-size: 32px;
+  font-size: 2rem;
 }
 
 .body2 {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .body3 {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
 .body4 {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .body5 {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 
 button,
 a {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -262,71 +262,55 @@ button.outline:disabled {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   * {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 
   .display {
-    font-size: 50px;
+    font-size: 3.125rem;
   }
 
   h1 {
-    font-size: 56px;
+    font-size: 3.5rem;
   }
 
   h2 {
-    font-size: 48px;
+    font-size: 3rem;
   }
 
   h3 {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 
   h4 {
-    font-size: 32px;
+    font-size: 2rem;
   }
 
   h5 {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
   .b1 {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 
   .b2 {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   .b3 {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .b4 {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .b5 {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   button,
   a {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {
-} */
-
-/* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (min-width: 768px) {
-} */
-
-/* Large devices (laptops/desktops, 992px and up) */
-/* @media only screen and (min-width: 992px) {
-} */
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 1200px) {
-} */
