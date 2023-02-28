@@ -1,5 +1,6 @@
 import AboutUsBanner from "@/components/AboutUsBanner/AboutUsBanner"
 import Icon from "@/components/Icon/Icon"
+import Image from 'next/image'
 import styles from '@/styles/AboutUs.module.css'
 
 const AboutUs = () => {
@@ -37,6 +38,12 @@ const AboutUs = () => {
                     description='Participants'
                 />
             </div>
+            <Image className={styles.members}
+                src={'/members.png'}
+                alt='members'
+                width={1440}
+                height={530}
+            />
         </main>
     )
 };
