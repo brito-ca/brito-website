@@ -75,28 +75,28 @@ h5 {
   font-size: 28px;
 }
 
-h5.uppercase {
+.uppercase {
   text-transform: uppercase;
 }
 
-.b1 {
+.body1 {
   font-size: 32px;
 }
 
-.b2 {
+.body2 {
   font-size: 24px;
 }
 
-.b3 {
+.body3 {
   font-size: 24px;
   font-weight: 500;
 }
 
-.b4 {
+.body4 {
   font-size: 24px;
 }
 
-.b5 {
+.body5 {
   font-size: 24px;
   font-weight: 300;
 }

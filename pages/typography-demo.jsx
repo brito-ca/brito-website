@@ -43,15 +43,15 @@ const TypographyDemo = () => {
         Body
         <br />
         b1
-        <div className="b1">The quick brown fox jumps over the lazy dog.</div>
+        <div className="body1">The quick brown fox jumps over the lazy dog.</div>
         b2
-        <div className="b2">The quick brown fox jumps over the lazy dog.</div>
+        <div className="body2">The quick brown fox jumps over the lazy dog.</div>
         b3
-        <div className="b3">The quick brown fox jumps over the lazy dog.</div>
+        <div className="body3">The quick brown fox jumps over the lazy dog.</div>
         b4
-        <div className="b4">The quick brown fox jumps over the lazy dog.</div>
+        <div className="body4">The quick brown fox jumps over the lazy dog.</div>
         b5
-        <div className="b5">The quick brown fox jumps over the lazy dog.</div>
+        <div className="body5">The quick brown fox jumps over the lazy dog.</div>
       </div>
 
       <br />
