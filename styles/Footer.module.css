@@ -1,0 +1,59 @@
+.footer .logoAndSocial{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.iconContainer {
+    display: flex;
+    gap: 23px;
+}
+
+.navigation {
+    font-size: 1.5rem;
+    color: #022777;
+    text-decoration: none;
+}
+
+.navigation:hover {
+    color: #022777;
+    background-color: #ffffff;
+}
+
+.footerBottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyrightText {
+    /* Paragraph/Default */
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.termsLink {
+    /* Paragraph/Default */
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #022777;
+    text-decoration: none;
+}
+
+.footerLink:hover {
+    /* Link/Hover */
+    color: #022777;
+    background-color: #ffffff;
+}
+
+
+
