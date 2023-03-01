@@ -1,8 +1,5 @@
 import Head from 'next/head';
-import styles from '@/styles/Home.module.css';
-import Header from '@/components/Header/Header';
-import Banner from '@/components/Banner/Banner';
-import AppLayout from '@/components/AppLayout/AppLayout';
+import { AppLayout } from '@/components';
 
 export default function Home() {
   return (
@@ -14,7 +11,22 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <AppLayout>
-        <Header />
+        <p>
+          Quis officia nisi ex laboris nisi adipisicing. Reprehenderit do irure
+          velit est culpa dolor aliqua voluptate et exercitation dolore. Minim
+          commodo est elit esse qui fugiat aliqua veniam nisi est sint laboris
+          ea sint. Qui reprehenderit officia sint aute voluptate laboris
+          consectetur do reprehenderit. Ea qui nulla officia culpa eiusmod
+          ullamco pariatur officia nostrud.
+        </p>
+        <p>
+          Sit culpa fugiat in cupidatat veniam ea sint nisi voluptate. Culpa do
+          anim qui aliqua. Elit do amet aliqua exercitation dolore non. Minim
+          non fugiat fugiat nisi esse quis culpa ipsum irure. Cillum non duis
+          aute eiusmod ad excepteur minim enim consequat duis ut officia.
+          Commodo ullamco veniam tempor cillum velit ea. Sint cupidatat enim
+          duis in id non eiusmod laborum dolor non voluptate et Lorem.
+        </p>
       </AppLayout>
     </>
   );
