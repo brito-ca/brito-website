@@ -7,6 +7,20 @@
     top: 319px;
 }
 
+.welcome_box {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 8px;
+    gap: 8px;
+
+    position: absolute;
+    left: 0%;
+    right: 4.54%;
+    top: 0.12%;
+    bottom: 81.42%;
+}
+
 .welcome_text {
     /* WELCOME TO BRITO */
     width: 468px;
