@@ -20,8 +20,8 @@ const Form = () => {
             <div className={styles.formContainer}>
                 <h3 className={styles.title}>Want to join Brito's network?</h3>
                 <form method="post">
-                    <div className={styles.formSectionOne}>
-                        <div>
+                    <div className={styles.formSections}>
+                        <div className={styles.formSectionOne}>
                             {/* Needs to implement * character to mandatory fields */}
                             <label className={styles.labelForm}>Your full name</label>
                             <input
@@ -62,18 +62,37 @@ const Form = () => {
                             </label>
                         </div>
                         <div className={styles.imageContainer}>
-                            <img className={styles.roundedFormImage} />                            
+                            <img className={styles.roundedFormImage} />
                         </div>
                         <div className={styles.formSectionTwo}>
-                        <div>
-                        <label className={styles.labelForm}>In wich city do you live in Canada?</label>
-                            <input
-                                className={styles.inputFormSectionTwo}
-                                placeholder="E.g. Ottawa"
-                                value={fullName}
-                            />        
-                        </div>                    
-                    </div>
+                            <div>
+                                <label className={styles.labelForm}>In wich city do you live in Canada?</label>
+                                <input
+                                    className={styles.inputFormSectionTwo}
+                                    placeholder="E.g. Ottawa"
+                                    value={fullName}
+                                />
+                                
+                                <label className={styles.labelForm}>
+                                    Immigration Status
+                                </label>
+                                <select>
+                                    <option value="one">Canadian Citizen (Foreign born)</option>
+                                    <option value="two">Convention Refugee / Protected Person</option>
+                                    <option value="tree">Permanent Resident</option>
+                                    <option value="four">Temporary Resident WITHOUT a Work Permit</option>
+                                    <option value="five">Temporary Resident WITH a Work Permit</option>
+                                    <option value="six">Other</option>
+                                </select>
+                                
+                                <label className={styles.labelForm}>LinkedIn profile</label>
+                                <input
+                                    className={styles.inputFormSectionTwo}
+                                    placeholder="Paste your profile link"
+                                    value={fullName}
+                                />
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
