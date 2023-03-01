@@ -12,7 +12,7 @@ const Footer = () => {
             />
             <div className={"flex-row-space-between"}>
                 <div className={styles.logoAndSocial}>
-                    <div>
+                    <div className={styles.logoAndSocial}>
                         <Image src='/brito-logo-1.png' alt='logo' width={72.33} height={64.36} />
                         <Image src='/brito-logo-2.png' alt='wordmark' width={193} height={72} />
                         <p className={styles.body2}>Building the Brazilian IT community in Ottawa</p>
