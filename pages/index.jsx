@@ -2,6 +2,7 @@ import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
 import Header from '@/components/Header/Header';
 import Banner from '@/components/Banner/Banner';
+import AppLayout from '@/components/AppLayout/AppLayout';
 
 export default function Home() {
   return (
@@ -12,12 +13,9 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main className={styles.container}>
+      <AppLayout>
         <Header />
-        <Banner title='Our mission' />
-        <Banner title='Our Vision' />
-        <div className={styles.title}>Home</div>
-      </main>
+      </AppLayout>
     </>
   );
 }
