@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Box = () => {
   return (
     <div
@@ -9,6 +11,7 @@ const Box = () => {
 const TypographyDemo = () => {
   return (
     <div>
+      <Link href="/">Back</Link>
       <div>
         Display
         <div className="display">
