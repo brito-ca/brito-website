@@ -19,7 +19,7 @@
   --tertiary-background: rgba(194, 18, 18, 0.15);
 
   --neutral-black: #1a1a1a;
-  --neutral-dark: #525252;
+  --neutral-dark: #39393d;
   --neutral-medium-dark: #525252;
   --neutral-medium: #9b9b9f;
   --neutral-medium-light: #c7c8d0;
@@ -130,7 +130,6 @@ a {
   font-size: 1.5rem;
   font-weight: 700;
 }
-
 button {
   color: var(--neutral-white);
   padding: var(--padding-sm) var(--padding-lg);
@@ -367,23 +366,23 @@ button.outline:disabled {
     font-size: 1.5rem;
   }
 
-  .b1 {
+  .body1 {
     font-size: 1.75rem;
   }
 
-  .b2 {
+  .body2 {
     font-size: 1.125rem;
   }
 
-  .b3 {
+  .body3 {
     font-size: 1rem;
   }
 
-  .b4 {
+  .body4 {
     font-size: 1rem;
   }
 
-  .b5 {
+  .body5 {
     font-size: 0.875rem;
   }
 

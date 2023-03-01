@@ -2,6 +2,19 @@
   width: 20%;
 }
 
-.nav {
+.nav a {
   color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.languages a {
+  color: var(--neutral-medium-dark);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.active {
+  color: var(--primary-blue) !important;
 }
