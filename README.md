@@ -1,5 +1,12 @@
 # Brito Website
 
+## Project Management
+
+- [Project Dashboard](https://github.com/orgs/brito-ca/projects/1)
+- [Timeline](https://github.com/orgs/brito-ca/projects/1/views/2)
+- [Issues](https://github.com/brito-ca/brito-website/issues)
+- [Milestones](https://github.com/brito-ca/brito-website/milestones)
+
 ## Design
 
 [Figma file](https://www.figma.com/file/I53K0k601AT2QmJcNw0Mq6/WEBSITE-BRITO?node-id=0%3A1&t=H8sxbQmYksdDNmdq-1)
@@ -23,3 +30,11 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## References
+
+- [React](https://beta.reactjs.org)
+- [NextJS](https://nextjs.org/docs/getting-started)
+- [CSS Modules](https://github.com/css-modules/css-modules)
+- [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
+-
