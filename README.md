@@ -1,6 +1,6 @@
 # Brito Website
 
-## Projet Management
+## Project Management
 
 - [Project Dashboard](https://github.com/orgs/brito-ca/projects/1)
 - [Timeline](https://github.com/orgs/brito-ca/projects/1/views/2)
