@@ -43,15 +43,25 @@ const TypographyDemo = () => {
         Body
         <br />
         b1
-        <div className="body1">The quick brown fox jumps over the lazy dog.</div>
+        <div className="body1">
+          The quick brown fox jumps over the lazy dog.
+        </div>
         b2
-        <div className="body2">The quick brown fox jumps over the lazy dog.</div>
+        <div className="body2">
+          The quick brown fox jumps over the lazy dog.
+        </div>
         b3
-        <div className="body3">The quick brown fox jumps over the lazy dog.</div>
+        <div className="body3">
+          The quick brown fox jumps over the lazy dog.
+        </div>
         b4
-        <div className="body4">The quick brown fox jumps over the lazy dog.</div>
+        <div className="body4">
+          The quick brown fox jumps over the lazy dog.
+        </div>
         b5
-        <div className="body5">The quick brown fox jumps over the lazy dog.</div>
+        <div className="body5">
+          The quick brown fox jumps over the lazy dog.
+        </div>
       </div>
 
       <br />
@@ -111,7 +121,7 @@ const TypographyDemo = () => {
         <br />
         <div style={{ border: "1px solid black", display: "inline-flex" }}>
           <div style={{ border: "1px solid red" }} className="margin">
-            Someting
+            Something
           </div>
         </div>
         <br />
@@ -119,7 +129,7 @@ const TypographyDemo = () => {
         <br />
         <div style={{ border: "1px solid black", display: "inline-flex" }}>
           <div style={{ border: "1px solid red" }} className="no-margin">
-            Someting
+            Something
           </div>
         </div>
         <br />
@@ -130,7 +140,7 @@ const TypographyDemo = () => {
             style={{ border: "1px solid red" }}
             className="horizontal-margin"
           >
-            Someting
+            Something
           </div>
         </div>
         <br />
@@ -138,7 +148,7 @@ const TypographyDemo = () => {
         <br />
         <div style={{ border: "1px solid black", display: "inline-flex" }}>
           <div style={{ border: "1px solid red" }} className="vertical-margin">
-            Someting
+            Something
           </div>
         </div>
       </div>
@@ -152,7 +162,7 @@ const TypographyDemo = () => {
         <br />
         <div style={{ border: "1px solid black", display: "inline-flex" }}>
           <div style={{ border: "1px solid red" }} className="padding">
-            Someting
+            Something
           </div>
         </div>
         <br />
@@ -160,7 +170,7 @@ const TypographyDemo = () => {
         <br />
         <div style={{ border: "1px solid black", display: "inline-flex" }}>
           <div style={{ border: "1px solid red" }} className="no-padding">
-            Someting
+            Something
           </div>
         </div>
         <br />
@@ -171,7 +181,7 @@ const TypographyDemo = () => {
             style={{ border: "1px solid red" }}
             className="horizontal-padding"
           >
-            Someting
+            Something
           </div>
         </div>
         <br />
@@ -179,7 +189,7 @@ const TypographyDemo = () => {
         <br />
         <div style={{ border: "1px solid black", display: "inline-flex" }}>
           <div style={{ border: "1px solid red" }} className="vertical-padding">
-            Someting
+            Something
           </div>
         </div>
       </div>
