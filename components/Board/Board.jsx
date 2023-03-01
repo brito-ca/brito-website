@@ -7,6 +7,9 @@ const Board = (props) => {
             <div className={styles.board_title_container}>
                 <h1 className={styles.board_title_text}>{title}</h1>
             </div>
+            <div className={styles.board_container}>
+
+            </div>
         </div>
     );
 };
