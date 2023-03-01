@@ -7,6 +7,10 @@
 - [Issues](https://github.com/brito-ca/brito-website/issues)
 - [Milestones](https://github.com/brito-ca/brito-website/milestones)
 
+## Live Preview
+
+- https://brito-website.netlify.app
+
 ## Design
 
 [Figma file](https://www.figma.com/file/I53K0k601AT2QmJcNw0Mq6/WEBSITE-BRITO?node-id=0%3A1&t=H8sxbQmYksdDNmdq-1)
