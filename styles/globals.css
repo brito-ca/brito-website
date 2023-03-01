@@ -243,6 +243,7 @@ button.outline:disabled {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: flex-start;
 }
 
@@ -250,6 +251,7 @@ button.outline:disabled {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: flex-end;
 }
 
@@ -257,6 +259,7 @@ button.outline:disabled {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
 }
 
@@ -264,6 +267,7 @@ button.outline:disabled {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -271,6 +275,7 @@ button.outline:disabled {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-around;
 }
 
@@ -278,6 +283,7 @@ button.outline:disabled {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-evenly;
 }
 
