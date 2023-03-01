@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { AppLayout } from '@/components';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -11,6 +12,9 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <AppLayout>
+        <p>
+          <Link href={'typography-demo'}>Typography Demo</Link>
+        </p>
         <p>
           Quis officia nisi ex laboris nisi adipisicing. Reprehenderit do irure
           velit est culpa dolor aliqua voluptate et exercitation dolore. Minim
