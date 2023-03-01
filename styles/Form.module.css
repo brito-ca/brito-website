@@ -8,20 +8,22 @@
     color: var(--primary-white);
 
     /* Temporary untill figure it out a better option to top marging */
-    padding-top: 90px;
+    padding: 90px 0px 40px 0;
 }
 
-.formDivider {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.formSectionOne {
+    display: grid;    
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+}
 
-    padding: 70px;
+.formSectionTwo {
+    grid-column: 1 / span 3;
+    grid-row: 2;       
 }
 
 .labelForm {
-    width: 250px;
+    width: 300px;
     height: 24px;
 
     font-weight: 400;
@@ -47,9 +49,17 @@
     background-color: var(--primary-white);
 }
 
+.inputFormSectionTwo {
+    width: 100%;
+}
+
 .roundedFormImage {
     width: 400px;
     height: 400px;
-    border-radius: 200px;
-    border: 9.46551px solid #FFFFFF;
+    border-radius: 50%;
+    border: 10px solid #FFFF;
+}
+
+.checkBoxForm {
+    margin-right: 0.6rem;
 }

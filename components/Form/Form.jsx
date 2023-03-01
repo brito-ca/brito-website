@@ -10,9 +10,9 @@ const Form = () => {
     const [checkBox, setCheckBox] = useState(false);
 
     function handleCheckBox() {
-        if (!checkBox) setCheckBox (true) 
-        if (checkBox) setCheckBox (false)
-     }
+        if (!checkBox) setCheckBox(true)
+        if (checkBox) setCheckBox(false)
+    }
 
     return (
         <>
@@ -20,7 +20,7 @@ const Form = () => {
             <div className={styles.formContainer}>
                 <h3 className={styles.title}>Want to join Brito's network?</h3>
                 <form method="post">
-                    <div className={styles.formDivider}>
+                    <div className={styles.formSectionOne}>
                         <div>
                             {/* Needs to implement * character to mandatory fields */}
                             <label className={styles.labelForm}>Your full name</label>
@@ -47,6 +47,7 @@ const Form = () => {
                                     type="checkbox"
                                     checked={checkBox}
                                     onChange={handleCheckBox}
+                                    className={styles.checkBoxForm}
                                 />
                                 Yes
                             </label>
@@ -55,15 +56,24 @@ const Form = () => {
                                     type="checkbox"
                                     checked={checkBox}
                                     onChange={handleCheckBox}
+                                    className={styles.checkBoxForm}
                                 />
                                 No
                             </label>
                         </div>
-                        <div>
-                            <img className={styles.roundedFormImage} />
+                        <div className={styles.imageContainer}>
+                            <img className={styles.roundedFormImage} />                            
                         </div>
+                        <div className={styles.formSectionTwo}>
+                        <div>
+                        <label className={styles.labelForm}>In wich city do you live in Canada?</label>
+                            <input
+                                className={styles.inputFormSectionTwo}
+                                placeholder="E.g. Ottawa"
+                                value={fullName}
+                            />        
+                        </div>                    
                     </div>
-                    <div>
                     </div>
                 </form>
             </div>
