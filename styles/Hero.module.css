@@ -57,4 +57,12 @@
     color: #525252;
 }
 
+.img_container {
+    position: absolute;
+    width: 672px;
+    height: 900px;
+    left: 768px;
+    top: 0px;
+}
+
 
