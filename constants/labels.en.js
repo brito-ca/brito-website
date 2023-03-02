@@ -7,7 +7,7 @@ const labels = {
     descriptionChat: "Our friendly team is here to help",
   },
   email: {
-    malito: "hi@brito.it",
+    malito: "mailto:hi@brito.it",
     email: "hi@brito.it",
   },
   location: {

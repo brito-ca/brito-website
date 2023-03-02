@@ -1,22 +1,67 @@
 .title {
   text-align: center;
   color: var(--primary-blue);
+  padding: var(--padding-lg);
 }
 .subtitle {
   color: var(--primary-blue);
 }
-.maple {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 825px;
-  height: 823px;
+
+.subtitleBasedIn {
+  color: var(--primary-blue);
+  padding-bottom: 17.93px;
 }
 
-/* .maple {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-} */
+.mail {
+  text-decoration: none;
+  color: var(--primary-blue);
+  font-size: 1.25rem;
+}
+.address {
+  padding-top: 41px;
+  padding-bottom: 70px;
+}
+.midia {
+  padding-top: 41px;
+}
+
+.maple {
+  background-image: url(/vector2.png);
+  background-size: "cover";
+  height: 823px;
+  width: 825px;
+  margin: -713px 482px 9px;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 600px) {
+  .maple {
+    background-image: url(/britologohalf.png);
+    background-size: "cover";
+    height: 410px;
+    margin: -94px 37px 9px;
+    background-repeat: no-repeat;
+  }
+  .subtitle {
+    padding-bottom: 16px;
+  }
+  .title {
+    text-align: center;
+    padding: var(--padding-lg);
+  }
+
+  .subtitleBasedIn {
+    padding-bottom: 17.93px;
+  }
+
+  .mail {
+    font-size: 1.25rem;
+  }
+  .address {
+    padding-top: 16px;
+    padding-bottom: 43px;
+  }
+  .midia {
+    padding-top: 41px;
+  }
+}
