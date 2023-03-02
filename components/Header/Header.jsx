@@ -8,7 +8,7 @@ const Header = () => {
   const { isEn, isPr, isFr } = useLng();
 
   return (
-    <div className="flex-row-space-between padding">
+    <div className={styles.header + " flex-row-space-between padding"}>
       <Link href="/">
         <Image alt="logo small" src={smallLogo} />
       </Link>

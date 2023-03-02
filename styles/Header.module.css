@@ -18,3 +18,25 @@
 .active {
   color: var(--primary-blue) !important;
 }
+
+@media only screen and (max-width: 600px) {
+  .header {
+    padding-top: 0;
+  }
+
+  .header img {
+    width: 75%;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .empty {
+    display: none;
+  }
+
+  .languages {
+    display: none;
+  }
+}
