@@ -1,18 +1,17 @@
-import { Header, Footer } from '@/components';
+import { Header, Footer, Placeholder } from '@/components';
 import styles from '@/styles/AppLayout.module.css';
-import Link from 'next/link';
 
 const AppLayout = (props) => {
   const { children } = props;
   return (
     <div className={styles.container}>
       <Header>
-        <Link href={'/'}>
-          <h1>Brito Website</h1>
-        </Link>
+        <Placeholder title='Header / Navigation' />
       </Header>
       <main>{children}</main>
-      <Footer>Footer</Footer>
+      <Footer>
+        <Placeholder title='Footer' />
+      </Footer>
     </div>
   );
 };
