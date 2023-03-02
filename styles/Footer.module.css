@@ -2,7 +2,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
+}
+
+.container {
+    padding: var(--padding-lg) 148px var(--padding-lg) 0;
 }
 
 .iconContainer {
@@ -10,9 +14,16 @@
     gap: 23px;
 }
 
-.navigation {
-    font-size: 1.5rem;
+.title {
+    padding: var(--padding-md) 0;
     color: var(--primary-blue);
+}
+
+.navigation {
+    color: var(--primary-blue);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
     text-decoration: none;
 }
 

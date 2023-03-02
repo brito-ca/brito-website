@@ -10,12 +10,12 @@ const Footer = () => {
                 width={1240}
                 height={3}
             />
-            <div className={"flex-row-space-between"}>
+            <div className={`${styles.container} flex-row-space-between`}>
                 <div className={styles.logoAndSocial}>
                     <div className={styles.logoAndSocial}>
                         <Image src='/brito-logo-1.png' alt='logo' width={72.33} height={64.36} />
                         <Image src='/brito-logo-2.png' alt='wordmark' width={193} height={72} />
-                        <p className={styles.body2}>Building the Brazlian IT community in Ottawa</p>
+                        <p className={"vertical-padding"}>Building the Brazlian IT community in Ottawa</p>
                     </div>
                     <div className={styles.iconContainer}>
                         <a href="https://www.facebook.com/groups/566404256865424" target={'_blank'} rel="noopener noreferrer">
@@ -31,18 +31,20 @@ const Footer = () => {
                 </div>
                 <div></div>
                 <div>
-                    <h5>Company</h5>
-                    <p>
-                        <a href="#about" className={styles.navigation}>About</a>
-                    </p>
-                    <p>
-                        <a href="#contactus" className={styles.navigation + "body2"}>Contact</a>
-                    </p>
+                    <h5 className={styles.title}>Company</h5>
+                    <div>
+                        <p>
+                            <a href="#about" className={styles.navigation}>About</a>
+                        </p>
+                        <p className={"vertical-padding"}>
+                            <a href="#contactus" className={styles.navigation}>Contact</a>
+                        </p>
+                    </div>
                 </div>
                 <div>
-                    <h5>Join us</h5>
+                    <h5 className={styles.title}>Join us</h5>
                     <p>
-                        <a href="" className={styles.navigation + "body2"}>Network list</a>
+                        <a href="" className={`${styles.navigation} body2`}>Network list</a>
                     </p>
                 </div>
             </div>
