@@ -22,6 +22,7 @@ export default function Home() {
         text={['BRAZILIAN IT OTTAWA is non-profit group of IT Brazilians professionals located in Ottawa.', <br />,
           'Our main objective is empowering the community, assisting with networking, and continuous' +
          'learning with lectures and workshops.']}
+         img_source='/ellipse.png' description='Parlemant' width='672' height='900'
       />
     </>
   );

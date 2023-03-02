@@ -1,7 +1,8 @@
 import styles from '@/styles/Hero.module.css';
+import Image from 'next/image';
 
 const Hero = (props) => {
-    const { title, text, img_source } = props;
+    const { title, text, img_source, description, width, height} = props;
     return (
         <div>
             <div className={styles.hero_container}>
@@ -11,7 +12,12 @@ const Hero = (props) => {
                 <p className={styles.intro_text}>{text}</p>
             </div>
             <div className={styles.img_container}>
-                <img src={img_source} alt="Parlement" />
+                <Image
+                    src={img_source}
+                    alt={description}
+                    width={width}
+                    height={height}
+                />
             </div>
         </div>
     );
