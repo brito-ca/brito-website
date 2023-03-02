@@ -12,13 +12,13 @@
 
 .navigation {
     font-size: 1.5rem;
-    color: #022777;
+    color: var(--primary-blue);
     text-decoration: none;
 }
 
 .navigation:hover {
-    color: #022777;
-    background-color: #ffffff;
+    color: var(--primary-blue);
+    background-color: var(--primary-white);
 }
 
 .footerBottom {
@@ -31,28 +31,25 @@
 
 .copyrightText {
     /* Paragraph/Default */
-    font-family: 'DM Sans';
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
+    color: var(--primary-blue);
 }
 
 .termsLink {
     /* Paragraph/Default */
-    font-family: 'DM Sans';
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
-    color: #022777;
-    text-decoration: none;
+    color: var(--primary-blue);
+    text-decoration: underline;
 }
 
 .footerLink:hover {
     /* Link/Hover */
-    color: #022777;
-    background-color: #ffffff;
+    color: var(--primary-blue);
+    background-color: var(--primary-white);
 }
 
 
