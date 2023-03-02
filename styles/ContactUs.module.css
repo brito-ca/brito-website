@@ -5,3 +5,18 @@
 .subtitle {
   color: var(--primary-blue);
 }
+.maple {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 825px;
+  height: 823px;
+}
+
+/* .maple {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+} */
