@@ -1,7 +1,8 @@
 import Head from 'next/head';
-import styles from '@/styles/Home.module.css';
-import Header from '@/components/Header/Header';
+import { AppLayout, Placeholder } from '@/components';
+import Link from 'next/link';
 import Banner from '@/components/Banner/Banner';
+import labels from '@/constants/labels.en';
 
 export default function Home() {
   return (
@@ -13,15 +14,16 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
       </Head>
-      <main className={styles.container}>
-        <Board
-          title='OUR BOARD'
-        />
-        {/* <Header />
-        <Banner title='Our mission' />
-        <Banner title='Our Vision' /> */}
-        {/* <div className={styles.title}>Home</div> */}
-      </main>
+      <AppLayout>
+        <Placeholder title='Hero' />
+        <Placeholder title='About Us' />
+        <Banner title={labels.ourMission.title} description={labels.ourMission.description}/>
+        <Banner title={labels.ourVision.title} description={labels.ourVision.description}/>
+        <Placeholder title='Our Board' />
+        <Banner title={labels.joinUs.title} description={labels.joinUs.description}/>
+        <Placeholder title='Form' />
+        <Placeholder title='Contact Us' />
+      </AppLayout>
     </>
   );
 }
