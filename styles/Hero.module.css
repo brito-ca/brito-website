@@ -1,67 +1,70 @@
-.hero_container {
+.container{
     display: flex;
-    position: absolute;
-    width: 507px;
-    height: 401px;
-    left: 149px;
-    top: 319px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px 0px 16px 133px;
+    gap: 100px;
 }
 
-.welcome_text {
-    /* WELCOME TO BRITO */
-    width: 468px;
-    height: 58px;
-    margin: 0;
+.hero_container {
+    margin-top: 319.5px;
+    display: flex;
+    flex-direction: column;
+    gap: 29.5px;
+}
 
-    /* Display/1 */
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
+.welcome_box {
+    color: var(--primary-blue);
+    padding: 8px;
+}
+
+.welcome_text{
     font-size: 50px;
-    line-height: 58px;
-
-    /* identical to box height, or 116% */
-    
-
-    /* Primary/3 */
-    color: #022777;
-
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+    height: 58px;
 }
 
 .intro_text {
-    /* BRAZILIAN IT OTTAWA is non-profit group of IT Brazilians professionals located in Ottawa. Our main objective is empowering the community, assisting with networking, and continuous learning with lectures and workshops. */
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 25.94%;
-    bottom: 0%;
-    margin: 0;
-
-    /* Body/B1 */
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 32px;
-
-    /* or 114% */
-    display: flex;
-    align-items: flex-end;
+    padding: 15% 0px 0px 0px;
+    color: var(--neutral-dark);
     text-align: justify;
-
-    /* Neutral/3 */
-    color: #525252;
+    font-size: 28px;
+    width: 507px;
 }
 
-.img_container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
+.img_item{
+    filter:drop-shadow(-10px 0px 10px rgba(0, 0, 0, 0.25)) 
+            drop-shadow(-10px 0px 10px rgba(0, 0, 0, 0.25));
 }
 
+/* .img_item{
+    
+} */
 
+@media only screen and (max-width: 600px) {
+    .container{
+        justify-content: center;
+        padding: var(--spacing-unit);
+        width: auto;
+    }
+
+    .hero_container {
+        display: none;
+    }
+    
+    .welcome_box {
+        display: none;
+    }
+    
+    .welcome_text{
+        display: none;
+    }
+    
+    .intro_text {
+        display: none;
+    }
+    
+    .img_item{
+        width: auto;
+    }
+};

@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { AppLayout } from '@/components';
 import Link from 'next/link';
+import Hero from '@/components/Hero/Hero';
 
 export default function Home() {
   return (
@@ -14,18 +15,16 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
       </Head>
-      <Header />
-      <Banner title='Our mission' />
-      <Banner title='Our Vision' />
-      <div className={styles.title}>Home</div>
-      <Hero
-        title='WELCOME TO BRITO'
-        text={['BRAZILIAN IT OTTAWA is non-profit group of IT Brazilians professionals located in Ottawa.', <br />,
-          'Our main objective is empowering the community, assisting with networking, and continuous' +
-          'learning with lectures and workshops.']}
-        img_source='/ellipse.png' description='Parlemant' width='672' height='900'
-      />
       <AppLayout>
+        <Hero
+          title='WELCOME TO BRITO'
+          text={['BRAZILIAN IT OTTAWA is non-profit group of IT Brazilians professionals located in Ottawa.', <br />,
+            'Our main objective is empowering the community, assisting with networking, and continuous' +
+            'learning with lectures and workshops.']}
+          img_source='/ellipse.png' 
+          img_source_mbl='/rectangle_39.png'
+          description='Parlemant'
+        />
         <p>
           <Link href={'typography-demo'}>Typography Demo</Link>
         </p>
