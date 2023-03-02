@@ -41,14 +41,3 @@
     order: 0;
     flex-grow: 0;
 }
-
-.board_container {
-    position: absolute;
-    width: 1440px;
-    height: 793px;
-    left: 0px;
-    top: 2836px;
-
-    /* Primary/3 */
-    background: #022777;
-}
