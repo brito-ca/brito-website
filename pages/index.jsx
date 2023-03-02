@@ -1,8 +1,6 @@
 import Head from 'next/head';
-import styles from '@/styles/Home.module.css';
-import Header from '@/components/Header/Header';
-import Banner from '@/components/Banner/Banner';
-import Form from '@/components/Form/Form';
+import { AppLayout, Placeholder } from '@/components';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -16,14 +14,16 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> 
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
       </Head>
-      <main className={styles.container}>
-        <Header />
-        <Banner title='Our mission' />
-        <Banner title='Our Vision' />
-        <div className={styles.title}>Home</div>
-        <a href='/typography-demo'>Typography Demo</a>
-        <Form />
-      </main>
+      <AppLayout>
+        <Placeholder title='Hero' />
+        <Placeholder title='About Us' />
+        <Placeholder title='Our Mission' />
+        <Placeholder title='Our Vision' />
+        <Placeholder title='Our Board' />
+        <Placeholder title='Join Us' />
+        <Placeholder title='Form' />
+        <Placeholder title='Contact Us' />
+      </AppLayout>
     </>
   );
 }

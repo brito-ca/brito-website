@@ -1,0 +1,10 @@
+/* Temporary component, not using globals */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem;
+    outline: solid 1px #9999;
+    color: #998;
+    margin-bottom: 2rem;
+}
