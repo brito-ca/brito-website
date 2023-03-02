@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import styles from '@/styles/Home.module.css';
-import Header from '@/components/Header/Header';
-import Banner from '@/components/Banner/Banner';
+import { AppLayout } from '@/components';
+import Link from 'next/link';
+import ContactUs from '@/components/ContactUs/ContactUs';
 
 export default function Home() {
   return (
@@ -32,15 +32,12 @@ export default function Home() {
           Commodo ullamco veniam tempor cillum velit ea. Sint cupidatat enim
           duis in id non eiusmod laborum dolor non voluptate et Lorem.
         </p>
-      </AppLayout>
-      <main className={styles.container}>
-        <Header />
+        
         <section>
           <ContactUs/>
         </section>
 
-        <div className={styles.title}>Home</div>
-      </main>
+      </AppLayout>
     </>
   );
 }
