@@ -2,14 +2,10 @@ import styles from "@/styles/Header.module.css";
 import Image from "next/image";
 import smallLogo from "../../public/images/logo-small.svg";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useLng } from "hooks";
 
 const Header = () => {
-  const router = useRouter();
-  const lng = router.pathname.split("/")[0];
-  const isEn = lng === "en" || lng === "";
-  const isPr = lng === "pt";
-  const isFr = lng === "fr";
+  const { isEn, isPr, isFr } = useLng();
 
   return (
     <div className="flex-row-space-between padding">
