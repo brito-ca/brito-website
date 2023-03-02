@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import { AppLayout, Placeholder } from '@/components';
 import Link from 'next/link';
+import Banner from '@/components/Banner/Banner';
+import labels from '@/constants/labels.en';
 import ContactUs from '@/components/ContactUs/ContactUs';
 
 export default function Home() {
@@ -15,10 +17,10 @@ export default function Home() {
       <AppLayout>
         <Placeholder title='Hero' />
         <Placeholder title='About Us' />
-        <Placeholder title='Our Mission' />
-        <Placeholder title='Our Vision' />
+        <Banner title={labels.ourMission.title} description={labels.ourMission.description}/>
+        <Banner title={labels.ourVision.title} description={labels.ourVision.description}/>
         <Placeholder title='Our Board' />
-        <Placeholder title='Join Us' />
+        <Banner title={labels.joinUs.title} description={labels.joinUs.description}/>
         <Placeholder title='Form' />
         <ContactUs/>
         
