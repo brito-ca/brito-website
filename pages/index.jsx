@@ -22,7 +22,6 @@ export default function Home() {
         <Banner title={labels.joinUs.title} description={labels.joinUs.description}/>
         <Placeholder title='Form' />
         <Placeholder title='Contact Us' />
-        
       </AppLayout>
     </>
   );
