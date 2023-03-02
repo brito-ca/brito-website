@@ -1,4 +1,4 @@
-import stylesbanner from '@/styles/banner.module.css'
+import stylesbanner from '@/styles/Banner.module.css'
 
 
 
