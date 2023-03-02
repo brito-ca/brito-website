@@ -6,16 +6,17 @@
 .subtitle {
   color: var(--primary-blue);
 }
-
 .subtitleBasedIn {
   color: var(--primary-blue);
   padding-bottom: 17.93px;
 }
-
 .mail {
   text-decoration: none;
   color: var(--primary-blue);
   font-size: 1.25rem;
+}
+.mailimg {
+  visibility: hidden;
 }
 .address {
   padding-top: 41px;
@@ -24,7 +25,6 @@
 .midia {
   padding-top: 41px;
 }
-
 .maple {
   background-image: url(/vector2.png);
   background-size: "cover";
@@ -33,13 +33,13 @@
   margin: -713px 482px 9px;
   background-repeat: no-repeat;
 }
-
 @media only screen and (max-width: 600px) {
   .maple {
     background-image: url(/britologohalf.png);
     background-size: "cover";
-    height: 410px;
-    margin: -94px 37px 9px;
+    height: 400px;
+    width: auto;
+    margin: -76px 49px 0px;
     background-repeat: no-repeat;
   }
   .subtitle {
@@ -47,15 +47,18 @@
   }
   .title {
     text-align: center;
-    padding: var(--padding-lg);
+    padding: var(--padding-sm);
   }
-
   .subtitleBasedIn {
     padding-bottom: 17.93px;
   }
-
   .mail {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
+    padding-left: 14px;
+    text-decoration: underline;
+  }
+  .mailimg {
+    visibility: visible;
   }
   .address {
     padding-top: 16px;
