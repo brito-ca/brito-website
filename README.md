@@ -38,7 +38,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Development Steps
 
-- Assgin an [issue[](https://github.com/orgs/brito-ca/projects/1/views/1) to yourself and add the start and taget dates on the [project timeline](https://github.com/orgs/brito-ca/projects/1/views/2)
+- Assgin an [issue](https://github.com/orgs/brito-ca/projects/1/views/1) to yourself and add the start and taget dates on the [project timeline](https://github.com/orgs/brito-ca/projects/1/views/2)
 - Create a branch to work on a issue
 - After finish your work, run `npm run build` then `npm start` to check if the everything is working fine
 - Create a pull request against `develop` and assign a member to get it approved
