@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { AppLayout } from '@/components';
+import { AppLayout, Placeholder } from '@/components';
 import Link from 'next/link';
 
 export default function Home() {
@@ -12,25 +12,14 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <AppLayout>
-        <p>
-          <Link href={'typography-demo'}>Typography Demo</Link>
-        </p>
-        <p>
-          Quis officia nisi ex laboris nisi adipisicing. Reprehenderit do irure
-          velit est culpa dolor aliqua voluptate et exercitation dolore. Minim
-          commodo est elit esse qui fugiat aliqua veniam nisi est sint laboris
-          ea sint. Qui reprehenderit officia sint aute voluptate laboris
-          consectetur do reprehenderit. Ea qui nulla officia culpa eiusmod
-          ullamco pariatur officia nostrud.
-        </p>
-        <p>
-          Sit culpa fugiat in cupidatat veniam ea sint nisi voluptate. Culpa do
-          anim qui aliqua. Elit do amet aliqua exercitation dolore non. Minim
-          non fugiat fugiat nisi esse quis culpa ipsum irure. Cillum non duis
-          aute eiusmod ad excepteur minim enim consequat duis ut officia.
-          Commodo ullamco veniam tempor cillum velit ea. Sint cupidatat enim
-          duis in id non eiusmod laborum dolor non voluptate et Lorem.
-        </p>
+        <Placeholder title='Hero' />
+        <Placeholder title='About Us' />
+        <Placeholder title='Our Mission' />
+        <Placeholder title='Our Vision' />
+        <Placeholder title='Our Board' />
+        <Placeholder title='Join Us' />
+        <Placeholder title='Form' />
+        <Placeholder title='Contact Us' />
       </AppLayout>
     </>
   );
