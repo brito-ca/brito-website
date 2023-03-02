@@ -1,20 +1,24 @@
 import Link from "next/link";
+import { AppLayout } from '@/components';
 
 const Box = () => {
   return (
     <div
-      style={{ width: 50, height: 50, background: "gray", border: "1px solid" }}
+      style={{ width: 50, height: 50, background: 'gray', border: '1px solid' }}
     ></div>
   );
 };
 
 const TypographyDemo = () => {
   return (
-    <div>
-      <Link href="/">Back</Link>
+    <AppLayout>
+      <h2>Typography Demo</h2>
+      <br />
+      <br />
+      <br />
       <div>
-        Display
-        <div className="display">
+        <h3>Display</h3>
+        <div className='display'>
           The quick brown fox jumps over the lazy dog.
         </div>
       </div>
@@ -33,7 +37,7 @@ const TypographyDemo = () => {
         h4
         <h4>The quick brown fox jumps over the lazy dog.</h4>
         h5 uppercase
-        <h5 className="uppercase">
+        <h5 className='uppercase'>
           The quick brown fox jumps over the lazy dog.
         </h5>
         h5
@@ -72,7 +76,7 @@ const TypographyDemo = () => {
       <div>
         Button
         <br />
-        <button className="primary">Click here!</button>
+        <button className='primary'>Click here!</button>
       </div>
 
       <br />
@@ -80,7 +84,7 @@ const TypographyDemo = () => {
       <div>
         Link
         <br />
-        <a href="#">Click here!</a>
+        <a href='#'>Click here!</a>
       </div>
 
       <br />
@@ -90,19 +94,19 @@ const TypographyDemo = () => {
         <br />
         primary
         <div>
-          <button className="primary">Button text</button>
+          <button className='primary'>Button text</button>
         </div>
         primary outline
         <div>
-          <button className="primary outline">Button text</button>
+          <button className='primary outline'>Button text</button>
         </div>
         secundary
         <div>
-          <button className="secundary">Button text</button>
+          <button className='secundary'>Button text</button>
         </div>
         secundary outline
         <div>
-          <button className="secundary outline">Button text</button>
+          <button className='secundary outline'>Button text</button>
         </div>
         disabled
         <div>
@@ -110,7 +114,7 @@ const TypographyDemo = () => {
         </div>
         outline disabled
         <div>
-          <button disabled className="outline">
+          <button disabled className='outline'>
             Button text
           </button>
         </div>
@@ -138,10 +142,10 @@ const TypographyDemo = () => {
         <br />
         horizontal-margin
         <br />
-        <div style={{ border: "1px solid black", display: "inline-flex" }}>
+        <div style={{ border: '1px solid black', display: 'inline-flex' }}>
           <div
-            style={{ border: "1px solid red" }}
-            className="horizontal-margin"
+            style={{ border: '1px solid red' }}
+            className='horizontal-margin'
           >
             Something
           </div>
@@ -179,10 +183,10 @@ const TypographyDemo = () => {
         <br />
         horizontal-padding
         <br />
-        <div style={{ border: "1px solid black", display: "inline-flex" }}>
+        <div style={{ border: '1px solid black', display: 'inline-flex' }}>
           <div
-            style={{ border: "1px solid red" }}
-            className="horizontal-padding"
+            style={{ border: '1px solid red' }}
+            className='horizontal-padding'
           >
             Something
           </div>
@@ -204,8 +208,8 @@ const TypographyDemo = () => {
         <br />
         flex-row-start
         <div
-          style={{ width: "50%", border: "1px solid red" }}
-          className="flex-row-start"
+          style={{ width: '50%', border: '1px solid red' }}
+          className='flex-row-start'
         >
           <Box />
           <Box />
@@ -215,8 +219,8 @@ const TypographyDemo = () => {
         <br />
         flex-row-end
         <div
-          style={{ width: "50%", border: "1px solid red" }}
-          className="flex-row-end"
+          style={{ width: '50%', border: '1px solid red' }}
+          className='flex-row-end'
         >
           <Box />
           <Box />
@@ -225,8 +229,8 @@ const TypographyDemo = () => {
         </div>
         flex-row-center
         <div
-          style={{ width: "50%", border: "1px solid red" }}
-          className="flex-row-center"
+          style={{ width: '50%', border: '1px solid red' }}
+          className='flex-row-center'
         >
           <Box />
           <Box />
@@ -235,8 +239,8 @@ const TypographyDemo = () => {
         </div>
         flex-row-space-between
         <div
-          style={{ width: "50%", border: "1px solid red" }}
-          className="flex-row-space-between"
+          style={{ width: '50%', border: '1px solid red' }}
+          className='flex-row-space-between'
         >
           <Box />
           <Box />
@@ -245,8 +249,8 @@ const TypographyDemo = () => {
         </div>
         flex-row-space-around
         <div
-          style={{ width: "50%", border: "1px solid red" }}
-          className="flex-row-space-around"
+          style={{ width: '50%', border: '1px solid red' }}
+          className='flex-row-space-around'
         >
           <Box />
           <Box />
@@ -255,8 +259,8 @@ const TypographyDemo = () => {
         </div>
         flex-row-space-evenly
         <div
-          style={{ width: "50%", border: "1px solid red" }}
-          className="flex-row-space-evenly"
+          style={{ width: '50%', border: '1px solid red' }}
+          className='flex-row-space-evenly'
         >
           <Box />
           <Box />
@@ -264,7 +268,7 @@ const TypographyDemo = () => {
           <Box />
         </div>
       </div>
-    </div>
+    </AppLayout>
   );
 };
 
