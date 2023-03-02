@@ -1,15 +1,14 @@
 .formContainer {
     background: var( --secundary-green);
-    padding: 20px 40px;
+    padding: var(--padding-sm) var(--padding-md);
 }
 
 .title {
-    font-size: 40px;
     text-align: center;
     color: var(--primary-white);
 
     /* Temporary untill figure it out a better option to top marging */
-    padding: 90px 0px 40px 0;
+    padding: var(--padding-lg) 0px var(--padding-md) 0;
 }
 
 .formSections {
@@ -39,25 +38,22 @@
     width: 300px;
     height: 24px;
 
-    font-weight: 400;
-    font-size: 18px;
-
     display: flex;
     align-items: center;
 
-    margin-top: 30px;
+    margin-top: 2rem;
 
     color:var(--primary-white);
 }
 
 .inputForm {
-    padding: 8px 12px;
+    padding: 0.5rem 0.75rem;
 
-    /* width: 100%; */
+    /* width: 100%; testing with grid set to 2fr 1fr for row 1 */
     width: 600px;
     height: 40px;
 
-    /* border set to none to remove some styles that were being applied from somewhere */
+    /* border set to none to remove some styles that were being applied from somewhere, maybe from globals not sure yet */
     border: none;
     border-radius: 5px;
     background-color: var(--primary-white);
@@ -65,9 +61,9 @@
 
 .inputFormSectionTwo {
     width: 100%;
-    padding: 8px 12px;
+    padding: 0.5rem 0.75rem;
 
-    height: 40px;
+    height: 2.5rem;
 
     /* border set to none to remove some styles that were being applied from somewhere */
     border: none;
@@ -79,9 +75,9 @@
     width: 400px;
     height: 400px;
     border-radius: 50%;
-    border: 10px solid #FFFF;
+    border: 10px solid var(--primary-white);
 
-    margin: 10px auto;
+    margin: 0.75rem auto;
 }
 
 .checkBoxForm {
