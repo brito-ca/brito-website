@@ -1,5 +1,17 @@
 # Brito Website
 
+## Project Management
+
+- [Project Dashboard](https://github.com/orgs/brito-ca/projects/1)
+- [Timeline](https://github.com/orgs/brito-ca/projects/1/views/2)
+- [Issues](https://github.com/brito-ca/brito-website/issues)
+- [Milestones](https://github.com/brito-ca/brito-website/milestones)
+
+## Live Preview
+
+- [Production (main branch)](https://brito-website.netlify.app)
+- [Development (develop branch)](https://develop--brito-website.netlify.app)
+
 ## Design
 
 [Figma file](https://www.figma.com/file/I53K0k601AT2QmJcNw0Mq6/WEBSITE-BRITO?node-id=0%3A1&t=H8sxbQmYksdDNmdq-1)
