@@ -13,7 +13,9 @@ const Header = () => {
 
   return (
     <div className="flex-row-space-between padding">
-      <Image alt="logo small" src={smallLogo} />
+      <Link href="/">
+        <Image alt="logo small" src={smallLogo} />
+      </Link>
       <div className={styles.empty}></div>
       <div className={styles.nav + " body1"}>
         <a href="#about" className="horizontal-margin">
