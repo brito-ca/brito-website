@@ -3,6 +3,8 @@ import Image from "next/image";
 import smallLogo from "../../public/images/logo-small.svg";
 import Link from "next/link";
 import { useLng } from "hooks";
+import { Icon } from "@/components";
+import menu from "../../public/images/menu-icon.svg";
 
 const Header = () => {
   const { isEn, isPr, isFr } = useLng();
@@ -10,7 +12,7 @@ const Header = () => {
   return (
     <div className={styles.header + " flex-row-space-between padding"}>
       <Link href="/">
-        <Image alt="logo small" src={smallLogo} />
+        <Image className={styles.logo} alt="logo small" src={smallLogo} />
       </Link>
       <div className={styles.empty}></div>
       <div className={styles.nav + " body1"}>
@@ -45,6 +47,9 @@ const Header = () => {
         >
           fr
         </Link>
+      </div>
+      <div className={styles.menu}>
+        <Icon alt="menu" src={menu} />
       </div>
     </div>
   );

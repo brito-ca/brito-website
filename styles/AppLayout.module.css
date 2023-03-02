@@ -1,5 +1,5 @@
 .container {
-  padding: var(--padding-lg) var(--padding-sm);
+  padding: var(--padding-lg) var(--padding-md);
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
