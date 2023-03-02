@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import styles from '../../styles/Form.module.css'
+import { RadioButton } from './RadioButton';
 // import britoImage from '../../public/brito.png'
 
 const Form = () => {
@@ -7,12 +8,11 @@ const Form = () => {
     const [fullName, setFullName] = useState('');
     const [expertise, setExpertise] = useState('');
     const [company, setCompany] = useState('');
-    const [checkBox, setCheckBox] = useState(false);
+    const [resideInCanada, setResideInCanada] = useState('yes');
 
-    function handleCheckBox() {
-        if (!checkBox) setCheckBox(true)
-        if (checkBox) setCheckBox(false)
-    }
+    const radioResideInCanadaChanger = (e) => {
+        setResideInCanada(e.target.value);
+    };
 
     return (
         <>
@@ -43,22 +43,22 @@ const Form = () => {
                             />
                             <label className={styles.labelForm}>Are you residing in Canada?</label>
                             <label className={styles.labelForm}>
-                                <input
-                                    type="checkbox"
-                                    checked={checkBox}
-                                    onChange={handleCheckBox}
-                                    className={styles.checkBoxForm}
-                                />
-                                Yes
+                            <RadioButton       
+                                 changed={radioResideInCanadaChanger}
+                                 id="1"
+                                 isSelected={resideInCanada === "yes"}
+                                 label="Yes"
+                                 value="yes"                           
+                                />                                
                             </label>
                             <label className={styles.labelForm}>
-                                <input
-                                    type="checkbox"
-                                    checked={checkBox}
-                                    onChange={handleCheckBox}
-                                    className={styles.checkBoxForm}
-                                />
-                                No
+                                <RadioButton       
+                                 changed={radioResideInCanadaChanger}
+                                 id="2"
+                                 isSelected={resideInCanada === "no"}
+                                 label="No"
+                                 value="no"                           
+                                />                              
                             </label>
                         </div>
                         <div className={styles.imageContainer}>
@@ -91,6 +91,7 @@ const Form = () => {
                                     placeholder="Paste your profile link"
                                     value={fullName}
                                 />
+                                <p>Value selected {resideInCanada}</p>
                             </div>
                         </div>
                     </div>
