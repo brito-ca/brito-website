@@ -1,9 +1,9 @@
 .container {
-  width: 100%;
-  margin: 0 auto;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .title {
-  font-size: 3rem;
-  color: red;
+    font-size: 3rem;
+    color: red;
 }
