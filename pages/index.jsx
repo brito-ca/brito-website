@@ -1,8 +1,7 @@
 import Head from 'next/head'
-import { AppLayout, Placeholder } from '@/components'
+import { AppLayout, Placeholder, Hero } from '@/components'
 import Banner from '@/components/Banner/Banner'
 import labels from '@/constants/labels.en'
-import Hero from '@/components/Hero/Hero'
 
 export default function Home() {
     return (
