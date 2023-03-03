@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { AppLayout, Placeholder } from '@/components';
 import Link from 'next/link';
+import Board from '@/components/Board/Board';
 import Banner from '@/components/Banner/Banner';
 import labels from '@/constants/labels.en';
 
@@ -20,6 +21,7 @@ export default function Home() {
         <Banner title={labels.ourMission.title} description={labels.ourMission.description}/>
         <Banner title={labels.ourVision.title} description={labels.ourVision.description}/>
         <Placeholder title='Our Board' />
+        <Board title='dsadsdad'/>
         <Banner title={labels.joinUs.title} description={labels.joinUs.description}/>
         <Placeholder title='Form' />
         <Placeholder title='Contact Us' />
