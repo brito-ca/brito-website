@@ -7,7 +7,8 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint --fix",
-        "format": "prettier -w ."
+        "format": "prettier -w .",
+        "release": "npm run lint && npm run format && npm run build"
     },
     "dependencies": {
         "@next/font": "13.1.6",
