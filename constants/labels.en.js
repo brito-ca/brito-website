@@ -9,37 +9,37 @@ const labels = {
         description:
             'Our Vision is to be a reference in supporting the Brazilian professional community in information technology (IT) in Ottawa.',
     },
-  joinUs: {
-    title: 'Join us',
-    description:
-      'Join a network that connects you to a IT community expanding your horizons and unlocking new opportunities. Connect with a vibrant community of tech-savvy individuals and be in the know of the latest happenings within Brito. Elevate your skills and join a network that's dedicated to fostering growth, innovation and collaboration!',
-  },
-  contactUs: {
-    title: 'Contact us',
-  },
-  chat: {
-    chat: 'Chat with us',
-    descriptionChat: 'Our friendly team is here to help',
-  },
-  email: {
-    malito: 'mailto:hi@brito.it',
-    email: 'hi@brito.it',
-  },
-  location: {
-    Basedin: 'Based in',
-    city: 'Ottawa - Ontario',
-  },
-  midia: {
-    visit: 'Visit our social media',
-    instagramlink: "#",
-    labelinstagram: 'BRITO_Instagram',
-    linklinkedin: 'https://www.linkedin.com/groups/12058916/',
-    labelinkedin: 'BRITO_Linkedin',
-    linkfacebook: 'https://www.facebook.com/groups/566404256865424',
-    labelfacebook: 'BRITO_Facebook',
-  },
-  Maple: {
-    labelimgmaple: 'mapleleave',
-  },
-};
-export default labels;
+    joinUs: {
+        title: 'Join us',
+        description:
+            "Join a network that connects you to a IT community expanding your horizons and unlocking new opportunities. Connect with a vibrant community of tech-savvy individuals and be in the know of the latest happenings within Brito. Elevate your skills and join a network that's dedicated to fostering growth, innovation and collaboration!",
+    },
+    contactUs: {
+        title: 'Contact us',
+    },
+    chat: {
+        chat: 'Chat with us',
+        descriptionChat: 'Our friendly team is here to help',
+    },
+    email: {
+        malito: 'mailto:hi@brito.it',
+        email: 'hi@brito.it',
+    },
+    location: {
+        Basedin: 'Based in',
+        city: 'Ottawa - Ontario',
+    },
+    midia: {
+        visit: 'Visit our social media',
+        instagramlink: '#',
+        labelinstagram: 'BRITO_Instagram',
+        linklinkedin: 'https://www.linkedin.com/groups/12058916/',
+        labelinkedin: 'BRITO_Linkedin',
+        linkfacebook: 'https://www.facebook.com/groups/566404256865424',
+        labelfacebook: 'BRITO_Facebook',
+    },
+    Maple: {
+        labelimgmaple: 'mapleleave',
+    },
+}
+export default labels
