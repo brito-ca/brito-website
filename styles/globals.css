@@ -42,6 +42,7 @@
     --base-font-size: 1rem;
     --spacing-unit: 16px;
 
+    --margin-xs: calc(0.5 * var(--spacing-unit));
     --margin-sm: var(--spacing-unit);
     --margin-md: calc(2 * var(--spacing-unit));
     --margin-lg: calc(4 * var(--spacing-unit));
@@ -210,12 +211,20 @@ button.outline:disabled {
     margin: 0;
 }
 
+.margin-xs {
+    margin: var(--margin-xs);
+}
+
 .margin {
     margin: var(--margin-sm);
 }
 
 .margin-lg {
-  margin: var(--margin-lg);
+    margin: var(--margin-lg);
+}
+
+.horizontal-margin-xs {
+    margin: 0 var(--margin-xs);
 }
 
 .horizontal-margin {
@@ -223,7 +232,11 @@ button.outline:disabled {
 }
 
 .horizontal-margin-lg {
-  margin: 0 var(--margin-lg);
+    margin: 0 var(--margin-lg);
+}
+
+.vertical-margin-xs {
+    margin: var(--margin-xs) 0;
 }
 
 .vertical-margin {
@@ -231,11 +244,15 @@ button.outline:disabled {
 }
 
 .vertical-margin-lg {
-  margin: var(--margin-lg) 0;
+    margin: var(--margin-lg) 0;
 }
 
 .no-padding {
     padding: 0;
+}
+
+.padding-xs {
+    padding: var(--padding-xs);
 }
 
 .padding {
@@ -243,7 +260,11 @@ button.outline:disabled {
 }
 
 .padding-lg {
-  padding: var(--padding-lg);
+    padding: var(--padding-lg);
+}
+
+.horizontal-padding-xs {
+    padding: 0 var(--padding-xs);
 }
 
 .horizontal-padding {
@@ -251,7 +272,11 @@ button.outline:disabled {
 }
 
 .horizontal-padding-lg {
-  padding: 0 var(--padding-lg);
+    padding: 0 var(--padding-lg);
+}
+
+.vertical-padding-sx {
+    padding: var(--padding-sx) 0;
 }
 
 .vertical-padding {
@@ -259,14 +284,14 @@ button.outline:disabled {
 }
 
 .vertical-padding-lg {
-  padding: var(--padding-lg) 0;
+    padding: var(--padding-lg) 0;
 }
 
 .flex-row-start {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-     align-items: center;
+    align-items: center;
     justify-content: flex-start;
 }
 
@@ -274,7 +299,7 @@ button.outline:disabled {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-     align-items: center;
+    align-items: center;
     justify-content: flex-end;
 }
 
@@ -282,7 +307,7 @@ button.outline:disabled {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-     align-items: center;
+    align-items: center;
     justify-content: center;
 }
 
@@ -290,7 +315,7 @@ button.outline:disabled {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-     align-items: center;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -298,7 +323,7 @@ button.outline:disabled {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-     align-items: center;
+    align-items: center;
     justify-content: space-around;
 }
 
@@ -311,10 +336,10 @@ button.outline:disabled {
 }
 
 .flex-column-start {
-  display: flex;
-  flex-direction: column;
-  align-content: flex-start;
-  justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
 }
 
 /* https://www.browserstack.com/guide/what-are-css-and-media-query-breakpoints */
