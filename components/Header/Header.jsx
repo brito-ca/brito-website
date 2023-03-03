@@ -2,14 +2,16 @@ import styles from "@/styles/Header.module.css";
 import Image from "next/image";
 import smallLogo from "../../public/images/logo-small.svg";
 import Link from "next/link";
-import { useState } from "react";
-import { useLng } from "hooks";
+import { useState, useRef } from "react";
+import { useOnClickOutside } from "hooks";
 import { Icon } from "@/components";
 import menu from "../../public/images/menu-icon.svg";
 
 const Header = () => {
-  const { isEn, isPr, isFr } = useLng();
+  const ref = useRef();
+  const [fakeLng, setFakeLng] = useState("en");
   const [showMenu, setShowMenu] = useState(false);
+  useOnClickOutside(ref, () => setModalOpen(false));
 
   return (
     <div className={styles.header + " flex-row-space-between padding"}>
@@ -33,22 +35,25 @@ const Header = () => {
 
       <div className={styles.languages + " body4"}>
         <Link
-          href="/en/home"
-          className={`uppercase ${isEn ? styles.active : ""}`}
+          href="/"
+          className={`uppercase ${fakeLng === "en" ? styles.active : ""}`}
+          onClick={() => setFakeLng("en")}
         >
           en
         </Link>
         <Link
-          href="/pt/home"
+          href="/"
           className={`uppercase horizontal-margin-sm ${
-            isPr ? styles.active : ""
+            fakeLng === "pt" ? styles.active : ""
           }`}
+          onClick={() => setFakeLng("pt")}
         >
           pt
         </Link>
         <Link
-          href="/fr/home"
-          className={`uppercase ${isFr ? styles.active : ""}`}
+          href="/"
+          className={`uppercase ${fakeLng === "fr" ? styles.active : ""}`}
+          onClick={() => setFakeLng("fr")}
         >
           fr
         </Link>
@@ -58,7 +63,7 @@ const Header = () => {
         <Icon alt="menu" src={menu} />
       </div>
 
-      {showMenu && <div>Menu</div>}
+      {showMenu && <div ref={ref}>Menu</div>}
     </div>
   );
 };

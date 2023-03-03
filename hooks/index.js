@@ -1,1 +1,1 @@
-export { default as useLng } from "./useLng";
+export { default as useOnClickOutside } from "./useOnClickOutside";
