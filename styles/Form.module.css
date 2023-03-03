@@ -34,6 +34,12 @@
     grid-row: 2;       
 }
 
+.formSectionTree {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 117px;
+}
+
 .labelForm {
     width: 300px;
     height: 24px;
@@ -41,7 +47,7 @@
     display: flex;
     align-items: center;
 
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 
     color:var(--primary-white);
 }
@@ -54,7 +60,7 @@
     height: 40px;
 
     /* border set to none to remove some styles that were being applied from somewhere, maybe from globals not sure yet */
-    border: none;
+    border: 1px solid #9B9B9F;
     border-radius: 5px;
     background-color: var(--primary-white);
 }
@@ -71,6 +77,17 @@
     background-color: var(--primary-white);
 }
 
+.selectImmigrationStatus {    
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+
+    background: #F5F5FA;
+/* Neutral/500 */
+
+    border: 1px solid #929BC6;
+    border-radius: 5px;
+}
+
 .roundedFormImage {
     width: 400px;
     height: 400px;
@@ -80,6 +97,7 @@
     margin: 0.75rem auto;
 }
 
-.checkBoxForm {
-    margin-right: 0.6rem;
+.mandatoryField {
+    color: var(--secundary-red-warning);
+    margin-left: 2px;
 }
