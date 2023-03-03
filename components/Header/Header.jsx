@@ -1,8 +1,6 @@
 import styles from '@/styles/Header.module.css'
 import Image from 'next/image'
 import smallLogo from '../../public/images/logo-small.svg'
-import menu from '../../public/images/menu-icon.svg'
-import close from '../../public/images/close-icon.svg'
 import Link from 'next/link'
 import { useState } from 'react'
 import { Icon, Nav, Languages } from '@/components'
@@ -20,7 +18,7 @@ const Header = () => {
             <Languages className={`${styles.languages}  ${styles.desktop}`} />
 
             <div className={styles.menuIcon} onClick={() => setModalOpen(!modalOpen)}>
-                <Icon alt='menu' src={menu} />
+                <Icon variant='menu' />
             </div>
 
             {modalOpen ? (
@@ -29,7 +27,7 @@ const Header = () => {
                         <div className={styles.menuHeader + ' flex-row-space-between padding'}>
                             <Languages className={`${styles.languages}`} />
                             <div onClick={() => setModalOpen(false)}>
-                                <Icon alt='close' src={close} />
+                                <Icon variant='close' />
                             </div>
                         </div>
                         <Nav className={styles.navMobile + ' flex-column-start'} />
