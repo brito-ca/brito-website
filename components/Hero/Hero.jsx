@@ -1,5 +1,4 @@
 import styles from '@/styles/Hero.module.css'
-import GetWidth from '@/components/Hero/WindowSize'
 import Image from 'next/image'
 
 function setSource(img_source, img_source_mbl, alt) {
