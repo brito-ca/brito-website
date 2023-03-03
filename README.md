@@ -40,7 +40,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 -   Assgin an [issue](https://github.com/orgs/brito-ca/projects/1/views/1) to yourself and add `start` and `target` dates on the [project timeline](https://github.com/orgs/brito-ca/projects/1/views/2)
 -   We are using [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) so, create a branch FROM `develop`
--   After finish your work, run `npm run build` then `npm start` to check if the everything is working fine
+-   After finish your work, run `npm run release`
+-   Run `npm start` to check if the everything is working fine
 -   Create a pull request against `develop` and assign a member to get it approved
 -   Once is approved, merge your changes to `develop`
 -   Close your pull request
