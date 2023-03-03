@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Image from 'next/image'
 import styles from '@/styles/Footer.module.css'
 
@@ -69,3 +70,10 @@ const Footer = () => {
     )
 };
 export default Footer;
+=======
+const Footer = (props) => {
+    const { children } = props
+    return <footer>{children}</footer>
+}
+export default Footer
+>>>>>>> origin/develop

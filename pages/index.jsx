@@ -1,7 +1,7 @@
-import Head from 'next/head';
-import styles from '@/styles/Home.module.css';
-import Header from '@/components/Header/Header';
-import Banner from '@/components/Banner/Banner';
+import Head from 'next/head'
+import { AppLayout, Placeholder } from '@/components'
+import Banner from '@/components/Banner/Banner'
+import labels from '@/constants/labels.en'
 import Footer from '@/components/Footer/Footer'
 
 export default function Home() {
@@ -13,14 +13,20 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main className={styles.container}>
-        <Header />
-        <Banner title='Our mission' />
-        <Banner title='Our Vision' />
-        <div className={styles.title}>Home</div>
-        <a href='/typography-demo'>Typography Demo</a>
+      <AppLayout>
+        <Placeholder title='Hero' />
+        <Placeholder title='About Us' />
+        <Banner
+          title={labels.ourMission.title}
+          description={labels.ourMission.description}
+        />
+        <Banner title={labels.ourVision.title} description={labels.ourVision.description} />
+        <Placeholder title='Our Board' />
+        <Banner title={labels.joinUs.title} description={labels.joinUs.description} />
+        <Placeholder title='Form' />
+        <Placeholder title='Contact Us' />
         <Footer />
-      </main>
+      </AppLayout>
     </>
-  );
+  )
 }

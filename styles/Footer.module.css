@@ -5,6 +5,10 @@
     align-items: center;
 }
 
+.logoAndSocial Image {
+    max-width: 100%;
+  }  
+
 .container {
     padding: var(--padding-lg) 148px var(--padding-lg) 0;
 }
@@ -25,7 +29,7 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
-    text-decoration: none;
+    text-decoration: git none;
 }
 
 .navigation:hover {
