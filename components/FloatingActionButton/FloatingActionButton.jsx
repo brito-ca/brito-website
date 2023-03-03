@@ -21,7 +21,7 @@ const FloatingActionButton = () => {
             {show ? (
                 <div
                     className={`${styles.fabWrapper} flex-row-center`}
-                    onClick={() => void window.screenTop()}
+                    onClick={() => void window.scrollTo({ top: 0 })}
                 >
                     <Icon width={50} height={50} variant='arrow-up' />
                 </div>
