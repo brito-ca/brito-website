@@ -37,7 +37,7 @@
     }
 
     .navMobile a {
-        color: #383f60;
+        color: var(--nav-text-color);
         text-decoration: none;
     }
 
@@ -59,7 +59,7 @@
         right: 0;
         height: 100vh;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: var(--modal-backdrop);
         display: flex;
         justify-content: flex-end;
     }
@@ -69,10 +69,10 @@
         top: 0;
         right: 0;
         width: 80%;
-        background-color: #ffffff;
+        background-color: var(--neutral-white);
     }
 
     .menuHeader {
-        border-bottom: 1px solid #ccd2eb;
+        border-bottom: 1px solid var(--menu-border);
     }
 }
