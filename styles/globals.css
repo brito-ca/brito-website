@@ -266,6 +266,7 @@ button.outline:disabled {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+     align-items: center;
     justify-content: flex-start;
 }
 
@@ -273,6 +274,7 @@ button.outline:disabled {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+     align-items: center;
     justify-content: flex-end;
 }
 
@@ -280,6 +282,7 @@ button.outline:disabled {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+     align-items: center;
     justify-content: center;
 }
 
@@ -287,6 +290,7 @@ button.outline:disabled {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+     align-items: center;
     justify-content: space-between;
 }
 
@@ -294,6 +298,7 @@ button.outline:disabled {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+     align-items: center;
     justify-content: space-around;
 }
 
@@ -301,6 +306,7 @@ button.outline:disabled {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-evenly;
 }
 
@@ -339,23 +345,23 @@ button.outline:disabled {
         font-size: 1.5rem;
     }
 
-    .b1 {
+    .body1 {
         font-size: 1.75rem;
     }
 
-    .b2 {
+    .body2 {
         font-size: 1.125rem;
     }
 
-    .b3 {
+    .body3 {
         font-size: 1rem;
     }
 
-    .b4 {
+    .body4 {
         font-size: 1rem;
     }
 
-    .b5 {
+    .body5 {
         font-size: 0.875rem;
     }
 
