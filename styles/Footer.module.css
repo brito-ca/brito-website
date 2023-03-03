@@ -1,4 +1,4 @@
-.footer .logoAndSocial{
+.logoAndSocial{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -20,6 +20,7 @@
 }
 
 .navigation {
+    padding: var(--padding-lg) 0;
     color: var(--primary-blue);
     font-weight: 400;
     font-size: 18px;

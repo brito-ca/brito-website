@@ -44,7 +44,7 @@ const Footer = () => {
                 <div>
                     <h5 className={styles.title}>Join us</h5>
                     <p>
-                        <a href="" className={`${styles.navigation} body2`}>Network list</a>
+                        <a href="" className={styles.navigation}>Network list</a>
                     </p>
                 </div>
             </div>
