@@ -1,4 +1,4 @@
-import { Header, Footer } from "@/components";
+import { Header, Footer, Placeholder } from "@/components";
 import styles from "@/styles/AppLayout.module.css";
 
 const AppLayout = (props) => {
@@ -7,7 +7,9 @@ const AppLayout = (props) => {
     <div className={styles.container}>
       <Header />
       <main>{children}</main>
-      <Footer>Footer</Footer>
+      <Footer>
+        <Placeholder title="Footer" />
+      </Footer>
     </div>
   );
 };

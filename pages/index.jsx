@@ -1,6 +1,8 @@
-import Head from "next/head";
-import { AppLayout } from "@/components";
-import Link from "next/link";
+import Head from 'next/head';
+import { AppLayout, Placeholder } from '@/components';
+import Link from 'next/link';
+import Banner from '@/components/Banner/Banner';
+import labels from '@/constants/labels.en';
 
 export default function Home() {
   return (
@@ -31,6 +33,14 @@ export default function Home() {
           Commodo ullamco veniam tempor cillum velit ea. Sint cupidatat enim
           duis in id non eiusmod laborum dolor non voluptate et Lorem.
         </p>
+        <Placeholder title='Hero' />
+        <Placeholder title='About Us' />
+        <Banner title={labels.ourMission.title} description={labels.ourMission.description}/>
+        <Banner title={labels.ourVision.title} description={labels.ourVision.description}/>
+        <Placeholder title='Our Board' />
+        <Banner title={labels.joinUs.title} description={labels.joinUs.description}/>
+        <Placeholder title='Form' />
+        <Placeholder title='Contact Us' />
       </AppLayout>
     </>
   );
