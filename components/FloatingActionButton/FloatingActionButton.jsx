@@ -3,11 +3,11 @@ import { Icon } from '@/components'
 import { useEffect, useState } from 'react'
 
 const FloatingActionButton = () => {
-    const [hasScrolled, setHasScrolled] = useState(false)
+    const [show, setShow] = useState(false)
 
     useEffect(() => {
         const scrollListener = () => {
-            setHasScrolled(true)
+            setShow(window.scrollY > 10)
         }
         window.addEventListener('scroll', scrollListener)
 
@@ -18,7 +18,7 @@ const FloatingActionButton = () => {
 
     return (
         <>
-            {hasScrolled ? (
+            {show ? (
                 <div
                     className={`${styles.fabWrapper} flex-row-center`}
                     onClick={() => void window.screenTop()}
