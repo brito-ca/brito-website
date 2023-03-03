@@ -14,7 +14,6 @@ export default function Home() {
                 <link rel='icon' href='/favicon.ico' />
             </Head>
             <AppLayout>
-                <Placeholder title='Hero' />
                 <Hero
                     title={labels.welcomeToBrito.title}
                     description={labels.welcomeToBrito.description}
