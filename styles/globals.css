@@ -334,6 +334,13 @@ button.outline:disabled {
   justify-content: space-evenly;
 }
 
+.flex-column-start {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+
 /* https://www.browserstack.com/guide/what-are-css-and-media-query-breakpoints */
 
 /* Extra small devices (phones, 600px and down) */

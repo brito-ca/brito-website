@@ -1,16 +1,18 @@
 import styles from "@/styles/Header.module.css";
 import Image from "next/image";
 import smallLogo from "../../public/images/logo-small.svg";
+import menu from "../../public/images/menu-icon.svg";
+import close from "../../public/images/close-icon.svg";
 import Link from "next/link";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useOnClickOutside } from "hooks";
 import { Icon } from "@/components";
-import menu from "../../public/images/menu-icon.svg";
+import { Nav } from "@/components";
 
 const Header = () => {
   const ref = useRef();
   const [fakeLng, setFakeLng] = useState("en");
-  const [showMenu, setShowMenu] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
   useOnClickOutside(ref, () => setModalOpen(false));
 
   return (
@@ -21,17 +23,7 @@ const Header = () => {
 
       <div className={styles.empty}></div>
 
-      <div className={styles.nav + " body1"}>
-        <a href="#about" className="horizontal-margin">
-          About
-        </a>
-        <a href="#join-us" className="horizontal-margin">
-          Join us
-        </a>
-        <a href="#contact" className="horizontal-margin">
-          Contact
-        </a>
-      </div>
+      <Nav className={styles.nav + " body1"} />
 
       <div className={styles.languages + " body4"}>
         <Link
@@ -59,11 +51,18 @@ const Header = () => {
         </Link>
       </div>
 
-      <div className={styles.menu} onClick={() => setShowMenu(!showMenu)}>
+      <div className={styles.menuIcon} onClick={() => setModalOpen(!modalOpen)}>
         <Icon alt="menu" src={menu} />
       </div>
 
-      {showMenu && <div ref={ref}>Menu</div>}
+      {modalOpen ? (
+        <div ref={ref} className={styles.menuModal}>
+          <div className={styles.menuHeader + " flex-row-end padding"}>
+            <Icon alt="close" src={close} onClick={() => setModalOpen(false)} />
+          </div>
+          <Nav className={styles.navMobile + " flex-column-start"} />
+        </div>
+      ) : null}
     </div>
   );
 };

@@ -36,6 +36,11 @@
     display: none;
   }
 
+  .navMobile a {
+    color: #383f60;
+    text-decoration: none;
+  }
+
   .empty {
     display: none;
   }
@@ -44,7 +49,19 @@
     display: none;
   }
 
-  .menu {
+  .menuIcon {
     display: block;
+  }
+
+  .menuModal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    background-color: #ffffff;
+  }
+
+  .menuHeader {
+    border-bottom: 1px solid #ccd2eb;
   }
 }
