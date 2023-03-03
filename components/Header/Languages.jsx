@@ -2,11 +2,12 @@ import { useState } from "react";
 import Link from "next/link";
 import styles from "@/styles/Header.module.css";
 
-const Languages = () => {
+const Languages = (props) => {
+  const { className } = props;
   const [fakeLng, setFakeLng] = useState("en");
 
   return (
-    <div className={styles.languages + " body4"}>
+    <div className={className + " body4"}>
       <Link
         href="/"
         className={`uppercase ${fakeLng === "en" ? styles.active : ""}`}

@@ -19,7 +19,7 @@
   color: var(--primary-blue) !important;
 }
 
-.menu {
+.menuIcon {
   display: none;
 }
 
@@ -42,6 +42,10 @@
   }
 
   .empty {
+    display: none;
+  }
+
+  .desktop {
     display: none;
   }
 
