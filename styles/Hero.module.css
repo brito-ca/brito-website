@@ -3,8 +3,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0px 0px 16px 133px;
-    gap: 100px;
+    padding: 0px 0px 16px 0px;
+    margin: 0px;
+    gap: 0px;
 }
 
 .hero_container {
@@ -32,14 +33,19 @@
     width: 507px;
 }
 
+.img_monitor{
+    width:632px;
+    height: 900px;
+}
+
+.img_mobile{
+    display: none;
+}
+
 .img_item{
     filter:drop-shadow(-10px 0px 10px rgba(0, 0, 0, 0.25)) 
             drop-shadow(-10px 0px 10px rgba(0, 0, 0, 0.25));
 }
-
-/* .img_item{
-    
-} */
 
 @media only screen and (max-width: 600px) {
     .container{
@@ -52,19 +58,17 @@
         display: none;
     }
     
-    .welcome_box {
-        display: none;
-    }
-    
-    .welcome_text{
-        display: none;
-    }
-    
-    .intro_text {
-        display: none;
-    }
-    
     .img_item{
-        width: auto;
+        filter: none; 
+    }
+
+    .img_monitor{
+        display: none;
+    }
+
+    .img_mobile{
+        display: flex;
+        width:327px;
+        height: 194px;
     }
 };

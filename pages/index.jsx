@@ -16,16 +16,11 @@ export default function Home() {
             <AppLayout>
                 <Placeholder title='Hero' />
                 <Hero
-                    title='WELCOME TO BRITO'
-                    text={[
-                        'BRAZILIAN IT OTTAWA is non-profit group of IT Brazilians professionals located in Ottawa.',
-                        <br />,
-                        'Our main objective is empowering the community, assisting with networking, and continuous' +
-                            'learning with lectures and workshops.',
-                    ]}
-                    img_source='/ellipse.png'
-                    img_source_mbl='/rectangle_39.png'
-                    description='Parlemant'
+                    title={labels.welcomeToBrito.title}
+                    description={labels.welcomeToBrito.description}
+                    img_source={labels.welcomeToBrito.img_source}
+                    img_source_mbl={labels.welcomeToBrito.img_source_mbl}
+                    alt={labels.welcomeToBrito.alt}
                 />
                 <Placeholder title='About Us' />
                 <Banner
