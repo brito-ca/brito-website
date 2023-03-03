@@ -36,16 +36,16 @@
         display: none;
     }
 
+    .languages {
+      margin-left: 6rem;
+    }
+
     .navMobile a {
-        color: var(--nav-text-color);
+        color: var(--primary-blue);
         text-decoration: none;
     }
 
     .empty {
-        display: none;
-    }
-
-    .desktop {
         display: none;
     }
 
