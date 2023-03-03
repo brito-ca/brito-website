@@ -24,31 +24,6 @@ function setSource(img_source, img_source_mbl, alt) {
             </div>
         </div>
     )
-
-    // const size = GetWidth()
-
-    // if (size <= 600) {
-    //     return (
-    //         <Image
-    //             className={styles.img_item}
-    //             src={img_source_mbl}
-    //             alt={description}
-    //             width={327}
-    //             height={194}
-    //         />
-    //     )
-    // } else {
-    //     console.log(GetWidth())
-    //     return (
-    //         <Image
-    //             className={styles.img_item}
-    //             src={img_source}
-    //             alt={description}
-    //             width={632}
-    //             height={900}
-    //         />
-    //     )
-    // }
 }
 
 const Hero = (props) => {
