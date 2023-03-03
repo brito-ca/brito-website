@@ -1,0 +1,12 @@
+.banner {
+    padding: var(--padding-md);
+}
+.titleBanner {
+    text-align: center;
+    color: var(--primary-blue);
+}
+.descriptionBanner {
+    padding: var(--padding-sm);
+    color: var(--neutral-dark);
+    text-align: justify;
+}
