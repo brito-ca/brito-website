@@ -6,65 +6,34 @@
 .subtitle {
   color: var(--primary-blue);
 }
-.subtitleBasedIn {
-  color: var(--primary-blue);
-  padding-bottom: 17.93px;
-}
+
 .mail {
   text-decoration: none;
   color: var(--primary-blue);
-  font-size: 1.25rem;
 }
 .mailimg {
   visibility: hidden;
 }
-.address {
-  padding-top: 41px;
-  padding-bottom: 70px;
-}
+
 .midia {
   padding-top: 41px;
 }
 .maple {
-  background-image: url(/vector2.png);
-  background-size: "cover";
-  height: 823px;
-  width: 825px;
-  margin: -713px 482px 9px;
-  background-repeat: no-repeat;
+  background-image: url(/vector2.svg);
 }
 @media only screen and (max-width: 600px) {
   .maple {
-    background-image: url(/britologohalf.png);
-    background-size: "cover";
-    height: 400px;
-    width: auto;
-    margin: -76px 49px 0px;
-    background-repeat: no-repeat;
-  }
-  .subtitle {
-    padding-bottom: 16px;
+    background-image: url(/britologohalf.svg);
   }
   .title {
     text-align: center;
     padding: var(--padding-sm);
   }
-  .subtitleBasedIn {
-    padding-bottom: 17.93px;
-  }
   .mail {
-    font-size: 1.125rem;
-    padding-left: 14px;
     text-decoration: underline;
+    padding: 0 var(--padding-sm);
   }
   .mailimg {
     visibility: visible;
-  }
-  .address {
-    padding-top: 16px;
-    padding-bottom: 43px;
-  }
-  .midia {
-    padding-top: 41px;
   }
 }
