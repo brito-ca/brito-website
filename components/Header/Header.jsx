@@ -15,7 +15,7 @@ const Header = () => {
             </Link>
             <div className={styles.empty}></div>
             <Nav className={styles.nav + ' body1'} />
-            <Languages className={`${styles.languages}  ${styles.desktop}`} />
+            <Languages className={`${styles.languages} ${styles.desktop}`} />
 
             <div className={styles.menuIcon} onClick={() => setModalOpen(!modalOpen)}>
                 <Icon variant='menu' />
@@ -30,7 +30,10 @@ const Header = () => {
                                 <Icon variant='close' />
                             </div>
                         </div>
-                        <Nav className={styles.navMobile + ' flex-column-start'} />
+                        <Nav
+                            className={styles.navMobile + ' flex-column-start'}
+                            closeModal={() => setModalOpen(false)}
+                        />
                     </div>
                 </div>
             ) : null}
