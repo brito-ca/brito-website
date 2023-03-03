@@ -21,7 +21,11 @@ export default function Home() {
                 />
                 <Banner title={labels.ourVision.title} description={labels.ourVision.description} />
                 <Placeholder title='Our Board' />
-                <Banner id="join-us" title={labels.joinUs.title} description={labels.joinUs.description} />
+                <Banner
+                    id='join-us'
+                    title={labels.joinUs.title}
+                    description={labels.joinUs.description}
+                />
                 <Placeholder title='Form' />
                 <Placeholder id='contact' title='Contact Us' />
             </AppLayout>
