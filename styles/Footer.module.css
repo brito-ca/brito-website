@@ -9,7 +9,7 @@
     padding: var(--padding-lg) 148px var(--padding-lg) 0;
 }
 
-.iconContainer {
+.socialContainer {
     display: flex;
     gap: 23px;
 }
@@ -63,6 +63,3 @@
     color: var(--primary-blue);
     background-color: var(--primary-white);
 }
-
-
-
