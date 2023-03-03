@@ -1,5 +1,6 @@
 import styles from '@/styles/Hero.module.css'
 import SetSource from '@/components/Hero/SetSource'
+import labels from '@/constants/labels.en'
 
 const Hero = (props) => {
     const { title, description } = props
@@ -17,4 +18,4 @@ const Hero = (props) => {
         </div>
     )
 }
-export default Hero;
+export default Hero

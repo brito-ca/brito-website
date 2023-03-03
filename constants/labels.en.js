@@ -25,9 +25,6 @@ const labels = {
             'Our main objective is empowering the community, assisting with networking, and continuous' +
                 'learning with lectures and workshops.'
         ],
-        img_source:'/ellipse.png',
-        img_source_mbl:'/rectangle_39.png',
-        alt:'Parlemant'
     },
 }
 
