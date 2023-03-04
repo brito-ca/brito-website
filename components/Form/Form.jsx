@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
+import { RadioButton } from '@/components'
 import styles from '../../styles/Form.module.css'
-import { RadioButton } from './RadioButton'
 import britoFormImage from '../../public/images/brito-group-image-form.svg'
 
 const Form = () => {
@@ -13,7 +13,7 @@ const Form = () => {
     const [linkedinProfileLink, setLinkedinProfileLink] = useState('')
     const [email, setEmail] = useState('')
 
-    const radioResideInCanadaChanger = (e) => {
+    const radioButtonHandler = (e) => {
         setResideInCanada(e.target.value)
     }
 
@@ -51,7 +51,7 @@ const Form = () => {
                             <label className={styles.labelForm}>Are you residing in Canada?</label>
                             <label className={styles.labelForm}>
                                 <RadioButton
-                                    changed={radioResideInCanadaChanger}
+                                    changed={radioButtonHandler}
                                     id='1'
                                     isSelected={resideInCanada === 'yes'}
                                     label='Yes'
@@ -60,7 +60,7 @@ const Form = () => {
                             </label>
                             <label className={styles.labelForm}>
                                 <RadioButton
-                                    changed={radioResideInCanadaChanger}
+                                    changed={radioButtonHandler}
                                     id='2'
                                     isSelected={resideInCanada === 'no'}
                                     label='No'
