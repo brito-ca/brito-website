@@ -1,4 +1,4 @@
-.container{
+.container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -20,7 +20,7 @@
     padding: 8px;
 }
 
-.welcome_text{
+.welcome_text {
     font-size: 50px;
     height: 58px;
 }
@@ -33,20 +33,20 @@
     width: 507px;
 }
 
-.crop_img_banner{
-    width:632px;
+.crop_img_banner {
+    width: 632px;
     overflow: hidden;
-    filter:drop-shadow(-10px 0px 10px rgba(0, 0, 0, 0.25)) 
-    drop-shadow(-10px 0px 10px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(-10px 0px 10px rgba(0, 0, 0, 0.25))
+        drop-shadow(-10px 0px 10px rgba(0, 0, 0, 0.25));
 }
 
-.img_banner{
+.img_banner {
     border-radius: 50%;
     object-fit: cover;
 }
 
 @media only screen and (max-width: 600px) {
-    .container{
+    .container {
         justify-content: center;
         padding: var(--spacing-unit);
     }
@@ -55,16 +55,16 @@
         display: none;
     }
 
-    .crop_img_banner{
+    .crop_img_banner {
         width: 327px;
         height: 194px;
         filter: none;
     }
 
-    .crop_img_banner > .img_banner{
+    .crop_img_banner > .img_banner {
         width: 100%;
         height: 100%;
         border-radius: 10%;
         object-fit: fill;
     }
-};
+}

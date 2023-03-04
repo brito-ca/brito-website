@@ -23,7 +23,7 @@ const labels = {
             'BRAZILIAN IT OTTAWA is non-profit group of IT Brazilians professionals located in Ottawa.',
             <br />,
             'Our main objective is empowering the community, assisting with networking, and continuous' +
-                'learning with lectures and workshops.'
+                'learning with lectures and workshops.',
         ],
     },
 }
