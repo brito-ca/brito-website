@@ -1,5 +1,5 @@
 export const RadioButton = (props) => {
-  const { changed, id, isSelected, label, value, labelRadioButton } = props;
+  const { changed, id, isSelected, label, value } = props;
   return (
     <div className="RadioButton">
       <input
