@@ -6,10 +6,10 @@ const ContactUs = () => {
     return (
         <div className={styles.maple}>
             <div>
-                <h3 className={styles.title}>{labels.contactUs.title}</h3>
+                <h2 className={styles.title}>{labels.contactUs.title}</h2>
             </div>
             <div className='padding'>
-                <h4 className={styles.subtitle}>{labels.chat.chat}</h4>
+                <h3 className={styles.subtitle}>{labels.chat.chat}</h3>
                 <p className='b2 body2'>{labels.chat.descriptionChat}</p>
             </div>
             <div>
@@ -29,13 +29,13 @@ const ContactUs = () => {
             <div className='padding'></div>
 
             <div>
-                <h4 className={styles.subtitle + ' padding'}>{labels.location.Basedin}</h4>
+                <h3 className={styles.subtitle + ' padding'}>{labels.location.Basedin}</h3>
                 <p className='b2 body2 padding'>{labels.location.city}</p>
             </div>
 
             <div className='padding'></div>
             <div className='padding'>
-                <h4 className={styles.subtitle}>{labels.midia.visit}</h4>
+                <h3 className={styles.subtitle}>{labels.midia.visit}</h3>
                 <div className={styles.midia}>
                     <a href={labels.midia.instagramlink} className='instagram'>
                         <Image
