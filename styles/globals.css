@@ -1,69 +1,65 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 :root {
-  --primary-green: #0d712e;
-  --primary-yellow: #ffd900;
-  --primary-blue: #022777;
-  --primary-white: #f5f5fa;
+    --primary-green: #0d712e;
+    --primary-yellow: #ffd900;
+    --primary-blue: #022777;
+    --primary-white: #f5f5fa;
 
-  --secundary-blue: #1c3183;
-  --secundary-dark-green: #00450e;
-  --secundary-green: #0b6128;
-  --secundary-light-green: #069736;
-  --secundary-yellow: #1c3183;
-  --secundary-red-warning: #ed3233;
+    --secundary-blue: #1c3183;
+    --secundary-dark-green: #00450e;
+    --secundary-green: #0b6128;
+    --secundary-light-green: #069736;
+    --secundary-yellow: #1c3183;
+    --secundary-red-warning: #ed3233;
 
-  --tertiary-light-blue: #b0c4d5;
-  --tertiary-dark-blue: #104b7e;
-  --tertiary-yellow: #ffcb21;
-  --tertiary-background: rgba(194, 18, 18, 0.15);
+    --tertiary-light-blue: #b0c4d5;
+    --tertiary-dark-blue: #104b7e;
+    --tertiary-yellow: #ffcb21;
+    --tertiary-background: rgba(194, 18, 18, 0.15);
 
-  --neutral-black: #1a1a1a;
-  --neutral-dark: #525252;
-  --neutral-medium-dark: #525252;
-  --neutral-medium: #9b9b9f;
-  --neutral-medium-light: #c7c8d0;
-  --neutral-light: #f2f2f7;
-  --neutral-white: #ffffff;
+    --neutral-black: #1a1a1a;
+    --neutral-dark: #525252;
+    --neutral-medium-dark: #525252;
+    --neutral-medium: #9b9b9f;
+    --neutral-medium-light: #c7c8d0;
+    --neutral-light: #f2f2f7;
+    --neutral-white: #ffffff;
 
-  --button-primary-hover: #374399;
-  --button-primary-active: #002167;
-  --button-primary-outline: #eeeff4;
-  --button-primary-outline-hover: #374399;
-  --button-primary-outline-active: #002167;
-  --button-secundary: #0d712e;
-  --button-secundary-hover: #348145;
-  --button-secundary-outline: #0d712e;
-  --button-secundary-outline-active: #00450e;
-  --button-text-disabled: #39393d;
-  --button-outline-disabled: #989799;
-  --button-bg-outline-disabled: #f5f5f5;
+    --button-primary-hover: #374399;
+    --button-primary-active: #002167;
+    --button-primary-outline: #eeeff4;
+    --button-primary-outline-hover: #374399;
+    --button-primary-outline-active: #002167;
+    --button-secundary: #0d712e;
+    --button-secundary-hover: #348145;
+    --button-secundary-outline: #0d712e;
+    --button-secundary-outline-active: #00450e;
+    --button-text-disabled: #39393d;
+    --button-outline-disabled: #989799;
+    --button-bg-outline-disabled: #f5f5f5;
 
-  --base-font-size: 16px;
-  --spacing-unit: 16px;
+    --base-font-size: 1rem;
+    --spacing-unit: 16px;
 
-  --margin-sm: var(--spacing-unit);
-  --margin-md: calc(2 * var(--spacing-unit));
-  --margin-lg: calc(4 * var(--spacing-unit));
+    --margin-sm: var(--spacing-unit);
+    --margin-md: calc(2 * var(--spacing-unit));
+    --margin-lg: calc(4 * var(--spacing-unit));
 
-  --padding-sm: var(--spacing-unit);
-  --padding-md: calc(2 * var(--spacing-unit));
-  --padding-lg: calc(4 * var(--spacing-unit));
+    --padding-sm: var(--spacing-unit);
+    --padding-md: calc(2 * var(--spacing-unit));
+    --padding-lg: calc(4 * var(--spacing-unit));
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: var(--base-font-size);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--base-font-size);
 }
 
 .display,
@@ -72,269 +68,269 @@ h2,
 h3,
 h4,
 h5 {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 .display {
-  font-size: 3.625rem;
+    font-size: 3.625rem;
 }
 
 h1 {
-  font-size: 4rem;
+    font-size: 4rem;
 }
 
 h2 {
-  font-size: 3.5rem;
+    font-size: 3.5rem;
 }
 
 h3 {
-  font-size: 2.875rem;
+    font-size: 2.875rem;
 }
 
 h4 {
-  font-size: 2.375rem;
+    font-size: 2.375rem;
 }
 
 h5 {
-  font-size: 1.75rem;
+    font-size: 1.75rem;
+}
+
+p {
+    padding-bottom: var(--spacing-unit);
 }
 
 .uppercase {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .body1 {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 .body2 {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 .body3 {
-  font-size: 1.5rem;
-  font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 .body4 {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 .body5 {
-  font-size: 1.5rem;
-  font-weight: 300;
+    font-size: 1.5rem;
+    font-weight: 300;
 }
 
 button,
 a {
-  font-size: 1.5rem;
-  font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 button {
-  color: var(--neutral-white);
-  padding: var(--padding-sm) var(--padding-lg);
-  border-radius: 40px;
-  border: 1px solid;
-  line-height: 24px;
+    color: var(--neutral-white);
+    padding: var(--padding-sm) var(--padding-lg);
+    border-radius: 40px;
+    border: 1px solid;
+    line-height: 24px;
 }
 
 button.primary {
-  background-color: var(--primary-blue);
+    background-color: var(--primary-blue);
 }
 
 button.primary:hover {
-  background-color: var(--button-primary-hover);
+    background-color: var(--button-primary-hover);
 }
 
 button.primary:active {
-  background-color: var(--button-primary-active);
+    background-color: var(--button-primary-active);
 }
 
 button.primary.outline {
-  color: var(--primary-blue);
-  background-color: var(--button-primary-outline);
-  border-color: var(--primary-blue);
+    color: var(--primary-blue);
+    background-color: var(--button-primary-outline);
+    border-color: var(--primary-blue);
 }
 
 button.primary.outline:hover {
-  color: var(--button-primary-outline-hover);
-  border-color: var(--button-primary-outline-hover);
+    color: var(--button-primary-outline-hover);
+    border-color: var(--button-primary-outline-hover);
 }
 
 button.primary.outline:active {
-  color: var(--button-primary-outline-active);
-  border-color: var(--button-primary-outline-active);
+    color: var(--button-primary-outline-active);
+    border-color: var(--button-primary-outline-active);
 }
 
 button.secundary {
-  background-color: var(--button-secundary);
+    background-color: var(--button-secundary);
 }
 
 button.secundary:hover {
-  background-color: var(--button-secundary-hover);
+    background-color: var(--button-secundary-hover);
 }
 
 button.secundary:active {
-  background-color: var(--button-secundary-outline-active);
+    background-color: var(--button-secundary-outline-active);
 }
 
 button.secundary.outline {
-  color: var(--button-secundary-outline);
-  background-color: var(--button-primary-outline);
-  border-color: var(--button-secundary-outline);
+    color: var(--button-secundary-outline);
+    background-color: var(--button-primary-outline);
+    border-color: var(--button-secundary-outline);
 }
 
 button.secundary.outline:hover {
-  color: var(--button-secundary-hover);
-  border-color: var(--button-secundary-hover);
+    color: var(--button-secundary-hover);
+    border-color: var(--button-secundary-hover);
 }
 
 button.secundary.outline:active {
-  color: var(--button-secundary-outline-active);
-  border-color: var(--button-secundary-outline-active);
+    color: var(--button-secundary-outline-active);
+    border-color: var(--button-secundary-outline-active);
 }
 
 button:disabled {
-  color: var(--button-text-disabled);
-  background-color: var(--neutral-medium);
-  border: unset;
+    color: var(--button-text-disabled);
+    background-color: var(--neutral-medium);
+    border: unset;
 }
 
 button.outline:disabled {
-  color: var(--button-outline-disabled);
-  background-color: var(--button-bg-outline-disabled);
-  border: 1px solid var(--button-outline-disabled);
+    color: var(--button-outline-disabled);
+    background-color: var(--button-bg-outline-disabled);
+    border: 1px solid var(--button-outline-disabled);
 }
 
 .no-margin {
-  margin: 0;
+    margin: 0;
 }
 
 .margin {
-  margin: var(--margin-sm);
+    margin: var(--margin-sm);
 }
 
 .horizontal-margin {
-  margin: 0 var(--margin-sm);
+    margin: 0 var(--margin-sm);
 }
 
 .vertical-margin {
-  margin: var(--margin-sm) 0;
+    margin: var(--margin-sm) 0;
 }
 
 .no-padding {
-  padding: 0;
+    padding: 0;
 }
 
 .padding {
-  padding: var(--padding-sm);
+    padding: var(--padding-sm);
 }
 
 .horizontal-padding {
-  padding: 0 var(--padding-sm);
+    padding: 0 var(--padding-sm);
 }
 
 .vertical-padding {
-  padding: var(--padding-sm) 0;
+    padding: var(--padding-sm) 0;
 }
 
 .flex-row-start {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .flex-row-end {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .flex-row-center {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .flex-row-space-between {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .flex-row-space-around {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .flex-row-space-evenly {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 /* https://www.browserstack.com/guide/what-are-css-and-media-query-breakpoints */
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  * {
-    font-size: 1.75rem;
-  }
+    .display {
+        font-size: 3.125rem;
+    }
 
-  .display {
-    font-size: 3.125rem;
-  }
+    h1 {
+        font-size: 3.5rem;
+    }
 
-  h1 {
-    font-size: 3.5rem;
-  }
+    h2 {
+        font-size: 3rem;
+    }
 
-  h2 {
-    font-size: 3rem;
-  }
+    h3 {
+        font-size: 2.5rem;
+    }
 
-  h3 {
-    font-size: 2.5rem;
-  }
+    h4 {
+        font-size: 2rem;
+    }
 
-  h4 {
-    font-size: 2rem;
-  }
+    h5 {
+        font-size: 1.5rem;
+    }
 
-  h5 {
-    font-size: 1.5rem;
-  }
+    .b1 {
+        font-size: 1.75rem;
+    }
 
-  .b1 {
-    font-size: 1.75rem;
-  }
+    .b2 {
+        font-size: 1.125rem;
+    }
 
-  .b2 {
-    font-size: 1.125rem;
-  }
+    .b3 {
+        font-size: 1rem;
+    }
 
-  .b3 {
-    font-size: 1rem;
-  }
+    .b4 {
+        font-size: 1rem;
+    }
 
-  .b4 {
-    font-size: 1rem;
-  }
+    .b5 {
+        font-size: 0.875rem;
+    }
 
-  .b5 {
-    font-size: 0.875rem;
-  }
-
-  button,
-  a {
-    font-size: 1.25rem;
-  }
+    button,
+    a {
+        font-size: 1.25rem;
+    }
 }
