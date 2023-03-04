@@ -1,20 +1,8 @@
-import Image from 'next/image'
-import menu from '../../public/images/menu-icon.svg'
-import close from '../../public/images/close-icon.svg'
-import arrowUp from '../../public/images/arrow-up-icon.svg'
-
-const icons = {
-    menu,
-    close,
-    arrowUp,
-}
+import icons from './icons'
 
 const Icon = (props) => {
     const { variant, width, height } = props
-    const size = {}
-    if (width) size.width = width
-    if (height) size.height = height
-
-    return <Image {...size} alt={`${variant} icon`} src={icons[variant]} />
+    const size = { width, height }
+    return <div {...size}>{icons[variant]}</div>
 }
 export default Icon
