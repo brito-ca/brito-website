@@ -55,4 +55,4 @@ const icons = {
     ),
 }
 
-export default icons;
+export default icons
