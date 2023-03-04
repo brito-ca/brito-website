@@ -24,13 +24,11 @@ const ContactUs = () => {
                         {labels.email.email}
                     </a>
             </div>
-            <div className='padding'></div>
-            <div>
+            <div className={styles.marg_lg }>
                 <h3 className={styles.subtitle + ' padding'}>{labels.location.Basedin}</h3>
-                <p className='b2 body2 padding'>{labels.location.city}</p>
+                <p className='b2 body2 horizontal-padding '>{labels.location.city}</p>
             </div>
-            <div className='padding'></div>
-            <div className='padding'>
+            <div className={styles.marg_lg + ' padding'}>
                 <h3 className={styles.subtitle}>{labels.midia.visit}</h3>
                 <div className = 'vertical-padding'>
                     <a href={labels.midia.instagramlink} className='instagram horizontal-padding'>

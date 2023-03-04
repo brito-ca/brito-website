@@ -13,7 +13,9 @@
 .mailimg {
     visibility: hidden;
 }
-
+.marg_lg {
+    margin: var(--margin-lg) 0;
+}
 .maple {
     background-image: url(/vector2.png);
     background-repeat: no-repeat;
