@@ -20,7 +20,7 @@ const ContactUs = () => {
                         src='/vector.png'
                         alt='mail'
                     />
-                    <a className={styles.mail + ' body3' + ' b3'} href={labels.email.malito}>
+                    <a className={styles.mail + ' body3 b3'} href={labels.email.malito}>
                         {labels.email.email}
                     </a>
             </div>
