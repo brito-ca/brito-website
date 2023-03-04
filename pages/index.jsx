@@ -2,7 +2,6 @@ import Head from 'next/head'
 import { AppLayout, Placeholder } from '@/components'
 import Banner from '@/components/Banner/Banner'
 import labels from '@/constants/labels.en'
-import Footer from '@/components/Footer/Footer'
 
 export default function Home() {
   return (
@@ -25,7 +24,6 @@ export default function Home() {
         <Banner title={labels.joinUs.title} description={labels.joinUs.description} />
         <Placeholder title='Form' />
         <Placeholder title='Contact Us' />
-        <Footer />
       </AppLayout>
     </>
   )
