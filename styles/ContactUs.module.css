@@ -1,39 +1,45 @@
 .title {
-  text-align: center;
-  color: var(--primary-blue);
-  padding: var(--padding-lg);
+    text-align: center;
+    color: var(--primary-blue);
+    padding: var(--padding-lg);
 }
 .subtitle {
-  color: var(--primary-blue);
+    color: var(--primary-blue);
 }
 
 .mail {
-  text-decoration: none;
-  color: var(--primary-blue);
+    text-decoration: none;
+    color: var(--primary-blue);
 }
 .mailimg {
-  visibility: hidden;
+    visibility: hidden;
 }
 
 .midia {
-  padding-top: 41px;
+    padding-top: 41px;
 }
 .maple {
-  background-image: url(/vector2.svg);
+    background-image: url(/vector2.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 825px;
+    height: 940px;
 }
 @media only screen and (max-width: 600px) {
-  .maple {
-    background-image: url(/britologohalf.svg);
-  }
-  .title {
-    text-align: center;
-    padding: var(--padding-sm);
-  }
-  .mail {
-    text-decoration: underline;
-    padding: 0 var(--padding-sm);
-  }
-  .mailimg {
-    visibility: visible;
-  }
+    .maple {
+        background-image: url(/britologohalf.png);
+        background-size: 424px;
+        height: 986px;
+    }
+    .title {
+        text-align: center;
+        padding: var(--padding-sm);
+    }
+    .mail {
+        text-decoration: underline;
+        padding: 0 var(--padding-sm);
+    }
+    .mailimg {
+        visibility: visible;
+    }
 }
