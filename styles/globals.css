@@ -42,7 +42,7 @@
     --modal-backdrop: rgba(0, 0, 0, 0.5);
     --menu-border: #ccd2eb;
 
-    --base-font-size: 1rem;
+    --base-font-size: 16px;
     --spacing-unit: 16px;
 
     --margin-xs: calc(0.5 * var(--spacing-unit));

@@ -13,9 +13,10 @@ const Header = () => {
             <Link href='/'>
                 <Image className={styles.logo} alt='logo small' src={smallLogo} />
             </Link>
-            <div className={styles.empty}></div>
-            <Nav className={`${styles.nav} body1`} />
-            <Languages className={styles.languages} />
+            <div className='flex-row-space-between'>
+                <Nav className={`${styles.nav} body1 horizontal-margin-lg`} />
+                <Languages className={`${styles.languages} horizontal-margin`} />
+            </div>
 
             <div className={styles.menuIcon} onClick={() => setModalOpen(!modalOpen)}>
                 <Icon variant='menu' />
