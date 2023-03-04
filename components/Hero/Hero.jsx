@@ -1,6 +1,5 @@
 import styles from '@/styles/Hero.module.css'
-import SetSource from '@/components/Hero/SetSource'
-import labels from '@/constants/labels.en'
+import BannerImage from '@/components/Hero/BannerImage'
 
 const Hero = (props) => {
     const { title, description } = props
@@ -14,7 +13,7 @@ const Hero = (props) => {
                     <p className={styles.intro_text}>{description}</p>
                 </div>
             </div>
-            <SetSource/>
+            <BannerImage/>
         </div>
     )
 }

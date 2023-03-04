@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from '@/styles/Hero.module.css'
 
-export default function SetSource() {
+export default function BannerImage() {
     const image = {
         ellipse: {
             className: 'styles.img_item',
