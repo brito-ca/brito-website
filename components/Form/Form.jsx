@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import styles from '../../styles/Form.module.css'
 import { RadioButton } from './RadioButton'
-import britoFormImage from '../../public/brito-group-image-form.svg'
+import britoFormImage from '../../public/images/brito-group-image-form.svg'
 
 const Form = () => {
     const [fullName, setFullName] = useState('')
