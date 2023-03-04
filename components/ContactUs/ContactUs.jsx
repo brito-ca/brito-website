@@ -36,8 +36,8 @@ const ContactUs = () => {
             <div className='padding'></div>
             <div className='padding'>
                 <h3 className={styles.subtitle}>{labels.midia.visit}</h3>
-                <div className={styles.midia}>
-                    <a href={labels.midia.instagramlink} className='instagram'>
+                <div className = 'vertical-padding'>
+                    <a href={labels.midia.instagramlink} className='instagram horizontal-padding'>
                         <Image
                             width='53'
                             height='53'
@@ -45,7 +45,7 @@ const ContactUs = () => {
                             alt={labels.midia.labelinstagram}
                         />
                     </a>
-                    <a href={labels.midia.linklinkedin} className='linkedin'>
+                    <a href={labels.midia.linklinkedin} className='linkedin horizontal-padding'>
                         <Image
                             width='53'
                             height='53'
@@ -53,7 +53,7 @@ const ContactUs = () => {
                             alt={labels.midia.labelinkedin}
                         />
                     </a>
-                    <a href={labels.midia.linkfacebook} className='facebook'>
+                    <a href={labels.midia.linkfacebook} className='facebook horizontal-padding'>
                         <Image
                             width='53'
                             height='53'
