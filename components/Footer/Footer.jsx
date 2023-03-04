@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/image'
 import styles from '@/styles/Footer.module.css'
 import line from '@/public/line.png'
 import britoFlag from '@/public/brito-logo-1.png'
@@ -17,16 +17,26 @@ const Footer = () => {
                         <div className={styles.logoAndSocial}>
                             <Image src={britoFlag} alt='logo' width={72.33} height={64.36} />
                             <Image src={britoWordmark} alt='wordmark' width={193} height={72} />
-                            <p className={"vertical-padding"}>Building the Brazilian IT community in Ottawa</p>
+                            <p className={'vertical-padding'}>
+                                Building the Brazilian IT community in Ottawa
+                            </p>
                         </div>
                         <div className={styles.socialContainer}>
-                            <a href="https://www.facebook.com/groups/566404256865424" target={'_blank'} rel="noopener noreferrer">
+                            <a
+                                href='https://www.facebook.com/groups/566404256865424'
+                                target={'_blank'}
+                                rel='noopener noreferrer'
+                            >
                                 <Image src={fbLogo} alt='facebook' width={9.82} height={18} />
                             </a>
-                            <a href="" target={'_blank'} rel="noopener noreferrer">
+                            <a href='' target={'_blank'} rel='noopener noreferrer'>
                                 <Image src={instaLogo} alt='instagram' width={18} height={18} />
                             </a>
-                            <a href="https://www.linkedin.com/groups/12058916/" target={'_blank'} rel="noopener noreferrer">
+                            <a
+                                href='https://www.linkedin.com/groups/12058916/'
+                                target={'_blank'}
+                                rel='noopener noreferrer'
+                            >
                                 <Image src={linkedinLogo} alt='linkedin' width={19} height={18} />
                             </a>
                         </div>
@@ -38,7 +48,7 @@ const Footer = () => {
                             <p>
                                 <a className={`${styles.navigation} body2`}>About</a>
                             </p>
-                            <p className={"vertical-padding"}>
+                            <p className={'vertical-padding'}>
                                 <a className={`${styles.navigation} body2`}>Contact</a>
                             </p>
                         </div>
@@ -57,14 +67,21 @@ const Footer = () => {
                     <div className={styles.footerBottom}>
                         <p className={styles.copyrightText}>All Rights Reserved</p>
                         <p>&nbsp;|&nbsp;</p>
-                        <p><a href="" className={styles.termsLink}>Terms and Conditions</a></p>
+                        <p>
+                            <a href='' className={styles.termsLink}>
+                                Terms and Conditions
+                            </a>
+                        </p>
                         <p>&nbsp;|&nbsp;</p>
-                        <p><a href="" className={styles.termsLink}>Privacy Policy</a></p>
+                        <p>
+                            <a href='' className={styles.termsLink}>
+                                Privacy Policy
+                            </a>
+                        </p>
                     </div>
                 </div>
             </div>
         </footer>
     )
-};
-export default Footer;
-
+}
+export default Footer

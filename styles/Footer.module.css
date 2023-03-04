@@ -1,4 +1,4 @@
-.logoAndSocial{
+.logoAndSocial {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -7,7 +7,7 @@
 
 .logoAndSocial Image {
     max-width: 100%;
-}  
+}
 
 .navigationContainer {
     padding: var(--padding-lg) 148px var(--padding-lg) 0;
@@ -67,14 +67,14 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .logoAndSocial > div:first-child img{
+    .logoAndSocial > div:first-child img {
         width: 75%;
         height: 75%;
-    } 
+    }
 
-    .logoAndSocial p{
+    .logoAndSocial p {
         display: none;
-      }
+    }
 
     .navigationContainer {
         padding: var(--padding-sm) 53px var(--padding-sm) 0;
@@ -91,7 +91,7 @@
         font-size: 12px;
         line-height: 24px;
     }
-    
+
     .navigation {
         padding: var(--padding-sm) 0;
         color: var(--primary-blue);
@@ -108,7 +108,7 @@
         line-height: 20px;
         color: var(--primary-blue);
     }
-    
+
     .termsLink {
         /* Paragraph/Default */
         font-weight: 300;
