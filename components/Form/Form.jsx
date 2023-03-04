@@ -151,8 +151,8 @@ const Form = () => {
                                         Choose file
                                     </button>
                                 </div>
-                                <div>
-                                    <p className={styles.fileChosenBox}>No file chosen</p>
+                                <div className={styles.fileChosenBox}>
+                                    <p className={styles.chosenBoxText}>No file chosen</p>
                                 </div>
                             </div>
                         </div>

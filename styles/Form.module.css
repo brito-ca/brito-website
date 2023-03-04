@@ -36,7 +36,7 @@
 
 .formSectionTree {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 11px;
     align-items: end;
 }
@@ -60,7 +60,6 @@
     width: 600px;
     height: 40px;
 
-    /* border set to none to remove some styles that were being applied from somewhere, maybe from globals not sure yet */
     border: 1px solid #9b9b9f;
     border-radius: 5px;
     background-color: var(--primary-white);
@@ -72,8 +71,7 @@
 
     height: 2.5rem;
 
-    /* border set to none to remove some styles that were being applied from somewhere */
-    border: none;
+    border: 1px solid #9b9b9f;
     border-radius: 5px;
     background-color: var(--primary-white);
 }
@@ -109,4 +107,20 @@
     background: #f5f5fa;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
+}
+
+.fileChosenBox {
+    border: 1px solid #f5f5fa;
+    border-radius: 8px;
+    padding: 8px var(--padding-lg);
+
+    color: var(--primary-white);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chosenBoxText {
+    padding: 0;
 }
