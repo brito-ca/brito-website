@@ -6,7 +6,6 @@
 .subtitle {
     color: var(--primary-blue);
 }
-
 .mail {
     text-decoration: none;
     color: var(--primary-blue);
@@ -14,7 +13,6 @@
 .mailimg {
     visibility: hidden;
 }
-
 .midia {
     padding-top: 41px;
 }
