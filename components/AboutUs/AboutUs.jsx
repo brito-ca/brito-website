@@ -1,5 +1,5 @@
-import AboutUsBanner from "@/components/AboutUsBanner/AboutUsBanner"
-import Icon from "@/components/Icon/Icon"
+import AboutUsBanner from "@/components/AboutUs/AboutUsBanner"
+import Icon from "@/components/AboutUs/Icon"
 import Image from 'next/image'
 import styles from '@/styles/AboutUs.module.css'
 
