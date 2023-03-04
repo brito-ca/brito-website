@@ -73,6 +73,6 @@
     }
 
     .menuHeader {
-        border-bottom: 1px solid var(--menu-border);
+        border-bottom: 0.5px solid var(--menu-border);
     }
 }

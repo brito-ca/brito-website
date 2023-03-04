@@ -1,8 +1,7 @@
 import icons from './icons'
 
 const Icon = (props) => {
-    const { variant, width, height } = props
-    const size = { width, height }
-    return <div {...size}>{icons[variant]}</div>
+    const { variant } = props
+    return <div>{icons[variant]}</div>
 }
 export default Icon

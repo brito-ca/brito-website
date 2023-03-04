@@ -10,7 +10,7 @@ const FloatingActionButton = () => {
         show && (
             <div className={`${styles.fabWrapper} flex-row-center`}>
                 <Link href='#'>
-                    <Icon width={50} height={50} variant='arrowUp' />
+                    <Icon variant='arrowUp' />
                 </Link>
             </div>
         )

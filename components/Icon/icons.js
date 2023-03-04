@@ -1,8 +1,8 @@
 const icons = {
     menu: (
         <svg
-            width='26'
-            height='18'
+            width='28'
+            height='20'
             viewBox='0 0 26 18'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
@@ -18,8 +18,8 @@ const icons = {
     ),
     close: (
         <svg
-            width='22'
-            height='22'
+            width='20'
+            height='20'
             viewBox='0 0 22 22'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
@@ -40,8 +40,8 @@ const icons = {
     ),
     arrowUp: (
         <svg
-            width='100'
-            height='100'
+            width='50'
+            height='50'
             viewBox='0 0 100 100'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
