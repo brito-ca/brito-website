@@ -13,7 +13,6 @@ const ContactUs = () => {
                 <p className='b2 body2'>{labels.chat.descriptionChat}</p>
             </div>
             <div>
-                <address>
                     <Image
                         className={styles.mailimg}
                         width='20'
@@ -24,7 +23,6 @@ const ContactUs = () => {
                     <a className={styles.mail + ' body3' + ' b3'} href={labels.email.malito}>
                         {labels.email.email}
                     </a>
-                </address>
             </div>
             <div className='padding'></div>
 
