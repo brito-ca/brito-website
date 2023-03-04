@@ -17,7 +17,7 @@ const ContactUs = () => {
                         className={styles.mailimg}
                         width='20'
                         height='16'
-                        src='/vector.svg'
+                        src='/vector.png'
                         alt='mail'
                     />
                     <a className={styles.mail + ' body3' + ' b3'} href={labels.email.malito}>
@@ -25,12 +25,10 @@ const ContactUs = () => {
                     </a>
             </div>
             <div className='padding'></div>
-
             <div>
                 <h3 className={styles.subtitle + ' padding'}>{labels.location.Basedin}</h3>
                 <p className='b2 body2 padding'>{labels.location.city}</p>
             </div>
-
             <div className='padding'></div>
             <div className='padding'>
                 <h3 className={styles.subtitle}>{labels.midia.visit}</h3>
