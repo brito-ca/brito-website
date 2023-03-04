@@ -2,6 +2,7 @@ import icons from './icons'
 
 const Icon = (props) => {
     const { variant } = props
-    return <div>{icons[variant]}</div>
+    return icons[variant]
 }
+
 export default Icon
