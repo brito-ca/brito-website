@@ -58,6 +58,7 @@
     .crop_img_banner{
         width: 327px;
         height: 194px;
+        filter: none;
     }
 
     .crop_img_banner > .img_banner{
