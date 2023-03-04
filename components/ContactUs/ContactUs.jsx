@@ -8,12 +8,10 @@ const ContactUs = () => {
             <div>
                 <h3 className={styles.title}>{labels.contactUs.title}</h3>
             </div>
-
             <div className='padding'>
                 <h4 className={styles.subtitle}>{labels.chat.chat}</h4>
                 <p className='b2 body2'>{labels.chat.descriptionChat}</p>
             </div>
-
             <div>
                 <address>
                     <Image
