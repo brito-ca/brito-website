@@ -14,13 +14,20 @@ export default function Home() {
             </Head>
             <AppLayout>
                 <Placeholder title='Hero' />
-                <Placeholder title='About Us' />
+                <Placeholder id='about' title='About Us' />
                 <Banner
                     title={labels.ourMission.title}
                     description={labels.ourMission.description}
                 />
                 <Banner title={labels.ourVision.title} description={labels.ourVision.description} />
                 <Placeholder title='Our Board' />
+                <Banner
+                    id='join-us'
+                    title={labels.joinUs.title}
+                    description={labels.joinUs.description}
+                />
+                <Placeholder title='Form' />
+                <Placeholder id='contact' title='Contact Us' />
                 <Banner title={labels.joinUs.title} description={labels.joinUs.description} />
                 <Form />
                 <Placeholder title='Contact Us' />
