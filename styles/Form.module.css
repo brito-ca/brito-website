@@ -90,20 +90,24 @@
 }
 
 .fileChosenBox {
-    color: var(--primary-white);
+    grid-row: 4 / 5;
+    grid-column: 2 / 6;
 
+    height: 42px;
+    font-size: 14px;
+
+    /* Distancing from button before breakpoint */
+    margin-left: 85px;
+
+    color: var(--primary-white);
     border: 1px solid #f5f5fa;
     border-radius: 8px;
     padding: 0 10px;
 
-    grid-row: 4 / 5;
-    grid-column: 2 / 6;
-
-    margin-left: 85px;
-
-    height: 42px;
-
-    font-size: 14px;
+    /* center p on div */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .chosenBoxText {
@@ -135,6 +139,7 @@
     border-radius: 40px;
 
     padding: 8px 16px;
+    margin-bottom: 3rem;
 }
 
 .mandatoryFieldSpan {
@@ -142,10 +147,11 @@
     margin-left: 4px;
 }
 
-@media (max-width: 768px) {
-    .labelForm {
-    }
+.infoIcon {
+    margin-left: 3px;
+}
 
+@media (max-width: 768px) {
     .primaryInformation {
         grid-column: 1 / 9;
     }
@@ -191,6 +197,11 @@
         height: 40px;
 
         border-radius: 0;
+        text-align: center;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
     }
 
     .sendButton {
