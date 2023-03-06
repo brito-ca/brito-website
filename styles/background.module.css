@@ -7,12 +7,13 @@
 
 @media only screen and (max-width: 600px) {
     .logoOnmission {
-        background-image: url(/britologohalf.png);
-        background-size: 424px;
-        height: 466px;
+        background-image: url(/logomission.png);
+        background-size: 572px;
+        height: 410px;
         background-repeat: no-repeat;
     }
 }
 .logoOnJoinUs {
     background-size: 1372px;
+    height: 347px;
 }
