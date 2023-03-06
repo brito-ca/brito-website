@@ -1,16 +1,18 @@
-import styles from '@/styles/Board.module.css';
+import styles from '@/styles/Board.module.css'
+import labels from '@/constants/labels.en'
+import { Icon } from '@/components'
+import Card from '@/components/Board/Card'
 
-const Board = (props) => {
-    const { title } = props;
+const Board = () => {
     return (
-        <div className='flex-row-center'>
-            <div >
-                <h3 >{title}</h3>
-                <div className='body1 b1'>
-                    <p>{'description'}</p>
-                </div>
+        <div className={styles.container}>
+            <div>
+                <h3 className={styles.title}>{'Our Board'}</h3>
+            </div>
+            <div className={'${styles.board_box} flex-row-center'}>
+                <Card/>
             </div>
         </div>
-    );
-};
+    )
+}
 export default Board
