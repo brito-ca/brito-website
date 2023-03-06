@@ -148,7 +148,7 @@
 }
 
 .infoIcon {
-    margin-left: 3px;
+    margin-left: 0.5rem;
 }
 
 @media (max-width: 768px) {
@@ -237,6 +237,8 @@
 
     color: #022777;
     font-size: 28px;
+
+    margin-top: 2rem;
 }
 
 .profilePictureModalDescription {
@@ -284,6 +286,14 @@
 
     grid-row: 4 / 5;
     grid-column: 5 / 8;
+}
+
+.closeModalIcon {
+    position: absolute;
+    right: 0;
+    margin: 0 21px 0 0;
+
+    width: 30px;
 }
 
 @media (max-width: 600px) {

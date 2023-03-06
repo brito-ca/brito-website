@@ -6,6 +6,7 @@ import styles from '../../styles/Form.module.css'
 import infoIcon from '../../public/images/form-info-icon.png'
 import britoFormImage from '../../public/images/brito-group-image-form.svg'
 import profilePictureTemplate from '../../public/images/brito-profile-picture-template.svg'
+import closeModalIcon from '../../public/images/close-modal-icon.svg'
 
 const Form = () => {
     const [fullName, setFullName] = useState('')
@@ -27,27 +28,10 @@ const Form = () => {
     function openProfilePictureModal() {
         setIsProfilePictureModalOpen(true)
     }
-    //
+
     function closeProfilePictureModal() {
         setIsProfilePictureModalOpen(false)
     }
-
-    // function afterOpenModal() {
-    //     subtitle.style.color = '#f00';
-    // }
-
-    // const customStyles = {
-    //     content: {
-    //         top: '50%',
-    //         left: '50%',
-    //         right: 'auto',
-    //         bottom: 'auto',
-    //         marginRight: '-50%',
-    //         transform: 'translate(-50%, -50%)',
-    //         borderRadius: '30px',
-    //         backgroundColor: 'white',
-    //     },
-    // }
 
     return (
         <>
@@ -129,7 +113,7 @@ const Form = () => {
                                         className={styles.infoIcon}
                                         src={infoIcon}
                                         alt='Info Icon - A circle with an exclamation point inside'
-                                        width={20}
+                                        width={15}
                                     />
                                 </span>
                             </label>
@@ -186,10 +170,8 @@ const Form = () => {
                             </button>
                             <Modal
                                 isOpen={isProfilePictureModalOpen}
-                                // onAfterOpen={afterOpenModal}
                                 overlayClassName='react-model-overlay'
                                 onRequestClose={closeProfilePictureModal}
-                                // style={styles.profilePictureModal}
                                 style={{
                                     overlay: {
                                         position: 'fixed',
@@ -211,6 +193,12 @@ const Form = () => {
                                     },
                                 }}
                             >
+                                <Image
+                                    src={closeModalIcon}
+                                    alt='X icon to close upload photo field'
+                                    className={styles.closeModalIcon}
+                                    onClick={closeProfilePictureModal}
+                                />
                                 <div className={styles.profilePictureModal}>
                                     <h1 className={styles.profilePictureModalTitle}>
                                         Profile Picture
