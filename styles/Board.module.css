@@ -1,43 +1,20 @@
-.container {
-    width: 1200px;
-    margin: 0 auto;
+.container{
+    padding:var(--padding-md);
 }
 
-.board_title_container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 8px;
-    gap: 8px;
-
-    position: absolute;
-    width: 225px;
-    height: 54px;
-    left: 608px;
-    top: 2726px;
-}
-
-.board_title_text {
-    width: 225px;
-    height: 54px;
-    margin: 0px;
-
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 54px;
-
-    /* identical to box height */
+.title {
     text-align: center;
+    color: var(--primary-blue);
+}
 
-    /* Primary/3 */
-    color: #022777;
+.board_box {
+    height: 793px;
+    background-color: var(--primary-blue);
+}
 
-
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+.card_box{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
