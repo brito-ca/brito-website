@@ -8,12 +8,13 @@
 @media only screen and (max-width: 600px) {
     .logoOnmission {
         background-image: url(/logomission.png);
-        background-size: 572px;
+        background-size: 424px;
+        background-position: right;
         height: 410px;
         background-repeat: no-repeat;
     }
-}
-.logoOnJoinUs {
-    background-size: 1372px;
-    height: 347px;
+
+    .logoOnJoinUs {
+        height: 275px;
+    }
 }
