@@ -3,9 +3,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0px 0px 16px 0px;
-    margin: 0px;
-    gap: 0px;
+    padding-bottom: var(--spacing-unit);
 }
 
 .hero_container {
