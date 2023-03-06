@@ -1,7 +1,7 @@
 import labels from '@/constants/labels.en'
 import Image from 'next/image'
 import styles from '@/styles/ContactUs.module.css'
-
+import { Icon } from '@/components'
 const ContactUs = () => {
     return (
         <div className={styles.maple}>
@@ -32,28 +32,13 @@ const ContactUs = () => {
                 <h3 className={styles.subtitle}>{labels.midia.visit}</h3>
                 <div className = 'vertical-padding'>
                     <a href={labels.midia.instagramlink} className='instagram horizontal-padding'>
-                        <Image
-                            width='53'
-                            height='53'
-                            src='/instagram.svg'
-                            alt={labels.midia.labelinstagram}
-                        />
+                    <Icon variant='instagram' />
                     </a>
                     <a href={labels.midia.linklinkedin} className='linkedin horizontal-padding'>
-                        <Image
-                            width='53'
-                            height='53'
-                            src='/linkedin.svg'
-                            alt={labels.midia.labelinkedin}
-                        />
+                    <Icon variant='linkedin' />
                     </a>
                     <a href={labels.midia.linkfacebook} className='facebook horizontal-padding'>
-                        <Image
-                            width='53'
-                            height='53'
-                            src='/facebook.svg'
-                            alt={labels.midia.labelfacebook}
-                        />
+                    <Icon variant='facebook' />
                     </a>
                 </div>
             </div>
