@@ -7,6 +7,7 @@ import infoIcon from '../../public/images/form-info-icon.png'
 import britoFormImage from '../../public/images/brito-group-image-form.svg'
 import profilePictureTemplate from '../../public/images/brito-profile-picture-template.svg'
 import closeModalIcon from '../../public/images/close-modal-icon.svg'
+import logo from '../../public/images/logo-small.svg'
 
 const Form = () => {
     const [fullName, setFullName] = useState('')
@@ -24,6 +25,7 @@ const Form = () => {
     Modal.setAppElement('#__next')
 
     const [isProfilePictureModalOpen, setIsProfilePictureModalOpen] = useState(false)
+    const [isSuccesfullSubmissionModalOpen, setisSuccesfullSubmissionModalOpen] = useState(false)
 
     function openProfilePictureModal() {
         setIsProfilePictureModalOpen(true)
@@ -31,6 +33,14 @@ const Form = () => {
 
     function closeProfilePictureModal() {
         setIsProfilePictureModalOpen(false)
+    }
+
+    function openSuccessSubModal() {
+        setisSuccesfullSubmissionModalOpen(true)
+    }
+
+    function closeSuccessSubModal() {
+        setisSuccesfullSubmissionModalOpen(false)
     }
 
     return (
@@ -196,7 +206,7 @@ const Form = () => {
                                 <Image
                                     src={closeModalIcon}
                                     alt='X icon to close upload photo field'
-                                    className={styles.closeModalIcon}
+                                    className={styles.closeProfilePictureModalIcon}
                                     onClick={closeProfilePictureModal}
                                 />
                                 <div className={styles.profilePictureModal}>
@@ -233,10 +243,69 @@ const Form = () => {
                         <button
                             type='button'
                             className={styles.sendButton}
-                            onClick={(e) => e.preventDefault()}
+                            onClick={openSuccessSubModal}
                         >
                             Send
                         </button>
+                        <Modal
+                            isOpen={isSuccesfullSubmissionModalOpen}
+                            overlayClassName='react-model-overlay'
+                            onRequestClose={closeSuccessSubModal}
+                            style={{
+                                overlay: {
+                                    position: 'fixed',
+                                    top: 0,
+                                    left: 0,
+                                    right: 0,
+                                    bottom: 0,
+                                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                                },
+                                content: {
+                                    top: '50%',
+                                    left: '50%',
+                                    right: 'auto',
+                                    bottom: 'auto',
+                                    marginRight: '-50%',
+                                    transform: 'translate(-50%, -50%)',
+                                    borderRadius: '33px',
+                                    backgroundColor: 'white',
+                                    padding: '0',
+                                    border: 'none',
+                                },
+                            }}
+                        >
+                            <Image
+                                src={closeModalIcon}
+                                alt='X icon to close upload photo field'
+                                className={styles.closeSubscriptionModalIcon}
+                                onClick={closeSuccessSubModal}
+                            />
+                            <div className={styles.subscriptionModalContainer}>
+                                <Image
+                                    src={logo}
+                                    alt="Brito's logo"
+                                    className={styles.logoSubscriptionModal}
+                                />
+                                <div className={styles.subscriptionModalTextDescriptionContainer}>
+                                    <h1 className={styles.subscriptionModalTitle}>
+                                        Thank you for connect with us!
+                                    </h1>
+                                    <p className={styles.subscriptionModalDescription}>
+                                        Your informations were submitted for approval.
+                                    </p>
+                                    <p className={styles.subscriptionModalDescription}>
+                                        You will receive a notification on your email.
+                                    </p>
+                                    <button
+                                        type='button'
+                                        className={styles.continueBrowsingButton}
+                                        onClick={closeSuccessSubModal}
+                                    >
+                                        Continue browsing
+                                    </button>
+                                </div>
+                            </div>
+                        </Modal>
                     </div>
                 </form>
             </div>

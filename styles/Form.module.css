@@ -288,10 +288,18 @@
     grid-column: 5 / 8;
 }
 
-.closeModalIcon {
+.closeProfilePictureModalIcon {
     position: absolute;
     right: 0;
     margin: 0 21px 0 0;
+
+    width: 30px;
+}
+
+.closeSubscriptionModalIcon {
+    position: absolute;
+    right: 0;
+    margin: 10px 21px 0 0;
 
     width: 30px;
 }
@@ -341,36 +349,89 @@
         grid-row: 5 / 6;
         grid-column: 1 / 9;
     }
+
+    .subscriptionModalContainer {
+        width: 320px !important;
+        height: 470px;
+    }
+
+    .subscriptionModalTextDescriptionContainer {
+        padding: 4rem 2.5rem !important;
+    }
+
+    .subscriptionModalTitle {
+        display: none;
+    }
+
+    .continueBrowsingButton {
+        width: 263px;
+        height: 56px;
+
+        width: 236px;
+        height: 56px;
+
+        border: 1px solid #1a1a1a;
+        border-radius: 4px;
+
+        background-color: #fff;
+        color: #022777;
+
+        padding: 0;
+        font-size: 20px;
+
+        margin-top: 2rem;
+
+        display: block !important;
+    }
 }
 
-/* 
-.react-model-overlay {
-    background: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.subscriptionModalContainer {
+    width: 500px;
+    height: 590px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+
+    text-align: center;
+    /* justify-items: center; */
 }
-.react-modal-content {
-    width: 100%;
-    max-width: 576px;
-    background: var(--background);
-    padding: 3rem;
-    position: relative;
-    border-radius: 0.24rem;
-} */
-/* .react-modal-close {
-    position: absolute;
-    right: 1.5rem;
-    top: 1.5rem;
-    border: 0;
-    background: transparent;
-    transition: filter 0.2s;
-    &:hover {
-        filter: brightness(0.7)
-    }
-} */
+
+.logoSubscriptionModal {
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+
+    width: 220px;
+    height: 220px;
+
+    margin: 30px auto 0 auto;
+}
+
+.subscriptionModalTextDescriptionContainer {
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+
+    background: #022777;
+    color: var(--primary-white);
+
+    text-align: center;
+
+    padding-bottom: 90px;
+    padding-top: 20px;
+}
+
+.subscriptionModalTitle {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+
+    margin: 3rem 1rem 3rem 1rem;
+}
+
+.subscriptionModalDescription {
+    padding: 0.15rem;
+}
+
+.continueBrowsingButton {
+    display: none;
+}
