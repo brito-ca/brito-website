@@ -40,9 +40,10 @@ const ContactUs = () => {
                     <a href={labels.midia.linkfacebook} className='facebook horizontal-padding'>
                     <Icon variant='facebook' />
                     </a>
-                </div>
+                </div><div className={styles.britologo}>
             </div>
-        </div>
+            
+        </div></div>
     )
 }
 export default ContactUs

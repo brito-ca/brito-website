@@ -25,9 +25,15 @@
 }
 @media only screen and (max-width: 600px) {
     .maple {
+        background-image: none;
+        height: 705px;
+    }
+    .britologo {
         background-image: url(/britologohalf.png);
         background-size: 424px;
-        height: 986px;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        height: 476px;
     }
     .title {
         text-align: center;
