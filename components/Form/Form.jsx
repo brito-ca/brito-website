@@ -1,10 +1,11 @@
 import Image from 'next/image'
+import Modal from 'react-modal'
 import { useState } from 'react'
 import { RadioButton } from '@/components'
-import britoFormImage from '../../public/images/brito-group-image-form.svg'
-import infoIcon from '../../public/images/form-info-icon.png'
-
 import styles from '../../styles/Form.module.css'
+import infoIcon from '../../public/images/form-info-icon.png'
+import britoFormImage from '../../public/images/brito-group-image-form.svg'
+import profilePictureTemplate from '../../public/images/brito-profile-picture-template.svg'
 
 const Form = () => {
     const [fullName, setFullName] = useState('')
@@ -19,9 +20,43 @@ const Form = () => {
         setResideInCanada(e.target.value)
     }
 
+    Modal.setAppElement('#__next')
+
+    const [isProfilePictureModalOpen, setIsProfilePictureModalOpen] = useState(false)
+
+    function openProfilePictureModal() {
+        setIsProfilePictureModalOpen(true)
+    }
+    //
+    function closeProfilePictureModal() {
+        setIsProfilePictureModalOpen(false)
+    }
+
+    // function afterOpenModal() {
+    //     subtitle.style.color = '#f00';
+    // }
+
+    // const customStyles = {
+    //     content: {
+    //         top: '50%',
+    //         left: '50%',
+    //         right: 'auto',
+    //         bottom: 'auto',
+    //         marginRight: '-50%',
+    //         transform: 'translate(-50%, -50%)',
+    //         borderRadius: '30px',
+    //         backgroundColor: 'white',
+    //     },
+    // }
+
     return (
         <>
-            <div className={styles.formContainer}>
+            <div
+                className={styles.formContainer}
+                // style={isProfilePictureModalOpen ? { filter: 'blur(5px)' } : { filter: 'none' }}
+                // It checks if the Modal is open and then blurs background
+                // Must find a way to check size of screen or talk to UI/UX team and check if it is design intended the difference on the background once the modal is open
+            >
                 <h3 className={styles.formTitle}>Want to join Brito&#39;s network?</h3>
                 <form method='post'>
                     <div className={styles.formSections}>
@@ -145,10 +180,64 @@ const Form = () => {
                             <button
                                 type='button'
                                 className={styles.chooseFileButton}
-                                onClick={(e) => e.preventDefault()}
+                                onClick={openProfilePictureModal}
                             >
                                 Choose file
                             </button>
+                            <Modal
+                                isOpen={isProfilePictureModalOpen}
+                                // onAfterOpen={afterOpenModal}
+                                overlayClassName='react-model-overlay'
+                                onRequestClose={closeProfilePictureModal}
+                                // style={styles.profilePictureModal}
+                                style={{
+                                    overlay: {
+                                        position: 'fixed',
+                                        top: 0,
+                                        left: 0,
+                                        right: 0,
+                                        bottom: 0,
+                                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                                    },
+                                    content: {
+                                        top: '50%',
+                                        left: '50%',
+                                        right: 'auto',
+                                        bottom: 'auto',
+                                        marginRight: '-50%',
+                                        transform: 'translate(-50%, -50%)',
+                                        borderRadius: '30px',
+                                        backgroundColor: 'white',
+                                    },
+                                }}
+                            >
+                                <div className={styles.profilePictureModal}>
+                                    <h1 className={styles.profilePictureModalTitle}>
+                                        Profile Picture
+                                    </h1>
+                                    <p className={styles.profilePictureModalDescription}>
+                                        A profile picture make a positive first impression on
+                                        potential connections It can also help to differentiate you
+                                        from others in your network and make your profile stand out
+                                        in search results.
+                                    </p>
+                                    <Image
+                                        src={profilePictureTemplate}
+                                        alt="A front face picture of a man. It's a template for the profile picture field before the user selects its own"
+                                        className={styles.profilePictureAvatar}
+                                    />
+
+                                    <button
+                                        type='button'
+                                        className={styles.profilePictureModalSaveButton}
+                                    >
+                                        Save
+                                    </button>
+                                    <button className={styles.profilePictureModalChangeButton}>
+                                        Change
+                                    </button>
+                                </div>
+                            </Modal>
                         </div>
                         <div className={styles.fileChosenBox}>
                             <p className={styles.chosenBoxText}>No file chosen</p>

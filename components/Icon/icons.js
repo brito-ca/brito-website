@@ -10,9 +10,9 @@ const icons = {
             <path
                 d='M5.66667 9.0013H20.3333M2 1.66797H24M2 16.3346H24'
                 stroke='#4A5568'
-                stroke-width='2.5625'
-                stroke-linecap='round'
-                stroke-linejoin='round'
+                strokeWidth='2.5625'
+                strokeLinecap='round'
+                strokeLinejoin='round'
             />
         </svg>
     ),
