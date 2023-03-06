@@ -5,7 +5,7 @@ import styles from '@/styles/AboutUs.module.css'
 
 const AboutUs = () => {
     return (
-        <main>
+        <section id="about">
             <AboutUsBanner
                 title='About us'
                 description='Brazilian IT Ottawa (BRITO) is a group of Brazilian professionals with a career focused in 
@@ -44,7 +44,7 @@ const AboutUs = () => {
                 width={1440}
                 height={530}
             />
-        </main>
+        </section>
     )
 };
 export default AboutUs;
