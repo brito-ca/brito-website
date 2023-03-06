@@ -1,0 +1,18 @@
+.logoOnJoinUs {
+    background-image: url(/britologohalf.png);
+    background-size: 1172px;
+    height: 466px;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 600px) {
+    .logoOnmission {
+        background-image: url(/britologohalf.png);
+        background-size: 424px;
+        height: 466px;
+        background-repeat: no-repeat;
+    }
+}
+.logoOnJoinUs {
+    background-size: 1372px;
+}
