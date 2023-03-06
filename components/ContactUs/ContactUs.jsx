@@ -10,7 +10,7 @@ const ContactUs = () => {
             </div>
             <div className='padding'>
                 <h3 className={styles.subtitle}>{labels.chat.chat}</h3>
-                <p className='b2 body2'>{labels.chat.descriptionChat}</p>
+                <p className='body2'>{labels.chat.descriptionChat}</p>
             </div>
             <div>
                     <Image
@@ -20,13 +20,13 @@ const ContactUs = () => {
                         src='/vector.png'
                         alt='mail'
                     />
-                    <a className={styles.mail + ' body3 b3'} href={labels.email.malito}>
+                    <a className={styles.mail + ' body3'} href={labels.email.malito}>
                         {labels.email.email}
                     </a>
             </div>
             <div className={styles.marg_lg }>
                 <h3 className={styles.subtitle + ' padding'}>{labels.location.Basedin}</h3>
-                <p className='b2 body2 horizontal-padding '>{labels.location.city}</p>
+                <p className='body2 horizontal-padding '>{labels.location.city}</p>
             </div>
             <div className={styles.marg_lg + ' padding'}>
                 <h3 className={styles.subtitle}>{labels.midia.visit}</h3>
