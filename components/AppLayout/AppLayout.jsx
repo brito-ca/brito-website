@@ -1,13 +1,12 @@
-import { Header, Footer, Placeholder } from '@/components'
+import { FloatingActionButton, Header, Footer, Placeholder } from '@/components'
 import styles from '@/styles/AppLayout.module.css'
 
 const AppLayout = (props) => {
     const { children } = props
     return (
         <div className={styles.container}>
-            <Header>
-                <Placeholder title='Header / Navigation' />
-            </Header>
+            <FloatingActionButton />
+            <Header />
             <main>{children}</main>
             <Footer>
                 <Placeholder title='Footer' />
