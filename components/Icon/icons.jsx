@@ -10,9 +10,9 @@ const icons = {
             <path
                 d='M5.66667 9.0013H20.3333M2 1.66797H24M2 16.3346H24'
                 stroke='#4A5568'
-                stroke-width='2.5625'
-                stroke-linecap='round'
-                stroke-linejoin='round'
+                strokeWidth='2.5625'
+                strokeLinecap='round'
+                strokeLinejoin='round'
             />
         </svg>
     ),
@@ -25,14 +25,14 @@ const icons = {
             xmlns='http://www.w3.org/2000/svg'
         >
             <path
-                fill-rule='evenodd'
-                clip-rule='evenodd'
+                fillRule='evenodd'
+                clipRule='evenodd'
                 d='M21.2634 0.736568C21.5789 1.05199 21.5789 1.56339 21.2634 1.87882L1.87882 21.2634C1.56339 21.5789 1.05199 21.5789 0.736568 21.2634C0.421144 20.948 0.421144 20.4366 0.736568 20.1212L20.1212 0.736568C20.4366 0.421144 20.948 0.421144 21.2634 0.736568Z'
                 fill='#383F60'
             />
             <path
-                fill-rule='evenodd'
-                clip-rule='evenodd'
+                fillRule='evenodd'
+                clipRule='evenodd'
                 d='M0.736568 0.736568C1.05199 0.421144 1.56339 0.421144 1.87882 0.736568L21.2634 20.1212C21.5789 20.4366 21.5789 20.948 21.2634 21.2634C20.948 21.5789 20.4366 21.5789 20.1212 21.2634L0.736568 1.87882C0.421144 1.56339 0.421144 1.05199 0.736568 0.736568Z'
                 fill='#383F60'
             />
