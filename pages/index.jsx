@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { AppLayout, Placeholder, Hero } from '@/components'
 import Banner from '@/components/Banner/Banner'
 import labels from '@/constants/labels.en'
+import ContactUs from '@/components/ContactUs/ContactUs'
 import styles from '@/styles/Banner.module.css'
 
 export default function Home() {
@@ -42,7 +43,7 @@ export default function Home() {
                     />
                 </div>
                 <Placeholder title='Form' />
-                <Placeholder id='contact' title='Contact Us' />
+                <ContactUs />
             </AppLayout>
         </>
     )
