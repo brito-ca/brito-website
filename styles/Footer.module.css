@@ -9,7 +9,7 @@
     max-width: 100%;
 }
 
-.navigationContainer {
+.footerContainer {
     padding: var(--padding-lg) 148px var(--padding-lg) 0;
 }
 
@@ -76,9 +76,10 @@
         display: none;
     }
 
-    .navigationContainer {
+    .footerContainer {
         padding: var(--padding-sm) 53px var(--padding-sm) 0;
     }
+
     .socialContainer {
         display: flex;
         gap: 9.5px;
