@@ -1,5 +1,4 @@
 import labels from '@/constants/labels.en'
-import Image from 'next/image'
 import styles from '@/styles/ContactUs.module.css'
 import { Icon } from '@/components'
 const ContactUs = () => {
@@ -12,14 +11,14 @@ const ContactUs = () => {
                 <h3 className={styles.subtitle}>{labels.chat.chat}</h3>
                 <p className='body2'>{labels.chat.descriptionChat}</p>
             </div>
-            <div>
-                    <Image
-                        className={styles.mailimg}
-                        width='20'
-                        height='16'
-                        src='/vector.png'
-                        alt='mail'
-                    />
+            <div className={styles.mailimg + ' padding'}>
+            <Icon   variant='mail' />
+             
+                    <a className={styles.mail + ' body3'} href={labels.email.malito}>
+                        {labels.email.email}
+                    </a>
+            </div>
+            <div className={styles.mailnoimg + ' padding'}>
                     <a className={styles.mail + ' body3'} href={labels.email.malito}>
                         {labels.email.email}
                     </a>
