@@ -1,0 +1,85 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    padding-bottom: var(--spacing-unit);
+    gap: calc(1.81 * var(--spacing-unit));
+}
+
+.hero_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: calc(15 * var(--spacing-unit));
+    gap: calc(5 * var(--spacing-unit));
+}
+
+.welcome_box {
+    color: var(--primary-blue);
+    padding: calc(var(--spacing-unit) / 2);
+}
+
+.welcome_text {
+    font-size: calc(3.12 * var(--spacing-unit));
+}
+
+.intro_text {
+    color: var(--neutral-dark);
+    text-align: justify;
+    font-size: calc(1.75 * var(--spacing-unit));
+    margin-bottom: calc(2 * var(--spacing-unit));
+    width: calc(31.6875 * var(--spacing-unit));
+}
+
+.crop_img_banner {
+    width: calc(39.5 * var(--spacing-unit));
+}
+
+.img_banner {
+    border-radius: calc(31.25 * var(--spacing-unit));
+    box-shadow: calc(0 * var(--spacing-unit)) calc(0.625 * var(--spacing-unit))
+        calc(1.25 * var(--spacing-unit)) calc(0.625 * var(--spacing-unit)) rgba(0, 0, 0, 0.25);
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        justify-content: center;
+        padding: calc(0 * var(--spacing-unit));
+        gap: calc(0 * var(--spacing-unit));
+    }
+
+    .hero_container {
+        padding-top: calc(2.19 * var(--spacing-unit));
+        gap: calc(1.69 * var(--spacing-unit));
+    }
+
+    .welcome_box {
+        padding: calc(0 * var(--spacing-unit));
+    }
+
+    .welcome_text {
+        text-align: center;
+        font-size: calc(2 * var(--spacing-unit));
+    }
+
+    .intro_text {
+        width: auto;
+        font-size: var(--spacing-unit);
+    }
+
+    .crop_img_banner {
+        width: auto;
+        height: auto;
+    }
+
+    .img_banner {
+        width: calc(23.43 * var(--spacing-unit));
+        height: calc(14.25 * var(--spacing-unit));
+        border-radius: calc(0 * var(--spacing-unit));
+        box-shadow: none;
+        object-fit: fill;
+    }
+}
