@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import { AppLayout, Placeholder } from '@/components'
 import Board from '@/components/Board/Board';
+import { AppLayout, Placeholder, Hero } from '@/components'
 import Banner from '@/components/Banner/Banner'
 import labels from '@/constants/labels.en'
 
@@ -15,6 +15,12 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
             </Head>
             <AppLayout>
+                <Hero
+                    title={labels.welcomeToBrito.title}
+                    description={labels.welcomeToBrito.description}
+                    image={labels.image}
+                />
+                <Placeholder title='About Us' />
                 <Placeholder title='Hero' />
                 <Placeholder id='about' title='About Us' />
                 <Banner
@@ -23,16 +29,13 @@ export default function Home() {
                 />
                 <Banner title={labels.ourVision.title} description={labels.ourVision.description} />
                 <Placeholder title='Our Board' />
-<<<<<<< HEAD
-        <Board title='dsadsdad'/>
+                <Board title='dsadsdad'/>
                 <Banner title={labels.joinUs.title} description={labels.joinUs.description} />
-=======
                 <Banner
                     id='join-us'
                     title={labels.joinUs.title}
                     description={labels.joinUs.description}
                 />
->>>>>>> origin/develop
                 <Placeholder title='Form' />
                 <Placeholder id='contact' title='Contact Us' />
             </AppLayout>
