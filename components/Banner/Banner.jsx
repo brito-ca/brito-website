@@ -6,7 +6,7 @@ const Banner = (props) => {
             <div className={styles.banner}>
                 <h3 className={styles.titleBanner}>{title}</h3>
                 <div className='body1'>
-                    <p className={styles.descriptionBanner +' body4'}>{description}</p>
+                    <p className={styles.descriptionBanner + ' body4'}>{description}</p>
                 </div>
             </div>
         </div>
