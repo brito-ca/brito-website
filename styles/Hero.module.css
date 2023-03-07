@@ -46,7 +46,7 @@
 }
 
 .img_banner {
-    border-radius: 50%;
+    border-radius: calc(29 * var(--spacing-unit));
     object-fit: cover;
 }
 
@@ -85,7 +85,7 @@
     .img_banner {
         width: calc(23.43 * var(--spacing-unit));
         height: calc(14.25 * var(--spacing-unit));
-        border-radius: 0%;
+        border-radius: calc(0 * var(--spacing-unit));
         object-fit: fill;
     }
 }
