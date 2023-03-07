@@ -30,7 +30,6 @@ export default function Home() {
                 <Placeholder id='contact' title='Contact Us' />
                 <Banner title={labels.joinUs.title} description={labels.joinUs.description} />
                 <Form />
-                <Popover icon='exclamation' />
             </AppLayout>
         </>
     )

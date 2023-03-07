@@ -121,12 +121,12 @@ const Form = () => {
                                         icon='exclamation'
                                         className={styles.immigrationStatusPopover}
                                     />
-                                    <Image
+                                    {/* <Image
                                         className={styles.infoIcon}
                                         src={infoIcon}
                                         alt='Info Icon - A circle with an exclamation point inside'
                                         width={15}
-                                    />
+                                    /> */}
                                 </span>
                             </label>
                             <select

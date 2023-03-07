@@ -32,3 +32,84 @@
     border-width: 0 10px 10px 10px;
     border-color: transparent transparent #525252 transparent;
 }
+
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip::after {
+    background-color: #525252;
+    border-radius: 10px;
+    color: #fff;
+    display: none;
+    padding: 10px 15px;
+    position: absolute;
+    text-align: center;
+    z-index: 999;
+}
+
+.tooltip.top::after {
+    content: 'top';
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, calc(-100% - 10px));
+}
+
+.tooltip.bottom::after {
+    content: 'bottom';
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, calc(100% + 10px));
+}
+
+.tooltip.right::after {
+    content: 'right';
+    top: 0;
+    right: 0;
+    transform: translateX(calc(100% + 10px));
+}
+
+.tooltip:hover::after {
+    display: block;
+}
+
+
+/* This creates the arrow */
+.tooltip::before {
+    background-color: #525252;
+    content: ' ';
+    display: none;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    z-index: 999;
+}
+
+.tooltip:hover::before {
+    display: block;
+}
+
+.tooltip.top::before {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+
+.tooltip.right::before {
+    top: 50%;
+    right: 0;
+    transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+}
+
+.tooltip.left::before {
+    top: 50%;
+    left: 0;
+    transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
+}
+
+.tooltip.bottom::before {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+}
