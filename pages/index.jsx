@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { AppLayout, Placeholder, Form } from '@/components'
+import { AppLayout, Placeholder, Form, Popover } from '@/components'
 import Banner from '@/components/Banner/Banner'
 import labels from '@/constants/labels.en'
 
@@ -30,7 +30,6 @@ export default function Home() {
                 <Placeholder id='contact' title='Contact Us' />
                 <Banner title={labels.joinUs.title} description={labels.joinUs.description} />
                 <Form />
-                <Placeholder title='Contact Us' />
             </AppLayout>
         </>
     )
