@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { AppLayout, Placeholder } from '@/components'
 import Banner from '@/components/Banner/Banner'
 import labels from '@/constants/labels.en'
-import styles from '@/styles/background.module.css'
+import styles from '@/styles/Banner.module.css'
 
 export default function Home() {
     return (

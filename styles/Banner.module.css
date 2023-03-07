@@ -10,3 +10,31 @@
     color: var(--neutral-dark);
     text-align: justify;
 }
+.logoOnJoinUs {
+    background-image: url(/britologohalf.png);
+    background-size: 1172px;
+    height: 466px;
+    background-repeat: no-repeat;
+}
+@media only screen and (max-width: 600px) {
+    .logoOnmission {
+        background-image: url(/britologohalf.png);
+        background-size: 424px;
+        background-position: right;
+        height: 456px;
+        background-repeat: no-repeat;
+    }
+
+    .logoOnJoinUs {
+        background-image: none;
+        height: 347px;
+    }
+
+    .rectangle4 {
+        background-image: url(/Rectangle4.png);
+        height: 2px;
+        background-size: 470px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
