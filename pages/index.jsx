@@ -16,10 +16,7 @@ export default function Home() {
                 <Hero
                     title={labels.welcomeToBrito.title}
                     description={labels.welcomeToBrito.description}
-                    src={labels.image.src}
-                    alt={labels.image.alt}
-                    width={labels.image.width}
-                    height={labels.image.height}
+                    image={labels.image}
                 />
                 <Placeholder title='About Us' />
                 <Banner
