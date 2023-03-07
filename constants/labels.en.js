@@ -17,14 +17,8 @@ const labels = {
 
     welcomeToBrito: {
         title: 'WELCOME TO BRITO',
-        description: [
-            'BRAZILIAN IT OTTAWA is non-profit group of IT Brazilians professionals located in Ottawa.',
-            <br />,
-            'Our main objective is empowering the community, assisting with networking, and continuous' +
-                'learning with lectures and workshops.',
-        ],
+        description: `BRAZILIAN IT OTTAWA is non-profit group of IT Brazilians professionals located in Ottawa. Our main objective is empowering the community, assisting with networking, and continuous learning with lectures and workshops.`,
     },
-
     image: {
         alt: 'parlement',
         src: '/parlement.png',
