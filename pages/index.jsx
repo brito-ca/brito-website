@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { AppLayout, Placeholder } from '@/components'
+import { AppLayout, Placeholder, Hero } from '@/components'
 import Banner from '@/components/Banner/Banner'
 import labels from '@/constants/labels.en'
 import styles from '@/styles/Banner.module.css'
@@ -14,6 +14,12 @@ export default function Home() {
                 <link rel='icon' href='/favicon.ico' />
             </Head>
             <AppLayout>
+                <Hero
+                    title={labels.welcomeToBrito.title}
+                    description={labels.welcomeToBrito.description}
+                    image={labels.image}
+                />
+                <Placeholder title='About Us' />
                 <Placeholder title='Hero' />
                 <Placeholder id='about' title='About Us' />
                 <div className={styles.logoOnmission}>
