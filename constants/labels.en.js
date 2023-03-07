@@ -33,6 +33,27 @@ const labels = {
         width: '900',
         height: '900',
     },
+
+    card_image: {
+        marcelo: {
+            alt: 'director',
+            src: '/image1.png',
+            width: '200',
+            height: '200',
+        },
+        diego: {
+            alt: 'director',
+            src: '/image2.png',
+            width: '200',
+            height: '200',
+        },
+        roger: {
+            alt: 'director',
+            src: '/image3.png',
+            width: '200',
+            height: '200',
+        }
+    }
 }
 
 export default labels
