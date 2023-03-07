@@ -5,40 +5,11 @@
     margin-left: 4px;
 }
 
-.popoverContainer:hover .popoverContent {
-    opacity: 1;
-    visibility: visible;
-}
-
-.popoverContent {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    right: -140px;
-    transform: translate(0, 10px);
-    background-color: #525252;
-    padding: 1.5rem;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-    width: 300px;
-}
-
-.popoverContent:before {
-    position: absolute;
-    z-index: -1;
-    content: "";
-    right: calc(50% - 10px);
-    top: -8px;
-    border-style: solid;
-    border-width: 0 10px 10px 10px;
-    border-color: transparent transparent #525252 transparent;
-}
-
-
-.tooltip {
+.popover {
     position: relative;
 }
 
-.tooltip::after {
+.popover::after {
     background-color: #525252;
     border-radius: 10px;
     color: #fff;
@@ -47,36 +18,41 @@
     position: absolute;
     text-align: center;
     z-index: 999;
+
+    width: 320px;
+
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
 }
 
-.tooltip.top::after {
-    content: 'top';
+.popover.top::after {
+    content: "This status assists Brito in identifying suitable projects and job opportunities based on his type of visa. Some visas only permit 20 hours of work, and holding citizenship is a requirement for certain government positions, enhancing one's chances of securing a job.";
     top: 0;
     left: 50%;
     transform: translate(-50%, calc(-100% - 10px));
 }
 
-.tooltip.bottom::after {
+.popover.bottom::after {
     content: 'bottom';
     bottom: 0;
     left: 50%;
     transform: translate(-50%, calc(100% + 10px));
 }
 
-.tooltip.right::after {
+.popover.right::after {
     content: 'right';
     top: 0;
     right: 0;
     transform: translateX(calc(100% + 10px));
 }
 
-.tooltip:hover::after {
+.popover:hover::after {
     display: block;
 }
 
-
 /* This creates the arrow */
-.tooltip::before {
+.popover::before {
     background-color: #525252;
     content: ' ';
     display: none;
@@ -86,30 +62,18 @@
     z-index: 999;
 }
 
-.tooltip:hover::before {
+.popover:hover::before {
     display: block;
 }
 
-.tooltip.top::before {
+.popover.top::before {
     top: 0;
     left: 50%;
     transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
 }
 
-.tooltip.right::before {
+.popover.right::before {
     top: 50%;
     right: 0;
     transform: translate(calc(100% + 5px), -50%) rotate(45deg);
-}
-
-.tooltip.left::before {
-    top: 50%;
-    left: 0;
-    transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
-}
-
-.tooltip.bottom::before {
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
 }

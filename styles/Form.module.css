@@ -47,6 +47,9 @@
     grid-row: 1 / 2;
     margin-top: 40px;
 }
+.labelRadioButton {
+    margin-left: '5px' !important;
+}
 
 .imageContainer {
     grid-column: 6 / 9;
