@@ -32,7 +32,7 @@ const labels = {
         src: '/parlement.png',
         width: '900',
         height: '900',
-    }
+    },
 }
 
 export default labels

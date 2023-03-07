@@ -28,7 +28,7 @@
     color: var(--neutral-dark);
     text-align: justify;
     font-size: 28px;
-    margin-bottom: calc(2*var(--spacing-unit));
+    margin-bottom: calc(2 * var(--spacing-unit));
     width: 507px;
 }
 
@@ -51,12 +51,12 @@
         gap: calc(0 * var(--spacing-unit));
     }
 
-    .hero_container{
+    .hero_container {
         padding-top: calc(2.19 * var(--spacing-unit));
         gap: calc(1.69 * var(--spacing-unit));
     }
 
-    .welcome_box{
+    .welcome_box {
         padding: calc(0 * var(--spacing-unit));
     }
 
@@ -65,7 +65,7 @@
         font-size: 32px;
     }
 
-    .intro_text{
+    .intro_text {
         width: auto;
         font-size: 16px;
     }
