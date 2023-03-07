@@ -43,12 +43,9 @@ const Form = () => {
         setResideInCanada(e.target.value)
     }
 
-
     return (
         <>
-            <div
-                className={styles.formContainer}
-            >
+            <div className={styles.formContainer}>
                 <h3 className={styles.formTitle}>Want to join Brito&#39;s network?</h3>
                 <form method='post'>
                     <div className={styles.formSections}>
@@ -130,9 +127,7 @@ const Form = () => {
                                 className={styles.immigrationStatusList}
                                 required
                             >
-                                <option
-                                    value="" disabled selected
-                                >
+                                <option value='' disabled selected>
                                     Select
                                 </option>
                                 <option value='one'>Canadian Citizen (Foreign born)</option>
@@ -190,7 +185,7 @@ const Form = () => {
                                         right: 0,
                                         bottom: 0,
                                         backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                                        backdropFilter: 'blur(5px)'
+                                        backdropFilter: 'blur(5px)',
                                     },
                                     content: {
                                         top: '50%',
@@ -241,7 +236,8 @@ const Form = () => {
                         <div className={styles.fileChosenBox}>
                             <p className={styles.chosenBoxText}>No file chosen</p>
                         </div>
-                        <button className={styles.sendButton}
+                        <button
+                            className={styles.sendButton}
                             type='button'
                             onClick={openSuccessSubModal}
                         >
@@ -259,7 +255,7 @@ const Form = () => {
                                     right: 0,
                                     bottom: 0,
                                     backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                                    backdropFilter: 'blur(5px)'
+                                    backdropFilter: 'blur(5px)',
                                 },
                                 content: {
                                     top: '50%',

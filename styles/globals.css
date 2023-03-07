@@ -355,7 +355,7 @@ select:required:invalid {
     color: gray;
 }
 
-option[value=""][disabled] {
+option[value=''][disabled] {
     display: none;
 }
 
