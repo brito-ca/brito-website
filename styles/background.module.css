@@ -10,11 +10,20 @@
         background-image: url(/logomission.png);
         background-size: 424px;
         background-position: right;
-        height: 410px;
+        height: 456px;
         background-repeat: no-repeat;
     }
 
     .logoOnJoinUs {
-        height: 275px;
+        background-image: none;
+        height: 347px;
+    }
+
+    .rectangle4 {
+        background-image: url(/Rectangle4.png);
+        height: 2px;
+        background-size: 470px;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
