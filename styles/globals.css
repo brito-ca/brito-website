@@ -134,6 +134,7 @@ a {
     font-size: 1.5rem;
     font-weight: 700;
 }
+
 button {
     color: var(--neutral-white);
     padding: var(--padding-sm) var(--padding-lg);
@@ -343,6 +344,23 @@ button.outline:disabled {
     flex-direction: column;
     align-content: flex-start;
     justify-content: flex-start;
+}
+
+/* Solution for select list from Form.jsx 'Immigration Status' without the use of Javascript 
+    sources :
+    https://stackoverflow.com/questions/17603055/placeholder-for-select-tag
+    https://stackoverflow.com/questions/5805059/how-do-i-make-a-placeholder-for-a-select-box/5805194#5805194
+*/
+select:required:invalid {
+    color: gray;
+}
+
+option[value=""][disabled] {
+    display: none;
+}
+
+option {
+    color: black;
 }
 
 /* https://www.browserstack.com/guide/what-are-css-and-media-query-breakpoints */

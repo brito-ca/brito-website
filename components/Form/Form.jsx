@@ -18,10 +18,6 @@ const Form = () => {
     const [linkedinProfileLink, setLinkedinProfileLink] = useState('')
     const [email, setEmail] = useState('')
 
-    const radioButtonHandler = (e) => {
-        setResideInCanada(e.target.value)
-    }
-
     Modal.setAppElement('#__next')
 
     const [isProfilePictureModalOpen, setIsProfilePictureModalOpen] = useState(false)
@@ -43,13 +39,15 @@ const Form = () => {
         setisSuccesfullSubmissionModalOpen(false)
     }
 
+    const radioButtonHandler = (e) => {
+        setResideInCanada(e.target.value)
+    }
+
+
     return (
         <>
             <div
                 className={styles.formContainer}
-                // style={isProfilePictureModalOpen ? { filter: 'blur(5px)' } : { filter: 'none' }}
-                // It checks if the Modal is open and then blurs background
-                // Must find a way to check size of screen or talk to UI/UX team and check if it is design intended the difference on the background once the modal is open
             >
                 <h3 className={styles.formTitle}>Want to join Brito&#39;s network?</h3>
                 <form method='post'>
@@ -129,10 +127,12 @@ const Form = () => {
                             </label>
                             <select
                                 id='immigration-status'
-                                defaultValue={'DEFAULT'}
                                 className={styles.immigrationStatusList}
+                                required
                             >
-                                <option value='DEFAULT' disabled>
+                                <option
+                                    value="" disabled selected
+                                >
                                     Select
                                 </option>
                                 <option value='one'>Canadian Citizen (Foreign born)</option>
@@ -190,6 +190,7 @@ const Form = () => {
                                         right: 0,
                                         bottom: 0,
                                         backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                                        backdropFilter: 'blur(5px)'
                                     },
                                     content: {
                                         top: '50%',
@@ -240,9 +241,8 @@ const Form = () => {
                         <div className={styles.fileChosenBox}>
                             <p className={styles.chosenBoxText}>No file chosen</p>
                         </div>
-                        <button
+                        <button className={styles.sendButton}
                             type='button'
-                            className={styles.sendButton}
                             onClick={openSuccessSubModal}
                         >
                             Send
@@ -259,6 +259,7 @@ const Form = () => {
                                     right: 0,
                                     bottom: 0,
                                     backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                                    backdropFilter: 'blur(5px)'
                                 },
                                 content: {
                                     top: '50%',
