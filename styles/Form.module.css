@@ -1,28 +1,3 @@
-.backdrop {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    height: 100vh;
-    width: 100%;
-    background-color: var(--modal-backdrop);
-    backdrop-filter: blur(5px);
-}
-
-.menuModal {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-    background-color: var(--neutral-white);
-
-    z-index: 9 !important;
-
-    border-radius: 20px;
-}
-
 .formContainer {
     background: var(--secundary-green);
     padding: var(--padding-sm) var(--padding-md);
@@ -468,4 +443,29 @@
 
 .continueBrowsingButton {
     display: none;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--modal-backdrop);
+    backdrop-filter: blur(5px);
+}
+
+.menuModal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: var(--neutral-white);
+
+    z-index: 9 !important;
+
+    border-radius: 20px;
 }

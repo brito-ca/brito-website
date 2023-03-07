@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Modal from 'react-modal'
 import { useState } from 'react'
 import { RadioButton, Popover } from '@/components'
 import styles from '../../styles/Form.module.css'
@@ -17,8 +16,6 @@ const Form = () => {
     const [city, setCity] = useState('')
     const [linkedinProfileLink, setLinkedinProfileLink] = useState('')
     const [email, setEmail] = useState('')
-
-    Modal.setAppElement('#__next')
 
     const [isProfilePictureModalOpen, setIsProfilePictureModalOpen] = useState(false)
     const [isSuccesfullSubmissionModalOpen, setisSuccesfullSubmissionModalOpen] = useState(false)
