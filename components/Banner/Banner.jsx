@@ -5,8 +5,8 @@ const Banner = (props) => {
         <div id={id} className='flex-row-center'>
             <div className={styles.banner}>
                 <h3 className={styles.titleBanner}>{title}</h3>
-                <div className='body1 b1'>
-                    <p className={styles.descriptionBanner}>{description}</p>
+                <div className='body1'>
+                    <p className={styles.descriptionBanner + ' body4'}>{description}</p>
                 </div>
             </div>
         </div>

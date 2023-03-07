@@ -3,6 +3,8 @@ import { AppLayout, Placeholder, Hero } from '@/components'
 import Banner from '@/components/Banner/Banner'
 import labels from '@/constants/labels.en'
 import ContactUs from '@/components/ContactUs/ContactUs'
+import styles from '@/styles/AppLayout.module.css'
+
 export default function Home() {
     return (
         <>
@@ -21,17 +23,25 @@ export default function Home() {
                 <Placeholder title='About Us' />
                 <Placeholder title='Hero' />
                 <Placeholder id='about' title='About Us' />
-                <Banner
-                    title={labels.ourMission.title}
-                    description={labels.ourMission.description}
-                />
-                <Banner title={labels.ourVision.title} description={labels.ourVision.description} />
+                <div className={styles.logoOnmission}>
+                    <Banner
+                        title={labels.ourMission.title}
+                        description={labels.ourMission.description}
+                    />
+                    <div className={styles.rectangle4}></div>
+                    <Banner
+                        title={labels.ourVision.title}
+                        description={labels.ourVision.description}
+                    />
+                </div>
                 <Placeholder title='Our Board' />
-                <Banner
-                    id='join-us'
-                    title={labels.joinUs.title}
-                    description={labels.joinUs.description}
-                />
+                <div className={styles.logoOnJoinUs}>
+                    <Banner
+                        id='join-us'
+                        title={labels.joinUs.title}
+                        description={labels.joinUs.description}
+                    />
+                </div>
                 <Placeholder title='Form' />
                 <ContactUs />
             </AppLayout>
