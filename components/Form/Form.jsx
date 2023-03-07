@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Modal from 'react-modal'
 import { useState } from 'react'
-import { RadioButton } from '@/components'
+import { RadioButton, Popover } from '@/components'
 import styles from '../../styles/Form.module.css'
 import infoIcon from '../../public/images/form-info-icon.png'
 import britoFormImage from '../../public/images/brito-group-image-form.svg'
@@ -117,6 +117,10 @@ const Form = () => {
                             <label htmlFor='immigration-status' className={styles.labelForm}>
                                 Immigration Status
                                 <span>
+                                    <Popover
+                                        icon='exclamation'
+                                        className={styles.immigrationStatusPopover}
+                                    />
                                     <Image
                                         className={styles.infoIcon}
                                         src={infoIcon}
