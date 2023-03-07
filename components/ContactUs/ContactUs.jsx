@@ -12,37 +12,37 @@ const ContactUs = () => {
                 <p className='body2'>{labels.chat.descriptionChat}</p>
             </div>
             <div className={styles.mailimg + ' padding'}>
-            <Icon   variant='mail' />
-             
-                    <a className={styles.mail + ' body3'} href={labels.email.malito}>
-                        {labels.email.email}
-                    </a>
+                <Icon variant='mail' />
+
+                <a className={styles.mail + ' body3'} href={labels.email.malito}>
+                    {labels.email.email}
+                </a>
             </div>
             <div className={styles.mailnoimg + ' padding'}>
-                    <a className={styles.mail + ' body3'} href={labels.email.malito}>
-                        {labels.email.email}
-                    </a>
+                <a className={styles.mail + ' body3'} href={labels.email.malito}>
+                    {labels.email.email}
+                </a>
             </div>
-            <div className={styles.marg_lg }>
+            <div className={styles.marg_lg}>
                 <h3 className={styles.subtitle + ' padding'}>{labels.location.Basedin}</h3>
                 <p className='body2 horizontal-padding '>{labels.location.city}</p>
             </div>
             <div className={styles.marg_lg + ' padding'}>
                 <h3 className={styles.subtitle}>{labels.midia.visit}</h3>
-                <div className = 'vertical-padding'>
+                <div className='vertical-padding'>
                     <a href={labels.midia.instagramlink} className='instagram horizontal-padding'>
-                    <Icon variant='instagram' />
+                        <Icon variant='instagram' />
                     </a>
                     <a href={labels.midia.linklinkedin} className='linkedin horizontal-padding'>
-                    <Icon variant='linkedin' />
+                        <Icon variant='linkedin' />
                     </a>
                     <a href={labels.midia.linkfacebook} className='facebook horizontal-padding'>
-                    <Icon variant='facebook' />
+                        <Icon variant='facebook' />
                     </a>
-                </div><div className={styles.britologo}>
+                </div>
+                <div className={styles.britologo}></div>
             </div>
-            
-        </div></div>
+        </div>
     )
 }
 export default ContactUs
