@@ -3,7 +3,7 @@ import { AppLayout, Placeholder, Hero } from '@/components'
 import Banner from '@/components/Banner/Banner'
 import labels from '@/constants/labels.en'
 import ContactUs from '@/components/ContactUs/ContactUs'
-import styles from '@/styles/Banner.module.css'
+import styles from '@/styles/AppLayout.module.css'
 
 export default function Home() {
     return (
