@@ -26,6 +26,13 @@ const labels = {
                 'learning with lectures and workshops.',
         ],
     },
+
+    image: {
+        alt: 'parlement',
+        src: '/parlement.png',
+        width: '900',
+        height: '900',
+    }
 }
 
 export default labels
