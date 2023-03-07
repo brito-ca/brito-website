@@ -1,7 +1,9 @@
 import Head from 'next/head'
-import { AppLayout, Placeholder, Form, Popover } from '@/components'
+import { AppLayout, Placeholder, Hero } from '@/components'
 import Banner from '@/components/Banner/Banner'
 import labels from '@/constants/labels.en'
+import ContactUs from '@/components/ContactUs/ContactUs'
+import styles from '@/styles/AppLayout.module.css'
 
 export default function Home() {
     return (
@@ -13,23 +15,35 @@ export default function Home() {
                 <link rel='icon' href='/favicon.ico' />
             </Head>
             <AppLayout>
+                <Hero
+                    title={labels.welcomeToBrito.title}
+                    description={labels.welcomeToBrito.description}
+                    image={labels.image}
+                />
+                <Placeholder title='About Us' />
                 <Placeholder title='Hero' />
                 <Placeholder id='about' title='About Us' />
-                <Banner
-                    title={labels.ourMission.title}
-                    description={labels.ourMission.description}
-                />
-                <Banner title={labels.ourVision.title} description={labels.ourVision.description} />
+                <div className={styles.logoOnmission}>
+                    <Banner
+                        title={labels.ourMission.title}
+                        description={labels.ourMission.description}
+                    />
+                    <div className={styles.rectangle4}></div>
+                    <Banner
+                        title={labels.ourVision.title}
+                        description={labels.ourVision.description}
+                    />
+                </div>
                 <Placeholder title='Our Board' />
-                <Banner
-                    id='join-us'
-                    title={labels.joinUs.title}
-                    description={labels.joinUs.description}
-                />
+                <div className={styles.logoOnJoinUs}>
+                    <Banner
+                        id='join-us'
+                        title={labels.joinUs.title}
+                        description={labels.joinUs.description}
+                    />
+                </div>
                 <Placeholder title='Form' />
-                <Placeholder id='contact' title='Contact Us' />
-                <Banner title={labels.joinUs.title} description={labels.joinUs.description} />
-                <Form />
+                <ContactUs />
             </AppLayout>
         </>
     )
