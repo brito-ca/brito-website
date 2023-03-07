@@ -79,8 +79,8 @@
     }
 
     .crop_img_banner {
-        width: calc(23.43 * var(--spacing-unit));
-        height: calc(14.25 * var(--spacing-unit));
+        width: auto;
+        height: auto;
         filter: none;
     }
 
