@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { AppLayout, Placeholder, Hero } from '@/components'
+import { AppLayout, Placeholder, Hero, Form } from '@/components'
 import Banner from '@/components/Banner/Banner'
 import labels from '@/constants/labels.en'
 import ContactUs from '@/components/ContactUs/ContactUs'
@@ -42,7 +42,7 @@ export default function Home() {
                         description={labels.joinUs.description}
                     />
                 </div>
-                <Placeholder title='Form' />
+                <Form />
                 <ContactUs />
             </AppLayout>
         </>

@@ -12,6 +12,7 @@ const Form = () => {
     const [fullName, setFullName] = useState('')
     const [expertise, setExpertise] = useState('')
     const [company, setCompany] = useState('')
+    const [immigrationStatus, setImmigrationStatus] = useState('')
     const [resideInCanada, setResideInCanada] = useState('yes')
     const [city, setCity] = useState('')
     const [linkedinProfileLink, setLinkedinProfileLink] = useState('')
@@ -22,20 +23,12 @@ const Form = () => {
     const [isProfilePictureModalOpen, setIsProfilePictureModalOpen] = useState(false)
     const [isSuccesfullSubmissionModalOpen, setisSuccesfullSubmissionModalOpen] = useState(false)
 
-    function openProfilePictureModal() {
-        setIsProfilePictureModalOpen(true)
+    function openCloseProfilePictureModal() {
+        setIsProfilePictureModalOpen(!isProfilePictureModalOpen)
     }
 
-    function closeProfilePictureModal() {
-        setIsProfilePictureModalOpen(false)
-    }
-
-    function openSuccessSubModal() {
-        setisSuccesfullSubmissionModalOpen(true)
-    }
-
-    function closeSuccessSubModal() {
-        setisSuccesfullSubmissionModalOpen(false)
+    function openCloseSubscriptionSuccessModal() {
+        setisSuccesfullSubmissionModalOpen(!isSuccesfullSubmissionModalOpen)
     }
 
     const radioButtonHandler = (e) => {
@@ -119,19 +112,33 @@ const Form = () => {
                             </span>
                         </label>
                         <select
+                            value={immigrationStatus}
+                            onChange={(event) => setImmigrationStatus(event.target.value)}
                             id='immigration-status'
                             className={styles.immigrationStatusList}
                             required
                         >
-                            <option value='' disabled selected>
+                            <option value='' disabled>
                                 Select
                             </option>
-                            <option value='one'>Canadian Citizen (Foreign born)</option>
-                            <option value='two'>Convention Refugee / Protected Person</option>
-                            <option value='tree'>Permanent Resident</option>
-                            <option value='four'>Temporary Resident WITHOUT a Work Permit</option>
-                            <option value='five'>Temporary Resident WITH a Work Permit</option>
-                            <option value='six'>Other</option>
+                            <option key={1} value='Canadian Citizen (Foreign born)'>
+                                Canadian Citizen (Foreign born)
+                            </option>
+                            <option key={2} value='Convention Refugee / Protected Person'>
+                                Convention Refugee / Protected Person
+                            </option>
+                            <option key={3} value='Permanent Resident'>
+                                Permanent Resident
+                            </option>
+                            <option key={4} value='Temporary Resident WITHOUT a Work Permit'>
+                                Temporary Resident WITHOUT a Work Permit
+                            </option>
+                            <option key={5} value='Temporary Resident WITH a Work Permit'>
+                                Temporary Resident WITH a Work Permit
+                            </option>
+                            <option key={6} value='Other'>
+                                Other
+                            </option>
                         </select>
                     </div>
                     <div className={styles.linkedinField}>
@@ -163,66 +170,48 @@ const Form = () => {
                         <button
                             type='button'
                             className={styles.chooseFileButton}
-                            onClick={openProfilePictureModal}
+                            onClick={openCloseProfilePictureModal}
                         >
                             Choose file
                         </button>
-                        <Modal
-                            isOpen={isProfilePictureModalOpen}
-                            overlayClassName='react-model-overlay'
-                            onRequestClose={closeProfilePictureModal}
-                            style={{
-                                overlay: {
-                                    position: 'fixed',
-                                    top: 0,
-                                    left: 0,
-                                    right: 0,
-                                    bottom: 0,
-                                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                                    backdropFilter: 'blur(5px)',
-                                },
-                                content: {
-                                    top: '50%',
-                                    left: '50%',
-                                    right: 'auto',
-                                    bottom: 'auto',
-                                    marginRight: '-50%',
-                                    transform: 'translate(-50%, -50%)',
-                                    borderRadius: '30px',
-                                    backgroundColor: 'white',
-                                },
-                            }}
-                        >
-                            <Image
-                                src={closeModalIcon}
-                                alt='X icon to close upload photo field'
-                                className={styles.closeProfilePictureModalIcon}
-                                onClick={closeProfilePictureModal}
-                            />
-                            <div className={styles.profilePictureModal}>
-                                <h1 className={styles.profilePictureModalTitle}>Profile Picture</h1>
-                                <p className={styles.profilePictureModalDescription}>
-                                    A profile picture make a positive first impression on potential
-                                    connections It can also help to differentiate you from others in
-                                    your network and make your profile stand out in search results.
-                                </p>
-                                <Image
-                                    src={profilePictureTemplate}
-                                    alt="A front face picture of a man. It's a template for the profile picture field before the user selects its own"
-                                    className={styles.profilePictureAvatar}
-                                />
+                        {isProfilePictureModalOpen && (
+                            <div className={styles.backdrop}>
+                                <div className={styles.menuModal}>
+                                    <Image
+                                        src={closeModalIcon}
+                                        alt='X icon to close upload photo field'
+                                        className={styles.closeProfilePictureModalIcon}
+                                        onClick={openCloseProfilePictureModal}
+                                    />
+                                    <div className={styles.profilePictureModal}>
+                                        <h1 className={styles.profilePictureModalTitle}>
+                                            Profile Picture
+                                        </h1>
+                                        <p className={styles.profilePictureModalDescription}>
+                                            A profile picture make a positive first impression on
+                                            potential connections It can also help to differentiate
+                                            you from others in your network and make your profile
+                                            stand out in search results.
+                                        </p>
+                                        <Image
+                                            src={profilePictureTemplate}
+                                            alt="A front face picture of a man. It's a template for the profile picture field before the user selects its own"
+                                            className={styles.profilePictureAvatar}
+                                        />
 
-                                <button
-                                    type='button'
-                                    className={styles.profilePictureModalSaveButton}
-                                >
-                                    Save
-                                </button>
-                                <button className={styles.profilePictureModalChangeButton}>
-                                    Change
-                                </button>
+                                        <button
+                                            type='button'
+                                            className={styles.profilePictureModalSaveButton}
+                                        >
+                                            Save
+                                        </button>
+                                        <button className={styles.profilePictureModalChangeButton}>
+                                            Change
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-                        </Modal>
+                        )}
                     </div>
                     <div className={styles.fileChosenBox}>
                         <p className={styles.chosenBoxText}>No file chosen</p>
@@ -230,70 +219,52 @@ const Form = () => {
                     <button
                         className={styles.sendButton}
                         type='button'
-                        onClick={openSuccessSubModal}
+                        onClick={openCloseSubscriptionSuccessModal}
                     >
                         Send
                     </button>
-                    <Modal
-                        isOpen={isSuccesfullSubmissionModalOpen}
-                        overlayClassName='react-model-overlay'
-                        onRequestClose={closeSuccessSubModal}
-                        style={{
-                            overlay: {
-                                position: 'fixed',
-                                top: 0,
-                                left: 0,
-                                right: 0,
-                                bottom: 0,
-                                backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                                backdropFilter: 'blur(5px)',
-                            },
-                            content: {
-                                top: '50%',
-                                left: '50%',
-                                right: 'auto',
-                                bottom: 'auto',
-                                marginRight: '-50%',
-                                transform: 'translate(-50%, -50%)',
-                                borderRadius: '33px',
-                                backgroundColor: 'white',
-                                padding: '0',
-                                border: 'none',
-                            },
-                        }}
-                    >
-                        <Image
-                            src={closeModalIcon}
-                            alt='X icon to close upload photo field'
-                            className={styles.closeSubscriptionModalIcon}
-                            onClick={closeSuccessSubModal}
-                        />
-                        <div className={styles.subscriptionModalContainer}>
-                            <Image
-                                src={logo}
-                                alt="Brito's logo"
-                                className={styles.logoSubscriptionModal}
-                            />
-                            <div className={styles.subscriptionModalTextDescriptionContainer}>
-                                <h1 className={styles.subscriptionModalTitle}>
-                                    Thank you for connect with us!
-                                </h1>
-                                <p className={styles.subscriptionModalDescription}>
-                                    Your informations were submitted for approval.
-                                </p>
-                                <p className={styles.subscriptionModalDescription}>
-                                    You will receive a notification on your email.
-                                </p>
-                                <button
-                                    type='button'
-                                    className={styles.continueBrowsingButton}
-                                    onClick={closeSuccessSubModal}
-                                >
-                                    Continue browsing
-                                </button>
+                    {isSuccesfullSubmissionModalOpen && (
+                        <div className={styles.backdrop}>
+                            <div
+                                className={styles.menuModal}
+                                onClick={(e) => void e.stopPropagation()}
+                            >
+                                <div className={styles.subscriptionModalContainer}>
+                                    <Image
+                                        src={closeModalIcon}
+                                        alt='X icon to close upload photo field'
+                                        className={styles.closeSubscriptionModalIcon}
+                                        onClick={openCloseSubscriptionSuccessModal}
+                                    />
+                                    <Image
+                                        src={logo}
+                                        alt="Brito's logo"
+                                        className={styles.logoSubscriptionModal}
+                                    />
+                                    <div
+                                        className={styles.subscriptionModalTextDescriptionContainer}
+                                    >
+                                        <h1 className={styles.subscriptionModalTitle}>
+                                            Thank you for connect with us!
+                                        </h1>
+                                        <p className={styles.subscriptionModalDescription}>
+                                            Your informations were submitted for approval.
+                                        </p>
+                                        <p className={styles.subscriptionModalDescription}>
+                                            You will receive a notification on your email.
+                                        </p>
+                                        <button
+                                            type='button'
+                                            className={styles.continueBrowsingButton}
+                                            onClick={openCloseSubscriptionSuccessModal}
+                                        >
+                                            Continue browsing
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </Modal>
+                    )}
                 </div>
             </form>
         </div>
