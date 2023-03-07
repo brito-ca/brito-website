@@ -8,13 +8,47 @@
 }
 
 .board_box {
-    height: 793px;
     background-color: var(--primary-blue);
 }
 
 .card_box{
     width: 400px;
+    height: 793px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: justify;
+    color: var(--button-bg-outline-disabled);
 }
+
+.image_box{
+    padding-top: calc(5.75* var(--spacing-unit));
+    padding-bottom: calc(3.5* var(--spacing-unit));
+}
+
+.title_box{
+    padding-bottom: calc(1.687* var(--spacing-unit));
+}
+
+.info_box{
+    padding-bottom: calc(1.687* var(--spacing-unit));
+}
+
+.info_text{
+    font-size: 18px;
+}
+
+.linkedin_box{
+    justify-items: center;
+    align-items: center;
+    padding-top: calc(4.25* var(--spacing-unit));
+    padding-bottom: calc(1.18* var(--spacing-unit));
+}
+
+
+.email_box{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
