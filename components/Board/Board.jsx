@@ -7,18 +7,18 @@ const Board = (props) => {
     return (
         <div className={styles.container}>
             <div>
-                <h3 className={styles.title}>{'Our Board'}</h3>
+                <h3 className={styles.title}>{info.title}</h3>
             </div>
             <div className={styles.board_box}>
                 <div className={styles.card_one}>
-                    <Line />
+                    <div className={styles.line}/>
                     <Card image={image.marcelo} info={info.marcelo} />
                 </div>
                 <div className={styles.card_two}>
                     <Card image={image.diego} info={info.diego} />
                 </div>
                 <div className={styles.card_three}>
-                    <Line />
+                    <div className={styles.line}/>
                     <Card image={image.roger} info={info.roger} />
                 </div>
             </div>
