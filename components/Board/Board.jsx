@@ -1,18 +1,26 @@
 import styles from '@/styles/Board.module.css'
-import labels from '@/constants/labels.en'
 import Card from '@/components/Board/Card'
+import Line from '@/components/Board/Line'
 
 const Board = (props) => {
-    const {image} = props
+    const { image, info } = props
     return (
         <div className={styles.container}>
             <div>
                 <h3 className={styles.title}>{'Our Board'}</h3>
             </div>
             <div className={styles.board_box}>
-                <Card
-                    image={image.marcelo}
-                />
+                <div className={styles.card_one}>
+                    <Line/>
+                    <Card image={image.marcelo} info={info.marcelo}/>
+                </div>
+                <div className={styles.card_two}>
+                    <Card image={image.diego} info={info.diego} />
+                </div>
+                <div className={styles.card_three}>
+                    <Line/>
+                    <Card image={image.roger} info={info.roger} />
+                </div>
             </div>
         </div>
     )
