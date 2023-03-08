@@ -30,6 +30,7 @@ export default function Home() {
                 <Board 
                     title='dsadsdad'
                     image={labels.card_image}
+                    info={labels.board_info}
                     />
                 <Banner
                     id='join-us'
