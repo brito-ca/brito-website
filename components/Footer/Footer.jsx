@@ -18,7 +18,7 @@ const Footer = () => {
                         <Image src={britoFlag} alt='logo' width={72.33} height={64.36} />
                         <Image src={britoWordmark} alt='wordmark' width={193} height={72} />
                         <p className={'vertical-padding'}>
-                            {labels.brito.phrase}
+                            {labels.footerBrito.phrase}
                         </p>
                     </div>
                     <div className={styles.socialContainer}>

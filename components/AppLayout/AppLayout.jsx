@@ -16,9 +16,7 @@ const AppLayout = (props) => {
                 <FloatingActionButton />
                 <Header />
                 <main>{children}</main>
-                <Footer>
-                    <Placeholder title='Footer' />
-                </Footer>
+                <Footer />
             </div>
         </>
     )

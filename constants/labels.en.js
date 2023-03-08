@@ -52,7 +52,7 @@ const labels = {
     Maple: {
         labelimgmaple: 'mapleleave',
     },
-    brito: {
+    footerBrito: {
         phrase: 'Building the Brazilian IT community in Ottawa'
     },
     footerNavigation: {
