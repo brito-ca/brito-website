@@ -52,18 +52,6 @@ const labels = {
     Maple: {
         labelimgmaple: 'mapleleave',
     },
-    britoFlag: {
-        alt: 'brito flag logo',
-        src: '/brito-logo-1.png',
-        width: '72.33',
-        height: '64.36',
-    },
-    britoWordMark: {
-        alt: 'brito flag wordmark',
-        src: '/brito-logo-2.png',
-        width: '193',
-        height: '72',
-    },
     footerBrito: {
         phrase: 'Building the Brazilian IT community in Ottawa',
     },
