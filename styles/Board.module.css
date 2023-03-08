@@ -88,8 +88,6 @@
     }
 
     .board_box > :nth-child(3) {
-        border-bottom: calc(0.125 * var(--spacing-unit)) solid #f5f5fa;
-        margin-bottom: calc(1.25 * var(--spacing-unit));
         order: 3;
     }
 
