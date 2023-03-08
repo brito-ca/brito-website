@@ -7,13 +7,7 @@ const icons = {
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
         >
-            <path
-                d='M5.66667 9.0013H20.3333M2 1.66797H24M2 16.3346H24'
-                stroke='#4A5568'
-                stroke-width='2.5625'
-                stroke-linecap='round'
-                stroke-linejoin='round'
-            />
+            <path d='M5.66667 9.0013H20.3333M2 1.66797H24M2 16.3346H24' stroke='#4A5568' />
         </svg>
     ),
     close: (
@@ -65,16 +59,10 @@ const icons = {
             <path
                 d='M21 2V10C21 10.5304 20.7366 11.0391 20.2678 11.4142C19.7989 11.7893 19.163 12 18.5 12H3.5C2.83696 12 2.20107 11.7893 1.73223 11.4142C1.26339 11.0391 1 10.5304 1 10V2'
                 stroke='#F5F5FA'
-                stroke-width='1.4'
-                stroke-linecap='round'
-                stroke-linejoin='round'
             />
             <path
                 d='M21 3.10928C21 2.54986 20.7366 2.01336 20.2678 1.61779C19.7989 1.22223 19.163 1 18.5 1H3.5C2.83696 1 2.20107 1.22223 1.73223 1.61779C1.26339 2.01336 1 2.54986 1 3.10928L9.675 7.67938C10.0723 7.8889 10.5314 8 11 8C11.4686 8 11.9277 7.8889 12.325 7.67938L21 3.10928Z'
                 stroke='#F5F5FA'
-                stroke-width='1.4'
-                stroke-linecap='round'
-                stroke-linejoin='round'
             />
         </svg>
     ),
