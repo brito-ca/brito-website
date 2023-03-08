@@ -1,0 +1,471 @@
+.formContainer {
+    background: var(--secundary-green);
+    padding: var(--padding-sm) var(--padding-md);
+}
+
+.formTitle {
+    text-align: center;
+    color: var(--primary-white);
+
+    padding: var(--padding-lg) 0px var(--padding-md) 0;
+}
+
+.labelForm {
+    width: 300px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+
+    margin-top: 1.5rem;
+    margin-bottom: 2px;
+
+    color: var(--primary-white);
+}
+
+.inputForm {
+    padding: 0.5rem 0.75rem;
+
+    width: 100%;
+    height: 2.5rem;
+
+    border: 1px solid #9b9b9f;
+    border-radius: 5px;
+    background-color: var(--primary-white);
+}
+
+.formSections {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, auto);
+    justify-content: space-around;
+    align-items: end;
+}
+
+.primaryInformation {
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+    margin-top: 40px;
+}
+.labelRadioButton {
+    margin-left: '5px' !important;
+}
+
+.imageContainer {
+    grid-column: 6 / 9;
+    grid-row: 1 / 2;
+}
+
+.roundedFormImage {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.immigrationStatusSection {
+    grid-column: 1 / 9;
+    grid-row: 2 / 3;
+}
+
+.immigrationStatusList {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+
+    background: #f5f5fa;
+
+    border: 1px solid #929bc6;
+    border-radius: 5px;
+    color: #272424;
+    font-size: 13px;
+}
+
+.linkedinField {
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+}
+
+.emailField {
+    grid-column: 5 / 9;
+    grid-row: 3 / 4;
+}
+
+.uploadPhotoField {
+    grid-column: 1 / 4;
+    grid-row: 4 / 5;
+}
+
+.fileChosenBox {
+    grid-row: 4 / 5;
+    grid-column: 2 / 6;
+
+    height: 42px;
+    font-size: 14px;
+
+    /* Distancing from button before breakpoint */
+    margin-left: 85px;
+
+    color: var(--primary-white);
+    border: 1px solid #f5f5fa;
+    border-radius: 8px;
+    padding: 0 10px;
+
+    /* center p on div */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.chosenBoxText {
+    padding: 0;
+}
+
+.chooseFileButton {
+    color: #022777;
+    background: #f5f5fa;
+
+    padding: 8px 2rem;
+    margin-top: var(--margin-sm);
+
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    font-size: 18px;
+}
+
+.sendButton {
+    grid-row: 5 / 6;
+    grid-column: 8 / 9;
+
+    font-size: 20px;
+    color: #022777;
+
+    background: #f5f5fa;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+
+    padding: 8px 16px;
+    margin-bottom: 3rem;
+}
+
+.mandatoryFieldSpan {
+    color: var(--secundary-red-warning);
+    margin-left: 4px;
+}
+
+.infoIcon {
+    margin-left: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .primaryInformation {
+        grid-column: 1 / 9;
+    }
+
+    .imageContainer {
+        visibility: hidden;
+    }
+
+    .linkedinField {
+        grid-column: 1 / 9;
+    }
+
+    .emailField {
+        grid-column: 1 / 9;
+        grid-row: 4 / 5;
+    }
+
+    .uploadPhotoField {
+        grid-column: 1/ 5;
+        grid-row: 5 / 6;
+        margin-right: 1rem;
+    }
+
+    .chooseFileButton {
+        padding: 0;
+        width: 100%;
+
+        background: #022777;
+        color: var(--primary-white);
+
+        font-style: normal;
+        font-size: 16px;
+        border-radius: 0;
+        border: none;
+        height: 40px;
+    }
+
+    .fileChosenBox {
+        grid-row: 5 / 6;
+        grid-column: 5 / 9;
+        margin-left: 1rem;
+
+        height: 40px;
+
+        border-radius: 0;
+        text-align: center;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+    }
+
+    .sendButton {
+        grid-row: 7 / 8;
+        grid-column: 1 / 9;
+
+        margin-top: 40px;
+
+        border-radius: 0;
+
+        width: 100%;
+        height: 4rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.profilePictureModal {
+    width: 500px;
+    height: 590px;
+
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    grid-template-rows: repeat(4, auto);
+    align-content: center;
+    align-items: center;
+
+    padding: 0 3rem;
+    margin: 2rem;
+}
+
+.profilePictureModalTitle {
+    grid-row: 1 / 2;
+    grid-column: 1 / 9;
+
+    color: #022777;
+    font-size: 28px;
+
+    margin-top: 2rem;
+}
+
+.profilePictureModalDescription {
+    grid-row: 2 / 3;
+    grid-column: 1 / 9;
+    line-height: 24px;
+    color: #525252;
+    margin: 1.25rem 0;
+}
+
+.profilePictureAvatar {
+    grid-row: 3 / 4;
+    grid-column: 1 / 9;
+
+    margin: 0 auto 1.5rem auto;
+    width: 280px;
+    height: 280px;
+}
+
+.profilePictureModalSaveButton {
+    width: 146px;
+    height: 40px;
+    background: #022777;
+    border-radius: 40px;
+    margin: 1rem 0;
+
+    padding: 0;
+    font-size: 20px;
+
+    grid-row: 4 / 5;
+    grid-column: 2 / 4;
+}
+
+.profilePictureModalChangeButton {
+    width: 146px;
+    height: 40px;
+    border-radius: 40px !important;
+    border: 3px solid #022777;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #022777;
+
+    padding: 0;
+    font-size: 20px;
+
+    grid-row: 4 / 5;
+    grid-column: 5 / 8;
+}
+
+.closeProfilePictureModalIcon {
+    position: absolute;
+    right: 0;
+    margin: 0 21px 0 0;
+
+    width: 30px;
+}
+
+.closeSubscriptionModalIcon {
+    position: absolute;
+    right: 0;
+    margin: 10px 21px 0 0;
+
+    width: 30px;
+}
+
+@media (max-width: 600px) {
+    .profilePictureModal {
+        width: 310px;
+        height: 667px;
+
+        text-align: center;
+        justify-content: center;
+        justify-items: center;
+
+        margin: 0;
+    }
+
+    .profilePictureModalTitle {
+        grid-row: 1 / 2;
+        grid-column: 2 / 8;
+
+        color: #022777;
+
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .profilePictureAvatar {
+        width: 187px;
+        height: 187px;
+    }
+
+    .profilePictureModalSaveButton {
+        width: 263px;
+        height: 56px;
+
+        border-radius: 4px;
+
+        grid-row: 4 / 5;
+        grid-column: 1 / 9;
+    }
+
+    .profilePictureModalChangeButton {
+        width: 263px;
+        height: 56px;
+
+        border-radius: 4px !important;
+
+        grid-row: 5 / 6;
+        grid-column: 1 / 9;
+    }
+
+    .subscriptionModalContainer {
+        width: 320px !important;
+        height: 470px;
+    }
+
+    .subscriptionModalTextDescriptionContainer {
+        padding: 4rem 2.5rem !important;
+    }
+
+    .subscriptionModalTitle {
+        display: none;
+    }
+
+    .continueBrowsingButton {
+        width: 263px;
+        height: 56px;
+
+        width: 236px;
+        height: 56px;
+
+        border: 1px solid #1a1a1a;
+        border-radius: 4px;
+
+        background-color: #fff;
+        color: #022777;
+
+        padding: 0;
+        font-size: 20px;
+
+        margin-top: 2rem;
+
+        display: block !important;
+    }
+}
+
+.subscriptionModalContainer {
+    width: 500px;
+    height: 590px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+
+    text-align: center;
+    /* justify-items: center; */
+}
+
+.logoSubscriptionModal {
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+
+    width: 220px;
+    height: 220px;
+
+    margin: 30px auto 0 auto;
+}
+
+.subscriptionModalTextDescriptionContainer {
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+
+    background: #022777;
+    color: var(--primary-white);
+
+    text-align: center;
+
+    padding-bottom: 90px;
+    padding-top: 20px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.subscriptionModalTitle {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+
+    margin: 3rem 1rem 3rem 1rem;
+}
+
+.subscriptionModalDescription {
+    padding: 0.15rem;
+}
+
+.continueBrowsingButton {
+    display: none;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--modal-backdrop);
+    backdrop-filter: blur(5px);
+}
+
+.menuModal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: var(--neutral-white);
+
+    z-index: 9 !important;
+
+    border-radius: 20px;
+}

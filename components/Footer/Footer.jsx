@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import styles from '@/styles/Footer.module.css'
 import line from '@/public/line.png'
-import britoFlag from '@/public/brito-logo-1.png'
-import britoWordmark from '@/public/brito-logo-2.png'
 import labels from '@/constants/labels.en'
 import { Icon } from '@/components'
 
@@ -13,8 +11,8 @@ const Footer = () => {
             <div className={`${styles.footerContainer} flex-row-space-between`}>
                 <div className={styles.logoAndSocial}>
                     <div className={styles.logoAndSocial}>
-                        <Image src={britoFlag} alt='logo' width={72.33} height={64.36} />
-                        <Image src={britoWordmark} alt='wordmark' width={193} height={72} />
+                        <Image src={labels.britoFlag.src} alt={labels.britoFlag.alt} width={labels.britoFlag.width} height={labels.britoFlag.height} />
+                        <Image src={labels.britoWordMark.src} alt={labels.britoWordMark.alt} width={labels.britoWordMark.width} height={labels.britoWordMark.height} />
                         <p className={'vertical-padding'}>
                             {labels.footerBrito.phrase}
                         </p>

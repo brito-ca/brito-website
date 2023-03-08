@@ -1,4 +1,4 @@
-import { AppLayout, Placeholder, Hero } from '@/components'
+import { AppLayout, Placeholder, Hero, Form } from '@/components'
 import Banner from '@/components/Banner/Banner'
 import labels from '@/constants/labels.en'
 import ContactUs from '@/components/ContactUs/ContactUs'
@@ -8,7 +8,6 @@ export default function Home() {
     return (
         <AppLayout>
             <Hero
-                id='hero'
                 title={labels.welcomeToBrito.title}
                 description={labels.welcomeToBrito.description}
                 image={labels.image}
@@ -19,6 +18,7 @@ export default function Home() {
                     title={labels.ourMission.title}
                     description={labels.ourMission.description}
                 />
+                <div className={styles.rectangle4}></div>
                 <Banner title={labels.ourVision.title} description={labels.ourVision.description} />
             </div>
             <Placeholder title='Our Board' />
@@ -29,7 +29,7 @@ export default function Home() {
                     description={labels.joinUs.description}
                 />
             </div>
-            <Placeholder title='Form' />
+            <Form />
             <ContactUs />
         </AppLayout>
     )
