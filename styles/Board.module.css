@@ -1,5 +1,5 @@
 .container{
-    padding:var(--padding-md);
+    padding:0px;
 }
 
 .title {
@@ -8,47 +8,114 @@
 }
 
 .board_box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     background-color: var(--primary-blue);
+    padding:var(--spacing-unit);
+    gap: 28px;
 }
 
 .card_box{
-    width: 400px;
-    height: 793px;
+    width: 330px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     text-align: justify;
     color: var(--button-bg-outline-disabled);
+    gap: 50px
 }
 
 .image_box{
-    padding-top: calc(5.75* var(--spacing-unit));
-    padding-bottom: calc(3.5* var(--spacing-unit));
+    width: auto;
+    height: auto;
 }
 
-.title_box{
-    padding-bottom: calc(1.687* var(--spacing-unit));
+.title_text{
+    font-size: 20px;
 }
 
-.info_box{
-    padding-bottom: calc(1.687* var(--spacing-unit));
+.center_box{
+    height: 197px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .info_text{
+    padding-bottom: 0px;
     font-size: 18px;
 }
-
-.linkedin_box{
-    justify-items: center;
+.bottom_box{
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    padding-top: calc(4.25* var(--spacing-unit));
-    padding-bottom: calc(1.18* var(--spacing-unit));
+    justify-content: center;
+    gap: 20px;
 }
-
 
 .email_box{
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
     gap: 20px;
+}
+
+.line{
+    border: 0;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .card_box{
+        align-items: center;
+        justify-content: space-evenly;
+        
+    }
+    
+
+    .line {   
+    border-bottom: 2px solid #F5F5FA;
+    margin-bottom: 20px;
+    }
+
+    .card_one{
+        order: 2
+    }
+
+    .card_two{
+        order: 1
+    }
+    
+    .card_three{
+        order: 3
+    }
+
+    .image_box{
+        width: auto;
+        height: auto;
+        object-fit: fill;
+    }
+
+    .center_box{
+        height: auto;
+    }
+
+    .title_text{
+        word-wrap: break-word;
+        font-weight: 600;
+        font-size: var(--spacing-unit);
+        text-align: center;
+    }
+
+    .info_text{
+        padding-bottom: 0px;
+        font-size: var(--spacing-unit);
+        font-weight: 400;
+    }
+    
 }
 
