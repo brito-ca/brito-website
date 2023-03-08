@@ -11,14 +11,14 @@ const Board = (props) => {
             </div>
             <div className={styles.board_box}>
                 <div className={styles.card_one}>
-                    <Line/>
-                    <Card image={image.marcelo} info={info.marcelo}/>
+                    <Line />
+                    <Card image={image.marcelo} info={info.marcelo} />
                 </div>
                 <div className={styles.card_two}>
                     <Card image={image.diego} info={info.diego} />
                 </div>
                 <div className={styles.card_three}>
-                    <Line/>
+                    <Line />
                     <Card image={image.roger} info={info.roger} />
                 </div>
             </div>

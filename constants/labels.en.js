@@ -52,26 +52,29 @@ const labels = {
             src: '/image3.png',
             width: '200',
             height: '200',
-        }
+        },
     },
-    
+
     board_info: {
         marcelo: {
-            title:'Marcelo - Dev director',
-            description:'Senior Front-end Engineer with 20 years of experience building websites and applications using tech-edge for big techs, digital agencies, media and educational companies in Canada, the United States and Brazil.',
+            title: 'Marcelo - Dev director',
+            description:
+                'Senior Front-end Engineer with 20 years of experience building websites and applications using tech-edge for big techs, digital agencies, media and educational companies in Canada, the United States and Brazil.',
             email: 'contact@company.com',
         },
         diego: {
-            title:'Diego - President and co-founder',
-            description:'Senior Project manager with over 20 years experience working for consulting companies, banks and government.',
+            title: 'Diego - President and co-founder',
+            description:
+                'Senior Project manager with over 20 years experience working for consulting companies, banks and government.',
             email: 'contact@company.com',
         },
         roger: {
-            title:'Roger - Director and co-founder',
-            description:'Senior CRM specialist with international experience in projects for telecom, consulting and  entertainment companies',
+            title: 'Roger - Director and co-founder',
+            description:
+                'Senior CRM specialist with international experience in projects for telecom, consulting and  entertainment companies',
             email: 'contact@company.com',
-        }
-    }
+        },
+    },
 }
 
 export default labels

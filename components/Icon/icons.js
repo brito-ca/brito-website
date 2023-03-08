@@ -77,8 +77,6 @@ const icons = {
                 stroke-linejoin='round'
             />
         </svg>
-        
-
     ),
 
     linkedinCard: (
