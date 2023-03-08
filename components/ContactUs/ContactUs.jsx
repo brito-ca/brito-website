@@ -1,9 +1,12 @@
 import labels from '@/constants/labels.en'
 import styles from '@/styles/ContactUs.module.css'
 import { Icon } from '@/components'
-const ContactUs = () => {
+
+const ContactUs = (props) => {
+    const { id } = props
+
     return (
-        <div className={styles.maple}>
+        <div id={id} className={styles.maple}>
             <div>
                 <h2 className={styles.title}>{labels.contactUs.title}</h2>
             </div>
