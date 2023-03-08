@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import { AppLayout, Placeholder, Hero, Board } from '@/components'
 import Banner from '@/components/Banner/Banner'
 import labels from '@/constants/labels.en'
