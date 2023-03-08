@@ -3,16 +3,11 @@
 }
 
 .logoAndSocial {
-    flex: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
-
-.navigationContainer {
-    flex: 2;
-  }
 
 .logoAndSocial Image {
     max-width: 100%;
@@ -21,10 +16,6 @@
 .socialContainer {
     display: flex;
     gap: calc(1.4 * var(--spacing-unit));
-}
-
-.navigationContainer {
-  flex-grow: 1;
 }
 
 .title {
