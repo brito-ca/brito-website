@@ -40,39 +40,38 @@ const Footer = () => {
                         </a>
                     </div>
                 </div>
-                <nav className={styles.navigationContainer}>
+                <div className={styles.navigationContainer}>
                     <h5 className={styles.title}>Company</h5>
                     <div>
                         <p>
-                            <a className={`${styles.navigation} body2`}>About</a>
+                            <a className={styles.navigation + ' body2'}>About</a>
                         </p>
                         <p className={'vertical-padding'}>
-                            <a className={`${styles.navigation} body2`}>Contact</a>
+                            <a className={styles.navigation + ' body2'}>Contact</a>
                         </p>
                     </div>
-                </nav>
-                <nav className={styles.navigationContainer}>
+                </div>
+                <div className={styles.navigationContainer}>
                     <h5 className={styles.title}>Join us</h5>
                     <p>
-                        <a className={`${styles.navigation} body2`}>Network list</a>
+                        <a className={styles.navigation + ' body2'}>Network list</a>
                     </p>
-                </nav>
+                </div>
             </div>
             <Image src={line} alt='divisor' width={1240} height={3} />
             <div className={`${styles.footerBottom} vertical-padding`}>
-                <p className={styles.copyrightText}>Copyright © 2023 Brito</p>
-                <p></p>
-                <div className={styles.footerBottom}>
-                    <p className={styles.copyrightText}>All Rights Reserved</p>
-                    <p>&nbsp;|&nbsp;</p>
+                <p className={styles.copyrightText + ' body5'} >Copyright © 2023 Brito</p>
+                <div className={styles.footerLinks}>
+                    <p className={styles.copyrightText + ' body5'}>All Rights Reserved</p>
+                    <p>|</p>
                     <p>
-                        <a href='' className={styles.termsLink}>
+                        <a className={styles.termsLink + ' body5'} href=''>
                             Terms and Conditions
                         </a>
                     </p>
-                    <p>&nbsp;|&nbsp;</p>
+                    <p>|</p>
                     <p>
-                        <a href='' className={styles.termsLink}>
+                        <a className={styles.termsLink + ' body5'} href=''>
                             Privacy Policy
                         </a>
                     </p>

@@ -1,21 +1,30 @@
+.footerContainer {
+    padding: var(--padding-lg) 148px var(--padding-lg) 0;
+}
+
 .logoAndSocial {
+    flex: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
+.navigationContainer {
+    flex: 2;
+  }
+
 .logoAndSocial Image {
     max-width: 100%;
 }
 
-.footerContainer {
-    padding: var(--padding-lg) 148px var(--padding-lg) 0;
-}
-
 .socialContainer {
     display: flex;
-    gap: 23px;
+    gap: calc(1.4 * var(--spacing-unit));
+}
+
+.navigationContainer {
+  flex-grow: 1;
 }
 
 .title {
@@ -26,7 +35,6 @@
 .navigation {
     padding: var(--padding-sm) 0;
     color: var(--primary-blue);
-    font-weight: 400;
     text-decoration: none;
 }
 
@@ -38,24 +46,22 @@
 .footerBottom {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
+.footerLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-unit);
+}
+
 .copyrightText {
-    /* Paragraph/Default */
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
     color: var(--primary-blue);
 }
 
 .termsLink {
-    /* Paragraph/Default */
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
     color: var(--primary-blue);
     text-decoration: underline;
 }
@@ -82,40 +88,15 @@
 
     .socialContainer {
         display: flex;
-        gap: 9.5px;
+        gap: var(--spacing-unit)
     }
 
     .title {
         padding: 0;
-        color: var(--primary-blue);
-        font-weight: 600;
-        font-size: 12px;
-        line-height: 24px;
     }
 
     .navigation {
         padding: var(--padding-sm) 0;
-        color: var(--primary-blue);
-        font-weight: 400;
-        font-size: 10px;
-        line-height: 12px;
         text-decoration: none;
-    }
-
-    .copyrightText {
-        /* Paragraph/Default */
-        font-weight: 300;
-        font-size: 8px;
-        line-height: 20px;
-        color: var(--primary-blue);
-    }
-
-    .termsLink {
-        /* Paragraph/Default */
-        font-weight: 300;
-        font-size: 8px;
-        line-height: 20px;
-        color: var(--primary-blue);
-        text-decoration: underline;
     }
 }
