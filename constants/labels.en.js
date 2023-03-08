@@ -65,21 +65,20 @@ const labels = {
         height: '72',
     },
     footerBrito: {
-        phrase: 'Building the Brazilian IT community in Ottawa'
+        phrase: 'Building the Brazilian IT community in Ottawa',
     },
     footerNavigation: {
         company: 'Company',
         about: 'About',
         contact: 'Contact',
         joinus: 'Join us',
-        network: 'Network list'
+        network: 'Network list',
     },
     footerContent: {
         copyright: 'Copyright © 2023 Brito',
         rights: 'All Rights Reserved',
         terms: 'Terms and Conditions',
-        privacy: 'Privacy Policy'
-    }
-
+        privacy: 'Privacy Policy',
+    },
 }
 export default labels

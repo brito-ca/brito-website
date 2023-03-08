@@ -9,15 +9,6 @@
     align-items: center;
 }
 
-.logoAndSocial Image {
-    max-width: 100%;
-}
-
-.icon svg {
-    width: 25%;
-    height: 25%;
-}
-
 .socialContainer {
     display: flex;
     gap: calc(1.4 * var(--spacing-unit));
@@ -69,13 +60,12 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .logoAndSocial > div:first-child img {
-        width: 75%;
-        height: 75%;
-    }
-
     .logoAndSocial p {
         display: none;
+    }
+
+    .logo {
+        width: 26%;
     }
 
     .footerContainer {
@@ -84,15 +74,15 @@
 
     .socialContainer {
         display: flex;
-        gap: var(--spacing-unit)
+        gap: var(--spacing-unit);
     }
 
     .title {
-        padding: 0;
+        padding: var(--margin-xs) 0;
     }
 
     .navigation {
-        padding: var(--padding-sm) 0;
+        padding: var(--padding-xs) 0;
         text-decoration: none;
     }
 }

@@ -1,4 +1,4 @@
-import { FloatingActionButton, Header, Footer} from '@/components'
+import { FloatingActionButton, Header, Footer } from '@/components'
 import styles from '@/styles/AppLayout.module.css'
 import Head from 'next/head'
 
