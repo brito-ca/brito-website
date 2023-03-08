@@ -3,10 +3,8 @@ import styles from '@/styles/Footer.module.css'
 import line from '@/public/line.png'
 import britoFlag from '@/public/brito-logo-1.png'
 import britoWordmark from '@/public/brito-logo-2.png'
-import fbLogo from '@/public/facebook-footer.svg'
-import instaLogo from '@/public/instagram-footer.svg'
-import linkedinLogo from '@/public/linkedin-footer.svg'
 import labels from '@/constants/labels.en'
+import { Icon } from '@/components'
 
 const Footer = () => {
     return (
@@ -22,22 +20,14 @@ const Footer = () => {
                         </p>
                     </div>
                     <div className={styles.socialContainer}>
-                        <a
-                            href='https://www.facebook.com/groups/566404256865424'
-                            target={'_blank'}
-                            rel='noopener noreferrer'
-                        >
-                            <Image src={fbLogo} alt='facebook' width={9.82} height={18} />
+                        <a href='{labels.midia.instagramlink}' target={'_blank'} rel='noopener noreferrer'>
+                            <Icon className={styles.icon} variant='instagram' />
                         </a>
-                        <a href='' target={'_blank'} rel='noopener noreferrer'>
-                            <Image src={instaLogo} alt='instagram' width={18} height={18} />
+                        <a href={labels.midia.linklinkedin} target={'_blank'} rel='noopener noreferrer'>
+                            <Icon className={styles.icon} variant='linkedin' />
                         </a>
-                        <a
-                            href='https://www.linkedin.com/groups/12058916/'
-                            target={'_blank'}
-                            rel='noopener noreferrer'
-                        >
-                            <Image src={linkedinLogo} alt='linkedin' width={19} height={18} />
+                        <a href={labels.midia.linkfacebook} target={'_blank'} rel='noopener noreferrer'>
+                            <Icon className={styles.icon} variant='facebook' />
                         </a>
                     </div>
                 </div>

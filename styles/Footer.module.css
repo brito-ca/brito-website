@@ -13,6 +13,11 @@
     max-width: 100%;
 }
 
+.icon svg {
+    width: 25%;
+    height: 25%;
+}
+
 .socialContainer {
     display: flex;
     gap: calc(1.4 * var(--spacing-unit));
