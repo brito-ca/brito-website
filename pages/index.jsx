@@ -29,7 +29,7 @@ export default function Home() {
                     title={labels.ourMission.title}
                     description={labels.ourMission.description}
                 />
-                <Board title='dsadsdad' image={labels.card_image} info={labels.board_info} />
+                <Board title='Our Board' data={labels.card_data} />
                 <Banner
                     id='join-us'
                     title={labels.joinUs.title}

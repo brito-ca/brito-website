@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '@/styles/Board.module.css'
 
 const Card = (props) => {
-    const { image, info } = props
+    const { image, title, description, email } = props
     return (
         <div className={styles.card_box}>
             <div className={styles.image_box}>
@@ -11,10 +11,10 @@ const Card = (props) => {
             </div>
             <div className={styles.center_box}>
                 <div className={styles.title_box}>
-                    <h5 className={styles.title_text}>{info.title}</h5>
+                    <h5 className={styles.title_text}>{title}</h5>
                 </div>
                 <div>
-                    <p className={styles.info_text}>{info.description}</p>
+                    <p className={styles.info_text}>{description}</p>
                 </div>
             </div>
             <div className={styles.bottom_box}>
@@ -22,10 +22,10 @@ const Card = (props) => {
                     <Icon variant='linkedinCard' />
                 </div>
                 <div className={styles.email_box}>
-                    <div>
+                    <div className={styles.line}>
                         <Icon variant='mailCard' />
                     </div>
-                    <p className='no-padding'>{info.email}</p>
+                    <p className='no-padding'>{email}</p>
                 </div>
             </div>
         </div>
