@@ -1,8 +1,9 @@
 .container {
-    padding: calc(0 * var(--spacing-unit));
+    padding-top: calc(0 * var(--spacing-unit));
 }
 
 .title {
+    margin-bottom: calc(5.5 * var(--spacing-unit));
     text-align: center;
     color: var(--primary-blue);
 }
