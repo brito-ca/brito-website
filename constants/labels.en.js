@@ -56,6 +56,7 @@ const labels = {
     },
 
     board_info: {
+        title: "Our Board",
         marcelo: {
             title: 'Marcelo - Dev director',
             description:
