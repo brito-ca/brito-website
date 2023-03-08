@@ -134,6 +134,7 @@ a {
     font-size: 1.5rem;
     font-weight: 700;
 }
+
 button {
     color: var(--neutral-white);
     padding: var(--padding-sm) var(--padding-lg);

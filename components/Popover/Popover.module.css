@@ -1,0 +1,79 @@
+.popoverContainer {
+    position: relative;
+    display: inline-block;
+
+    margin-left: 4px;
+}
+
+.popover {
+    position: relative;
+}
+
+.popover::after {
+    background-color: #525252;
+    border-radius: 10px;
+    color: #fff;
+    display: none;
+    padding: 10px 15px;
+    position: absolute;
+    text-align: center;
+    z-index: 999;
+
+    width: 280px;
+
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.popover.top::after {
+    content: "This status assists Brito in identifying suitable projects and job opportunities based on his type of visa. Some visas only permit 20 hours of work, and holding citizenship is a requirement for certain government positions, enhancing one's chances of securing a job.";
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, calc(-100% - 10px));
+}
+
+.popover.bottom::after {
+    content: 'bottom';
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, calc(100% + 10px));
+}
+
+.popover.right::after {
+    content: 'right';
+    top: 0;
+    right: 0;
+    transform: translateX(calc(100% + 10px));
+}
+
+.popover:hover::after {
+    display: block;
+}
+
+/* This creates the arrow */
+.popover::before {
+    background-color: #525252;
+    content: ' ';
+    display: none;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    z-index: 999;
+}
+
+.popover:hover::before {
+    display: block;
+}
+
+.popover.top::before {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+
+.popover.right::before {
+    top: 50%;
+    right: 0;
+    transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+}
