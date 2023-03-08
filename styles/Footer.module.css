@@ -1,5 +1,5 @@
 .footerContainer {
-    padding: var(--padding-lg) 148;
+    padding: var(--padding-lg) 0;
     border-top: 3px solid  var(--neutral-medium-light);
     border-bottom: 3px solid var(--neutral-medium-light);
 }

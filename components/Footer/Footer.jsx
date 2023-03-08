@@ -2,19 +2,17 @@ import Image from 'next/image'
 import britoFlag from '../../public/images/brito-logo-1.svg'
 import britoWordMark from '../../public/images/brito-logo-2.svg'
 import styles from '@/styles/Footer.module.css'
-import line from '@/public/line.png'
 import labels from '@/constants/labels.en'
 import { Icon } from '@/components'
 
 const Footer = () => {
     return (
         <div>
-            <Image src={line} alt='divisor' width={1240} height={3} />
-            <div className={`${styles.footerContainer} flex-row-space-between`}>
+            <div className={styles.footerContainer + 'flex-row-space-between'}>
                 <div className={styles.logoAndSocial}>
                     <div className={styles.logoAndSocial}>
                         <Image alt='brito flag' src={britoFlag} className={styles.logo} />
-                        <Image alt='britoWordMark' src={britoWordMark} className={styles.logo} />
+                        <Image alt='brito wordMark' src={britoWordMark} className={styles.logo} />
                         <p className={'vertical-padding'}>{labels.footerBrito.phrase}</p>
                     </div>
                     <div className={styles.socialContainer}>
@@ -23,7 +21,7 @@ const Footer = () => {
                             target={'_blank'}
                             rel='noopener noreferrer'
                         >
-                            <Icon variant='instagram' className={styles.icon} />
+                            <Icon className={styles.icon} variant='instagram' />
                         </a>
                         <a
                             href={labels.midia.linklinkedin}
@@ -65,8 +63,7 @@ const Footer = () => {
                     </p>
                 </div>
             </div>
-            <Image src={line} alt='divisor' width={1240} height={3} />
-            <div className={`${styles.footerBottom} vertical-padding`}>
+            <div className={styles.footerBottom + 'vertical-padding'}>
                 <p className={styles.copyrightText + ' body5'}>{labels.footerContent.copyright}</p>
                 <div className={styles.footerLinks}>
                     <p className={styles.copyrightText + ' body5'}>{labels.footerContent.rights}</p>
