@@ -1,7 +1,3 @@
-.empty {
-    width: 20%;
-}
-
 .nav a {
     color: var(--primary-blue);
     text-decoration: none;
@@ -43,10 +39,6 @@
     .navMobile a {
         color: var(--primary-blue);
         text-decoration: none;
-    }
-
-    .empty {
-        display: none;
     }
 
     .menuIcon {
