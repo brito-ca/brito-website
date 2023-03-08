@@ -8,7 +8,7 @@ import { Icon } from '@/components'
 const Footer = () => {
     return (
         <div>
-            <div className={styles.footerContainer + 'flex-row-space-between'}>
+            <div className={`${styles.footerContainer} flex-row-space-between`}>
                 <div className={styles.logoAndSocial}>
                     <div className={styles.logoAndSocial}>
                         <Image alt='brito flag' src={britoFlag} className={styles.logo} />
@@ -63,7 +63,7 @@ const Footer = () => {
                     </p>
                 </div>
             </div>
-            <div className={styles.footerBottom + 'vertical-padding'}>
+            <div className={`${styles.footerBottom} vertical-padding`}>
                 <p className={styles.copyrightText + ' body5'}>{labels.footerContent.copyright}</p>
                 <div className={styles.footerLinks}>
                     <p className={styles.copyrightText + ' body5'}>{labels.footerContent.rights}</p>
