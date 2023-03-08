@@ -1,5 +1,4 @@
-import Head from 'next/head'
-import { AppLayout, Placeholder, Hero, Form } from '@/components'
+import { AppLayout, Head, Placeholder, Hero, Form } from '@/components'
 import Banner from '@/components/Banner/Banner'
 import labels from '@/constants/labels.en'
 import ContactUs from '@/components/ContactUs/ContactUs'
@@ -26,7 +25,6 @@ export default function Home() {
                     description={labels.welcomeToBrito.description}
                     image={labels.image}
                 />
-                <Placeholder title='Hero' />
                 <Placeholder id={labels.aboutUs.id} title={labels.aboutUs.title} />
                 <div className={styles.logoOnmission}>
                     <Banner
