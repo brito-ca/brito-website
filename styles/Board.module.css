@@ -82,6 +82,7 @@
 
     .card_one {
         order: 2;
+        border: calc(0 * var(--spacing-unit));
     }
 
     .card_two {
@@ -90,6 +91,7 @@
 
     .card_three {
         order: 3;
+        border: calc(0 * var(--spacing-unit));
     }
 
     .image_box {
