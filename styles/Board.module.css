@@ -1,5 +1,5 @@
 .container{
-    padding:0px;
+    padding: calc(0 * var(--spacing-unit));
 }
 
 .title {
@@ -14,18 +14,18 @@
     justify-content: center;
     background-color: var(--primary-blue);
     padding:var(--spacing-unit);
-    gap: 28px;
+    gap: calc(1.75 * var(--spacing-unit));
 }
 
 .card_box{
-    width: 330px;
+    width: calc(20.62 * var(--spacing-unit));
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     text-align: justify;
     color: var(--button-bg-outline-disabled);
-    gap: 50px
+    gap: calc(3.125 * var(--spacing-unit))
 }
 
 .image_box{
@@ -34,38 +34,38 @@
 }
 
 .title_text{
-    font-size: 20px;
+    font-size: calc(1.25 * var(--spacing-unit));
 }
 
 .center_box{
-    height: 197px;
+    height: calc(12.31 * var(--spacing-unit));
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: calc(1.25 * var(--spacing-unit));
 }
 
 .info_text{
-    padding-bottom: 0px;
-    font-size: 18px;
+    padding-bottom: calc(0 * var(--spacing-unit));
+    font-size: calc(1.125 * var(--spacing-unit));
 }
 .bottom_box{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: calc(1.25 * var(--spacing-unit));
 }
 
 .email_box{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    gap: 20px;
+    gap: calc(1.25 * var(--spacing-unit));
 }
 
 .line{
-    border: 0;
+    border: calc(0 * var(--spacing-unit));
 }
 
 @media only screen and (max-width: 600px) {
@@ -73,13 +73,12 @@
     .card_box{
         align-items: center;
         justify-content: space-evenly;
-        
     }
     
 
     .line {   
-    border-bottom: 2px solid #F5F5FA;
-    margin-bottom: 20px;
+    border-bottom: calc(0.125 * var(--spacing-unit)) solid #F5F5FA;
+    margin-bottom: calc(1.25 * var(--spacing-unit));
     }
 
     .card_one{
@@ -97,7 +96,6 @@
     .image_box{
         width: auto;
         height: auto;
-        object-fit: fill;
     }
 
     .center_box{
@@ -112,7 +110,7 @@
     }
 
     .info_text{
-        padding-bottom: 0px;
+        padding-bottom: calc(0 * var(--spacing-unit));
         font-size: var(--spacing-unit);
         font-weight: 400;
     }
