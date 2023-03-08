@@ -6,7 +6,7 @@ const Box = () => {
 
 const TypographyDemo = () => {
     return (
-        <AppLayout>
+        <AppLayout navigation={[]}>
             <h2>Typography Demo</h2>
             <br />
             <br />
