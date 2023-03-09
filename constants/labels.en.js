@@ -57,5 +57,21 @@ const labels = {
     Maple: {
         labelimgmaple: 'mapleleave',
     },
+    footerBrito: {
+        phrase: 'Building the Brazilian IT community in Ottawa',
+    },
+    footerNavigation: {
+        company: 'Company',
+        about: 'About',
+        contact: 'Contact',
+        joinus: 'Join us',
+        network: 'Network list',
+    },
+    footerContent: {
+        copyright: 'Copyright © 2023 Brito',
+        rights: 'All Rights Reserved',
+        terms: 'Terms and Conditions',
+        privacy: 'Privacy Policy',
+    },
 }
 export default labels

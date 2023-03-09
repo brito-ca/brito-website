@@ -34,13 +34,13 @@ const ContactUs = (props) => {
                 <h3 className={styles.subtitle}>{labels.midia.visit}</h3>
                 <div className='vertical-padding'>
                     <a href={labels.midia.instagramlink} className='instagram horizontal-padding'>
-                        <Icon variant='instagram' />
+                        <Icon className={styles.icon} variant='instagram' />
                     </a>
                     <a href={labels.midia.linklinkedin} className='linkedin horizontal-padding'>
-                        <Icon variant='linkedin' />
+                        <Icon className={styles.icon} variant='linkedin' />
                     </a>
                     <a href={labels.midia.linkfacebook} className='facebook horizontal-padding'>
-                        <Icon variant='facebook' />
+                        <Icon className={styles.icon} variant='facebook' />
                     </a>
                 </div>
                 <div className={styles.britologo}></div>
