@@ -9,7 +9,13 @@ const FloatingActionButton = () => {
     return (
         show && (
             <div className={`${styles.fabWrapper} flex-row-center`}>
-                <Link href='#'>
+                <Link
+                    href='#'
+                    onClick={(e) => {
+                        e.preventDefault()
+                        window.scroll({ top: 0, behavior: 'smooth' })
+                    }}
+                >
                     <Icon variant='arrowUp' />
                 </Link>
             </div>
