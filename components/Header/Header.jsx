@@ -37,6 +37,7 @@ const Header = (props) => {
                         <Nav
                             className={`${styles.navMobile} body3 flex-column-start`}
                             closeModal={() => setModalOpen(false)}
+                            navigation={navigation}
                         />
                     </div>
                 </div>
