@@ -5,7 +5,8 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { Icon, Nav, Languages } from '@/components'
 
-const Header = () => {
+const Header = (props) => {
+    const { navigation } = props
     const [modalOpen, setModalOpen] = useState(false)
 
     return (
@@ -14,7 +15,10 @@ const Header = () => {
                 <Image className={styles.logo} alt='logo small' src={smallLogo} />
             </Link>
             <div className='flex-row-space-between'>
-                <Nav className={`${styles.nav} body1 horizontal-margin-lg`} />
+                <Nav
+                    className={`${styles.nav} body1 horizontal-margin-lg`}
+                    navigation={navigation}
+                />
                 <Languages className={`${styles.languages} horizontal-margin`} />
             </div>
 
@@ -33,6 +37,7 @@ const Header = () => {
                         <Nav
                             className={`${styles.navMobile} body3 flex-column-start`}
                             closeModal={() => setModalOpen(false)}
+                            navigation={navigation}
                         />
                     </div>
                 </div>

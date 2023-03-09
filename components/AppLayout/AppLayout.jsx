@@ -3,7 +3,7 @@ import styles from '@/styles/AppLayout.module.css'
 import Head from 'next/head'
 
 const AppLayout = (props) => {
-    const { children } = props
+    const { children, navigation } = props
     return (
         <>
             <Head>
@@ -14,7 +14,7 @@ const AppLayout = (props) => {
             </Head>
             <div className={styles.container}>
                 <FloatingActionButton />
-                <Header />
+                <Header navigation={navigation} />
                 <main>{children}</main>
                 <Footer>
                     <Placeholder title='Footer' />

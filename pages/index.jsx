@@ -4,15 +4,21 @@ import labels from '@/constants/labels.en'
 import ContactUs from '@/components/ContactUs/ContactUs'
 import styles from '@/styles/AppLayout.module.css'
 
+const navigation = [
+    { id: labels.aboutUs.id, title: labels.aboutUs.title },
+    { id: labels.joinUs.id, title: labels.joinUs.title },
+    { id: labels.contactUs.id, title: labels.contactUs.title },
+]
+
 export default function Home() {
     return (
-        <AppLayout>
+        <AppLayout navigation={navigation}>
             <Hero
                 title={labels.welcomeToBrito.title}
                 description={labels.welcomeToBrito.description}
                 image={labels.image}
             />
-            <Placeholder id='about' title='About Us' />
+            <Placeholder id={labels.aboutUs.id} title={labels.aboutUs.title} />
             <div className={styles.logoOnmission}>
                 <Banner
                     title={labels.ourMission.title}
@@ -24,13 +30,13 @@ export default function Home() {
             <Placeholder title='Our Board' />
             <div className={styles.logoOnJoinUs}>
                 <Banner
-                    id='join-us'
+                    id={labels.joinUs.id}
                     title={labels.joinUs.title}
                     description={labels.joinUs.description}
                 />
             </div>
             <Form />
-            <ContactUs />
+            <ContactUs id={labels.contactUs.id} />
         </AppLayout>
     )
 }
