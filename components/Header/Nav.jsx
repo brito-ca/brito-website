@@ -13,7 +13,7 @@ const Nav = (props) => {
                     onClick={closeModal}
                     scroll={false}
                 >
-                    {nav.title}
+                    {nav.navTitle}
                 </Link>
             ))}
         </div>
