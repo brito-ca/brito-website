@@ -6,7 +6,13 @@ const Nav = (props) => {
     return (
         <div className={className}>
             {navigation.map((nav) => (
-                <Link key={nav.id} href={`#${nav.id}`} className='margin' onClick={closeModal}>
+                <Link
+                    key={nav.id}
+                    href={`#${nav.id}`}
+                    className='margin'
+                    onClick={closeModal}
+                    scroll={false}
+                >
                     {nav.title}
                 </Link>
             ))}
