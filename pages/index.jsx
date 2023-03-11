@@ -36,7 +36,21 @@ export default function Home() {
                 />
             </div>
             <Form />
-            <ContactUs id={labels.contactUs.id} />
+            <ContactUs id={labels.contactUs.id} 
+            title= {labels.contactUs.title}
+            chat= {labels.chat.chat}
+            descriptionChat= {labels.chat.descriptionChat}
+            malito= {labels.email.malito}
+            email= {labels.email.email}
+            malito1={labels.email.malito}
+            email1={labels.email.email}
+            basedin ={labels.location.basedin}
+            city={labels.location.city}
+            visit= {labels.midia.visit}
+            instagramlink={labels.midia.instagramlink}
+            linklinkedin={labels.midia.linklinkedin}
+            linkfacebook= {labels.midia.linkfacebook}
+            />
         </AppLayout>
     )
 }

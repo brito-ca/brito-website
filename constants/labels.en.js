@@ -42,7 +42,7 @@ const labels = {
         email: 'hi@brito.it',
     },
     location: {
-        Basedin: 'Based in',
+        basedin: 'Based in',
         city: 'Ottawa - Ontario',
     },
     midia: {
