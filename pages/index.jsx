@@ -5,9 +5,9 @@ import ContactUs from '@/components/ContactUs/ContactUs'
 import styles from '@/styles/AppLayout.module.css'
 
 const navigation = [
-    { id: labels.aboutUs.id, title: labels.aboutUs.title },
-    { id: labels.joinUs.id, title: labels.joinUs.title },
-    { id: labels.contactUs.id, title: labels.contactUs.title },
+    { id: labels.aboutUs.id, title: labels.aboutUs.title, navTitle: labels.aboutUs.navTitle },
+    { id: labels.joinUs.id, title: labels.joinUs.title, navTitle: labels.joinUs.navTitle },
+    { id: labels.contactUs.id, title: labels.contactUs.title, navTitle: labels.contactUs.navTitle },
 ]
 
 export default function Home() {
