@@ -1,5 +1,5 @@
 import styles from '@/styles/Board.module.css'
-import Card from '@/components/Board/Card'
+import { Card } from '@/components'
 
 const Board = (props) => {
     const { cards, title } = props
