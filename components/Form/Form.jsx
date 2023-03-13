@@ -139,15 +139,13 @@ const Form = () => {
                         </select>
                     </div>
                     <div className={styles.linkedinField}>
-                        <div>
-                            <label className={styles.labelForm}>LinkedIn profile</label>
-                            <input
-                                className={styles.inputForm}
-                                placeholder='Paste your profile link'
-                                value={linkedinProfileLink}
-                                onChange={(event) => setLinkedinProfileLink(event.target.value)}
-                            />
-                        </div>
+                        <label className={styles.labelForm}>LinkedIn profile</label>
+                        <input
+                            className={styles.inputForm}
+                            placeholder='Paste your profile link'
+                            value={linkedinProfileLink}
+                            onChange={(event) => setLinkedinProfileLink(event.target.value)}
+                        />
                     </div>
                     <div className={styles.emailField}>
                         <label className={styles.labelForm}>
