@@ -1,0 +1,4 @@
+.mandatoryFieldSpan {
+    color: var(--secundary-red-warning);
+    margin-left: 4px;
+}

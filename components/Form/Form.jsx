@@ -6,6 +6,7 @@ import britoFormImage from '../../public/images/brito-group-image-form.svg'
 import profilePictureTemplate from '../../public/images/brito-profile-picture-template.svg'
 import closeModalIcon from '../../public/images/close-modal-icon.svg'
 import logo from '../../public/images/logo-small.svg'
+import FormInput from '../FormInput/FormInput'
 
 const Form = () => {
     const [fullName, setFullName] = useState('')
@@ -16,6 +17,17 @@ const Form = () => {
     const [city, setCity] = useState('')
     const [linkedinProfileLink, setLinkedinProfileLink] = useState('')
     const [email, setEmail] = useState('')
+
+    const [formValues, setFormValues] = useState({
+        fullName: '',
+        expertise: '',
+        company: '',
+        immigrationStatus: '',
+        resideInCanada: '',
+        city: '',
+        linkedinProfileLink: '',
+        email: '',
+    })
 
     const [isProfilePictureModalOpen, setIsProfilePictureModalOpen] = useState(false)
     const [isSuccesfullSubmissionModalOpen, setisSuccesfullSubmissionModalOpen] = useState(false)
@@ -42,25 +54,25 @@ const Form = () => {
                             Your full name
                             <span className={styles.mandatoryFieldSpan}>*</span>
                         </label>
-                        <input
+                        <FormInput
                             className={styles.inputForm}
-                            placeholder='E.g. Amanda costa'
+                            placeholder='E.g Amanda Costa'
                             value={fullName}
-                            onChange={(event) => setFullName(event.target.value)}
+                            setValue={setFullName}
                         />
                         <label className={styles.labelForm}>Your expertise</label>
-                        <input
+                        <FormInput
                             className={styles.inputForm}
                             placeholder='E.g. UX Designer'
                             value={expertise}
-                            onChange={(event) => setExpertise(event.target.value)}
+                            setValue={setExpertise}
                         />
                         <label className={styles.labelForm}>Your company</label>
-                        <input
+                        <FormInput
                             className={styles.inputForm}
                             placeholder='E.g. TD bank'
                             value={company}
-                            onChange={(event) => setCompany(event.target.value)}
+                            setValue={setCompany}
                         />
                         <label className={styles.labelForm}>Are you residing in Canada?</label>
                         <label className={styles.labelForm}>
@@ -93,11 +105,11 @@ const Form = () => {
                         <label className={styles.labelForm}>
                             In wich city do you live in Canada?
                         </label>
-                        <input
-                            className={styles.inputForm}
-                            placeholder='E.g. Ottawa'
+                        <FormInput
                             value={city}
-                            onChange={(event) => setCity(event.target.value)}
+                            placeholder='E.g. Ottawa'
+                            className={styles.inputForm}
+                            setValue={setCity}
                         />
                         <label htmlFor='immigration-status' className={styles.labelForm}>
                             Immigration Status
@@ -138,28 +150,27 @@ const Form = () => {
                             </option>
                         </select>
                     </div>
-                    <div className={styles.linkedinField}>
-                        <div>
-                            <label className={styles.labelForm}>LinkedIn profile</label>
-                            <input
-                                className={styles.inputForm}
-                                placeholder='Paste your profile link'
-                                value={linkedinProfileLink}
-                                onChange={(event) => setLinkedinProfileLink(event.target.value)}
-                            />
-                        </div>
-                    </div>
-                    <div className={styles.emailField}>
-                        <label className={styles.labelForm}>
-                            E-mail<span className={styles.mandatoryFieldSpan}>*</span>
-                        </label>
-                        <input
-                            className={styles.inputForm}
-                            placeholder='E.g. john@gmail.com'
-                            value={email}
-                            onChange={(event) => setEmail(event.target.value)}
-                        />
-                    </div>
+                    <FormInput
+                        madatory={true}
+                        fieldStyle={styles.linkedinField}
+                        labelContent='LinkedIn profile'
+                        labelStyle={styles.labelForm}
+                        inputStyle={styles.inputForm}
+                        placeholder='Paste your profile link'
+                        value={linkedinProfileLink}
+                        setValue={setLinkedinProfileLink}
+                    />
+
+                    <FormInput
+                        fieldStyle={styles.emailField}
+                        labelContent='E-mail'
+                        labelStyle={styles.labelForm}
+                        inputStyle={styles.inputForm}
+                        placeholder='E.g. john@gmail.com'
+                        value={email}
+                        setValue={setEmail}
+                    />
+
                     <div className={styles.uploadPhotoField}>
                         <label className={styles.labelForm}>
                             Upload photo<span className={styles.mandatoryFieldSpan}>*</span>
