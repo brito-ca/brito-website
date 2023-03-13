@@ -37,18 +37,15 @@ const labels = {
         title: 'Contact us',
     },
     chat: {
-        chat: 'Chat with us',
-        descriptionChat: 'Our friendly team is here to help',
+        title: 'Chat with us',
+        description: 'Our friendly team is here to help',
     },
-    email: {
-        malito: 'mailto:hi@brito.it',
-        email: 'hi@brito.it',
-    },
+    email: 'hi@brito.it',
     location: {
         basedin: 'Based in',
         city: 'Ottawa - Ontario',
     },
-    midia: {
+    media: {
         visit: 'Visit our social media',
         instagramlink: '#',
         labelinstagram: 'BRITO_Instagram',
