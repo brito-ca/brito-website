@@ -2,7 +2,7 @@ import styles from '@/styles/ContactUs.module.css'
 import { Icon } from '@/components'
 
 const ContactUs = (props) => {
-    const { id,title,chat,descriptionChat,malito,email,malito1,email1,basedin,city,visit,instagramlink,linklinkedin,linkfacebook } = props
+    const { id, title, chat, descriptionChat, email, basedin, city, visit, socialMedia } = props
 
     return (
         <div id={id} className={styles.maple}>
@@ -15,14 +15,8 @@ const ContactUs = (props) => {
             </div>
             <div className={styles.mailimg + ' padding'}>
                 <Icon variant='mail' />
-
-                <a className={styles.mail + ' body3'} href={malito}>
+                <a className={styles.mail + ' body3'} href={`mailto:${email}`}>
                     {email}
-                </a>
-            </div>
-            <div className={styles.mailnoimg + ' padding'}>
-                <a className={styles.mail + ' body3'} href={malito1}>
-                    {email1}
                 </a>
             </div>
             <div className={styles.marg_lg}>
@@ -32,15 +26,11 @@ const ContactUs = (props) => {
             <div className={styles.marg_lg + ' padding'}>
                 <h3 className={styles.subtitle}>{visit}</h3>
                 <div className='vertical-padding'>
-                    <a href={instagramlink} className='instagram horizontal-padding'>
-                        <Icon variant='instagram' />
-                    </a>
-                    <a href={linklinkedin} className='linkedin horizontal-padding'>
-                        <Icon variant='linkedin' />
-                    </a>
-                    <a href={linkfacebook} className='facebook horizontal-padding'>
-                        <Icon variant='facebook' />
-                    </a>
+                    {socialMedia.map((a) => (
+                        <a key={a.id} href={a.link} className={'horizontal-padding'}>
+                            <Icon variant={a.icon} />
+                        </a>
+                    ))}
                 </div>
                 <div className={styles.britologo}></div>
             </div>
