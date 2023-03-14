@@ -10,7 +10,7 @@
     text-decoration: none;
     color: var(--primary-blue);
 }
-.mailimg {
+.mailimg svg {
     visibility: hidden;
 }
 .marg_lg {
@@ -43,10 +43,7 @@
         text-decoration: underline;
         padding: 0 var(--padding-sm);
     }
-    .mailnoimg {
-        visibility: hidden;
-    }
-    .mailimg {
+    .mailimg svg {
         visibility: visible;
     }
 }
