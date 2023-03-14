@@ -1,6 +1,12 @@
 import { FloatingActionButton, Header, Footer, Placeholder } from '@/components'
 import styles from '@/styles/AppLayout.module.css'
 import Head from 'next/head'
+import { Roboto } from '@next/font/google'
+
+const roboto = Roboto({
+    subsets: ['latin'],
+    weight: ['300', '400', '500', '700'],
+})
 
 const AppLayout = (props) => {
     const { children, navigation } = props
@@ -12,7 +18,7 @@ const AppLayout = (props) => {
                 <meta name='viewport' content='width=device-width, initial-scale=1' />
                 <link rel='icon' href='/favicon.ico' />
             </Head>
-            <div className={styles.container}>
+            <div className={`${roboto.className} ${styles.container}`}>
                 <FloatingActionButton />
                 <Header navigation={navigation} />
                 <main>{children}</main>

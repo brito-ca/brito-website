@@ -16,7 +16,7 @@ export default function Home() {
             <Hero
                 title={labels.welcomeToBrito.title}
                 description={labels.welcomeToBrito.description}
-                image={labels.image}
+                image={labels.heroImage}
             />
             <Placeholder id={labels.aboutUs.id} title={labels.aboutUs.title} />
             <div className={styles.logoOnmission}>

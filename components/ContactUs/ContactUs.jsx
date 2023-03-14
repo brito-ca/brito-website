@@ -33,13 +33,25 @@ const ContactUs = (props) => {
             <div className={styles.marg_lg + ' padding'}>
                 <h3 className={styles.subtitle}>{labels.midia.visit}</h3>
                 <div className='vertical-padding'>
-                    <a href={labels.midia.instagramlink} className='instagram horizontal-padding'>
+                    <a
+                        href={labels.midia.instagramlink}
+                        aria-label='instagram link'
+                        className='instagram horizontal-padding'
+                    >
                         <Icon variant='instagram' />
                     </a>
-                    <a href={labels.midia.linklinkedin} className='linkedin horizontal-padding'>
+                    <a
+                        href={labels.midia.linklinkedin}
+                        aria-label='linkedin link'
+                        className='linkedin horizontal-padding'
+                    >
                         <Icon variant='linkedin' />
                     </a>
-                    <a href={labels.midia.linkfacebook} className='facebook horizontal-padding'>
+                    <a
+                        href={labels.midia.linkfacebook}
+                        aria-label='facebook link'
+                        className='facebook horizontal-padding'
+                    >
                         <Icon variant='facebook' />
                     </a>
                 </div>
