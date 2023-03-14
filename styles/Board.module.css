@@ -14,8 +14,8 @@
     flex-wrap: wrap;
     justify-content: center;
     background-color: var(--primary-blue);
-    padding: calc(5.75 * var(--spacing-unit)) var(--spacing-unit) 
-    calc(6.75 * var(--spacing-unit)) var(--spacing-unit) ;
+    padding: calc(5.75 * var(--spacing-unit)) var(--spacing-unit) calc(6.75 * var(--spacing-unit))
+        var(--spacing-unit);
     gap: calc(1.75 * var(--spacing-unit));
 }
 
@@ -75,11 +75,11 @@
         margin-bottom: calc(2.75 * var(--spacing-unit));
     }
 
-    .board_box{
-        padding: calc(1.87 * var(--spacing-unit)) var(--spacing-unit) 
-        var(--spacing-unit) var(--spacing-unit) ;
+    .board_box {
+        padding: calc(1.87 * var(--spacing-unit)) var(--spacing-unit) var(--spacing-unit)
+            var(--spacing-unit);
     }
-    
+
     .card_box {
         align-items: center;
         justify-content: space-evenly;
