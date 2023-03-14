@@ -4,7 +4,7 @@ const FormInput = (props) => {
     console.log(props.name)
     return (
         <div className={props.fieldStyle}>
-            <label className={props.labelStyle}>
+            <label className={styles.labelForm}>
                 {props.labelContent}
                 {props.mandatory === 'yes' ? (
                     <span className={styles.mandatoryFieldSpan}>*</span>
@@ -15,7 +15,7 @@ const FormInput = (props) => {
             <input
                 name={props.name}
                 placeholder={props.placeholder}
-                className={props.inputStyle}
+                className={styles.inputForm}
                 value={props.value}
                 onChange={(e) => props.setValue(e.target.value)}
             />
