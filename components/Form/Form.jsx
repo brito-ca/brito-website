@@ -55,6 +55,10 @@ const Form = () => {
                             <span className={styles.mandatoryFieldSpan}>*</span>
                         </label>
                         <FormInput
+                            fieldStyle={styles.linkedinField}
+                            labelContent='LinkedIn profile'
+                            labelStyle={styles.labelForm}
+                            inputStyle={styles.inputForm}
                             className={styles.inputForm}
                             placeholder='E.g Amanda Costa'
                             value={fullName}
@@ -62,6 +66,10 @@ const Form = () => {
                         />
                         <label className={styles.labelForm}>Your expertise</label>
                         <FormInput
+                            fieldStyle={styles.expertiseField}
+                            labelContent='LinkedIn profile'
+                            labelStyle={styles.labelForm}
+                            inputStyle={styles.inputForm}
                             className={styles.inputForm}
                             placeholder='E.g. UX Designer'
                             value={expertise}

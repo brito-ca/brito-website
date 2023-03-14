@@ -2,7 +2,7 @@ import styles from './FormInput.module.css'
 
 const FormInput = (props) => {
     return (
-        <div className={props.formFieldStyle}>
+        <div className={props.fieldStyle}>
             <label className={props.labelStyle}>
                 {props.labelContent}
                 {props.mandatory ? <span className={styles.mandatoryFieldSpan}>*</span> : ''}
