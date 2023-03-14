@@ -24,10 +24,10 @@ export default function Home() {
                     title={labels.ourMission.title}
                     description={labels.ourMission.description}
                 />
-                <Board title='Our Board' cards={labels.card_data} />
                 <div className={styles.rectangle4}></div>
                 <Banner title={labels.ourVision.title} description={labels.ourVision.description} />
             </div>
+            <Board title='Our Board' cards={labels.card_data} />
             <div className={styles.logoOnJoinUs}>
                 <Banner
                     id={labels.joinUs.id}
