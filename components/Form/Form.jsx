@@ -68,8 +68,10 @@ const Form = () => {
                         <FormInput
                             name='fullName'
                             mandatory='yes'
-                            labelContent='Your full name'
                             fieldStyle={styles.fullNameField}
+                            labelContent='Your full name'
+                            labelStyle={styles.labelForm}
+                            inputStyle={styles.inputForm}
                             placeholder='E.g Amanda Costa'
                             value={formValues.fullName}
                             onChange={handleChange}
@@ -78,6 +80,8 @@ const Form = () => {
                             name='expertise'
                             fieldStyle={styles.expertiseField}
                             labelContent='Your expertise'
+                            labelStyle={styles.labelForm}
+                            inputStyle={styles.inputForm}
                             placeholder='E.g. UX Designer'
                             value={expertise}
                             setValue={handleChange}
@@ -85,6 +89,8 @@ const Form = () => {
                         <FormInput
                             fieldStyle={styles.companyField}
                             labelContent='Your company'
+                            labelStyle={styles.labelForm}
+                            inputStyle={styles.inputForm}
                             placeholder='E.g. TD bank'
                             value={company}
                             setValue={setCompany}
@@ -120,6 +126,8 @@ const Form = () => {
                         <FormInput
                             fieldStyle={styles.cityField}
                             labelContent='Your expertise'
+                            labelStyle={styles.labelForm}
+                            inputStyle={styles.inputForm}
                             value={city}
                             placeholder='E.g. Ottawa'
                             setValue={setCity}
