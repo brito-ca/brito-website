@@ -30,7 +30,7 @@ const Form = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         openCloseSubscriptionSuccessModal()
-        console.log(formValues)
+        // console.log(formValues)
     }
 
     const [isProfilePictureModalOpen, setIsProfilePictureModalOpen] = useState(false)
