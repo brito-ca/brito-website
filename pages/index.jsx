@@ -1,4 +1,4 @@
-import { AppLayout, Placeholder, Hero, Form } from '@/components'
+import { AppLayout, Placeholder, Hero, Board, Form } from '@/components'
 import Banner from '@/components/Banner/Banner'
 import labels from '@/constants/labels.en'
 import ContactUs from '@/components/ContactUs/ContactUs'
@@ -9,6 +9,11 @@ const navigation = [
     { id: labels.joinUs.id, title: labels.joinUs.title, navTitle: labels.joinUs.navTitle },
     { id: labels.contactUs.id, title: labels.contactUs.title, navTitle: labels.contactUs.navTitle },
 ]
+const socialMedia = [
+    { id: 'instagram', link: labels.media.instagramlink, icon: 'instagram' },
+    { id: 'linkedin', link: labels.media.linklinkedin, icon: 'linkedin' },
+    { id: 'facebook', link: labels.media.linkfacebook, icon: 'facebook' },
+]
 
 export default function Home() {
     return (
@@ -16,7 +21,7 @@ export default function Home() {
             <Hero
                 title={labels.welcomeToBrito.title}
                 description={labels.welcomeToBrito.description}
-                image={labels.image}
+                image={labels.heroImage}
             />
             <Placeholder id={labels.aboutUs.id} title={labels.aboutUs.title} />
             <div className={styles.logoOnmission}>
@@ -27,7 +32,7 @@ export default function Home() {
                 <div className={styles.rectangle4}></div>
                 <Banner title={labels.ourVision.title} description={labels.ourVision.description} />
             </div>
-            <Placeholder title='Our Board' />
+            <Board title='Our Board' cards={labels.card_data} />
             <div className={styles.logoOnJoinUs}>
                 <Banner
                     id={labels.joinUs.id}
@@ -36,7 +41,17 @@ export default function Home() {
                 />
             </div>
             <Form />
-            <ContactUs id={labels.contactUs.id} />
+            <ContactUs
+                id={labels.contactUs.id}
+                title={labels.contactUs.title}
+                chat={labels.chat.title}
+                descriptionChat={labels.chat.description}
+                email={labels.email}
+                basedin={labels.location.basedin}
+                city={labels.location.city}
+                visit={labels.media.visit}
+                socialMedia={socialMedia}
+            />
         </AppLayout>
     )
 }

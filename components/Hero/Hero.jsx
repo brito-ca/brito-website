@@ -9,7 +9,7 @@ const Hero = (props) => {
                 <div className={styles.welcome_box}>
                     <h3 className={styles.welcome_text}>{title}</h3>
                 </div>
-                <div className={'body1 b1'}>
+                <div className='body1'>
                     <p className={styles.intro_text}>{description}</p>
                 </div>
             </div>
@@ -20,6 +20,7 @@ const Hero = (props) => {
                     alt={image.alt}
                     width={image.width}
                     height={image.height}
+                    priority
                 />
             </div>
         </div>

@@ -1,47 +1,41 @@
-import labels from '@/constants/labels.en'
 import styles from '@/styles/ContactUs.module.css'
 import { Icon } from '@/components'
 
 const ContactUs = (props) => {
-    const { id } = props
+    const { id, title, chat, descriptionChat, email, basedin, city, visit, socialMedia } = props
 
     return (
         <div id={id} className={styles.maple}>
             <div>
-                <h2 className={styles.title}>{labels.contactUs.title}</h2>
+                <h2 className={styles.title}>{title}</h2>
             </div>
             <div className='padding'>
-                <h3 className={styles.subtitle}>{labels.chat.chat}</h3>
-                <p className='body2'>{labels.chat.descriptionChat}</p>
+                <h3 className={styles.subtitle}>{chat}</h3>
+                <p className='body2'>{descriptionChat}</p>
             </div>
             <div className={styles.mailimg + ' padding'}>
                 <Icon variant='mail' />
-
-                <a className={styles.mail + ' body3'} href={labels.email.malito}>
-                    {labels.email.email}
-                </a>
-            </div>
-            <div className={styles.mailnoimg + ' padding'}>
-                <a className={styles.mail + ' body3'} href={labels.email.malito}>
-                    {labels.email.email}
+                <a className={styles.mail + ' body3'} href={`mailto:${email}`}>
+                    {email}
                 </a>
             </div>
             <div className={styles.marg_lg}>
-                <h3 className={styles.subtitle + ' padding'}>{labels.location.Basedin}</h3>
-                <p className='body2 horizontal-padding '>{labels.location.city}</p>
+                <h3 className={styles.subtitle + ' padding'}>{basedin}</h3>
+                <p className='body2 horizontal-padding '>{city}</p>
             </div>
             <div className={styles.marg_lg + ' padding'}>
-                <h3 className={styles.subtitle}>{labels.midia.visit}</h3>
+                <h3 className={styles.subtitle}>{visit}</h3>
                 <div className='vertical-padding'>
-                    <a href={labels.midia.instagramlink} className='instagram horizontal-padding'>
-                        <Icon variant='instagram' />
-                    </a>
-                    <a href={labels.midia.linklinkedin} className='linkedin horizontal-padding'>
-                        <Icon variant='linkedin' />
-                    </a>
-                    <a href={labels.midia.linkfacebook} className='facebook horizontal-padding'>
-                        <Icon variant='facebook' />
-                    </a>
+                    {socialMedia.map((a) => (
+                        <a
+                            key={a.id}
+                            href={a.link}
+                            aria-label={`${a.id} link`}
+                            className={'horizontal-padding'}
+                        >
+                            <Icon variant={a.icon} />
+                        </a>
+                    ))}
                 </div>
                 <div className={styles.britologo}></div>
             </div>
