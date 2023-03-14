@@ -1,4 +1,4 @@
-import { AppLayout, Placeholder, Hero, Form } from '@/components'
+import { AppLayout, Placeholder, Hero, Board, Form } from '@/components'
 import Banner from '@/components/Banner/Banner'
 import labels from '@/constants/labels.en'
 import ContactUs from '@/components/ContactUs/ContactUs'
@@ -27,7 +27,7 @@ export default function Home() {
                 <div className={styles.rectangle4}></div>
                 <Banner title={labels.ourVision.title} description={labels.ourVision.description} />
             </div>
-            <Placeholder title='Our Board' />
+            <Board title='Our Board' cards={labels.card_data} />
             <div className={styles.logoOnJoinUs}>
                 <Banner
                     id={labels.joinUs.id}
