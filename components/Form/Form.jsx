@@ -50,34 +50,29 @@ const Form = () => {
             <form method='post'>
                 <div className={styles.formSections}>
                     <div className={styles.primaryInformation}>
-                        <label className={styles.labelForm}>
-                            Your full name
-                            <span className={styles.mandatoryFieldSpan}>*</span>
-                        </label>
                         <FormInput
-                            fieldStyle={styles.linkedinField}
-                            labelContent='LinkedIn profile'
+                            fieldStyle={styles.fullNameField}
+                            labelContent='Your full name'
                             labelStyle={styles.labelForm}
                             inputStyle={styles.inputForm}
-                            className={styles.inputForm}
                             placeholder='E.g Amanda Costa'
                             value={fullName}
                             setValue={setFullName}
                         />
-                        <label className={styles.labelForm}>Your expertise</label>
                         <FormInput
                             fieldStyle={styles.expertiseField}
-                            labelContent='LinkedIn profile'
+                            labelContent='Your expertise'
                             labelStyle={styles.labelForm}
                             inputStyle={styles.inputForm}
-                            className={styles.inputForm}
                             placeholder='E.g. UX Designer'
                             value={expertise}
                             setValue={setExpertise}
                         />
-                        <label className={styles.labelForm}>Your company</label>
                         <FormInput
-                            className={styles.inputForm}
+                            fieldStyle={styles.companyField}
+                            labelContent='Your company'
+                            labelStyle={styles.labelForm}
+                            inputStyle={styles.inputForm}
                             placeholder='E.g. TD bank'
                             value={company}
                             setValue={setCompany}
@@ -110,13 +105,13 @@ const Form = () => {
                         />
                     </div>
                     <div className={styles.immigrationStatusSection}>
-                        <label className={styles.labelForm}>
-                            In wich city do you live in Canada?
-                        </label>
                         <FormInput
+                            fieldStyle={styles.cityField}
+                            labelContent='Your expertise'
+                            labelStyle={styles.labelForm}
+                            inputStyle={styles.inputForm}
                             value={city}
                             placeholder='E.g. Ottawa'
-                            className={styles.inputForm}
                             setValue={setCity}
                         />
                         <label htmlFor='immigration-status' className={styles.labelForm}>
