@@ -31,6 +31,45 @@ const labels = {
         width: '900',
         height: '900',
     },
+
+    card_data: [
+        {
+            title: 'Marcelo - Dev director',
+            description:
+                'Senior Front-end Engineer with 20 years of experience building websites and applications using tech-edge for big techs, digital agencies, media and educational companies in Canada, the United States and Brazil.',
+            email: 'contact@company.com',
+            image: {
+                alt: 'director',
+                src: '/image1.png',
+                width: '200',
+                height: '200',
+            },
+        },
+        {
+            title: 'Diego - President and co-founder',
+            description:
+                'Senior Project manager with over 20 years experience working for consulting companies, banks and government.',
+            email: 'contact@company.com',
+            image: {
+                alt: 'director',
+                src: '/image2.png',
+                width: '200',
+                height: '200',
+            },
+        },
+        {
+            title: 'Roger - Director and co-founder',
+            description:
+                'Senior CRM specialist with international experience in projects for telecom, consulting and  entertainment companies',
+            email: 'contact@company.com',
+            image: {
+                alt: 'director',
+                src: '/image3.png',
+                width: '200',
+                height: '200',
+            },
+        },
+    ],
     contactUs: {
         id: 'contact-us',
         navTitle: 'Contact',
