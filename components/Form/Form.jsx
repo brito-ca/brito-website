@@ -6,16 +6,32 @@ import britoFormImage from '../../public/images/brito-group-image-form.svg'
 import profilePictureTemplate from '../../public/images/brito-profile-picture-template.svg'
 import closeModalIcon from '../../public/images/close-modal-icon.svg'
 import logo from '../../public/images/logo-small.svg'
+import FormInput from '../FormInput/FormInput'
 
 const Form = () => {
-    const [fullName, setFullName] = useState('')
-    const [expertise, setExpertise] = useState('')
-    const [company, setCompany] = useState('')
-    const [immigrationStatus, setImmigrationStatus] = useState('')
-    const [resideInCanada, setResideInCanada] = useState('yes')
-    const [city, setCity] = useState('')
-    const [linkedinProfileLink, setLinkedinProfileLink] = useState('')
-    const [email, setEmail] = useState('')
+    const [formValues, setFormValues] = useState({
+        fullName: '',
+        expertise: '',
+        company: '',
+        immigrationStatus: '',
+        resideInCanada: '',
+        city: '',
+        linkedinProfileLink: '',
+        email: '',
+    })
+
+    const handleChange = (e) => {
+        setFormValues({
+            ...formValues,
+            [e.target.name]: e.target.value,
+        })
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        openCloseSubscriptionSuccessModal()
+        console.log(formValues)
+    }
 
     const [isProfilePictureModalOpen, setIsProfilePictureModalOpen] = useState(false)
     const [isSuccesfullSubmissionModalOpen, setisSuccesfullSubmissionModalOpen] = useState(false)
@@ -28,55 +44,60 @@ const Form = () => {
         setisSuccesfullSubmissionModalOpen(!isSuccesfullSubmissionModalOpen)
     }
 
-    const radioButtonHandler = (e) => {
-        setResideInCanada(e.target.value)
-    }
-
     return (
         <div className={styles.formContainer}>
             <h3 className={styles.formTitle}>Want to join Brito&#39;s network?</h3>
             <form method='post'>
                 <div className={styles.formSections}>
                     <div className={styles.primaryInformation}>
-                        <label className={styles.labelForm}>
-                            Your full name
-                            <span className={styles.mandatoryFieldSpan}>*</span>
-                        </label>
-                        <input
-                            className={styles.inputForm}
-                            placeholder='E.g. Amanda costa'
-                            value={fullName}
-                            onChange={(event) => setFullName(event.target.value)}
+                        <FormInput
+                            name='fullName'
+                            mandatory='yes'
+                            fieldStyle={styles.fullNameField}
+                            labelContent='Your full name'
+                            labelStyle={styles.labelForm}
+                            inputStyle={styles.inputForm}
+                            placeholder='E.g Amanda Costa'
+                            value={formValues.fullName}
+                            onChange={handleChange}
                         />
-                        <label className={styles.labelForm}>Your expertise</label>
-                        <input
-                            className={styles.inputForm}
+                        <FormInput
+                            name='expertise'
+                            fieldStyle={styles.expertiseField}
+                            labelContent='Your expertise'
+                            labelStyle={styles.labelForm}
+                            inputStyle={styles.inputForm}
                             placeholder='E.g. UX Designer'
-                            value={expertise}
-                            onChange={(event) => setExpertise(event.target.value)}
+                            value={formValues.expertise}
+                            onChange={handleChange}
                         />
-                        <label className={styles.labelForm}>Your company</label>
-                        <input
-                            className={styles.inputForm}
+                        <FormInput
+                            name='company'
+                            fieldStyle={styles.companyField}
+                            labelContent='Your company'
+                            labelStyle={styles.labelForm}
+                            inputStyle={styles.inputForm}
                             placeholder='E.g. TD bank'
-                            value={company}
-                            onChange={(event) => setCompany(event.target.value)}
+                            value={formValues.company}
+                            onChange={handleChange}
                         />
                         <label className={styles.labelForm}>Are you residing in Canada?</label>
                         <label className={styles.labelForm}>
                             <RadioButton
-                                changed={radioButtonHandler}
+                                name='resideInCanada'
+                                onChange={handleChange}
                                 id='1'
-                                isSelected={resideInCanada === 'yes'}
+                                isSelected={formValues.resideInCanada === 'yes'}
                                 label='Yes'
                                 value='yes'
                             />
                         </label>
                         <label className={styles.labelForm}>
                             <RadioButton
-                                changed={radioButtonHandler}
+                                name='resideInCanada'
+                                onChange={handleChange}
                                 id='2'
-                                isSelected={resideInCanada === 'no'}
+                                isSelected={formValues.resideInCanada === 'no'}
                                 label='No'
                                 value='no'
                             />
@@ -90,14 +111,15 @@ const Form = () => {
                         />
                     </div>
                     <div className={styles.immigrationStatusSection}>
-                        <label className={styles.labelForm}>
-                            In wich city do you live in Canada?
-                        </label>
-                        <input
-                            className={styles.inputForm}
+                        <FormInput
+                            name='city'
+                            fieldStyle={styles.cityField}
+                            labelContent='In which city do you live in Canada?'
+                            labelStyle={styles.labelForm}
+                            inputStyle={styles.inputForm}
+                            value={formValues.city}
                             placeholder='E.g. Ottawa'
-                            value={city}
-                            onChange={(event) => setCity(event.target.value)}
+                            onChange={handleChange}
                         />
                         <label htmlFor='immigration-status' className={styles.labelForm}>
                             Immigration Status
@@ -109,8 +131,9 @@ const Form = () => {
                             </span>
                         </label>
                         <select
-                            value={immigrationStatus}
-                            onChange={(event) => setImmigrationStatus(event.target.value)}
+                            name='immigrationStatus'
+                            value={formValues.immigrationStatus}
+                            onChange={handleChange}
                             id='immigration-status'
                             className={styles.immigrationStatusList}
                             required
@@ -138,26 +161,30 @@ const Form = () => {
                             </option>
                         </select>
                     </div>
-                    <div className={styles.linkedinField}>
-                        <label className={styles.labelForm}>LinkedIn profile</label>
-                        <input
-                            className={styles.inputForm}
-                            placeholder='Paste your profile link'
-                            value={linkedinProfileLink}
-                            onChange={(event) => setLinkedinProfileLink(event.target.value)}
-                        />
-                    </div>
-                    <div className={styles.emailField}>
-                        <label className={styles.labelForm}>
-                            E-mail<span className={styles.mandatoryFieldSpan}>*</span>
-                        </label>
-                        <input
-                            className={styles.inputForm}
-                            placeholder='E.g. john@gmail.com'
-                            value={email}
-                            onChange={(event) => setEmail(event.target.value)}
-                        />
-                    </div>
+                    <FormInput
+                        name='linkedinProfileLink'
+                        fieldStyle={styles.linkedinField}
+                        labelContent='LinkedIn profile'
+                        labelStyle={styles.labelForm}
+                        inputStyle={styles.inputForm}
+                        placeholder='Paste your profile link'
+                        value={formValues.linkedinProfileLink}
+                        onChange={handleChange}
+                    />
+
+                    <FormInput
+                        name='email'
+                        type='email'
+                        mandatory='yes'
+                        fieldStyle={styles.emailField}
+                        labelContent='E-mail'
+                        labelStyle={styles.labelForm}
+                        inputStyle={styles.inputForm}
+                        placeholder='E.g. john@gmail.com'
+                        value={formValues.email}
+                        onChange={handleChange}
+                    />
+
                     <div className={styles.uploadPhotoField}>
                         <label className={styles.labelForm}>
                             Upload photo<span className={styles.mandatoryFieldSpan}>*</span>
@@ -211,11 +238,7 @@ const Form = () => {
                     <div className={styles.fileChosenBox}>
                         <p className={styles.chosenBoxText}>No file chosen</p>
                     </div>
-                    <button
-                        className={styles.sendButton}
-                        type='button'
-                        onClick={openCloseSubscriptionSuccessModal}
-                    >
+                    <button className={styles.sendButton} type='button' onClick={handleSubmit}>
                         Send
                     </button>
                     {isSuccesfullSubmissionModalOpen && (
