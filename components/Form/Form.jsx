@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { RadioButton, Popover } from '@/components'
 import styles from '../../styles/Form.module.css'
 import britoFormImage from '../../public/images/brito-group-image-form.svg'
@@ -29,6 +29,21 @@ const Form = () => {
         email: '',
     })
 
+    const onChange = (e) => {
+        setFormValues({ ...formValues, [e.target.name]: e.target.value })
+    }
+
+    const handleChange = (e) => {
+        e.persist()
+        setFormValues({
+            ...formValues,
+            [e.target.name]: e.target.value.trim(),
+        })
+        console.log('this')
+    }
+
+    console.log(formValues)
+
     const [isProfilePictureModalOpen, setIsProfilePictureModalOpen] = useState(false)
     const [isSuccesfullSubmissionModalOpen, setisSuccesfullSubmissionModalOpen] = useState(false)
 
@@ -51,22 +66,25 @@ const Form = () => {
                 <div className={styles.formSections}>
                     <div className={styles.primaryInformation}>
                         <FormInput
+                            mandatory='yes'
                             fieldStyle={styles.fullNameField}
                             labelContent='Your full name'
                             labelStyle={styles.labelForm}
                             inputStyle={styles.inputForm}
                             placeholder='E.g Amanda Costa'
-                            value={fullName}
-                            setValue={setFormValues.fullName}
+                            name='fullName'
+                            value={formValues.fullName}
+                            onChange={handleChange}
                         />
                         <FormInput
+                            name='expertise'
                             fieldStyle={styles.expertiseField}
                             labelContent='Your expertise'
                             labelStyle={styles.labelForm}
                             inputStyle={styles.inputForm}
                             placeholder='E.g. UX Designer'
                             value={expertise}
-                            setValue={setExpertise}
+                            setValue={handleChange}
                         />
                         <FormInput
                             fieldStyle={styles.companyField}
@@ -165,6 +183,7 @@ const Form = () => {
                     />
 
                     <FormInput
+                        mandatory='yes'
                         fieldStyle={styles.emailField}
                         labelContent='E-mail'
                         labelStyle={styles.labelForm}
