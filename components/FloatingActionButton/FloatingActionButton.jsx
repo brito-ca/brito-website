@@ -1,7 +1,6 @@
 import styles from '@/styles/FloatingActionButton.module.css'
 import { Icon } from '@/components'
 import { useScroll } from '@/hooks'
-import Link from 'next/link'
 
 const FloatingActionButton = () => {
     const show = useScroll(10)
@@ -9,9 +8,9 @@ const FloatingActionButton = () => {
     return (
         show && (
             <div className={`${styles.fabWrapper} flex-row-center`}>
-                <Link href='#'>
+                <a href='#'>
                     <Icon variant='arrowUp' />
-                </Link>
+                </a>
             </div>
         )
     )

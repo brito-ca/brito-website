@@ -1,19 +1,21 @@
 import Link from 'next/link'
 
 const Nav = (props) => {
-    const { className, closeModal } = props
+    const { className, closeModal, navigation } = props
 
     return (
         <div className={className}>
-            <Link href='#about' className='margin' onClick={closeModal}>
-                About
-            </Link>
-            <Link href='#join-us' className='margin' onClick={closeModal}>
-                Join us
-            </Link>
-            <Link href='#contact' className='margin' onClick={closeModal}>
-                Contact
-            </Link>
+            {navigation.map((nav) => (
+                <Link
+                    key={nav.id}
+                    href={`#${nav.id}`}
+                    className='margin'
+                    onClick={closeModal}
+                    scroll={false}
+                >
+                    {nav.navTitle}
+                </Link>
+            ))}
         </div>
     )
 }
