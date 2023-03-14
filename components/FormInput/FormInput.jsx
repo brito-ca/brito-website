@@ -1,7 +1,6 @@
 import styles from './FormInput.module.css'
 
 const FormInput = (props) => {
-    console.log(props.name)
     return (
         <div className={props.fieldStyle}>
             <label className={props.labelStyle}>
@@ -17,7 +16,7 @@ const FormInput = (props) => {
                 placeholder={props.placeholder}
                 className={props.inputStyle}
                 value={props.value}
-                onChange={(e) => props.setValue(e.target.value)}
+                onChange={props.onChange}
             />
         </div>
     )

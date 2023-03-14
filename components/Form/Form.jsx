@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { RadioButton, Popover } from '@/components'
 import styles from '../../styles/Form.module.css'
 import britoFormImage from '../../public/images/brito-group-image-form.svg'
@@ -9,15 +9,6 @@ import logo from '../../public/images/logo-small.svg'
 import FormInput from '../FormInput/FormInput'
 
 const Form = () => {
-    const [fullName, setFullName] = useState('')
-    const [expertise, setExpertise] = useState('')
-    const [company, setCompany] = useState('')
-    const [immigrationStatus, setImmigrationStatus] = useState('')
-    const [resideInCanada, setResideInCanada] = useState('yes')
-    const [city, setCity] = useState('')
-    const [linkedinProfileLink, setLinkedinProfileLink] = useState('')
-    const [email, setEmail] = useState('')
-
     const [formValues, setFormValues] = useState({
         fullName: '',
         expertise: '',
@@ -29,20 +20,18 @@ const Form = () => {
         email: '',
     })
 
-    const onChange = (e) => {
-        setFormValues({ ...formValues, [e.target.name]: e.target.value })
-    }
-
     const handleChange = (e) => {
-        e.persist()
         setFormValues({
             ...formValues,
-            [e.target.name]: e.target.value.trim(),
+            [e.target.name]: e.target.value,
         })
-        console.log('this')
     }
 
-    console.log(formValues)
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        openCloseSubscriptionSuccessModal()
+        console.log(formValues)
+    }
 
     const [isProfilePictureModalOpen, setIsProfilePictureModalOpen] = useState(false)
     const [isSuccesfullSubmissionModalOpen, setisSuccesfullSubmissionModalOpen] = useState(false)
@@ -53,10 +42,6 @@ const Form = () => {
 
     function openCloseSubscriptionSuccessModal() {
         setisSuccesfullSubmissionModalOpen(!isSuccesfullSubmissionModalOpen)
-    }
-
-    const radioButtonHandler = (e) => {
-        setResideInCanada(e.target.value)
     }
 
     return (
@@ -83,33 +68,36 @@ const Form = () => {
                             labelStyle={styles.labelForm}
                             inputStyle={styles.inputForm}
                             placeholder='E.g. UX Designer'
-                            value={expertise}
-                            setValue={handleChange}
+                            value={formValues.expertise}
+                            onChange={handleChange}
                         />
                         <FormInput
+                            name='company'
                             fieldStyle={styles.companyField}
                             labelContent='Your company'
                             labelStyle={styles.labelForm}
                             inputStyle={styles.inputForm}
                             placeholder='E.g. TD bank'
-                            value={company}
-                            setValue={setCompany}
+                            value={formValues.company}
+                            onChange={handleChange}
                         />
                         <label className={styles.labelForm}>Are you residing in Canada?</label>
                         <label className={styles.labelForm}>
                             <RadioButton
-                                changed={radioButtonHandler}
+                                name='resideInCanada'
+                                onChange={handleChange}
                                 id='1'
-                                isSelected={resideInCanada === 'yes'}
+                                isSelected={formValues.resideInCanada === 'yes'}
                                 label='Yes'
                                 value='yes'
                             />
                         </label>
                         <label className={styles.labelForm}>
                             <RadioButton
-                                changed={radioButtonHandler}
+                                name='resideInCanada'
+                                onChange={handleChange}
                                 id='2'
-                                isSelected={resideInCanada === 'no'}
+                                isSelected={formValues.resideInCanada === 'no'}
                                 label='No'
                                 value='no'
                             />
@@ -124,13 +112,14 @@ const Form = () => {
                     </div>
                     <div className={styles.immigrationStatusSection}>
                         <FormInput
+                            name='city'
                             fieldStyle={styles.cityField}
-                            labelContent='Your expertise'
+                            labelContent='In which city do you live in Canada?'
                             labelStyle={styles.labelForm}
                             inputStyle={styles.inputForm}
-                            value={city}
+                            value={formValues.city}
                             placeholder='E.g. Ottawa'
-                            setValue={setCity}
+                            onChange={handleChange}
                         />
                         <label htmlFor='immigration-status' className={styles.labelForm}>
                             Immigration Status
@@ -142,8 +131,9 @@ const Form = () => {
                             </span>
                         </label>
                         <select
-                            value={immigrationStatus}
-                            onChange={(event) => setImmigrationStatus(event.target.value)}
+                            name='immigrationStatus'
+                            value={formValues.immigrationStatus}
+                            onChange={handleChange}
                             id='immigration-status'
                             className={styles.immigrationStatusList}
                             required
@@ -172,25 +162,27 @@ const Form = () => {
                         </select>
                     </div>
                     <FormInput
-                        madatory={true}
+                        name='linkedinProfileLink'
                         fieldStyle={styles.linkedinField}
                         labelContent='LinkedIn profile'
                         labelStyle={styles.labelForm}
                         inputStyle={styles.inputForm}
                         placeholder='Paste your profile link'
-                        value={linkedinProfileLink}
-                        setValue={setLinkedinProfileLink}
+                        value={formValues.linkedinProfileLink}
+                        onChange={handleChange}
                     />
 
                     <FormInput
+                        name='email'
+                        type='email'
                         mandatory='yes'
                         fieldStyle={styles.emailField}
                         labelContent='E-mail'
                         labelStyle={styles.labelForm}
                         inputStyle={styles.inputForm}
                         placeholder='E.g. john@gmail.com'
-                        value={email}
-                        setValue={setEmail}
+                        value={formValues.email}
+                        onChange={handleChange}
                     />
 
                     <div className={styles.uploadPhotoField}>
@@ -246,11 +238,7 @@ const Form = () => {
                     <div className={styles.fileChosenBox}>
                         <p className={styles.chosenBoxText}>No file chosen</p>
                     </div>
-                    <button
-                        className={styles.sendButton}
-                        type='button'
-                        onClick={openCloseSubscriptionSuccessModal}
-                    >
+                    <button className={styles.sendButton} type='button' onClick={handleSubmit}>
                         Send
                     </button>
                     {isSuccesfullSubmissionModalOpen && (
