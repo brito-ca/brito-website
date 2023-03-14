@@ -27,7 +27,12 @@ const ContactUs = (props) => {
                 <h3 className={styles.subtitle}>{visit}</h3>
                 <div className='vertical-padding'>
                     {socialMedia.map((a) => (
-                        <a key={a.id} href={a.link} className={'horizontal-padding'}>
+                        <a
+                            key={a.id}
+                            href={a.link}
+                            aria-label={`${a.id} link`}
+                            className={'horizontal-padding'}
+                        >
                             <Icon variant={a.icon} />
                         </a>
                     ))}
