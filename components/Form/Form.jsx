@@ -57,7 +57,7 @@ const Form = () => {
                             inputStyle={styles.inputForm}
                             placeholder='E.g Amanda Costa'
                             value={fullName}
-                            setValue={setFullName}
+                            setValue={setFormValues.fullName}
                         />
                         <FormInput
                             fieldStyle={styles.expertiseField}
