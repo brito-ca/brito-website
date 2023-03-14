@@ -33,16 +33,6 @@ const ContactUs = (props) => {
             <div className={styles.marg_lg + ' padding'}>
                 <h3 className={styles.subtitle}>{labels.midia.visit}</h3>
                 <div className='vertical-padding'>
-<<<<<<< HEAD
-                    <a href={labels.midia.instagramlink} className='instagram horizontal-padding'>
-                        <Icon className={styles.icon} variant='instagram' />
-                    </a>
-                    <a href={labels.midia.linklinkedin} className='linkedin horizontal-padding'>
-                        <Icon className={styles.icon} variant='linkedin' />
-                    </a>
-                    <a href={labels.midia.linkfacebook} className='facebook horizontal-padding'>
-                        <Icon className={styles.icon} variant='facebook' />
-=======
                     <a
                         href={labels.midia.instagramlink}
                         aria-label='instagram link'
@@ -63,7 +53,6 @@ const ContactUs = (props) => {
                         className='facebook horizontal-padding'
                     >
                         <Icon variant='facebook' />
->>>>>>> origin/develop
                     </a>
                 </div>
                 <div className={styles.britologo}></div>

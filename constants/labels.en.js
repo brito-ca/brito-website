@@ -99,6 +99,9 @@ const labels = {
     Maple: {
         labelimgmaple: 'mapleleave',
     },
+    footerId: {
+        id: 'footer',
+    },
     footerBrito: {
         phrase: 'Building the Brazilian IT community in Ottawa',
     },
