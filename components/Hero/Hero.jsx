@@ -20,6 +20,7 @@ const Hero = (props) => {
                     alt={image.alt}
                     width={image.width}
                     height={image.height}
+                    priority
                 />
             </div>
         </div>
