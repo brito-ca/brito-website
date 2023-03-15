@@ -13,7 +13,11 @@ const Footer = (props) => {
                 <div className={styles.logoAndSocial}>
                     <div className={styles.logoAndSocial}>
                         <Image alt={description.altFlag} src={britoFlag} className={styles.logo} />
-                        <Image alt={description.altWordmark} src={britoWordMark} className={styles.logo} />
+                        <Image
+                            alt={description.altWordmark}
+                            src={britoWordMark}
+                            className={styles.logo}
+                        />
                         <p className={'vertical-padding'}>{description.phrase}</p>
                     </div>
                     <div className={styles.socialContainer}>
@@ -21,10 +25,10 @@ const Footer = (props) => {
                             <a
                                 key={media.variant}
                                 href={media.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                target='_blank'
+                                rel='noopener noreferrer'
                             >
-                            <Icon className={styles.icon} variant={media.variant} />
+                                <Icon className={styles.icon} variant={media.variant} />
                             </a>
                         ))}
                     </div>
@@ -43,9 +47,13 @@ const Footer = (props) => {
                 ))}
             </div>
             <div className={`${styles.footerBottom} vertical-padding`}>
-                <p className={styles.copyrightText + ' body5'}>{labels.footerCopyright.copyright}</p>
+                <p className={styles.copyrightText + ' body5'}>
+                    {labels.footerCopyright.copyright}
+                </p>
                 <div className={styles.footerLinks}>
-                    <p className={styles.copyrightText + ' body5'}>{labels.footerCopyright.rights}</p>
+                    <p className={styles.copyrightText + ' body5'}>
+                        {labels.footerCopyright.rights}
+                    </p>
                     <p>|</p>
                     <p>
                         <a href='' className={styles.termsLink + ' body5'}>
