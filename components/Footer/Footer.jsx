@@ -6,38 +6,27 @@ import labels from '@/constants/labels.en'
 import { Icon } from '@/components'
 
 const Footer = (props) => {
-    const { menu } = props
+    const { icons, menu } = props
     return (
         <div>
             <div className={`${styles.footerContainer} flex-row-space-between`}>
                 <div className={styles.logoAndSocial}>
                     <div className={styles.logoAndSocial}>
-                        <Image alt='brito flag' src={britoFlag} className={styles.logo} />
-                        <Image alt='brito wordMark' src={britoWordMark} className={styles.logo} />
+                        <Image alt={labels.footerBrito.altFlag} src={britoFlag} className={styles.logo} />
+                        <Image alt={labels.footerBrito.altWordmark} src={britoWordMark} className={styles.logo} />
                         <p className={'vertical-padding'}>{labels.footerBrito.phrase}</p>
                     </div>
                     <div className={styles.socialContainer}>
-                        <a
-                            href='{labels.midia.instagramlink}'
-                            target={'_blank'}
-                            rel='noopener noreferrer'
-                        >
-                            <Icon className={styles.icon} variant='instagram' />
-                        </a>
-                        <a
-                            href={labels.midia.linklinkedin}
-                            target={'_blank'}
-                            rel='noopener noreferrer'
-                        >
-                            <Icon className={styles.icon} variant='linkedin' />
-                        </a>
-                        <a
-                            href={labels.midia.linkfacebook}
-                            target={'_blank'}
-                            rel='noopener noreferrer'
-                        >
-                            <Icon className={styles.icon} variant='facebook' />
-                        </a>
+                        {icons.map((media) => (
+                            <a
+                                key={media.variant}
+                                href={media.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                            <Icon className={styles.icon} variant={media.variant} />
+                            </a>
+                        ))}
                     </div>
                 </div>
                 {menu.map((menuItem, index) => (

@@ -100,7 +100,14 @@ const labels = {
         labelimgmaple: 'mapleleave',
     },
     footerBrito: {
+        altFlag: 'brito flag',
+        altWordmark: 'brito wordmark',
         phrase: 'Building the Brazilian IT community in Ottawa',
+    },
+    footerIcons: {
+        instagram: 'instagram',
+        linkedin: 'linkedin',
+        facebook: 'facebook',
     },
     footerNavigation: {
         company: 'Company',

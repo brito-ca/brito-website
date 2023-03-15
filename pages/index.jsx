@@ -23,11 +23,18 @@ const menu = [
     },
 ]
 
+const icons = [
+    { href: labels.midia.instagramlink, variant: labels.footerIcons.instagram },
+    { href: labels.midia.linklinkedin, variant: labels.footerIcons.instagram  },
+    { href: labels.midia.linkfacebook, variant: labels.footerIcons.facebook  },
+]
+
 export default function Home() {
     return (
         <AppLayout
             navigation={navigation}
             menu={menu}
+            icons={icons}
         >
             <Hero
                 title={labels.welcomeToBrito.title}
