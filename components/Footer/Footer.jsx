@@ -5,9 +5,10 @@ import styles from '@/styles/Footer.module.css'
 import labels from '@/constants/labels.en'
 import { Icon } from '@/components'
 
-const Footer = () => {
+const Footer = (props) => {
+    const { menu } = props
     return (
-        <div id={labels.footerId.id}>
+        <div>
             <div className={`${styles.footerContainer} flex-row-space-between`}>
                 <div className={styles.logoAndSocial}>
                     <div className={styles.logoAndSocial}>
@@ -39,44 +40,33 @@ const Footer = () => {
                         </a>
                     </div>
                 </div>
-                <div>
-                    <h5 className={styles.title}>{labels.footerNavigation.company}</h5>
-                    <div>
-                        <p>
-                            <a href='#about' className={styles.navigation + ' body2'}>
-                                {labels.footerNavigation.about}
-                            </a>
-                        </p>
-                        <p className={'vertical-padding'}>
-                            <a href='#contact' className={styles.navigation + ' body2'}>
-                                {labels.footerNavigation.contact}
-                            </a>
-                        </p>
+                {menu.map((menuItem, index) => (
+                    <div key={index}>
+                        <h5 className={styles.title}>{menuItem.title}</h5>
+                        {menuItem.links.map((link, index) => (
+                            <p key={index} className={'vertical-padding'}>
+                                <a href={link.href} className={styles.navigation + ' body2'}>
+                                    {link.label}
+                                </a>
+                            </p>
+                        ))}
                     </div>
-                </div>
-                <div>
-                    <h5 className={styles.title}>{labels.footerNavigation.joinus}</h5>
-                    <p>
-                        <a href='' className={styles.navigation + ' body2'}>
-                            {labels.footerNavigation.network}
-                        </a>
-                    </p>
-                </div>
+                ))}
             </div>
             <div className={`${styles.footerBottom} vertical-padding`}>
-                <p className={styles.copyrightText + ' body5'}>{labels.footerContent.copyright}</p>
+                <p className={styles.copyrightText + ' body5'}>{labels.footerCopyright.copyright}</p>
                 <div className={styles.footerLinks}>
-                    <p className={styles.copyrightText + ' body5'}>{labels.footerContent.rights}</p>
+                    <p className={styles.copyrightText + ' body5'}>{labels.footerCopyright.rights}</p>
                     <p>|</p>
                     <p>
                         <a href='' className={styles.termsLink + ' body5'}>
-                            {labels.footerContent.terms}
+                            {labels.footerCopyright.terms}
                         </a>
                     </p>
                     <p>|</p>
                     <p>
                         <a href='' className={styles.termsLink + ' body5'}>
-                            {labels.footerContent.privacy}
+                            {labels.footerCopyright.privacy}
                         </a>
                     </p>
                 </div>

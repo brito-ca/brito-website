@@ -9,10 +9,26 @@ const navigation = [
     { id: labels.joinUs.id, title: labels.joinUs.title, navTitle: labels.joinUs.navTitle },
     { id: labels.contactUs.id, title: labels.contactUs.title, navTitle: labels.contactUs.navTitle },
 ]
+const menu = [
+    {
+        title: labels.footerNavigation.company,
+        links: [
+            { label: labels.footerNavigation.about, href: labels.footerNavigation.linkAbout },
+            { label: labels.footerNavigation.contact, href: labels.footerNavigation.contactAbout },
+        ]
+    },
+    {
+        title: labels.footerNavigation.joinus,
+        links: [{ label: labels.footerNavigation.network, href: '' }],
+    },
+]
 
 export default function Home() {
     return (
-        <AppLayout navigation={navigation}>
+        <AppLayout
+            navigation={navigation}
+            menu={menu}
+        >
             <Hero
                 title={labels.welcomeToBrito.title}
                 description={labels.welcomeToBrito.description}
