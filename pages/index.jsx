@@ -25,16 +25,14 @@ const menu = [
 
 const icons = [
     { href: labels.midia.instagramlink, variant: labels.footerIcons.instagram },
-    { href: labels.midia.linklinkedin, variant: labels.footerIcons.instagram  },
+    { href: labels.midia.linklinkedin, variant: labels.footerIcons.linkedin  },
     { href: labels.midia.linkfacebook, variant: labels.footerIcons.facebook  },
 ]
 
 const description = {
     phrase: labels.footerBrito.phrase,
     altFlag: labels.footerBrito.altFlag,
-    srcFlag: labels.footerBrito.srcFlag,
     altWordmark: labels.footerBrito.altWordmark,
-    srcWordmark: labels.footerBrito.srcWordmark
   };
 
 export default function Home() {

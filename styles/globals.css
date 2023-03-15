@@ -48,6 +48,7 @@
     --margin-md: calc(2 * var(--spacing-unit));
     --margin-lg: calc(4 * var(--spacing-unit));
 
+    --padding-xs: calc(0.5 * var(--spacing-unit));
     --padding-sm: var(--spacing-unit);
     --padding-md: calc(2 * var(--spacing-unit));
     --padding-lg: calc(4 * var(--spacing-unit));

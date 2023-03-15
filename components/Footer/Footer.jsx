@@ -13,7 +13,7 @@ const Footer = (props) => {
                 <div className={styles.logoAndSocial}>
                     <div className={styles.logoAndSocial}>
                         <Image alt={description.altFlag} src={britoFlag} className={styles.logo} />
-                        <Image alt={description.altWordmark} src={britoWordMark } className={styles.logo} />
+                        <Image alt={description.altWordmark} src={britoWordMark} className={styles.logo} />
                         <p className={'vertical-padding'}>{description.phrase}</p>
                     </div>
                     <div className={styles.socialContainer}>
