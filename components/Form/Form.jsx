@@ -30,7 +30,9 @@ const Form = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        //Opens up modal - implement a loading mechanism that awaits for the sucessfull post request and a visual reprensetation of the loading ( forgot the name of it)
         setSubscriptionModalOpen(!subscriptionModalOpen)
+        // ** Line below is for testing purposes **
         // console.log(formValues)
     }
     const [profilePictureModalOpen, setProfilePictureModalOpen] = useState(false)
@@ -39,35 +41,6 @@ const Form = () => {
     return (
         <div className={styles.formContainer}>
             <h3 className={styles.formTitle}>Want to join Brito&#39;s network?</h3>
-            {/* <button onClick={() => setModalOpen(!modalOpen)}>Modal</button>
-            {modalOpen && (
-                <Modal className={styles.modalTest} onClick={() => setModalOpen(!modalOpen)}>
-                    <Image
-                        src={closeModalIcon}
-                        alt='X icon to close upload photo field'
-                        className={styles.closeProfilePictureModalIcon}
-                        onClick={() => setModalOpen(!modalOpen)}
-                    />
-                    <div className={styles.profilePictureModal}>
-                        <h1 className={styles.profilePictureModalTitle}>Profile Picture</h1>
-                        <p className={styles.profilePictureModalDescription}>
-                            A profile picture make a positive first impression on potential
-                            connections It can also help to differentiate you from others in your
-                            network and make your profile stand out in search results.
-                        </p>
-                        <Image
-                            src={profilePictureTemplate}
-                            alt="A front face picture of a man. It's a template for the profile picture field before the user selects its own"
-                            className={styles.profilePictureAvatar}
-                        />
-
-                        <button type='button' className={styles.profilePictureModalSaveButton}>
-                            Save
-                        </button>
-                        <button className={styles.profilePictureModalChangeButton}>Change</button>
-                    </div>
-                </Modal>
-            )} */}
             <form method='post'>
                 <div className={styles.formSections}>
                     <div className={styles.primaryInformation}>
@@ -267,7 +240,7 @@ const Form = () => {
                     </button>
                     {subscriptionModalOpen && (
                         <Modal
-                            className={styles.subscriptionModal}
+                            className={styles.subscriptionModalContainer}
                             onClick={() => setSubscriptionModalOpen(!subscriptionModalOpen)}
                         >
                             <Image
