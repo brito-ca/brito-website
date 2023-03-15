@@ -9,7 +9,6 @@ const navigation = [
     { id: labels.joinUs.id, title: labels.joinUs.title, navTitle: labels.joinUs.navTitle },
     { id: labels.contactUs.id, title: labels.contactUs.title, navTitle: labels.contactUs.navTitle },
 ]
-<<<<<<< HEAD
 const menu = [
     {
         title: labels.footerNavigation.company,
@@ -25,9 +24,9 @@ const menu = [
 ]
 
 const icons = [
-    { href: labels.midia.instagramlink, variant: labels.footerIcons.instagram },
-    { href: labels.midia.linklinkedin, variant: labels.footerIcons.linkedin  },
-    { href: labels.midia.linkfacebook, variant: labels.footerIcons.facebook  },
+    { href: labels.media.instagramlink, variant: labels.footerIcons.instagram },
+    { href: labels.media.linklinkedin, variant: labels.footerIcons.linkedin  },
+    { href: labels.media.linkfacebook, variant: labels.footerIcons.facebook  },
 ]
 
 const description = {
@@ -35,13 +34,11 @@ const description = {
     altFlag: labels.footerBrito.altFlag,
     altWordmark: labels.footerBrito.altWordmark,
   };
-=======
 const socialMedia = [
     { id: 'instagram', link: labels.media.instagramlink, icon: 'instagram' },
     { id: 'linkedin', link: labels.media.linklinkedin, icon: 'linkedin' },
     { id: 'facebook', link: labels.media.linkfacebook, icon: 'facebook' },
 ]
->>>>>>> origin/develop
 
 export default function Home() {
     return (
