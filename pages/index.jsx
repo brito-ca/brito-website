@@ -9,6 +9,7 @@ const navigation = [
     { id: labels.joinUs.id, title: labels.joinUs.title, navTitle: labels.joinUs.navTitle },
     { id: labels.contactUs.id, title: labels.contactUs.title, navTitle: labels.contactUs.navTitle },
 ]
+<<<<<<< HEAD
 const menu = [
     {
         title: labels.footerNavigation.company,
@@ -34,6 +35,13 @@ const description = {
     altFlag: labels.footerBrito.altFlag,
     altWordmark: labels.footerBrito.altWordmark,
   };
+=======
+const socialMedia = [
+    { id: 'instagram', link: labels.media.instagramlink, icon: 'instagram' },
+    { id: 'linkedin', link: labels.media.linklinkedin, icon: 'linkedin' },
+    { id: 'facebook', link: labels.media.linkfacebook, icon: 'facebook' },
+]
+>>>>>>> origin/develop
 
 export default function Home() {
     return (
@@ -66,7 +74,17 @@ export default function Home() {
                 />
             </div>
             <Form />
-            <ContactUs id={labels.contactUs.id} />
+            <ContactUs
+                id={labels.contactUs.id}
+                title={labels.contactUs.title}
+                chat={labels.chat.title}
+                descriptionChat={labels.chat.description}
+                email={labels.email}
+                basedin={labels.location.basedin}
+                city={labels.location.city}
+                visit={labels.media.visit}
+                socialMedia={socialMedia}
+            />
         </AppLayout>
     )
 }
