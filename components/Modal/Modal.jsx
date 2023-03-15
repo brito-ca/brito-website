@@ -1,10 +1,10 @@
 import styles from './Modal.module.css'
 
 const Modal = (props) => {
-    const { name, className } = props
+    const { onClick, children } = props
     return (
-        <div className={className}>
-            <div className={styles.modal}>{name}</div>
+        <div className={styles.backdrop} onClick={onClick}>
+            <div className={styles.modal}>{children}</div>
         </div>
     )
 }
