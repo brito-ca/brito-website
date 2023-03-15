@@ -7,6 +7,7 @@ import profilePictureTemplate from '../../public/images/brito-profile-picture-te
 import closeModalIcon from '../../public/images/close-modal-icon.svg'
 import logo from '../../public/images/logo-small.svg'
 import FormInput from '../FormInput/FormInput'
+import Modal from '../Modal/Modal'
 
 const Form = () => {
     const [formValues, setFormValues] = useState({
@@ -30,7 +31,7 @@ const Form = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         openCloseSubscriptionSuccessModal()
-        console.log(formValues)
+        // console.log(formValues)
     }
 
     const [isProfilePictureModalOpen, setIsProfilePictureModalOpen] = useState(false)
@@ -44,9 +45,13 @@ const Form = () => {
         setisSuccesfullSubmissionModalOpen(!isSuccesfullSubmissionModalOpen)
     }
 
+    const [modalOpen, setModalOpen] = useState(false)
+
     return (
         <div className={styles.formContainer}>
             <h3 className={styles.formTitle}>Want to join Brito&#39;s network?</h3>
+            <button onClick={() => setModalOpen(!modalOpen)}>Modal</button>
+            {modalOpen && <Modal className={styles.menuModal} />}
             <form method='post'>
                 <div className={styles.formSections}>
                     <div className={styles.primaryInformation}>
