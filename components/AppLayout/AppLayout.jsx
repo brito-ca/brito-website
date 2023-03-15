@@ -9,7 +9,7 @@ const roboto = Roboto({
 })
 
 const AppLayout = (props) => {
-    const { children, navigation, icons, menu} = props
+    const { children, navigation, description, icons, menu} = props
     return (
         <>
             <Head>
@@ -23,6 +23,7 @@ const AppLayout = (props) => {
                 <Header navigation={navigation} />
                 <main>{children}</main>
                 <Footer
+                    description={description}
                     icons={icons}
                     menu={menu}
                 />

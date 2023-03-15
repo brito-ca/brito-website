@@ -19,7 +19,7 @@ const menu = [
     },
     {
         title: labels.footerNavigation.joinus,
-        links: [{ label: labels.footerNavigation.network, href: '' }],
+        links: [{ label: labels.footerNavigation.network, href: labels.footerNavigation.linkJoinus }],
     },
 ]
 
@@ -29,10 +29,19 @@ const icons = [
     { href: labels.midia.linkfacebook, variant: labels.footerIcons.facebook  },
 ]
 
+const description = {
+    phrase: labels.footerBrito.phrase,
+    altFlag: labels.footerBrito.altFlag,
+    srcFlag: labels.footerBrito.srcFlag,
+    altWordmark: labels.footerBrito.altWordmark,
+    srcWordmark: labels.footerBrito.srcWordmark
+  };
+
 export default function Home() {
     return (
         <AppLayout
             navigation={navigation}
+            description={description}
             menu={menu}
             icons={icons}
         >

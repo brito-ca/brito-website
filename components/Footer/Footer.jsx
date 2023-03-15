@@ -6,15 +6,15 @@ import labels from '@/constants/labels.en'
 import { Icon } from '@/components'
 
 const Footer = (props) => {
-    const { icons, menu } = props
+    const { description, icons, menu } = props
     return (
         <div>
             <div className={`${styles.footerContainer} flex-row-space-between`}>
                 <div className={styles.logoAndSocial}>
                     <div className={styles.logoAndSocial}>
-                        <Image alt={labels.footerBrito.altFlag} src={britoFlag} className={styles.logo} />
-                        <Image alt={labels.footerBrito.altWordmark} src={britoWordMark} className={styles.logo} />
-                        <p className={'vertical-padding'}>{labels.footerBrito.phrase}</p>
+                        <Image alt={description.altFlag} src={britoFlag} className={styles.logo} />
+                        <Image alt={description.altWordmark} src={britoWordMark } className={styles.logo} />
+                        <p className={'vertical-padding'}>{description.phrase}</p>
                     </div>
                     <div className={styles.socialContainer}>
                         {icons.map((media) => (

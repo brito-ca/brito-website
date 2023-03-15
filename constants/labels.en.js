@@ -101,7 +101,9 @@ const labels = {
     },
     footerBrito: {
         altFlag: 'brito flag',
+        srcFlag: '../../public/images/brito-logo-1.svg',
         altWordmark: 'brito wordmark',
+        srcWordmark: '../../public/images/brito-logo-2.svg',
         phrase: 'Building the Brazilian IT community in Ottawa',
     },
     footerIcons: {
