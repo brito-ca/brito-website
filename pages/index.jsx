@@ -24,13 +24,11 @@ const menu = [
         ],
     },
 ]
-
 const icons = [
     { href: labels.media.instagramlink, variant: labels.footerIcons.instagram },
     { href: labels.media.linklinkedin, variant: labels.footerIcons.linkedin },
     { href: labels.media.linkfacebook, variant: labels.footerIcons.facebook },
 ]
-
 const description = {
     phrase: labels.footerBrito.phrase,
     altFlag: labels.footerBrito.altFlag,
