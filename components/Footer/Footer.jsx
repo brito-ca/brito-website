@@ -2,7 +2,6 @@ import Image from 'next/image'
 import britoFlag from '../../public/images/brito-logo-1.svg'
 import britoWordMark from '../../public/images/brito-logo-2.svg'
 import styles from '@/styles/Footer.module.css'
-import navStyles from '@/styles/Header.module.css'
 import { Icon, Nav } from '@/components'
 
 const Footer = (props) => {
@@ -10,11 +9,8 @@ const Footer = (props) => {
 
     return (
         <>
-            <div className='flex-row-space-between'>
-                <div
-                    style={{ width: '40%' }}
-                    className={`${styles.footerLogoContainer} flex-column-center`}
-                >
+            <div className={styles.footerContainer}>
+                <div className={`${styles.footerLogoContainer} flex-column-center`}>
                     <div className='flex-column-space-between'>
                         <Image
                             alt={footerContent.altFlag}
@@ -41,12 +37,9 @@ const Footer = (props) => {
                         ))}
                     </div>
                 </div>
-                <div className={`${styles.footerNav} flex-column-center`}>
+                <div className={styles.footerNav}>
                     <h5>{footerContent.header}</h5>
-                    <Nav
-                        className={`${navStyles.nav} body3 flex-column-start`}
-                        navigation={navigation}
-                    />
+                    <Nav className={`${styles.nav} body3 `} navigation={navigation} />
                 </div>
             </div>
             <div className={`${styles.footerBottom} vertical-padding flex-row-space-between body5`}>
