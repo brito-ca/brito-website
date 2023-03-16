@@ -8,8 +8,6 @@ import { Icon, Nav } from '@/components'
 const Footer = (props) => {
     const { footerContent, navigation, socialMedia } = props
 
-    console.log(socialMedia)
-
     return (
         <>
             <div className='flex-row-space-between'>
@@ -17,7 +15,7 @@ const Footer = (props) => {
                     style={{ width: '40%' }}
                     className={`${styles.footerLogoContainer} flex-column-center`}
                 >
-                    <div className={styles.logoAndSocial}>
+                    <div className='flex-column-space-between'>
                         <Image
                             alt={footerContent.altFlag}
                             src={britoFlag}
