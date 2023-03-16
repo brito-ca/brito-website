@@ -31,6 +31,7 @@
 }
 
 .footerBottom {
+    margin-top: var(--spacing-unit);
     border-top: 3px solid var(--neutral-medium-light);
     color: var(--primary-blue);
     font-size: 1.125rem;

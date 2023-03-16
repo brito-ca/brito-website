@@ -39,7 +39,10 @@ const Footer = (props) => {
                 </div>
                 <div className={styles.footerNav}>
                     <h5>{footerContent.header}</h5>
-                    <Nav className={`${styles.nav} body3 `} navigation={navigation} />
+                    <Nav
+                        className={`${styles.nav} body3 flex-column-start`}
+                        navigation={navigation}
+                    />
                 </div>
             </div>
             <div className={`${styles.footerBottom} vertical-padding flex-row-space-between body5`}>
