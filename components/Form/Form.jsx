@@ -7,6 +7,7 @@ import profilePictureTemplate from '../../public/images/brito-profile-picture-te
 import closeModalIcon from '../../public/images/close-modal-icon.svg'
 import logo from '../../public/images/logo-small.svg'
 import FormInput from '../FormInput/FormInput'
+import Modal from '../Modal/Modal'
 
 const Form = () => {
     const [formValues, setFormValues] = useState({
@@ -29,20 +30,13 @@ const Form = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        openCloseSubscriptionSuccessModal()
+        //Opens up modal - implement a loading mechanism that awaits for the sucessfull post request and a visual reprensetation of the loading ( forgot the name of it)
+        setSubscriptionModalOpen(!subscriptionModalOpen)
+        // ** Line below is for testing purposes **
         // console.log(formValues)
     }
-
-    const [isProfilePictureModalOpen, setIsProfilePictureModalOpen] = useState(false)
-    const [isSuccesfullSubmissionModalOpen, setisSuccesfullSubmissionModalOpen] = useState(false)
-
-    function openCloseProfilePictureModal() {
-        setIsProfilePictureModalOpen(!isProfilePictureModalOpen)
-    }
-
-    function openCloseSubscriptionSuccessModal() {
-        setisSuccesfullSubmissionModalOpen(!isSuccesfullSubmissionModalOpen)
-    }
+    const [profilePictureModalOpen, setProfilePictureModalOpen] = useState(false)
+    const [subscriptionModalOpen, setSubscriptionModalOpen] = useState(false)
 
     return (
         <div className={styles.formContainer}>
@@ -192,47 +186,50 @@ const Form = () => {
                         <button
                             type='button'
                             className={styles.chooseFileButton}
-                            onClick={openCloseProfilePictureModal}
+                            onClick={() => setProfilePictureModalOpen(!profilePictureModalOpen)}
                         >
                             Choose file
                         </button>
-                        {isProfilePictureModalOpen && (
-                            <div className={styles.backdrop}>
-                                <div className={styles.menuModal}>
+                        {profilePictureModalOpen && (
+                            <Modal
+                                className={styles.profilePictureModal}
+                                onClick={() => setProfilePictureModalOpen(!profilePictureModalOpen)}
+                            >
+                                <Image
+                                    src={closeModalIcon}
+                                    alt='X icon to close upload photo field'
+                                    className={styles.closeProfilePictureModalIcon}
+                                    onClick={() =>
+                                        setProfilePictureModalOpen(!profilePictureModalOpen)
+                                    }
+                                />
+                                <div className={styles.profilePictureModal}>
+                                    <h1 className={styles.profilePictureModalTitle}>
+                                        Profile Picture
+                                    </h1>
+                                    <p className={styles.profilePictureModalDescription}>
+                                        A profile picture make a positive first impression on
+                                        potential connections It can also help to differentiate you
+                                        from others in your network and make your profile stand out
+                                        in search results.
+                                    </p>
                                     <Image
-                                        src={closeModalIcon}
-                                        alt='X icon to close upload photo field'
-                                        className={styles.closeProfilePictureModalIcon}
-                                        onClick={openCloseProfilePictureModal}
+                                        src={profilePictureTemplate}
+                                        alt="A front face picture of a man. It's a template for the profile picture field before the user selects its own"
+                                        className={styles.profilePictureAvatar}
                                     />
-                                    <div className={styles.profilePictureModal}>
-                                        <h1 className={styles.profilePictureModalTitle}>
-                                            Profile Picture
-                                        </h1>
-                                        <p className={styles.profilePictureModalDescription}>
-                                            A profile picture make a positive first impression on
-                                            potential connections It can also help to differentiate
-                                            you from others in your network and make your profile
-                                            stand out in search results.
-                                        </p>
-                                        <Image
-                                            src={profilePictureTemplate}
-                                            alt="A front face picture of a man. It's a template for the profile picture field before the user selects its own"
-                                            className={styles.profilePictureAvatar}
-                                        />
 
-                                        <button
-                                            type='button'
-                                            className={styles.profilePictureModalSaveButton}
-                                        >
-                                            Save
-                                        </button>
-                                        <button className={styles.profilePictureModalChangeButton}>
-                                            Change
-                                        </button>
-                                    </div>
+                                    <button
+                                        type='button'
+                                        className={styles.profilePictureModalSaveButton}
+                                    >
+                                        Save
+                                    </button>
+                                    <button className={styles.profilePictureModalChangeButton}>
+                                        Change
+                                    </button>
                                 </div>
-                            </div>
+                            </Modal>
                         )}
                     </div>
                     <div className={styles.fileChosenBox}>
@@ -241,47 +238,41 @@ const Form = () => {
                     <button className={styles.sendButton} type='button' onClick={handleSubmit}>
                         Send
                     </button>
-                    {isSuccesfullSubmissionModalOpen && (
-                        <div className={styles.backdrop}>
-                            <div
-                                className={styles.menuModal}
-                                onClick={(e) => void e.stopPropagation()}
-                            >
-                                <div className={styles.subscriptionModalContainer}>
-                                    <Image
-                                        src={closeModalIcon}
-                                        alt='X icon to close upload photo field'
-                                        className={styles.closeSubscriptionModalIcon}
-                                        onClick={openCloseSubscriptionSuccessModal}
-                                    />
-                                    <Image
-                                        src={logo}
-                                        alt="Brito's logo"
-                                        className={styles.logoSubscriptionModal}
-                                    />
-                                    <div
-                                        className={styles.subscriptionModalTextDescriptionContainer}
-                                    >
-                                        <h1 className={styles.subscriptionModalTitle}>
-                                            Thank you for connect with us!
-                                        </h1>
-                                        <p className={styles.subscriptionModalDescription}>
-                                            Your informations were submitted for approval.
-                                        </p>
-                                        <p className={styles.subscriptionModalDescription}>
-                                            You will receive a notification on your email.
-                                        </p>
-                                        <button
-                                            type='button'
-                                            className={styles.continueBrowsingButton}
-                                            onClick={openCloseSubscriptionSuccessModal}
-                                        >
-                                            Continue browsing
-                                        </button>
-                                    </div>
-                                </div>
+                    {subscriptionModalOpen && (
+                        <Modal
+                            className={styles.subscriptionModalContainer}
+                            onClick={() => setSubscriptionModalOpen(!subscriptionModalOpen)}
+                        >
+                            <Image
+                                src={closeModalIcon}
+                                alt='X icon to close upload photo field'
+                                className={styles.closeSubscriptionModalIcon}
+                                onClick={() => setSubscriptionModalOpen(!subscriptionModalOpen)}
+                            />
+                            <Image
+                                src={logo}
+                                alt="Brito's logo"
+                                className={styles.logoSubscriptionModal}
+                            />
+                            <div className={styles.subscriptionModalTextDescriptionContainer}>
+                                <h1 className={styles.subscriptionModalTitle}>
+                                    Thank you for connect with us!
+                                </h1>
+                                <p className={styles.subscriptionModalDescription}>
+                                    Your informations were submitted for approval.
+                                </p>
+                                <p className={styles.subscriptionModalDescription}>
+                                    You will receive a notification on your email.
+                                </p>
+                                <button
+                                    type='button'
+                                    className={styles.continueBrowsingButton}
+                                    onClick={() => setSubscriptionModalOpen(!subscriptionModalOpen)}
+                                >
+                                    Continue browsing
+                                </button>
                             </div>
-                        </div>
+                        </Modal>
                     )}
                 </div>
             </form>
