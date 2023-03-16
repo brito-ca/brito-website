@@ -9,31 +9,6 @@ const navigation = [
     { id: labels.joinUs.id, title: labels.joinUs.title, navTitle: labels.joinUs.navTitle },
     { id: labels.contactUs.id, title: labels.contactUs.title, navTitle: labels.contactUs.navTitle },
 ]
-const menu = [
-    {
-        title: labels.footerNavigation.company,
-        links: [
-            { label: labels.footerNavigation.about, href: labels.footerNavigation.linkAbout },
-            { label: labels.footerNavigation.contact, href: labels.footerNavigation.contactAbout },
-        ],
-    },
-    {
-        title: labels.footerNavigation.joinus,
-        links: [
-            { label: labels.footerNavigation.network, href: labels.footerNavigation.linkJoinus },
-        ],
-    },
-]
-const icons = [
-    { href: labels.media.instagramlink, variant: labels.footerIcons.instagram },
-    { href: labels.media.linklinkedin, variant: labels.footerIcons.linkedin },
-    { href: labels.media.linkfacebook, variant: labels.footerIcons.facebook },
-]
-const description = {
-    phrase: labels.footerBrito.phrase,
-    altFlag: labels.footerBrito.altFlag,
-    altWordmark: labels.footerBrito.altWordmark,
-}
 const socialMedia = [
     { id: 'instagram', link: labels.media.instagramlink, icon: 'instagram' },
     { id: 'linkedin', link: labels.media.linklinkedin, icon: 'linkedin' },
@@ -42,7 +17,7 @@ const socialMedia = [
 
 export default function Home() {
     return (
-        <AppLayout navigation={navigation} description={description} menu={menu} icons={icons}>
+        <AppLayout content={{ navigation, socialMedia, footerContent: labels.footerContent }}>
             <Hero
                 title={labels.welcomeToBrito.title}
                 description={labels.welcomeToBrito.description}

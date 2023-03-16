@@ -99,33 +99,15 @@ const labels = {
     Maple: {
         labelimgmaple: 'mapleleave',
     },
-    footerBrito: {
+    footerContent: {
         altFlag: 'brito flag',
-        srcFlag: '../../public/images/brito-logo-1.svg',
         altWordmark: 'brito wordmark',
-        srcWordmark: '../../public/images/brito-logo-2.svg',
         phrase: 'Building the Brazilian IT community in Ottawa',
-    },
-    footerIcons: {
-        instagram: 'instagram',
-        linkedin: 'linkedin',
-        facebook: 'facebook',
-    },
-    footerNavigation: {
-        company: 'Company',
-        about: 'About',
-        linkAbout: '#about',
-        contact: 'Contact',
-        linkContact: '#contact',
-        joinus: 'Join us',
-        linkJoinus: '',
-        network: 'Network list',
-    },
-    footerCopyright: {
         copyright: 'Copyright © 2023 Brito',
         rights: 'All Rights Reserved',
-        terms: 'Terms and Conditions',
-        privacy: 'Privacy Policy',
+        terms: { href: '/', text: 'Terms and Conditions' },
+        privacy: { href: '/', text: 'Privacy Policy' },
+        header: 'BRITO',
     },
 }
 export default labels

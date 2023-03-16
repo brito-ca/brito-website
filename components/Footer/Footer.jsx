@@ -2,73 +2,71 @@ import Image from 'next/image'
 import britoFlag from '../../public/images/brito-logo-1.svg'
 import britoWordMark from '../../public/images/brito-logo-2.svg'
 import styles from '@/styles/Footer.module.css'
-import labels from '@/constants/labels.en'
-import { Icon } from '@/components'
+import navStyles from '@/styles/Header.module.css'
+import { Icon, Nav } from '@/components'
 
 const Footer = (props) => {
-    const { description, icons, menu } = props
+    const { footerContent, navigation, socialMedia } = props
+
+    console.log(socialMedia)
+
     return (
-        <div>
-            <div className={`${styles.footerContainer} flex-row-space-between`}>
-                <div className={styles.logoAndSocial}>
+        <>
+            <div className='flex-row-space-between'>
+                <div
+                    style={{ width: '40%' }}
+                    className={`${styles.footerLogoContainer} flex-column-center`}
+                >
                     <div className={styles.logoAndSocial}>
-                        <Image alt={description.altFlag} src={britoFlag} className={styles.logo} />
                         <Image
-                            alt={description.altWordmark}
+                            alt={footerContent.altFlag}
+                            src={britoFlag}
+                            className={styles.logo}
+                        />
+                        <Image
+                            alt={footerContent.altWordmark}
                             src={britoWordMark}
                             className={styles.logo}
                         />
-                        <p className={'vertical-padding'}>{description.phrase}</p>
+                        <p className={'vertical-padding'}>{footerContent.phrase}</p>
                     </div>
-                    <div className={styles.socialContainer}>
-                        {icons.map((media) => (
+                    <div className={`${styles.socialContainer} flex-row-center`}>
+                        {socialMedia.map((media) => (
                             <a
-                                key={media.variant}
-                                href={media.href}
+                                key={media.id}
+                                href={media.link}
                                 target='_blank'
                                 rel='noopener noreferrer'
                             >
-                                <Icon className={styles.icon} variant={media.variant} />
+                                <Icon className={styles.icon} variant={media.icon} />
                             </a>
                         ))}
                     </div>
                 </div>
-                {menu.map((menuItem, index) => (
-                    <div key={index}>
-                        <h5 className={styles.title}>{menuItem.title}</h5>
-                        {menuItem.links.map((link, index) => (
-                            <p key={index} className={'vertical-padding'}>
-                                <a href={link.href} className={styles.navigation + ' body2'}>
-                                    {link.label}
-                                </a>
-                            </p>
-                        ))}
-                    </div>
-                ))}
+                <div className={`${styles.footerNav} flex-column-center`}>
+                    <h5>{footerContent.header}</h5>
+                    <Nav
+                        className={`${navStyles.nav} body3 flex-column-start`}
+                        navigation={navigation}
+                    />
+                </div>
             </div>
-            <div className={`${styles.footerBottom} vertical-padding`}>
-                <p className={styles.copyrightText + ' body5'}>
-                    {labels.footerCopyright.copyright}
-                </p>
-                <div className={styles.footerLinks}>
-                    <p className={styles.copyrightText + ' body5'}>
-                        {labels.footerCopyright.rights}
+            <div className={`${styles.footerBottom} vertical-padding flex-row-space-between body5`}>
+                <p>{footerContent.copyright}</p>
+                <div className='flex-row-center'>
+                    <p>{footerContent.rights}</p>
+                    <p>|</p>
+                    <p>
+                        <a href={footerContent.terms.href}>{footerContent.terms.text}</a>
                     </p>
                     <p>|</p>
                     <p>
-                        <a href='' className={styles.termsLink + ' body5'}>
-                            {labels.footerCopyright.terms}
-                        </a>
-                    </p>
-                    <p>|</p>
-                    <p>
-                        <a href='' className={styles.termsLink + ' body5'}>
-                            {labels.footerCopyright.privacy}
-                        </a>
+                        <a href={footerContent.privacy.href}>{footerContent.privacy.text}</a>
                     </p>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
+
 export default Footer

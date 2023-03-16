@@ -1,7 +1,34 @@
-.footerContainer {
-    padding: var(--padding-lg) calc(2 * var(--padding-lg)) var(--padding-lg) 0;
+.footerLogoContainer {
+    width: 40%;
+}
+
+.footerNav {
+    width: 60%;
+    padding-left: calc(10 * var(--spacing-unit));
+}
+
+.footerNav h5 {
+    color: var(--primary-blue);
+    padding-left: var(--spacing-unit);
+}
+
+.footerNav a {
+    width: fit-content;
+}
+
+.footerBottom {
     border-top: 3px solid var(--neutral-medium-light);
-    border-bottom: 3px solid var(--neutral-medium-light);
+    color: var(--primary-blue);
+    font-size: 1.125rem;
+}
+
+.footerBottom p {
+    margin-left: calc(var(--spacing-unit) / 2);
+}
+
+.footerBottom a {
+    font-size: 1.125rem;
+    font-weight: 300;
 }
 
 .logoAndSocial {
