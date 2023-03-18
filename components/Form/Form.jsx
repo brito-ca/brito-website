@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useState } from 'react'
-import { RadioButton, Popover } from '@/components'
+import { RadioButton, Popover, Icon } from '@/components'
 import styles from '../../styles/Form.module.css'
 import britoFormImage from '../../public/images/brito-group-image-form.svg'
 import profilePictureTemplate from '../../public/images/brito-profile-picture-template.svg'
@@ -37,6 +37,7 @@ const Form = () => {
     }
     const [profilePictureModalOpen, setProfilePictureModalOpen] = useState(false)
     const [subscriptionModalOpen, setSubscriptionModalOpen] = useState(false)
+    const [immigrationStatusPopover, setImmigrationStatusPopover] = useState(false)
 
     return (
         <div className={styles.formContainer}>
@@ -117,11 +118,23 @@ const Form = () => {
                         />
                         <label htmlFor='immigration-status' className={styles.labelForm}>
                             Immigration Status
-                            <span>
-                                <Popover
-                                    icon='exclamation'
-                                    className={styles.immigrationStatusPopover}
-                                />
+                            <span
+                                onMouseEnter={() => setImmigrationStatusPopover(true)}
+                                onMouseLeave={() => setImmigrationStatusPopover(true)}
+                            >
+                                <Icon variant={'exclamation'} className={styles.icon} />
+                                {immigrationStatusPopover && (
+                                    <Popover className={`${styles.popoverContainer} ${styles.top}`}>
+                                        <p>
+                                            This status assists Brito in identifying suitable
+                                            projects and job opportunities based on his type of
+                                            visa. Some visas only permit 20 hours of work, and
+                                            holding citizenship is a requirement for certain
+                                            government positions, enhancing chances of securing a
+                                            job.
+                                        </p>
+                                    </Popover>
+                                )}
                             </span>
                         </label>
                         <select

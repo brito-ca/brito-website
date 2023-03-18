@@ -445,3 +445,30 @@
 .continueBrowsingButton {
     display: none;
 }
+
+.popoverContainer {
+    position: relative;
+    margin-left: 30px;
+
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, calc(-100% - 10px));
+
+    /* Style , Fonts */
+    background-color: #525252;
+    border-radius: 20px;
+    text-align: center;
+    width: 280px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px;
+
+    border: 2px solid white;
+}
+
+.popoverContainer.top::before {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
