@@ -1,8 +1,13 @@
-// import styles from './Popover.module.css'
+import styles from './Popover.module.css'
 
 export function Popover(props) {
-    const { children, className } = props
-    return <div className={className}>{children}</div>
+    const { children } = props
+    return (
+        <div className={styles.popover}>
+            <div className={styles.popoverArrow}></div>
+            <div className={styles.popoverContent}>{children}</div>
+        </div>
+    )
 }
 
 export default Popover

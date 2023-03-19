@@ -119,12 +119,13 @@ const Form = () => {
                         <label htmlFor='immigration-status' className={styles.labelForm}>
                             Immigration Status
                             <span
+                                className={styles.infoIcon}
                                 onMouseEnter={() => setImmigrationStatusPopover(true)}
-                                onMouseLeave={() => setImmigrationStatusPopover(true)}
+                                onMouseLeave={() => setImmigrationStatusPopover(false)}
                             >
-                                <Icon variant={'exclamation'} className={styles.icon} />
+                                <Icon variant={'exclamation'} className={styles.infoIcon} />
                                 {immigrationStatusPopover && (
-                                    <Popover className={`${styles.popoverContainer} ${styles.top}`}>
+                                    <Popover>
                                         <p>
                                             This status assists Brito in identifying suitable
                                             projects and job opportunities based on his type of
@@ -137,6 +138,7 @@ const Form = () => {
                                 )}
                             </span>
                         </label>
+
                         <select
                             name='immigrationStatus'
                             value={formValues.immigrationStatus}
