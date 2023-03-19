@@ -206,10 +206,7 @@ const Form = () => {
                             Choose file
                         </button>
                         {profilePictureModalOpen && (
-                            <Modal
-                                className={styles.profilePictureModal}
-                                onClick={() => setProfilePictureModalOpen(!profilePictureModalOpen)}
-                            >
+                            <Modal className={styles.profilePictureModal}>
                                 <Image
                                     src={closeModalIcon}
                                     alt='X icon to close upload photo field'
@@ -254,10 +251,7 @@ const Form = () => {
                         Send
                     </button>
                     {subscriptionModalOpen && (
-                        <Modal
-                            className={styles.subscriptionModalContainer}
-                            onClick={() => setSubscriptionModalOpen(!subscriptionModalOpen)}
-                        >
+                        <Modal className={styles.subscriptionModalContainer}>
                             <Image
                                 src={closeModalIcon}
                                 alt='X icon to close upload photo field'
