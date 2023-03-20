@@ -71,13 +71,11 @@ labels for other fields. */
 
 .immigrationStatusList {
     width: 100%;
-    padding: 0.5rem 0.75rem;
+    padding: var(--padding-xs);
 
-    background: #f5f5fa;
+    border: 1px solid var(--neutral-medium);
+    border-radius: var(--radius-xs);
 
-    border: 1px solid #929bc6;
-    border-radius: 5px;
-    color: #272424;
     font-size: 13px;
 }
 
@@ -98,23 +96,15 @@ labels for other fields. */
 
 .fileChosenBox {
     grid-row: 4 / 5;
-    grid-column: 2 / 6;
+    grid-column: 3 / 5;
 
-    height: 42px;
-    font-size: 14px;
-
-    /* Distancing from button before breakpoint */
-    margin-left: 85px;
+    padding: var(--padding-xs) !important;
+    font-size: 0.75rem;
 
     color: var(--primary-white);
-    border: 1px solid #f5f5fa;
-    border-radius: 8px;
-    padding: 0 10px;
-
-    /* center p on div */
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    border: 1px solid var(--primary-white);
+    border-radius: var(--radius-sm);
+    padding: 0 var(--padding-sm);
 }
 
 .chosenBoxText {
@@ -122,40 +112,39 @@ labels for other fields. */
 }
 
 .chooseFileButton {
-    color: #022777;
-    background: #f5f5fa;
+    font-size: 14px;
+    color: var(--secundary-blue);
+    background: var(--primary-white);
 
-    padding: 8px 2rem;
+    padding: calc(0.5 * var(--padding-xs)) var(--padding-md);
     margin-top: var(--margin-sm);
 
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-    font-size: 18px;
 }
 
 .sendButton {
     grid-row: 5 / 6;
     grid-column: 8 / 9;
 
-    font-size: 20px;
-    color: #022777;
+    font-size: 1rem;
+    color: var(--secundary-blue);
+    background: var(--primary-white);
 
-    background: #f5f5fa;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 40px;
+    border-radius: var(--radius-lg);
 
-    padding: 8px 16px;
-    margin-bottom: 3rem;
+    padding: var(--padding-xs) var(--padding-sm);
+    margin-bottom: var(--margin-lg);
 }
 
 .mandatoryFieldSpan {
     color: var(--secundary-red-warning);
-    margin-left: 4px;
+    margin-left: var(--margin-xs);
 }
 
 .infoIcon {
-    margin-left: 0.5rem;
+    margin-left: var(--margin-xs);
     display: inline;
 }
 
@@ -297,15 +286,7 @@ labels for other fields. */
     grid-column: 5 / 8;
 }
 
-.closeProfilePictureModalIcon {
-    position: absolute;
-    right: 0;
-    margin: 0 21px 0 0;
-
-    width: 30px;
-}
-
-.closeSubscriptionModalIcon {
+.closeModalIcon {
     position: absolute;
     right: 0;
     margin: 10px 21px 0 0;

@@ -222,7 +222,7 @@ const Form = () => {
                                 <Image
                                     src={closeModalIcon}
                                     alt='X icon to close upload photo field'
-                                    className={styles.closeProfilePictureModalIcon}
+                                    className={styles.closeModalIcon}
                                     onClick={() =>
                                         setProfilePictureModalOpen(!profilePictureModalOpen)
                                     }
@@ -267,7 +267,7 @@ const Form = () => {
                             <Image
                                 src={closeModalIcon}
                                 alt='X icon to close upload photo field'
-                                className={styles.closeSubscriptionModalIcon}
+                                className={styles.closeModalIcon}
                                 onClick={() => setSubscriptionModalOpen(!subscriptionModalOpen)}
                             />
                             <Image
