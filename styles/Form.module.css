@@ -1,26 +1,20 @@
 .formContainer {
-    background: var(--secundary-green);
+    background: var(--secondary-green);
     padding: var(--padding-sm) var(--padding-md);
 }
 
 .formTitle {
     text-align: center;
     color: var(--primary-white);
-
-    padding: var(--padding-lg) 0px var(--padding-md) 0;
+    padding: var(--padding-md) 0px var(--padding-sm) 0;
 }
 
-/* For now labelForm and inputForm 
-are duplicated at FormInput.module.css 
-because some inputs are not using the 
-FormInput component and we have independent 
-labels for other fields. */
 .labelForm {
     width: 100%;
 
     display: flex;
 
-    margin-top: var(--margin-md);
+    margin-top: var(--margin-sm);
     margin-bottom: var(--margin-xs);
 
     color: var(--primary-white);
@@ -41,15 +35,12 @@ labels for other fields. */
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(5, auto);
     justify-content: space-around;
-    align-items: end;
+    align-items: center;
 }
 
 .primaryInformation {
     grid-column: 1 / 5;
     grid-row: 1 / 2;
-}
-.labelRadioButton {
-    margin-left: '5px' !important;
 }
 
 .imageContainer {
@@ -62,63 +53,31 @@ labels for other fields. */
     border-radius: 50%;
 }
 
-.immigrationStatusSection {
-    grid-column: 1 / 9;
+.provinceField {
+    grid-column: 1 / 4;
     grid-row: 2 / 3;
 }
 
-.immigrationStatusList {
-    width: 100%;
-    padding: var(--padding-xs);
+.cityField {
+    grid-row: 2 / 3;
+    grid-column: 4 / 9;
+    margin-left: var(--margin-sm);
+}
 
-    border: 1px solid var(--neutral-medium);
-    border-radius: var(--radius-xs);
-
-    font-size: 13px;
+.immigrationStatusSection {
+    grid-column: 1 / 9;
+    grid-row: 3 / 4;
 }
 
 .linkedinField {
-    grid-column: 1 / 4;
-    grid-row: 3 / 4;
+    grid-column: 4 / 9;
+    grid-row: 4 / 5;
+    margin-left: var(--margin-sm);
 }
 
 .emailField {
-    grid-column: 5 / 9;
-    grid-row: 3 / 4;
-}
-
-.uploadPhotoField {
+    grid-row: 4 / 5;
     grid-column: 1 / 4;
-    grid-row: 4 / 5;
-}
-
-.fileChosenBox {
-    grid-row: 4 / 5;
-    grid-column: 3 / 5;
-
-    padding: var(--padding-xs) !important;
-    font-size: 0.75rem;
-
-    color: var(--primary-white);
-    border: 1px solid var(--primary-white);
-    border-radius: var(--radius-sm);
-    padding: 0 var(--padding-sm);
-}
-
-.chosenBoxText {
-    padding: 0;
-}
-
-.chooseFileButton {
-    font-size: 14px;
-    color: var(--secundary-blue);
-    background: var(--primary-white);
-
-    padding: calc(0.5 * var(--padding-xs)) var(--padding-md);
-    margin-top: var(--margin-sm);
-
-    border-radius: var(--radius-sm);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .sendButton {
@@ -126,19 +85,14 @@ labels for other fields. */
     grid-column: 8 / 9;
 
     font-size: 1rem;
-    color: var(--secundary-blue);
+    color: var(--secondary-blue);
     background: var(--primary-white);
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: var(--radius-lg);
 
-    padding: var(--padding-xs) var(--padding-sm);
-    margin-bottom: var(--margin-lg);
-}
-
-.mandatoryFieldSpan {
-    color: var(--secundary-red-warning);
-    margin-left: var(--margin-xs);
+    padding: 0.5rem var(--padding-sm);
+    margin: var(--margin-lg) 0 var(--margin-md) 0;
 }
 
 .infoIcon {
@@ -146,207 +100,65 @@ labels for other fields. */
     display: inline;
 }
 
-@media (max-width: 768px) {
+/* Image on top of Form disapears if screen size if bigger than 768px */
+.mobileFormImage {
+    display: none;
+}
+
+.closeModalIcon {
+    position: absolute;
+    right: 0;
+    margin: var(--margin-xs) var(--margin-sm) 0 0;
+    width: 1.75rem;
+}
+
+@media (max-width: 600px) {
     .primaryInformation {
         grid-column: 1 / 9;
+        grid-row: 1 / 2;
     }
 
     .imageContainer {
-        visibility: hidden;
+        display: none;
     }
 
-    .linkedinField {
+    .provinceField {
         grid-column: 1 / 9;
+        grid-row: 2 / 3;
     }
 
-    .emailField {
+    .cityField {
+        grid-column: 1 / 9;
+        grid-row: 3 / 4;
+        margin-left: 0;
+    }
+    .immigrationStatusSection {
         grid-column: 1 / 9;
         grid-row: 4 / 5;
     }
 
-    .uploadPhotoField {
-        grid-column: 1/ 5;
+    .linkedinField {
+        grid-column: 1 / 9;
         grid-row: 5 / 6;
-        margin-right: 1rem;
+        margin-left: 0;
     }
 
-    .chooseFileButton {
-        padding: 0;
-        width: 100%;
-
-        background: #022777;
-        color: var(--primary-white);
-
-        font-style: normal;
-        font-size: 16px;
-        border-radius: 0;
-        border: none;
-        height: 40px;
-    }
-
-    .fileChosenBox {
-        grid-row: 5 / 6;
-        grid-column: 5 / 9;
-        margin-left: 1rem;
-
-        height: 40px;
-
-        border-radius: 0;
-        text-align: center;
-
-        font-style: normal;
-        font-weight: 300;
-        font-size: 14px;
+    .emailField {
+        grid-column: 1 / 9;
+        grid-row: 6 / 7;
     }
 
     .sendButton {
         grid-row: 7 / 8;
         grid-column: 1 / 9;
 
-        margin-top: 40px;
-
-        border-radius: 0;
-
-        width: 100%;
-        height: 4rem;
-        margin-bottom: 3rem;
+        margin-top: var(--margin-md);
+        border-radius: var(--radius-sm);
+        padding: var(--padding-sm);
     }
 
     .mobileFormImage {
         display: block !important;
-    }
-}
-
-/* Image on top of Form disapears if screen size if bigger than 768px */
-.mobileFormImage {
-    display: none;
-}
-
-.profilePictureModal {
-    width: 500px;
-    height: 590px;
-
-    display: grid;
-    grid-template-columns: repeat(8, auto);
-    grid-template-rows: repeat(4, auto);
-    align-content: center;
-    align-items: center;
-
-    padding: 0 3rem;
-    margin: 2rem;
-}
-
-.profilePictureModalTitle {
-    grid-row: 1 / 2;
-    grid-column: 1 / 9;
-
-    color: #022777;
-    font-size: 28px;
-
-    margin-top: 2rem;
-}
-
-.profilePictureModalDescription {
-    grid-row: 2 / 3;
-    grid-column: 1 / 9;
-    line-height: 24px;
-    color: #525252;
-    margin: 1.25rem 0;
-}
-
-.profilePictureAvatar {
-    grid-row: 3 / 4;
-    grid-column: 1 / 9;
-
-    margin: 0 auto 1.5rem auto;
-    width: 280px;
-    height: 280px;
-}
-
-.profilePictureModalSaveButton {
-    width: 146px;
-    height: 40px;
-    background: #022777;
-    border-radius: 40px;
-    margin: 1rem 0;
-
-    padding: 0;
-    font-size: 20px;
-
-    grid-row: 4 / 5;
-    grid-column: 2 / 4;
-}
-
-.profilePictureModalChangeButton {
-    width: 146px;
-    height: 40px;
-    border-radius: 40px !important;
-    border: 3px solid #022777;
-    border-radius: 4px;
-    background-color: #fff;
-    color: #022777;
-
-    padding: 0;
-    font-size: 20px;
-
-    grid-row: 4 / 5;
-    grid-column: 5 / 8;
-}
-
-.closeModalIcon {
-    position: absolute;
-    right: 0;
-    margin: 10px 21px 0 0;
-
-    width: 30px;
-}
-
-@media (max-width: 600px) {
-    .profilePictureModal {
-        width: 310px;
-        height: 667px;
-
-        text-align: center;
-        justify-content: center;
-        justify-items: center;
-
-        margin: 0;
-    }
-
-    .profilePictureModalTitle {
-        grid-row: 1 / 2;
-        grid-column: 2 / 8;
-
-        color: #022777;
-
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
-    }
-
-    .profilePictureAvatar {
-        width: 187px;
-        height: 187px;
-    }
-
-    .profilePictureModalSaveButton {
-        width: 263px;
-        height: 56px;
-
-        border-radius: 4px;
-
-        grid-row: 4 / 5;
-        grid-column: 1 / 9;
-    }
-
-    .profilePictureModalChangeButton {
-        width: 263px;
-        height: 56px;
-
-        border-radius: 4px !important;
-
-        grid-row: 5 / 6;
-        grid-column: 1 / 9;
     }
 
     .subscriptionModalContainer {
@@ -355,7 +167,7 @@ labels for other fields. */
     }
 
     .subscriptionModalTextDescriptionContainer {
-        padding: 4rem 2.5rem !important;
+        padding: var(--padding-md) var(--padding-md) !important;
     }
 
     .subscriptionModalTitle {
@@ -363,25 +175,21 @@ labels for other fields. */
     }
 
     .continueBrowsingButton {
-        width: 263px;
-        height: 56px;
-
         width: 236px;
-        height: 56px;
-
-        border: 1px solid #1a1a1a;
-        border-radius: 4px;
-
-        background-color: #fff;
-        color: #022777;
-
-        padding: 0;
-        font-size: 20px;
-
-        margin-top: 2rem;
-
-        display: block !important;
     }
+}
+
+.continueBrowsingButton {
+    border: 1px solid #1a1a1a;
+    border-radius: var(--radius-lg);
+    color: var(--primary-blue);
+
+    padding: var(--padding-xs) var(--padding-md);
+    font-size: 1rem;
+
+    margin: var(--margin-md) auto var(--margin-sm) auto;
+
+    display: block !important;
 }
 
 .subscriptionModalContainer {
@@ -393,7 +201,6 @@ labels for other fields. */
     grid-template-rows: repeat(2, auto);
 
     text-align: center;
-    /* justify-items: center; */
 }
 
 .logoSubscriptionModal {
@@ -403,30 +210,29 @@ labels for other fields. */
     width: 220px;
     height: 220px;
 
-    margin: 30px auto 0 auto;
+    margin: var(--margin-sm) auto 0 auto;
 }
 
 .subscriptionModalTextDescriptionContainer {
     grid-column: 1 / 5;
     grid-row: 2 / 3;
-
-    background: #022777;
-    color: var(--primary-white);
-
     text-align: center;
 
-    padding-bottom: 90px;
-    padding-top: 20px;
+    background: var(--primary-blue);
+    color: var(--primary-white);
+
+    padding: var(--padding-sm);
+
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
 }
 
 .subscriptionModalTitle {
-    font-weight: 700;
-    font-size: 32px;
+    font-weight: 500;
+    font-size: 26px;
     line-height: 38px;
 
-    margin: 3rem 1rem 3rem 1rem;
+    margin: var(--margin-sm);
 }
 
 .subscriptionModalDescription {

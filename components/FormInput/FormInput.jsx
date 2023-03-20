@@ -1,18 +1,34 @@
 import styles from './FormInput.module.css'
 
 const FormInput = (props) => {
+    const {
+        fieldStyle,
+        labelContent,
+        mandatory,
+        type,
+        required,
+        disabled,
+        name,
+        placeholder,
+        value,
+        onChange,
+    } = props
+
     return (
-        <div className={props.fieldStyle}>
+        <div className={fieldStyle}>
             <label className={styles.labelForm}>
-                {props.labelContent}
-                {props.mandatory && <span className={styles.mandatoryFieldSpan}>*</span>}
+                {labelContent}
+                {mandatory && <span className={styles.mandatoryFieldSpan}>*</span>}
             </label>
             <input
-                name={props.name}
-                placeholder={props.placeholder}
+                type={type}
+                required={required}
+                disabled={disabled}
+                name={name}
+                placeholder={placeholder}
                 className={styles.inputForm}
-                value={props.value}
-                onChange={props.onChange}
+                value={value}
+                onChange={onChange}
             />
         </div>
     )

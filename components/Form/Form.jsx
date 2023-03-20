@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { RadioButton, Popover, Icon } from '@/components'
 import styles from '../../styles/Form.module.css'
 import britoFormImage from '../../public/images/brito-group-image-form.svg'
-import profilePictureTemplate from '../../public/images/brito-profile-picture-template.svg'
 import closeModalIcon from '../../public/images/close-modal-icon.svg'
 import logo from '../../public/images/logo-small.svg'
 import FormInput from '../FormInput/FormInput'
@@ -16,10 +15,10 @@ const Form = () => {
         company: '',
         immigrationStatus: '',
         resideInCanada: '',
+        province: '',
         city: '',
         linkedinProfileLink: '',
         email: '',
-        profilePicture: '',
     })
 
     const handleChange = (e) => {
@@ -37,15 +36,6 @@ const Form = () => {
         // console.log(formValues)
     }
 
-    // const handleImageSelect = (e) => {
-    //     setFormValues.profilePicture({
-    //         file: e.target.files[0],
-    //         name: e.target.files[0].name,
-    //         type: e.target.files[0].type,
-    //         size: e.target.files[0].size,
-    //     })
-    // }
-    const [profilePictureModalOpen, setProfilePictureModalOpen] = useState(false)
     const [subscriptionModalOpen, setSubscriptionModalOpen] = useState(false)
     const [immigrationStatusPopover, setImmigrationStatusPopover] = useState(false)
 
@@ -57,7 +47,7 @@ const Form = () => {
                 alt='Picture of members of BRITO co-working in their computers in one of the meetings '
             />
             <div className={styles.formContainer}>
-                <h3 className={styles.formTitle}>Want to join Brito&#39;s network?</h3>
+                <h4 className={styles.formTitle}>Want to join Brito&#39;s network?</h4>
                 <form method='post'>
                     <div className={styles.formSections}>
                         <div className={styles.primaryInformation}>
@@ -92,7 +82,10 @@ const Form = () => {
                                 value={formValues.company}
                                 onChange={handleChange}
                             />
-                            <label className={styles.labelForm}>Are you residing in Canada?</label>
+
+                            <label className={styles.labelForm}>
+                                Do you currently live in Canada?
+                            </label>
                             <RadioButton
                                 name='resideInCanada'
                                 onChange={handleChange}
@@ -110,26 +103,32 @@ const Form = () => {
                                 value='no'
                             />
                         </div>
-                        <div className={styles.imageContainer}>
-                            <Image
-                                className={styles.roundedFormImage}
-                                src={britoFormImage}
-                                alt='Picture of members of BRITO co-working in their computers in one of the meetings '
-                            />
-                        </div>
+                        <FormInput
+                            required
+                            disabled={formValues.resideInCanada === 'no'}
+                            name='province'
+                            fieldStyle={styles.provinceField}
+                            labelContent='Province / Territory'
+                            labelStyle={styles.labelForm}
+                            inputStyle={styles.inputForm}
+                            value={formValues.province}
+                            placeholder='E.g. Ontario'
+                            onChange={handleChange}
+                        />
+                        <FormInput
+                            disabled={formValues.resideInCanada === 'no'}
+                            name='city'
+                            fieldStyle={styles.cityField}
+                            labelContent='City'
+                            labelStyle={styles.labelForm}
+                            inputStyle={styles.inputForm}
+                            value={formValues.city}
+                            placeholder='E.g. Ottawa'
+                            onChange={handleChange}
+                        />
                         <div className={styles.immigrationStatusSection}>
-                            <FormInput
-                                name='city'
-                                fieldStyle={styles.cityField}
-                                labelContent='In which city do you live in Canada?'
-                                labelStyle={styles.labelForm}
-                                inputStyle={styles.inputForm}
-                                value={formValues.city}
-                                placeholder='E.g. Ottawa'
-                                onChange={handleChange}
-                            />
                             <label htmlFor='immigration-status' className={styles.labelForm}>
-                                Immigration Status
+                                What&#39;s your current status?
                                 <span
                                     className={styles.infoIcon}
                                     onMouseEnter={() => setImmigrationStatusPopover(true)}
@@ -152,36 +151,37 @@ const Form = () => {
                             </label>
 
                             <select
+                                disabled={formValues.resideInCanada === 'no'}
                                 name='immigrationStatus'
                                 value={formValues.immigrationStatus}
                                 onChange={handleChange}
                                 id='immigration-status'
-                                className={styles.immigrationStatusList}
+                                className={styles.inputForm}
                                 required
                             >
                                 <option value='' disabled>
                                     Select
                                 </option>
-                                <option key={1} value='Canadian Citizen (Foreign born)'>
-                                    Canadian Citizen (Foreign born)
-                                </option>
-                                <option key={2} value='Convention Refugee / Protected Person'>
-                                    Convention Refugee / Protected Person
-                                </option>
                                 <option key={3} value='Permanent Resident'>
                                     Permanent Resident
                                 </option>
-                                <option key={4} value='Temporary Resident WITHOUT a Work Permit'>
-                                    Temporary Resident WITHOUT a Work Permit
+                                <option key={2} value='Convention Refugee / Protected Person'>
+                                    Student
                                 </option>
-                                <option key={5} value='Temporary Resident WITH a Work Permit'>
-                                    Temporary Resident WITH a Work Permit
-                                </option>
-                                <option key={6} value='Other'>
-                                    Other
+                                <option key={1} value='Canadian Citizen (Foreign born)'>
+                                    Temporary
                                 </option>
                             </select>
                         </div>
+                        {/* )} */}
+                        <div className={styles.imageContainer}>
+                            <Image
+                                className={styles.roundedFormImage}
+                                src={britoFormImage}
+                                alt='Picture of members of BRITO co-working in their computers in one of the meetings '
+                            />
+                        </div>
+
                         <FormInput
                             name='linkedinProfileLink'
                             fieldStyle={styles.linkedinField}
@@ -206,65 +206,6 @@ const Form = () => {
                             onChange={handleChange}
                         />
 
-                        <div className={styles.uploadPhotoField}>
-                            <label className={styles.labelForm}>
-                                Upload photo<span className={styles.mandatoryFieldSpan}>*</span>
-                            </label>
-                            {/* 
-                        <input
-                            className={styles.chooseFileButton}
-                            type='file'
-                            onChange={handleChange}
-                        /> */}
-                            <button
-                                type='button'
-                                className={styles.chooseFileButton}
-                                onClick={() => setProfilePictureModalOpen(!profilePictureModalOpen)}
-                            >
-                                Choose file
-                            </button>
-                            {profilePictureModalOpen && (
-                                <Modal className={styles.profilePictureModal}>
-                                    <Image
-                                        src={closeModalIcon}
-                                        alt='X icon to close upload photo field'
-                                        className={styles.closeModalIcon}
-                                        onClick={() =>
-                                            setProfilePictureModalOpen(!profilePictureModalOpen)
-                                        }
-                                    />
-                                    <div className={styles.profilePictureModal}>
-                                        <h1 className={styles.profilePictureModalTitle}>
-                                            Profile Picture
-                                        </h1>
-                                        <p className={styles.profilePictureModalDescription}>
-                                            A profile picture make a positive first impression on
-                                            potential connections It can also help to differentiate
-                                            you from others in your network and make your profile
-                                            stand out in search results.
-                                        </p>
-                                        <Image
-                                            src={profilePictureTemplate}
-                                            alt="A front face picture of a man. It's a template for the profile picture field before the user selects its own"
-                                            className={styles.profilePictureAvatar}
-                                        />
-
-                                        <button
-                                            type='button'
-                                            className={styles.profilePictureModalSaveButton}
-                                        >
-                                            Save
-                                        </button>
-                                        <button className={styles.profilePictureModalChangeButton}>
-                                            Change
-                                        </button>
-                                    </div>
-                                </Modal>
-                            )}
-                        </div>
-                        <div className={styles.fileChosenBox}>
-                            <p className={styles.chosenBoxText}>No file chosen</p>
-                        </div>
                         <button className={styles.sendButton} type='button' onClick={handleSubmit}>
                             Send
                         </button>

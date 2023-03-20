@@ -7,7 +7,7 @@
 
     display: flex;
 
-    margin-top: var(--margin-md);
+    margin-top: var(--margin-sm);
     margin-bottom: var(--margin-xs);
 
     color: var(--primary-white);
