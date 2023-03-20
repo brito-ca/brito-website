@@ -6,9 +6,7 @@
 
     background-color: var(--neutral-white);
 
-    z-index: 9 !important;
-
-    border-radius: 20px;
+    border-radius: var(--radius-md);
     text-align: center;
 }
 

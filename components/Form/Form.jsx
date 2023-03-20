@@ -19,6 +19,7 @@ const Form = () => {
         city: '',
         linkedinProfileLink: '',
         email: '',
+        profilePicture: '',
     })
 
     const handleChange = (e) => {
@@ -35,6 +36,15 @@ const Form = () => {
         // ** Line below is for testing purposes **
         // console.log(formValues)
     }
+
+    // const handleImageSelect = (e) => {
+    //     setFormValues.profilePicture({
+    //         file: e.target.files[0],
+    //         name: e.target.files[0].name,
+    //         type: e.target.files[0].type,
+    //         size: e.target.files[0].size,
+    //     })
+    // }
     const [profilePictureModalOpen, setProfilePictureModalOpen] = useState(false)
     const [subscriptionModalOpen, setSubscriptionModalOpen] = useState(false)
     const [immigrationStatusPopover, setImmigrationStatusPopover] = useState(false)
@@ -198,6 +208,12 @@ const Form = () => {
                         <label className={styles.labelForm}>
                             Upload photo<span className={styles.mandatoryFieldSpan}>*</span>
                         </label>
+                        {/* 
+                        <input
+                            className={styles.chooseFileButton}
+                            type='file'
+                            onChange={handleChange}
+                        /> */}
                         <button
                             type='button'
                             className={styles.chooseFileButton}
