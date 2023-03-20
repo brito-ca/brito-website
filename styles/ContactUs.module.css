@@ -21,11 +21,13 @@
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: 825px;
+    background-color: var(--neutral-white);
     height: 904px;
 }
 @media only screen and (max-width: 600px) {
     .maple {
         background-image: none;
+        background-color: unset;
         height: 705px;
     }
     .britologo {
