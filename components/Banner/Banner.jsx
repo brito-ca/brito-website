@@ -4,7 +4,7 @@ const Banner = (props) => {
     return (
         <div id={id} className='flex-row-center'>
             <div className={styles.banner}>
-                <h3 className={styles.titleBanner}>{title}</h3>
+                <h4 className={styles.titleBanner}>{title}</h4>
                 <div className='body1'>
                     <p className={styles.descriptionBanner + ' body4'}>{description}</p>
                 </div>
