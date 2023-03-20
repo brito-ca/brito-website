@@ -47,7 +47,6 @@ labels for other fields. */
 .primaryInformation {
     grid-column: 1 / 5;
     grid-row: 1 / 2;
-    margin-top: 40px;
 }
 .labelRadioButton {
     margin-left: '5px' !important;
@@ -61,7 +60,6 @@ labels for other fields. */
 .roundedFormImage {
     width: 100%;
     border-radius: 50%;
-    height: auto;
 }
 
 .immigrationStatusSection {
@@ -213,6 +211,15 @@ labels for other fields. */
         height: 4rem;
         margin-bottom: 3rem;
     }
+
+    .mobileFormImage {
+        display: block !important;
+    }
+}
+
+/* Image on top of Form disapears if screen size if bigger than 768px */
+.mobileFormImage {
+    display: none;
 }
 
 .profilePictureModal {

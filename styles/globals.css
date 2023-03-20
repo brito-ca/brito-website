@@ -254,6 +254,10 @@ button.outline:disabled {
     margin: var(--margin-sm) 0;
 }
 
+.vertical-margin-md {
+    margin: var(--margin-md) 0;
+}
+
 .vertical-margin-lg {
     margin: var(--margin-lg) 0;
 }
