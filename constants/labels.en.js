@@ -34,6 +34,7 @@ const labels = {
 
     card_data: [
         {
+            id: 'marcelo',
             title: 'Marcelo - Dev director',
             description:
                 'Senior Front-end Engineer with 20 years of experience building websites and applications using tech-edge for big techs, digital agencies, media and educational companies in Canada, the United States and Brazil.',
@@ -46,6 +47,7 @@ const labels = {
             },
         },
         {
+            id: 'diego',
             title: 'Diego - President and co-founder',
             description:
                 'Senior Project manager with over 20 years experience working for consulting companies, banks and government.',
@@ -58,6 +60,7 @@ const labels = {
             },
         },
         {
+            id: 'roger',
             title: 'Roger - Director and co-founder',
             description:
                 'Senior CRM specialist with international experience in projects for telecom, consulting and  entertainment companies',
@@ -96,33 +99,15 @@ const labels = {
     Maple: {
         labelimgmaple: 'mapleleave',
     },
-    footerBrito: {
+    footerContent: {
         altFlag: 'brito flag',
-        srcFlag: '../../public/images/brito-logo-1.svg',
         altWordmark: 'brito wordmark',
-        srcWordmark: '../../public/images/brito-logo-2.svg',
         phrase: 'Building the Brazilian IT community in Ottawa',
-    },
-    footerIcons: {
-        instagram: 'instagram',
-        linkedin: 'linkedin',
-        facebook: 'facebook',
-    },
-    footerNavigation: {
-        company: 'Company',
-        about: 'About',
-        linkAbout: '#about',
-        contact: 'Contact',
-        linkContact: '#contact',
-        joinus: 'Join us',
-        linkJoinus: '',
-        network: 'Network list',
-    },
-    footerCopyright: {
         copyright: 'Copyright © 2023 Brito',
         rights: 'All Rights Reserved',
-        terms: 'Terms and Conditions',
-        privacy: 'Privacy Policy',
+        terms: { href: '/', text: 'Terms and Conditions' },
+        privacy: { href: '/', text: 'Privacy Policy' },
+        header: 'BRITO',
     },
 }
 export default labels

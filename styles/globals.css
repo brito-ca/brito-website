@@ -348,6 +348,20 @@ button.outline:disabled {
     justify-content: flex-start;
 }
 
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.flex-column-space-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /* https://www.browserstack.com/guide/what-are-css-and-media-query-breakpoints */
 
 /* Extra small devices (phones, 600px and down) */
