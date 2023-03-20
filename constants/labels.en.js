@@ -34,7 +34,7 @@ const labels = {
 
     card_data: [
         {
-            id: 'marcelo',
+            id: 'brito1001',
             title: 'Marcelo - Dev director',
             description:
                 'Senior Front-end Engineer with 20 years of experience building websites and applications using tech-edge for big techs, digital agencies, media and educational companies in Canada, the United States and Brazil.',
@@ -47,7 +47,7 @@ const labels = {
             },
         },
         {
-            id: 'diego',
+            id: 'brito1002',
             title: 'Diego - President and co-founder',
             description:
                 'Senior Project manager with over 20 years experience working for consulting companies, banks and government.',
@@ -60,7 +60,7 @@ const labels = {
             },
         },
         {
-            id: 'roger',
+            id: 'brito1003',
             title: 'Roger - Director and co-founder',
             description:
                 'Senior CRM specialist with international experience in projects for telecom, consulting and  entertainment companies',
