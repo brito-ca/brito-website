@@ -10,6 +10,7 @@
 .backgroundLogo {
     background-image: url(../public/images/background-logo.svg);
     background-size: contain;
+    background-repeat: space;
 }
 
 @media only screen and (max-width: 600px) {
