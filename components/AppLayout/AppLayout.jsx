@@ -21,7 +21,7 @@ const AppLayout = (props) => {
             <div className={`${roboto.className} ${styles.container}`}>
                 <FloatingActionButton />
                 <Header navigation={navigation} />
-                <main>{children}</main>
+                <main className={styles.backgroundLogo}>{children}</main>
                 <Footer>
                     <Placeholder title='Footer' />
                 </Footer>
