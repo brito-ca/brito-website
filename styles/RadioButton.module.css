@@ -1,3 +1,14 @@
 .labelRadioButton {
     margin-left: 5px;
 }
+
+.radioButton {
+    width: 100%;
+
+    display: flex;
+
+    margin-top: var(--margin-md);
+    margin-bottom: var(--margin-xs);
+
+    color: var(--primary-white);
+}

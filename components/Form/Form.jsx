@@ -87,26 +87,22 @@ const Form = () => {
                             onChange={handleChange}
                         />
                         <label className={styles.labelForm}>Are you residing in Canada?</label>
-                        <label className={styles.labelForm}>
-                            <RadioButton
-                                name='resideInCanada'
-                                onChange={handleChange}
-                                id='1'
-                                isSelected={formValues.resideInCanada === 'yes'}
-                                label='Yes'
-                                value='yes'
-                            />
-                        </label>
-                        <label className={styles.labelForm}>
-                            <RadioButton
-                                name='resideInCanada'
-                                onChange={handleChange}
-                                id='2'
-                                isSelected={formValues.resideInCanada === 'no'}
-                                label='No'
-                                value='no'
-                            />
-                        </label>
+                        <RadioButton
+                            name='resideInCanada'
+                            onChange={handleChange}
+                            id='1'
+                            isSelected={formValues.resideInCanada === 'yes'}
+                            label='Yes'
+                            value='yes'
+                        />
+                        <RadioButton
+                            name='resideInCanada'
+                            onChange={handleChange}
+                            id='2'
+                            isSelected={formValues.resideInCanada === 'no'}
+                            label='No'
+                            value='no'
+                        />
                     </div>
                     <div className={styles.imageContainer}>
                         <Image

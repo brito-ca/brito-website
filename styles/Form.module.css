@@ -10,6 +10,11 @@
     padding: var(--padding-lg) 0px var(--padding-md) 0;
 }
 
+/* For now labelForm and inputForm 
+are duplicated at FormInput.module.css 
+because some inputs are not using the 
+FormInput component and we have independent 
+labels for other fields. */
 .labelForm {
     width: 100%;
 
