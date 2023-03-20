@@ -20,7 +20,6 @@ const AppLayout = (props) => {
             </Head>
             <div className={`${roboto.className} ${styles.container}`}>
                 <FloatingActionButton />
-<<<<<<< HEAD
                 <Header navigation={content.navigation} />
                 <main>{children}</main>
                 <Footer
@@ -28,13 +27,6 @@ const AppLayout = (props) => {
                     navigation={content.navigation}
                     socialMedia={content.socialMedia}
                 />
-=======
-                <Header navigation={navigation} />
-                <main className={styles.backgroundLogo}>{children}</main>
-                <Footer>
-                    <Placeholder title='Footer' />
-                </Footer>
->>>>>>> origin/develop
             </div>
         </>
     )
