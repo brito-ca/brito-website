@@ -1,0 +1,51 @@
+.title {
+    text-align: center;
+    color: var(--primary-blue);
+    padding: var(--padding-lg);
+}
+.subtitle {
+    color: var(--primary-blue);
+}
+.mail {
+    text-decoration: none;
+    color: var(--primary-blue);
+}
+.mailimg svg {
+    visibility: hidden;
+}
+.marg_lg {
+    margin: var(--margin-lg) 0;
+}
+.maple {
+    background-image: url(/vector2.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 825px;
+    background-color: var(--neutral-white);
+    height: 904px;
+}
+@media only screen and (max-width: 600px) {
+    .maple {
+        background-image: none;
+        background-color: unset;
+        height: 705px;
+    }
+    .britologo {
+        background-image: url(/britologohalf.png);
+        background-size: 424px;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        height: 476px;
+    }
+    .title {
+        text-align: center;
+        padding: var(--padding-sm);
+    }
+    .mail {
+        text-decoration: underline;
+        padding: 0 var(--padding-sm);
+    }
+    .mailimg svg {
+        visibility: visible;
+    }
+}
