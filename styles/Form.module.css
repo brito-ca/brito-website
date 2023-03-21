@@ -6,7 +6,7 @@
 .formTitle {
     text-align: center;
     color: var(--primary-white);
-    padding: var(--padding-md) 0px var(--padding-sm) 0;
+    padding-top: var(--padding-md);
 }
 
 .labelForm {
@@ -35,7 +35,7 @@
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(5, auto);
     justify-content: space-around;
-    align-items: center;
+    align-items: end;
 }
 
 .primaryInformation {

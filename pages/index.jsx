@@ -40,7 +40,7 @@ export default function Home() {
                     description={labels.joinUs.description}
                 />
             </div>
-            <Form />
+            <Form {...labels.form} />
             <ContactUs
                 id={labels.contactUs.id}
                 title={labels.contactUs.title}

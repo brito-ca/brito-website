@@ -8,13 +8,15 @@ import logo from '../../public/images/logo-small.svg'
 import FormInput from '../FormInput/FormInput'
 import Modal from '../Modal/Modal'
 
-const Form = () => {
+const Form = (props) => {
+    const { labels, text, immigrationStatus, subscriptionModalText } = props
+
     const [formValues, setFormValues] = useState({
         fullName: '',
         expertise: '',
         company: '',
         immigrationStatus: '',
-        resideInCanada: '',
+        resideInCanada: 'yes',
         province: '',
         city: '',
         linkedinProfileLink: '',
@@ -44,10 +46,10 @@ const Form = () => {
             <Image
                 className={`${styles.mobileFormImage} ${styles.roundedFormImage} vertical-margin-md`}
                 src={britoFormImage}
-                alt='Picture of members of BRITO co-working in their computers in one of the meetings '
+                alt={text.altImageText}
             />
             <div className={styles.formContainer}>
-                <h4 className={styles.formTitle}>Want to join Brito&#39;s network?</h4>
+                <h4 className={styles.formTitle}>{text.title}</h4>
                 <form method='post'>
                     <div className={styles.formSections}>
                         <div className={styles.primaryInformation}>
@@ -55,7 +57,7 @@ const Form = () => {
                                 name='fullName'
                                 mandatory='yes'
                                 fieldStyle={styles.fullNameField}
-                                labelContent='Your full name'
+                                labelContent={labels.fullNameLabel}
                                 labelStyle={styles.labelForm}
                                 inputStyle={styles.inputForm}
                                 placeholder='E.g Amanda Costa'
@@ -65,7 +67,7 @@ const Form = () => {
                             <FormInput
                                 name='expertise'
                                 fieldStyle={styles.expertiseField}
-                                labelContent='Your expertise'
+                                labelContent={labels.expertiseLabel}
                                 labelStyle={styles.labelForm}
                                 inputStyle={styles.inputForm}
                                 placeholder='E.g. UX Designer'
@@ -75,7 +77,7 @@ const Form = () => {
                             <FormInput
                                 name='company'
                                 fieldStyle={styles.companyField}
-                                labelContent='Your company'
+                                labelContent={labels.companyLabel}
                                 labelStyle={styles.labelForm}
                                 inputStyle={styles.inputForm}
                                 placeholder='E.g. TD bank'
@@ -83,9 +85,7 @@ const Form = () => {
                                 onChange={handleChange}
                             />
 
-                            <label className={styles.labelForm}>
-                                Do you currently live in Canada?
-                            </label>
+                            <label className={styles.labelForm}>{labels.resideInCanadaLabel}</label>
                             <RadioButton
                                 name='resideInCanada'
                                 onChange={handleChange}
@@ -108,7 +108,7 @@ const Form = () => {
                             disabled={formValues.resideInCanada === 'no'}
                             name='province'
                             fieldStyle={styles.provinceField}
-                            labelContent='Province / Territory'
+                            labelContent={labels.provinceLabel}
                             labelStyle={styles.labelForm}
                             inputStyle={styles.inputForm}
                             value={formValues.province}
@@ -119,7 +119,7 @@ const Form = () => {
                             disabled={formValues.resideInCanada === 'no'}
                             name='city'
                             fieldStyle={styles.cityField}
-                            labelContent='City'
+                            labelContent={labels.cityLabel}
                             labelStyle={styles.labelForm}
                             inputStyle={styles.inputForm}
                             value={formValues.city}
@@ -128,7 +128,7 @@ const Form = () => {
                         />
                         <div className={styles.immigrationStatusSection}>
                             <label htmlFor='immigration-status' className={styles.labelForm}>
-                                What&#39;s your current status?
+                                {labels.statusLabel}
                                 <span
                                     className={styles.infoIcon}
                                     onMouseEnter={() => setImmigrationStatusPopover(true)}
@@ -137,14 +137,7 @@ const Form = () => {
                                     <Icon variant={'exclamation'} className={styles.infoIcon} />
                                     {immigrationStatusPopover && (
                                         <Popover>
-                                            <p>
-                                                This status assists Brito in identifying suitable
-                                                projects and job opportunities based on his type of
-                                                visa. Some visas only permit 20 hours of work, and
-                                                holding citizenship is a requirement for certain
-                                                government positions, enhancing chances of securing
-                                                a job.
-                                            </p>
+                                            <p>{text.statusInformationPopover}</p>
                                         </Popover>
                                     )}
                                 </span>
@@ -160,16 +153,16 @@ const Form = () => {
                                 required
                             >
                                 <option value='' disabled>
-                                    Select
+                                    {immigrationStatus.select}
                                 </option>
                                 <option key={3} value='Permanent Resident'>
-                                    Permanent Resident
+                                    {immigrationStatus.permanentResident}
                                 </option>
-                                <option key={2} value='Convention Refugee / Protected Person'>
-                                    Student
+                                <option key={2} value='Student'>
+                                    {immigrationStatus.student}
                                 </option>
-                                <option key={1} value='Canadian Citizen (Foreign born)'>
-                                    Temporary
+                                <option key={1} value='Temporary'>
+                                    {immigrationStatus.temporary}
                                 </option>
                             </select>
                         </div>
@@ -178,14 +171,14 @@ const Form = () => {
                             <Image
                                 className={styles.roundedFormImage}
                                 src={britoFormImage}
-                                alt='Picture of members of BRITO co-working in their computers in one of the meetings '
+                                alt={text.altImageText}
                             />
                         </div>
 
                         <FormInput
                             name='linkedinProfileLink'
                             fieldStyle={styles.linkedinField}
-                            labelContent='LinkedIn profile'
+                            labelContent={labels.linkedinLabel}
                             labelStyle={styles.labelForm}
                             inputStyle={styles.inputForm}
                             placeholder='Paste your profile link'
@@ -198,7 +191,7 @@ const Form = () => {
                             type='email'
                             mandatory='yes'
                             fieldStyle={styles.emailField}
-                            labelContent='E-mail'
+                            labelContent={labels.emailLabel}
                             labelStyle={styles.labelForm}
                             inputStyle={styles.inputForm}
                             placeholder='E.g. john@gmail.com'
@@ -207,7 +200,7 @@ const Form = () => {
                         />
 
                         <button className={styles.sendButton} type='button' onClick={handleSubmit}>
-                            Send
+                            {text.sendButtonText}
                         </button>
                         {subscriptionModalOpen && (
                             <Modal className={styles.subscriptionModalContainer}>
@@ -224,14 +217,13 @@ const Form = () => {
                                 />
                                 <div className={styles.subscriptionModalTextDescriptionContainer}>
                                     <h1 className={styles.subscriptionModalTitle}>
-                                        Thank you for connect with us!
+                                        {subscriptionModalText.title}
                                     </h1>
                                     <p className={styles.subscriptionModalDescription}>
-                                        Your informations were submitted for approval.
+                                        {subscriptionModalText.firstLine}
                                     </p>
-                                    <p className={styles.subscriptionModalDescription}>
-                                        You will receive a notification on your email.
-                                    </p>
+                                    <p className={styles.subscriptionModalDescription}></p>
+                                    {subscriptionModalText.secondLine}
                                     <button
                                         type='button'
                                         className={styles.continueBrowsingButton}
@@ -239,7 +231,7 @@ const Form = () => {
                                             setSubscriptionModalOpen(!subscriptionModalOpen)
                                         }
                                     >
-                                        Continue browsing
+                                        {subscriptionModalText.continueBrowsingButton}
                                     </button>
                                 </div>
                             </Modal>
