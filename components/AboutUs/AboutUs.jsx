@@ -1,10 +1,10 @@
-import Banner from "@/components/Banner/Banner"
-import VectorCard from "@/components/AboutUs/VectorCard"
+import Banner from '@/components/Banner/Banner'
+import VectorCard from '@/components/AboutUs/VectorCard'
 import Image from 'next/image'
 import styles from '@/styles/AboutUs.module.css'
 
 const AboutUs = (props) => {
-    const { banner, vectorCard, membersImage } = props;
+    const { banner, vectorCard, membersImage } = props
     return (
         <div id={banner.id}>
             <div className={styles.aboutUsBanner}>
@@ -12,7 +12,12 @@ const AboutUs = (props) => {
             </div>
             <div className={`${styles.iconsContainer} flex-row-space-between`}>
                 {vectorCard.map((item, index) => (
-                    <VectorCard key={index} image={item.image} value={item.value} description={item.description} />
+                    <VectorCard
+                        key={index}
+                        image={item.image}
+                        value={item.value}
+                        description={item.description}
+                    />
                 ))}
             </div>
             <div className={styles.aboutUsImage}>
@@ -20,6 +25,5 @@ const AboutUs = (props) => {
             </div>
         </div>
     )
-};
-export default AboutUs;
-
+}
+export default AboutUs

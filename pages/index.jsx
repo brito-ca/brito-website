@@ -24,7 +24,11 @@ export default function Home() {
                 description={labels.welcomeToBrito.description}
                 image={labels.heroImage}
             />
-            <AboutUs banner={labels.aboutUs} vectorCard={labels.vectorCard} membersImage={labels.membersImage} />
+            <AboutUs
+                banner={labels.aboutUs}
+                vectorCard={labels.vectorCard}
+                membersImage={labels.membersImage}
+            />
             <div className={styles.logoOnmission}>
                 <Banner
                     title={labels.ourMission.title}

@@ -14,11 +14,11 @@
     padding: 0 var(--padding-lg) var(--padding-lg) var(--padding-lg);
 }
 
-.aboutUsImage img{
+.aboutUsImage img {
     width: 100%;
     height: auto;
 }
-  
+
 @media only screen and (max-width: 600px) {
     .vectorContainer {
         display: flex;
@@ -28,7 +28,7 @@
         gap: var(--spacing-unit);
     }
 
-    .vectorContainer img{
+    .vectorContainer img {
         width: 75%;
         height: auto;
     }
