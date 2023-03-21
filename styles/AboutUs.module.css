@@ -1,0 +1,21 @@
+.vectorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: calc(2 * var(--spacing-unit));
+}
+
+.vectorContainer h1 {
+    color: var(--primary-blue);
+}
+
+.iconsContainer {
+    padding: 0 var(--padding-lg) var(--padding-lg) var(--padding-lg);
+}
+
+.aboutUsImage img{
+    width: 100%;
+    height: auto;
+}
+  

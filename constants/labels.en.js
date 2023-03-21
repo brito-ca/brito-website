@@ -35,16 +35,16 @@ const labels = {
     vectorCard: [
         {
             image: {
-                path: '../../public/images/verified-user.svg',
-                width: '62',
-                height: '76',
+                path: '/verified_user.png',
+                width: '83',
+                height: '83',
             },
             value: '+7',
             description: 'Years in operation',
         },
         {
             image: {
-                path: '../../public/images/work.svg',
+                path: '/work.png',
                 width: '83',
                 height: '83',
             },
@@ -53,9 +53,9 @@ const labels = {
         },
         {
             image: {
-                path: '../../public/images/groups.svg',
+                path: '/groups.png',
                 width: '83',
-                height: '41',
+                height: '83',
             },
             value: '+250',
             description: 'Participants',

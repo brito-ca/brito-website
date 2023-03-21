@@ -1,9 +1,10 @@
 import Image from 'next/image'
+import styles from '@/styles/AboutUs.module.css'
 
 const VectorCard = (props) => {
     const { image, value, description } = props;
     return (
-        <div>
+        <div className={styles.vectorContainer}>
             <Image
                 alt={description}
                 src={image.path}
