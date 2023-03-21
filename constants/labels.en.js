@@ -3,6 +3,7 @@ const labels = {
         id: 'about-us',
         navTitle: 'About',
         title: 'About us',
+        description:'Brazilian IT Ottawa (BRITO) is a group of Brazilian professionals with a career focused in Information Technology living in the National Capital Region, from different backgrounds, areas of expertise and willingness to help each other by sharing knowledge and experiences, building a social and professional network.',
     },
     ourMission: {
         title: 'Our Mission',
@@ -31,7 +32,41 @@ const labels = {
         width: '900',
         height: '900',
     },
-
+    vectorCard: [
+        {
+            image: {
+                path: '../../public/images/verified-user.svg',
+                width: '62',
+                height: '76',
+            },
+            value: '+7',
+            description: 'Years in operation',
+        },
+        {
+            image: {
+                path: '../../public/images/work.svg',
+                width: '83',
+                height: '83',
+            },
+            value: '+72',
+            description: 'Network events',
+        },
+        {
+            image: {
+                path: '../../public/images/groups.svg',
+                width: '83',
+                height: '41',
+            },
+            value: '+250',
+            description: 'Participants',
+        }, 
+    ],
+    membersImage: {
+        src: '/members.png',
+        alt: 'members',
+        width: '1440',
+        height: '530',
+    },
     card_data: [
         {
             title: 'Marcelo - Dev director',

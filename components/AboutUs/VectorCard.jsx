@@ -1,19 +1,18 @@
 import Image from 'next/image'
-import styles from '@/styles/Icon.module.css'
 
-const Icon = (props) => {
-    const { iconPath, iconWidth, iconHeight, value, description} = props;
+const VectorCard = (props) => {
+    const { image, value, description } = props;
     return (
-        <div className={styles.icon}>
+        <div>
             <Image
-                src={iconPath}
                 alt={description}
-                width={iconWidth}
-                height={iconHeight}
-             />
-            <h1 className={styles.value}>{value}</h1>
-            <p className={styles.description}>{description}</p>
+                src={image.path}
+                width={image.width}
+                height={image.height}
+            />
+            <h1>{value}</h1>
+            <p>{description}</p>
         </div>
     )
 };
-export default Icon;
+export default VectorCard;
