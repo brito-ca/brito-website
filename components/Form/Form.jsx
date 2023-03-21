@@ -103,18 +103,27 @@ const Form = (props) => {
                                 value='no'
                             />
                         </div>
-                        <FormInput
-                            required
-                            disabled={formValues.resideInCanada === 'no'}
-                            name='province'
-                            fieldStyle={styles.provinceField}
-                            labelContent={labels.provinceLabel}
-                            labelStyle={styles.labelForm}
-                            inputStyle={styles.inputForm}
-                            value={formValues.province}
-                            placeholder='E.g. Ontario'
-                            onChange={handleChange}
-                        />
+                        <div className={styles.provinceField}>
+                            <label htmlFor='province' className={styles.labelForm}>
+                                {labels.provinceLabel}
+                            </label>
+
+                            <select
+                                disabled={formValues.resideInCanada === 'no'}
+                                name='province'
+                                value={formValues.province}
+                                onChange={handleChange}
+                                id='province'
+                                className={styles.inputForm}
+                                required
+                            >
+                                {text.provinces.map((province) => (
+                                    <option key={province.code} value={province.name}>
+                                        {province.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
                         <FormInput
                             disabled={formValues.resideInCanada === 'no'}
                             name='city'
@@ -166,7 +175,6 @@ const Form = (props) => {
                                 </option>
                             </select>
                         </div>
-                        {/* )} */}
                         <div className={styles.imageContainer}>
                             <Image
                                 className={styles.roundedFormImage}
