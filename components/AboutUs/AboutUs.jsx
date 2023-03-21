@@ -1,15 +1,14 @@
 import Banner from "@/components/Banner/Banner"
 import VectorCard from "@/components/AboutUs/VectorCard"
-import labels from '@/constants/labels.en'
 import Image from 'next/image'
 import styles from '@/styles/AboutUs.module.css'
 
 const AboutUs = (props) => {
-    const { vectorCard, membersImage } = props;
+    const { banner, vectorCard, membersImage } = props;
     return (
-        <div id={labels.aboutUs.id}>
-            <div>
-                <Banner title={labels.aboutUs.title} description={labels.aboutUs.description} />
+        <div id={banner.id}>
+            <div className={styles.aboutUsBanner}>
+                <Banner title={banner.title} description={banner.description} />
             </div>
             <div className={`${styles.iconsContainer} flex-row-space-between`}>
                 {vectorCard.map((item, index) => (
