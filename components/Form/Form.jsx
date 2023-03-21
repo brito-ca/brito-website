@@ -9,7 +9,7 @@ import FormInput from '../FormInput/FormInput'
 import Modal from '../Modal/Modal'
 
 const Form = (props) => {
-    const { labels, text, immigrationStatus, subscriptionModalText } = props
+    const { labels, text } = props
 
     const [formValues, setFormValues] = useState({
         fullName: '',
@@ -153,16 +153,16 @@ const Form = (props) => {
                                 required
                             >
                                 <option value='' disabled>
-                                    {immigrationStatus.select}
+                                    {text.immigrationStatus.select}
                                 </option>
                                 <option key={3} value='Permanent Resident'>
-                                    {immigrationStatus.permanentResident}
+                                    {text.immigrationStatus.permanentResident}
                                 </option>
                                 <option key={2} value='Student'>
-                                    {immigrationStatus.student}
+                                    {text.immigrationStatus.student}
                                 </option>
                                 <option key={1} value='Temporary'>
-                                    {immigrationStatus.temporary}
+                                    {text.immigrationStatus.temporary}
                                 </option>
                             </select>
                         </div>
@@ -217,13 +217,13 @@ const Form = (props) => {
                                 />
                                 <div className={styles.subscriptionModalTextDescriptionContainer}>
                                     <h1 className={styles.subscriptionModalTitle}>
-                                        {subscriptionModalText.title}
+                                        {text.subscriptionModal.title}
                                     </h1>
                                     <p className={styles.subscriptionModalDescription}>
-                                        {subscriptionModalText.firstLine}
+                                        {text.subscriptionModal.firstLine}
                                     </p>
                                     <p className={styles.subscriptionModalDescription}></p>
-                                    {subscriptionModalText.secondLine}
+                                    {text.subscriptionModal.secondLine}
                                     <button
                                         type='button'
                                         className={styles.continueBrowsingButton}
@@ -231,7 +231,7 @@ const Form = (props) => {
                                             setSubscriptionModalOpen(!subscriptionModalOpen)
                                         }
                                     >
-                                        {subscriptionModalText.continueBrowsingButton}
+                                        {text.subscriptionModal.continueBrowsingButton}
                                     </button>
                                 </div>
                             </Modal>

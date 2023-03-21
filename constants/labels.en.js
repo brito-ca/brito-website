@@ -98,7 +98,6 @@ const labels = {
     },
 
     form: {        
-       
         labels : {
             fullNameLabel: "Your full name",
             expertiseLabel: "Your expertise",
@@ -111,26 +110,27 @@ const labels = {
             linkedinLabel: "LinkedIn profile",
         },
         placeholders: {
-
+            
         },
         text: {
             title: "Want to join Brito's network?",
             altImageText: "Picture of members of BRITO co-working in their computers in one of the meetings ",
-            sendButtonText: "Send",
+            sendButtonText: "Send",        
+            immigrationStatus: {
+                select: "Select",
+                permanentResident: "Permanent Resident",
+                student: "Student",
+                temporary: "Temporary"
+            },
+            subscriptionModal: {
+                title: "Thank you for connecting with us!",
+                firstLine: "Your informations were submitted for approval.",
+                secondLine: " You will receive a notification on your email.",
+                continueBrowsingButton: "Continue browsing"
+            },
             statusInformationPopover: "This status assists Brito in identifying suitable projects and job opportunities based on his type of visa. Some visas only permit 20 hours of work, and holding citizenship is a requirement for certain government positions, enhancing one's chances of securing a job.",
         },
-        immigrationStatus: {
-            select: "Select",
-            permanentResident: "Permanent Resident",
-            student: "Student",
-            temporary: "Temporary"
-        },
-        subscriptionModalText: {
-            title: "Thank you for connecting with us!",
-            firstLine: "Your informations were submitted for approval.",
-            secondLine: " You will receive a notification on your email.",
-            continueBrowsingButton: "Continue browsing"
-        }
+
 
     }
         
