@@ -22,7 +22,7 @@ const Footer = (props) => {
                             src={britoWordMark}
                             className={styles.logo}
                         />
-                        <p className={'vertical-padding'}>{footerContent.phrase}</p>
+                        <p className={'vertical-padding'}>{footerContent.description}</p>
                     </div>
                     <div className={`${styles.socialContainer} flex-row-center`}>
                         {socialMedia.map((media) => (

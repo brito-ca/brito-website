@@ -102,7 +102,7 @@ const labels = {
     footerContent: {
         altFlag: 'brito flag',
         altWordmark: 'brito wordmark',
-        phrase: 'Building the Brazilian IT community in Ottawa',
+        description: 'Building the Brazilian IT community in Ottawa',
         copyright: 'Copyright © 2023 Brito',
         rights: 'All Rights Reserved',
         terms: { href: '/', text: 'Terms and Conditions' },
