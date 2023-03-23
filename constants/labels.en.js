@@ -36,7 +36,7 @@ const labels = {
     vectorCard: [
         {
             image: {
-                path: '/verified_user.png',
+                src: '/verified_user.png',
                 width: '83',
                 height: '83',
             },
@@ -45,7 +45,7 @@ const labels = {
         },
         {
             image: {
-                path: '/work.png',
+                src: '/work.png',
                 width: '83',
                 height: '83',
             },
@@ -54,7 +54,7 @@ const labels = {
         },
         {
             image: {
-                path: '/groups.png',
+                src: '/groups.png',
                 width: '83',
                 height: '83',
             },
