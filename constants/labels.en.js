@@ -37,6 +37,7 @@ const labels = {
         {
             image: {
                 src: '/verified_user.png',
+                alt: 'verified user',
                 width: '83',
                 height: '83',
             },
@@ -46,6 +47,7 @@ const labels = {
         {
             image: {
                 src: '/work.png',
+                alt: 'work',
                 width: '83',
                 height: '83',
             },
@@ -55,6 +57,7 @@ const labels = {
         {
             image: {
                 src: '/groups.png',
+                alt: 'groups',
                 width: '83',
                 height: '83',
             },
