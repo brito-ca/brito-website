@@ -34,6 +34,7 @@ const labels = {
 
     card_data: [
         {
+            id: 'brito1001',
             title: 'Marcelo - Dev director',
             description:
                 'Senior Front-end Engineer with 20 years of experience building websites and applications using tech-edge for big techs, digital agencies, media and educational companies in Canada, the United States and Brazil.',
@@ -46,6 +47,7 @@ const labels = {
             },
         },
         {
+            id: 'brito1002',
             title: 'Diego - President and co-founder',
             description:
                 'Senior Project manager with over 20 years experience working for consulting companies, banks and government.',
@@ -58,6 +60,7 @@ const labels = {
             },
         },
         {
+            id: 'brito1003',
             title: 'Roger - Director and co-founder',
             description:
                 'Senior CRM specialist with international experience in projects for telecom, consulting and  entertainment companies',
@@ -95,6 +98,16 @@ const labels = {
     },
     Maple: {
         labelimgmaple: 'mapleleave',
+    },
+    footerContent: {
+        altFlag: 'brito flag',
+        altWordmark: 'brito wordmark',
+        description: 'Building the Brazilian IT community in Ottawa',
+        copyright: 'Copyright © 2023 Brito',
+        rights: 'All Rights Reserved',
+        terms: { href: '/', text: 'Terms and Conditions' },
+        privacy: { href: '/', text: 'Privacy Policy' },
+        header: 'BRITO',
     },
 }
 export default labels
