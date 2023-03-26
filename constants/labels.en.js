@@ -97,6 +97,38 @@ const labels = {
         labelimgmaple: 'mapleleave',
     },
 
+    formx : {
+        fields : [
+            {
+                label: 'Your full name',
+                placeholder: "E.g Amanda Costa",
+                type: 'text',
+            },
+            {
+                label: 'Your expertise',
+                placeholder: "E.g UX Designer",
+                type: 'text',
+            },
+            {
+                label: 'Your company',
+                placeholder: "E.g TD Bank",
+                type: 'text',
+            },
+            {
+                label: 'Do you currently live in Canada?',
+                placeholder: "Eg Amanda",
+                type: 'text',
+            },
+            {
+                label: 'Province / Territory',
+                placeholder: "",
+                type: 'text',
+            },
+        ]
+
+        
+    },
+
     form: {        
         labels : {
             fullNameLabel: "Your full name",
@@ -125,7 +157,7 @@ const labels = {
             subscriptionModal: {
                 title: "Thank you for connecting with us!",
                 firstLine: "Your informations were submitted for approval.",
-                secondLine: " You will receive a notification on your email.",
+                secondLine: "You will receive a notification on your email.",
                 continueBrowsingButton: "Continue browsing"
             },
             provinces: [
