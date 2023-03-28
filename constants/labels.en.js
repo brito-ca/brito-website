@@ -128,7 +128,7 @@ const labels = {
     },
     media: {
         visit: 'Visit our social media',
-        instagramlink: '#',
+        instagramlink: 'https://www.instagram.com/brito.it/',
         labelinstagram: 'BRITO_Instagram',
         linklinkedin: 'https://www.linkedin.com/groups/12058916/',
         labelinkedin: 'BRITO_Linkedin',
