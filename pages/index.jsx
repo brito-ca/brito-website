@@ -1,8 +1,5 @@
-import { AppLayout, Hero, Board, Form } from '@/components'
-import AboutUs from '@/components/AboutUs/AboutUs'
-import Banner from '@/components/Banner/Banner'
+import { AboutUs, Banner, ContactUs, AppLayout, Hero, Board, Form } from '@/components'
 import labels from '@/constants/labels.en'
-import ContactUs from '@/components/ContactUs/ContactUs'
 import styles from '@/styles/AppLayout.module.css'
 
 const navigation = [
