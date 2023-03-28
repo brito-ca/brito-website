@@ -148,5 +148,54 @@ const labels = {
         privacy: { href: '/', text: 'Privacy Policy' },
         header: 'BRITO',
     },
+    form: {
+        labels: {
+            fullNameLabel: 'Your full name',
+            expertiseLabel: 'Your expertise',
+            companyLabel: 'Your company',
+            resideInCanadaLabel: 'Do you currently live in Canada?',
+            provinceLabel: 'Province / Territory',
+            cityLabel: 'City',
+            statusLabel: "What's your current status?",
+            emailLabel: 'E-mail',
+            linkedinLabel: 'LinkedIn profile',
+        },
+        placeholders: {},
+        text: {
+            title: "Want to join Brito's network?",
+            altImageText:
+                'Picture of members of BRITO co-working in their computers in one of the meetings ',
+            sendButtonText: 'Send',
+            immigrationStatus: {
+                select: 'Select',
+                permanentResident: 'Permanent Resident',
+                student: 'Student',
+                temporary: 'Temporary',
+            },
+            subscriptionModal: {
+                title: 'Thank you for connecting with us!',
+                firstLine: 'Your informations were submitted for approval.',
+                secondLine: ' You will receive a notification on your email.',
+                continueBrowsingButton: 'Continue browsing',
+            },
+            provinces: [
+                { name: 'Alberta', code: 'AB' },
+                { name: 'British Columbia', code: 'BC' },
+                { name: 'Manitoba', code: 'MB' },
+                { name: 'New Brunswick', code: 'NB' },
+                { name: 'Newfoundland and Labrador', code: 'NL' },
+                { name: 'Northwest Territories', code: 'NT' },
+                { name: 'Nova Scotia', code: 'NS' },
+                { name: 'Nunavut', code: 'NU' },
+                { name: 'Ontario', code: 'ON' },
+                { name: 'Prince Edward Island', code: 'PE' },
+                { name: 'Quebec', code: 'QC' },
+                { name: 'Saskatchewan', code: 'SK' },
+                { name: 'Yukon', code: 'YT' },
+            ],
+            statusInformationPopover:
+                "This status assists Brito in identifying suitable projects and job opportunities based on his type of visa. Some visas only permit 20 hours of work, and holding citizenship is a requirement for certain government positions, enhancing one's chances of securing a job.",
+        },
+    },
 }
 export default labels

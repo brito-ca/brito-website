@@ -1,12 +1,11 @@
-import { Icon } from '@/components'
 import styles from './Popover.module.css'
 
 export function Popover(props) {
+    const { children } = props
     return (
-        <div className={styles.popoverContainer}>
-            <div className={`${styles.popover} ${styles.top}`}>
-                <Icon variant={props.icon} className={styles.icon} />
-            </div>
+        <div className={styles.popover}>
+            <div className={styles.popoverArrow}></div>
+            <div className={styles.popoverContent}>{children}</div>
         </div>
     )
 }
