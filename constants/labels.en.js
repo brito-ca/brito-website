@@ -197,5 +197,87 @@ const labels = {
                 "This status assists Brito in identifying suitable projects and job opportunities based on his type of visa. Some visas only permit 20 hours of work, and holding citizenship is a requirement for certain government positions, enhancing one's chances of securing a job.",
         },
     },
+    termAndconditions: `<h3>Terms and conditions</h3>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima quod
+        a atque nisi illo, provident ratione pariatur in cupiditate sint enim doloremque,
+        repellat voluptatibus? Totam ducimus omnis reprehenderit iusto.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima quod
+        a atque nisi illo, provident ratione pariatur in cupiditate sint enim doloremque,
+        repellat voluptatibus? Totam ducimus omnis reprehenderit iusto.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima quod
+        a atque nisi illo, provident ratione pariatur in cupiditate sint enim doloremque,
+        repellat voluptatibus? Totam ducimus omnis reprehenderit iusto.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima quod
+        a atque nisi illo, provident ratione pariatur in cupiditate sint enim doloremque,
+        repellat voluptatibus? Totam ducimus omnis reprehenderit iusto.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima quod
+        a atque nisi illo, provident ratione pariatur in cupiditate sint enim doloremque,
+        repellat voluptatibus? Totam ducimus omnis reprehenderit iusto.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima quod
+        a atque nisi illo, provident ratione pariatur in cupiditate sint enim doloremque,
+        repellat voluptatibus? Totam ducimus omnis reprehenderit iusto.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima quod
+        a atque nisi illo, provident ratione pariatur in cupiditate sint enim doloremque,
+        repellat voluptatibus? Totam ducimus omnis reprehenderit iusto.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima quod
+        a atque nisi illo, provident ratione pariatur in cupiditate sint enim doloremque,
+        repellat voluptatibus? Totam ducimus omnis reprehenderit iusto.
+    </p>`,
+    privacyPolicy: `<h3>Privacy Policy</h3>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima quod
+        a atque nisi illo, provident ratione pariatur in cupiditate sint enim doloremque,
+        repellat voluptatibus? Totam ducimus omnis reprehenderit iusto.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima quod
+        a atque nisi illo, provident ratione pariatur in cupiditate sint enim doloremque,
+        repellat voluptatibus? Totam ducimus omnis reprehenderit iusto.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima quod
+        a atque nisi illo, provident ratione pariatur in cupiditate sint enim doloremque,
+        repellat voluptatibus? Totam ducimus omnis reprehenderit iusto.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima quod
+        a atque nisi illo, provident ratione pariatur in cupiditate sint enim doloremque,
+        repellat voluptatibus? Totam ducimus omnis reprehenderit iusto.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima quod
+        a atque nisi illo, provident ratione pariatur in cupiditate sint enim doloremque,
+        repellat voluptatibus? Totam ducimus omnis reprehenderit iusto.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima quod
+        a atque nisi illo, provident ratione pariatur in cupiditate sint enim doloremque,
+        repellat voluptatibus? Totam ducimus omnis reprehenderit iusto.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima quod
+        a atque nisi illo, provident ratione pariatur in cupiditate sint enim doloremque,
+        repellat voluptatibus? Totam ducimus omnis reprehenderit iusto.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minima quod
+        a atque nisi illo, provident ratione pariatur in cupiditate sint enim doloremque,
+        repellat voluptatibus? Totam ducimus omnis reprehenderit iusto.
+    </p>`,
 }
 export default labels

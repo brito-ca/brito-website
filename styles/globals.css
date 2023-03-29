@@ -148,6 +148,7 @@ button {
     border-radius: 40px;
     border: 1px solid;
     line-height: 24px;
+    cursor: pointer;
 }
 
 button.primary {

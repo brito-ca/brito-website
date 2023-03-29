@@ -1,23 +1,43 @@
-.modal {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-    background-color: var(--neutral-white);
-
-    border-radius: var(--radius-md);
-    text-align: center;
-}
-
-.backdrop {
+.container {
     position: fixed;
     top: 0;
-    right: 0;
     left: 0;
-    bottom: 0;
-    height: 100vh;
+    z-index: 999999999;
     width: 100%;
+    height: 100vh;
     background-color: var(--modal-backdrop);
-    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background-color: var(--primary-white);
+    padding: var(--padding-md);
+    padding-top: calc(2 * var(--padding-md));
+    overflow-y: scroll;
+    height: 95vh;
+    max-width: 95vw;
+    position: relative;
+}
+
+.button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: var(--padding-md);
+    cursor: pointer;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 700px) {
+    .modal {
+        max-width: 80vw;
+        height: 90vh;
+    }
+    
 }

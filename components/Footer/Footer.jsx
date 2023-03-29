@@ -3,9 +3,19 @@ import britoFlag from '../../public/images/brito-logo-1.svg'
 import britoWordMark from '../../public/images/brito-logo-2.svg'
 import styles from '@/styles/Footer.module.css'
 import { Icon, Nav } from '@/components'
+import { useState } from 'react'
+import Modal from '../Modal/Modal'
+import labels from '@/constants/labels.en'
 
 const Footer = (props) => {
     const { footerContent, navigation, socialMedia } = props
+    const [termsModalisOpen, setTermsModalOpen] = useState(false)
+    const [privacyModalisOpen, setPrivacyModalOpen] = useState(false)
+
+    const handleTermsModal = (e, setIsOpen) => {
+        e.preventDefault()
+        setIsOpen(true)
+    }
 
     return (
         <>
@@ -51,11 +61,21 @@ const Footer = (props) => {
                     <p>{footerContent.rights}</p>
                     <p>|</p>
                     <p>
-                        <a href={footerContent.terms.href}>{footerContent.terms.text}</a>
+                        <a onClick={(e) => handleTermsModal(e, setTermsModalOpen)} href='#'>
+                            {footerContent.terms.text}
+                        </a>
+                        <Modal isOpen={termsModalisOpen} setIsOpen={setTermsModalOpen}>
+                            {labels.termAndconditions}
+                        </Modal>
                     </p>
                     <p>|</p>
                     <p>
-                        <a href={footerContent.privacy.href}>{footerContent.privacy.text}</a>
+                        <a onClick={(e) => handleTermsModal(e, setPrivacyModalOpen)} href='#'>
+                            {footerContent.privacy.text}
+                        </a>
+                        <Modal isOpen={privacyModalisOpen} setIsOpen={setPrivacyModalOpen}>
+                            {labels.privacyPolicy}
+                        </Modal>
                     </p>
                 </div>
             </div>
