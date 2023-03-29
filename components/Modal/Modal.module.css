@@ -16,7 +16,7 @@
     padding: var(--padding-md);
     padding-top: calc(2 * var(--padding-md));
     overflow-y: scroll;
-    height: 95vh;
+    max-height: 95vh;
     max-width: 95vw;
     position: relative;
 }
@@ -37,7 +37,7 @@
 @media only screen and (min-width: 700px) {
     .modal {
         max-width: 80vw;
-        height: 90vh;
+        max-height: 90vh;
     }
     
 }
