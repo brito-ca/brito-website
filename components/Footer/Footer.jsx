@@ -34,7 +34,7 @@ const Footer = (props) => {
                         />
                         <p className={'vertical-padding'}>{footerContent.description}</p>
                     </div>
-                    <div className={`${styles.socialContainer} flex-row-center`}>
+                    {/* <div className={`${styles.socialContainer} flex-row-center`}>
                         {socialMedia.map((media) => (
                             <a
                                 key={media.id}
@@ -45,7 +45,7 @@ const Footer = (props) => {
                                 <Icon className={styles.icon} variant={media.icon} />
                             </a>
                         ))}
-                    </div>
+                    </div> */}
                 </div>
                 <div className={styles.footerNav}>
                     <h5>{footerContent.header}</h5>
