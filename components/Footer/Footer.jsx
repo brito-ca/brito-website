@@ -2,13 +2,13 @@ import Image from 'next/image'
 import britoFlag from '../../public/images/brito-logo-1.svg'
 import britoWordMark from '../../public/images/brito-logo-2.svg'
 import styles from '@/styles/Footer.module.css'
-import { Icon, Nav } from '@/components'
+import { Nav } from '@/components'
 import { useState } from 'react'
 import Modal from '../Modal/Modal'
 import labels from '@/constants/labels.en'
 
 const Footer = (props) => {
-    const { footerContent, navigation, socialMedia } = props
+    const { footerContent, navigation } = props
     const [termsModalisOpen, setTermsModalOpen] = useState(false)
     const [privacyModalisOpen, setPrivacyModalOpen] = useState(false)
 
@@ -34,18 +34,6 @@ const Footer = (props) => {
                         />
                         <p className={'vertical-padding'}>{footerContent.description}</p>
                     </div>
-                    {/* <div className={`${styles.socialContainer} flex-row-center`}>
-                        {socialMedia.map((media) => (
-                            <a
-                                key={media.id}
-                                href={media.link}
-                                target='_blank'
-                                rel='noopener noreferrer'
-                            >
-                                <Icon className={styles.icon} variant={media.icon} />
-                            </a>
-                        ))}
-                    </div> */}
                 </div>
                 <div className={styles.footerNav}>
                     <h5>{footerContent.header}</h5>
