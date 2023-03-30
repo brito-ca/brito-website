@@ -6,7 +6,7 @@
     flex-direction: column;
 }
 
-.backgroundLogo {
+.main {
     background-image: url(../public/images/background-logo.svg);
     background-size: contain;
     background-repeat: space;
