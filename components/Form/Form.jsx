@@ -7,7 +7,6 @@ import closeModalIcon from '../../public/images/close-modal-icon.svg'
 import logo from '../../public/images/logo-small.svg'
 import FormInput from '../FormInput/FormInput'
 import Modal from '../Modal/Modal'
-import labels from '@/constants/labels.en'
 
 const Form = (props) => {
     const { fields } = props
@@ -153,8 +152,6 @@ const Form = (props) => {
                             name='city'
                             fieldStyle={styles.cityField}
                             labelContent={fields.city.label}
-                            labelStyle={styles.labelForm}
-                            inputStyle={styles.inputForm}
                             value={formValues.city}
                             placeholder='E.g. Ottawa'
                             onChange={handleChange}
@@ -207,21 +204,15 @@ const Form = (props) => {
                             name='linkedinProfileLink'
                             fieldStyle={styles.linkedinField}
                             labelContent={fields.linkedin.label}
-                            labelStyle={styles.labelForm}
-                            inputStyle={styles.inputForm}
                             placeholder='Paste your profile link'
                             value={formValues.linkedinProfileLink}
                             onChange={handleChange}
                         />
 
                         <FormInput
-                            name='email'
-                            type='email'
                             mandatory='yes'
                             fieldStyle={styles.emailField}
                             labelContent={fields.email.label}
-                            labelStyle={styles.labelForm}
-                            inputStyle={styles.inputForm}
                             placeholder='E.g. john@gmail.com'
                             value={formValues.email}
                             onChange={handleChange}
