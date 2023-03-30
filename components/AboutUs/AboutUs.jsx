@@ -21,7 +21,7 @@ const AboutUs = (props) => {
                 ))}
             </div>
             <div className={styles.aboutUsImage}>
-                <Image alt={membersImage.alt} {...membersImage} />
+                <Image priority alt={membersImage.alt} {...membersImage} />
             </div>
         </div>
     )
