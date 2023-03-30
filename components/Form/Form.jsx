@@ -42,25 +42,21 @@ const Form = (props) => {
             body: formDataJSON,
         }
 
-        try {
-            const res = await fetch(api, options)
-            if (res.status === 200) {
-                setSubscriptionModalOpen(!subscriptionModalOpen)
-                setFormValues({
-                    fullName: '',
-                    expertise: '',
-                    company: '',
-                    immigrationStatus: '',
-                    resideInCanada: 'yes',
-                    province: '',
-                    city: '',
-                    linkedinProfileLink: '',
-                    email: '',
-                })
-            } else {
-                alert('Something went wrong. Please try again.')
-            }
-        } catch (err) {
+        const res = await fetch(api, options)
+        if (res.status === 200) {
+            setSubscriptionModalOpen(!subscriptionModalOpen)
+            setFormValues({
+                fullName: '',
+                expertise: '',
+                company: '',
+                immigrationStatus: '',
+                resideInCanada: 'yes',
+                province: '',
+                city: '',
+                linkedinProfileLink: '',
+                email: '',
+            })
+        } else {
             alert('Something went wrong. Please try again.')
         }
     }
@@ -210,6 +206,7 @@ const Form = (props) => {
                         />
 
                         <FormInput
+                            name='email'
                             mandatory='yes'
                             fieldStyle={styles.emailField}
                             labelContent={fields.email.label}
@@ -219,7 +216,7 @@ const Form = (props) => {
                         />
 
                         <button className={styles.sendButton} type='button' onClick={handleSubmit}>
-                            Send
+                            {fields.sendButton}
                         </button>
                         {subscriptionModalOpen && (
                             <Modal className={styles.subscriptionModalContainer}>
@@ -239,10 +236,10 @@ const Form = (props) => {
                                         {fields.subscriptionModal.title}
                                     </h1>
                                     <p className={styles.subscriptionModalDescription}>
-                                        {fields.subscriptionModal.firstLine}
+                                        {fields.subscriptionModal.approval}
                                     </p>
                                     <p className={styles.subscriptionModalDescription}></p>
-                                    {fields.subscriptionModal.secondLine}
+                                    {fields.subscriptionModal.notification}
                                     <button
                                         type='button'
                                         className={styles.continueBrowsingButton}

@@ -122,8 +122,8 @@ const labels = {
                 values: [
                     "Citizen",
                     "Permanent Resident",
-                     "Student",
-                     "Temporary"
+                    "Student",
+                    "Temporary"
                 ]
             },
             province : {
@@ -163,12 +163,13 @@ const labels = {
             },
             subscriptionModal : {
                 title: "Thank you for connecting with us!",
-                firstLine: "Your informations were submitted for approval.",
-                secondLine: "You will receive a notification on your email.",
+                approval: "Your informations were submitted for approval.",
+                notification: "You will receive a notification on your email.",
                 continueBrowsing: "Continue browsing"
             }, 
             statusInformationPopover: "This status assists Brito in identifying suitable projects and job opportunities based on his type of visa. Some visas only permit 20 hours of work, and holding citizenship is a requirement for certain government positions, enhancing one's chances of securing a job.",
             title: "Want to join Brito's network?",
+            sendButton: "Send"
         }     
     },
         
