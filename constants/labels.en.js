@@ -148,80 +148,76 @@ const labels = {
         privacy: { href: '/', text: 'Privacy Policy' },
         header: 'BRITO',
     },
-    form : {
-        fields : {
-            fullName : {
+    form: {
+        fields: {
+            fullName: {
                 label: 'Your full name',
-                placeholder: "E.g Amanda Costa",
+                placeholder: 'E.g Amanda Costa',
                 type: 'text',
             },
-            expertise : {
+            expertise: {
                 label: 'Your expertise',
-                placeholder: "E.g UX Designer",
+                placeholder: 'E.g UX Designer',
                 type: 'text',
             },
-            company : {
+            company: {
                 label: 'Your company',
-                placeholder: "E.g TD Bank",
+                placeholder: 'E.g TD Bank',
                 type: 'text',
             },
-            resideInCanada : {
+            resideInCanada: {
                 label: 'Do you currently live in Canada?',
             },
             immigrationStatus: {
                 label: "What's your current status?",
-                values: [
-                    "Citizen",
-                    "Permanent Resident",
-                    "Student",
-                    "Temporary"
-                ]
+                values: ['Citizen', 'Permanent Resident', 'Student', 'Temporary'],
             },
-            province : {
+            province: {
                 label: 'Province / Territory',
-                placeholder: "E.g Ontario",
+                placeholder: 'E.g Ontario',
                 type: 'text',
                 provinces: [
-                    { name: "Alberta", code: "AB" },
-                    { name: "British Columbia", code: "BC" },
-                    { name: "Manitoba", code: "MB" },
-                    { name: "New Brunswick", code: "NB" },
-                    { name: "Newfoundland and Labrador", code: "NL" },
-                    { name: "Northwest Territories", code: "NT" },
-                    { name: "Nova Scotia", code: "NS" },
-                    { name: "Nunavut", code: "NU" },
-                    { name: "Ontario", code: "ON" },
-                    { name: "Prince Edward Island", code: "PE" },
-                    { name: "Quebec", code: "QC" },
-                    { name: "Saskatchewan", code: "SK" },
-                    { name: "Yukon", code: "YT" }
+                    { name: 'Alberta', code: 'AB' },
+                    { name: 'British Columbia', code: 'BC' },
+                    { name: 'Manitoba', code: 'MB' },
+                    { name: 'New Brunswick', code: 'NB' },
+                    { name: 'Newfoundland and Labrador', code: 'NL' },
+                    { name: 'Northwest Territories', code: 'NT' },
+                    { name: 'Nova Scotia', code: 'NS' },
+                    { name: 'Nunavut', code: 'NU' },
+                    { name: 'Ontario', code: 'ON' },
+                    { name: 'Prince Edward Island', code: 'PE' },
+                    { name: 'Quebec', code: 'QC' },
+                    { name: 'Saskatchewan', code: 'SK' },
+                    { name: 'Yukon', code: 'YT' },
                 ],
             },
-            city : {
+            city: {
                 label: 'City',
-                placeholder: "E.g Ottawa",
+                placeholder: 'E.g Ottawa',
                 type: 'text',
             },
-            linkedin : {
+            linkedin: {
                 label: 'LinkedIn profile',
-                placeholder: "LinkedIn profile",
+                placeholder: 'LinkedIn profile',
                 type: 'text',
             },
-            email : {
+            email: {
                 label: 'E-mail',
-                placeholder: "E-mail",
+                placeholder: 'E-mail',
                 type: 'email',
             },
-            subscriptionModal : {
-                title: "Thank you for connecting with us!",
-                approval: "Your informations were submitted for approval.",
-                notification: "You will receive a notification on your email.",
-                continueBrowsing: "Continue browsing"
-            }, 
-            statusInformationPopover: "This status assists Brito in identifying suitable projects and job opportunities based on his type of visa. Some visas only permit 20 hours of work, and holding citizenship is a requirement for certain government positions, enhancing one's chances of securing a job.",
+            subscriptionModal: {
+                title: 'Thank you for connecting with us!',
+                approval: 'Your informations were submitted for approval.',
+                notification: 'You will receive a notification on your email.',
+                continueBrowsing: 'Continue browsing',
+            },
+            statusInformationPopover:
+                "This status assists Brito in identifying suitable projects and job opportunities based on his type of visa. Some visas only permit 20 hours of work, and holding citizenship is a requirement for certain government positions, enhancing one's chances of securing a job.",
             title: "Want to join Brito's network?",
-            sendButton: "Send"
-        }     
+            sendButton: 'Send',
+        },
     },
 }
 export default labels
