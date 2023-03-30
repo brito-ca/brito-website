@@ -3,6 +3,8 @@ const labels = {
         id: 'about-us',
         navTitle: 'About',
         title: 'About us',
+        description:
+            'Brazilian IT Ottawa (BRITO) is a group of Brazilian professionals with a career focused in Information Technology living in the National Capital Region, from different backgrounds, areas of expertise and willingness to help each other by sharing knowledge and experiences, building a social and professional network.',
     },
     ourMission: {
         title: 'Our Mission',
@@ -31,9 +33,47 @@ const labels = {
         width: '900',
         height: '900',
     },
-
+    vectorCard: [
+        {
+            image: {
+                src: '/verified_user.png',
+                alt: 'verified user',
+                width: '83',
+                height: '83',
+            },
+            value: '+7',
+            description: 'Years in operation',
+        },
+        {
+            image: {
+                src: '/work.png',
+                alt: 'work',
+                width: '83',
+                height: '83',
+            },
+            value: '+72',
+            description: 'Network events',
+        },
+        {
+            image: {
+                src: '/groups.png',
+                alt: 'groups',
+                width: '83',
+                height: '83',
+            },
+            value: '+250',
+            description: 'Participants',
+        },
+    ],
+    membersImage: {
+        src: '/members.png',
+        alt: 'members',
+        width: '1440',
+        height: '530',
+    },
     card_data: [
         {
+            id: 'brito1001',
             title: 'Marcelo - Dev director',
             description:
                 'Senior Front-end Engineer with 20 years of experience building websites and applications using tech-edge for big techs, digital agencies, media and educational companies in Canada, the United States and Brazil.',
@@ -46,6 +86,7 @@ const labels = {
             },
         },
         {
+            id: 'brito1002',
             title: 'Diego - President and co-founder',
             description:
                 'Senior Project manager with over 20 years experience working for consulting companies, banks and government.',
@@ -58,6 +99,7 @@ const labels = {
             },
         },
         {
+            id: 'brito1003',
             title: 'Roger - Director and co-founder',
             description:
                 'Senior CRM specialist with international experience in projects for telecom, consulting and  entertainment companies',
@@ -86,7 +128,7 @@ const labels = {
     },
     media: {
         visit: 'Visit our social media',
-        instagramlink: '#',
+        instagramlink: 'https://www.instagram.com/brito.it/',
         labelinstagram: 'BRITO_Instagram',
         linklinkedin: 'https://www.linkedin.com/groups/12058916/',
         labelinkedin: 'BRITO_Linkedin',
@@ -96,77 +138,90 @@ const labels = {
     Maple: {
         labelimgmaple: 'mapleleave',
     },
-
-    form: {
-        fields: {
-            fullName: {
+    footerContent: {
+        altFlag: 'brito flag',
+        altWordmark: 'brito wordmark',
+        description: 'Building the Brazilian IT community in Ottawa',
+        copyright: 'Copyright © 2023 Brito',
+        rights: 'All Rights Reserved',
+        terms: { href: '/', text: 'Terms and Conditions' },
+        privacy: { href: '/', text: 'Privacy Policy' },
+        header: 'BRITO',
+    },
+    form : {
+        fields : {
+            fullName : {
                 label: 'Your full name',
-                placeholder: 'E.g Amanda Costa',
+                placeholder: "E.g Amanda Costa",
                 type: 'text',
             },
-            expertise: {
+            expertise : {
                 label: 'Your expertise',
-                placeholder: 'E.g UX Designer',
+                placeholder: "E.g UX Designer",
                 type: 'text',
             },
-            company: {
+            company : {
                 label: 'Your company',
-                placeholder: 'E.g TD Bank',
+                placeholder: "E.g TD Bank",
                 type: 'text',
             },
-            resideInCanada: {
+            resideInCanada : {
                 label: 'Do you currently live in Canada?',
             },
             immigrationStatus: {
                 label: "What's your current status?",
-                values: ['Citizen', 'Permanent Resident', 'Student', 'Temporary'],
+                values: [
+                    "Citizen",
+                    "Permanent Resident",
+                    "Student",
+                    "Temporary"
+                ]
             },
-            province: {
+            province : {
                 label: 'Province / Territory',
-                placeholder: 'E.g Ontario',
+                placeholder: "E.g Ontario",
                 type: 'text',
                 provinces: [
-                    { name: 'Alberta', code: 'AB' },
-                    { name: 'British Columbia', code: 'BC' },
-                    { name: 'Manitoba', code: 'MB' },
-                    { name: 'New Brunswick', code: 'NB' },
-                    { name: 'Newfoundland and Labrador', code: 'NL' },
-                    { name: 'Northwest Territories', code: 'NT' },
-                    { name: 'Nova Scotia', code: 'NS' },
-                    { name: 'Nunavut', code: 'NU' },
-                    { name: 'Ontario', code: 'ON' },
-                    { name: 'Prince Edward Island', code: 'PE' },
-                    { name: 'Quebec', code: 'QC' },
-                    { name: 'Saskatchewan', code: 'SK' },
-                    { name: 'Yukon', code: 'YT' },
+                    { name: "Alberta", code: "AB" },
+                    { name: "British Columbia", code: "BC" },
+                    { name: "Manitoba", code: "MB" },
+                    { name: "New Brunswick", code: "NB" },
+                    { name: "Newfoundland and Labrador", code: "NL" },
+                    { name: "Northwest Territories", code: "NT" },
+                    { name: "Nova Scotia", code: "NS" },
+                    { name: "Nunavut", code: "NU" },
+                    { name: "Ontario", code: "ON" },
+                    { name: "Prince Edward Island", code: "PE" },
+                    { name: "Quebec", code: "QC" },
+                    { name: "Saskatchewan", code: "SK" },
+                    { name: "Yukon", code: "YT" }
                 ],
             },
-            city: {
+            city : {
                 label: 'City',
-                placeholder: 'E.g Ottawa',
+                placeholder: "E.g Ottawa",
                 type: 'text',
             },
-            linkedin: {
+            linkedin : {
                 label: 'LinkedIn profile',
-                placeholder: 'LinkedIn profile',
+                placeholder: "LinkedIn profile",
                 type: 'text',
             },
-            email: {
+            email : {
                 label: 'E-mail',
-                placeholder: 'E-mail',
+                placeholder: "E-mail",
                 type: 'email',
             },
-            subscriptionModal: {
-                title: 'Thank you for connecting with us!',
-                approval: 'Your informations were submitted for approval.',
-                notification: 'You will receive a notification on your email.',
-                continueBrowsing: 'Continue browsing',
-            },
-            statusInformationPopover:
-                "This status assists Brito in identifying suitable projects and job opportunities based on his type of visa. Some visas only permit 20 hours of work, and holding citizenship is a requirement for certain government positions, enhancing one's chances of securing a job.",
+            subscriptionModal : {
+                title: "Thank you for connecting with us!",
+                approval: "Your informations were submitted for approval.",
+                notification: "You will receive a notification on your email.",
+                continueBrowsing: "Continue browsing"
+            }, 
+            statusInformationPopover: "This status assists Brito in identifying suitable projects and job opportunities based on his type of visa. Some visas only permit 20 hours of work, and holding citizenship is a requirement for certain government positions, enhancing one's chances of securing a job.",
             title: "Want to join Brito's network?",
-            sendButton: 'Send',
-        },
+            sendButton: "Send"
+        }     
     },
 }
 export default labels

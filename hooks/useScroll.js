@@ -5,7 +5,9 @@ const useScroll = (limit) => {
 
     useEffect(() => {
         const scrollListener = () => {
-            setShow(window.scrollY > limit)
+            const atTheBottom =
+                window.innerHeight + window.pageYOffset >= document.body.offsetHeight
+            setShow(window.scrollY > limit && !atTheBottom)
         }
         window.addEventListener('scroll', scrollListener)
 
