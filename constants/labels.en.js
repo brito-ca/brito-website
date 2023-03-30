@@ -116,14 +116,15 @@ const labels = {
             },
             resideInCanada : {
                 label: 'Do you currently live in Canada?',
-                placeholder: "Select",
-                type: 'text',
             },
             immigrationStatus: {
                 label: "What's your current status?",
-                permanentResident: "Permanent Resident",
-                student: "Student",
-                temporary: "Temporary"
+                values: [
+                    "Citizen",
+                    "Permanent Resident",
+                     "Student",
+                     "Temporary"
+                ]
             },
             province : {
                 label: 'Province / Territory',

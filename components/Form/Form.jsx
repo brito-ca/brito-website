@@ -7,6 +7,7 @@ import closeModalIcon from '../../public/images/close-modal-icon.svg'
 import logo from '../../public/images/logo-small.svg'
 import FormInput from '../FormInput/FormInput'
 import Modal from '../Modal/Modal'
+import labels from '@/constants/labels.en'
 
 const Form = (props) => {
     const { fields } = props
@@ -85,8 +86,6 @@ const Form = (props) => {
                                 mandatory='yes'
                                 fieldStyle={styles.fullNameField}
                                 labelContent={fields.fullName.label}
-                                labelStyle={styles.labelForm}
-                                inputStyle={styles.inputForm}
                                 placeholder='E.g Amanda Costa'
                                 value={formValues.fullName}
                                 onChange={handleChange}
@@ -95,8 +94,6 @@ const Form = (props) => {
                                 name='expertise'
                                 fieldStyle={styles.expertiseField}
                                 labelContent={fields.expertise.label}
-                                labelStyle={styles.labelForm}
-                                inputStyle={styles.inputForm}
                                 placeholder='E.g. UX Designer'
                                 value={formValues.expertise}
                                 onChange={handleChange}
@@ -105,8 +102,6 @@ const Form = (props) => {
                                 name='company'
                                 fieldStyle={styles.companyField}
                                 labelContent={fields.company.label}
-                                labelStyle={styles.labelForm}
-                                inputStyle={styles.inputForm}
                                 placeholder='E.g. TD bank'
                                 value={formValues.company}
                                 onChange={handleChange}
@@ -193,15 +188,11 @@ const Form = (props) => {
                                 <option value='' disabled>
                                     Select
                                 </option>
-                                <option key={3} value='Permanent Resident'>
-                                    {fields.immigrationStatus.permanentResident}
-                                </option>
-                                <option key={2} value='Student'>
-                                    {fields.immigrationStatus.student}
-                                </option>
-                                <option key={1} value='Temporary'>
-                                    {fields.immigrationStatus.temporary}
-                                </option>
+                                {fields.immigrationStatus.values.map((value) => (
+                                    <option key={value} value={value}>
+                                        {value}
+                                    </option>
+                                ))}
                             </select>
                         </div>
                         <div className={styles.imageContainer}>
