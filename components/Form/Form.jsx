@@ -9,7 +9,7 @@ import FormInput from '../FormInput/FormInput'
 import Modal from '../Modal/Modal'
 
 const Form = (props) => {
-    const { labels, text } = props
+    const { fields } = props
 
     const [formValues, setFormValues] = useState({
         fullName: '',
@@ -30,12 +30,35 @@ const Form = (props) => {
         })
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        //Opens up modal - implement a loading mechanism that awaits for the sucessfull post request and a visual reprensetation of the loading ( forgot the name of it)
-        setSubscriptionModalOpen(!subscriptionModalOpen)
-        // ** Line below is for testing purposes **
-        // console.log(formValues)
+    const handleSubmit = async (event) => {
+        event.preventDefault()
+        const formDataJSON = JSON.stringify(formValues)
+        const api = 'http://localhost:3002/api/member'
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: formDataJSON,
+        }
+
+        const res = await fetch(api, options)
+        if (res.status === 200) {
+            setSubscriptionModalOpen(!subscriptionModalOpen)
+            setFormValues({
+                fullName: '',
+                expertise: '',
+                company: '',
+                immigrationStatus: '',
+                resideInCanada: 'yes',
+                province: '',
+                city: '',
+                linkedinProfileLink: '',
+                email: '',
+            })
+        } else {
+            alert('Something went wrong. Please try again.')
+        }
     }
 
     const [subscriptionModalOpen, setSubscriptionModalOpen] = useState(false)
@@ -46,10 +69,10 @@ const Form = (props) => {
             <Image
                 className={`${styles.mobileFormImage} ${styles.roundedFormImage} vertical-margin-md`}
                 src={britoFormImage}
-                alt={text.altImageText}
+                alt={'Brito group form image'}
             />
             <div className={styles.formContainer}>
-                <h4 className={styles.formTitle}>{text.title}</h4>
+                <h4 className={styles.formTitle}>{fields.title}</h4>
                 <form method='post'>
                     <div className={styles.formSections}>
                         <div className={styles.primaryInformation}>
@@ -57,9 +80,7 @@ const Form = (props) => {
                                 name='fullName'
                                 mandatory='yes'
                                 fieldStyle={styles.fullNameField}
-                                labelContent={labels.fullNameLabel}
-                                labelStyle={styles.labelForm}
-                                inputStyle={styles.inputForm}
+                                labelContent={fields.fullName.label}
                                 placeholder='E.g Amanda Costa'
                                 value={formValues.fullName}
                                 onChange={handleChange}
@@ -67,9 +88,7 @@ const Form = (props) => {
                             <FormInput
                                 name='expertise'
                                 fieldStyle={styles.expertiseField}
-                                labelContent={labels.expertiseLabel}
-                                labelStyle={styles.labelForm}
-                                inputStyle={styles.inputForm}
+                                labelContent={fields.expertise.label}
                                 placeholder='E.g. UX Designer'
                                 value={formValues.expertise}
                                 onChange={handleChange}
@@ -77,15 +96,15 @@ const Form = (props) => {
                             <FormInput
                                 name='company'
                                 fieldStyle={styles.companyField}
-                                labelContent={labels.companyLabel}
-                                labelStyle={styles.labelForm}
-                                inputStyle={styles.inputForm}
+                                labelContent={fields.company.label}
                                 placeholder='E.g. TD bank'
                                 value={formValues.company}
                                 onChange={handleChange}
                             />
 
-                            <label className={styles.labelForm}>{labels.resideInCanadaLabel}</label>
+                            <label className={styles.labelForm}>
+                                {fields.resideInCanada.label}
+                            </label>
                             <RadioButton
                                 name='resideInCanada'
                                 onChange={handleChange}
@@ -105,7 +124,7 @@ const Form = (props) => {
                         </div>
                         <div className={styles.provinceField}>
                             <label htmlFor='province' className={styles.labelForm}>
-                                {labels.provinceLabel}
+                                {fields.province.label}
                             </label>
 
                             <select
@@ -117,7 +136,7 @@ const Form = (props) => {
                                 className={styles.inputForm}
                                 required
                             >
-                                {text.provinces.map((province) => (
+                                {fields.province.provinces.map((province) => (
                                     <option key={province.code} value={province.name}>
                                         {province.name}
                                     </option>
@@ -128,16 +147,14 @@ const Form = (props) => {
                             disabled={formValues.resideInCanada === 'no'}
                             name='city'
                             fieldStyle={styles.cityField}
-                            labelContent={labels.cityLabel}
-                            labelStyle={styles.labelForm}
-                            inputStyle={styles.inputForm}
+                            labelContent={fields.city.label}
                             value={formValues.city}
                             placeholder='E.g. Ottawa'
                             onChange={handleChange}
                         />
                         <div className={styles.immigrationStatusSection}>
                             <label htmlFor='immigration-status' className={styles.labelForm}>
-                                {labels.statusLabel}
+                                {fields.immigrationStatus.label}
                                 <span
                                     className={styles.infoIcon}
                                     onMouseEnter={() => setImmigrationStatusPopover(true)}
@@ -146,7 +163,7 @@ const Form = (props) => {
                                     <Icon variant={'exclamation'} className={styles.infoIcon} />
                                     {immigrationStatusPopover && (
                                         <Popover>
-                                            <p>{text.statusInformationPopover}</p>
+                                            <p>{fields.statusInformationPopover}</p>
                                         </Popover>
                                     )}
                                 </span>
@@ -162,33 +179,27 @@ const Form = (props) => {
                                 required
                             >
                                 <option value='' disabled>
-                                    {text.immigrationStatus.select}
+                                    Select
                                 </option>
-                                <option key={3} value='Permanent Resident'>
-                                    {text.immigrationStatus.permanentResident}
-                                </option>
-                                <option key={2} value='Student'>
-                                    {text.immigrationStatus.student}
-                                </option>
-                                <option key={1} value='Temporary'>
-                                    {text.immigrationStatus.temporary}
-                                </option>
+                                {fields.immigrationStatus.values.map((value) => (
+                                    <option key={value} value={value}>
+                                        {value}
+                                    </option>
+                                ))}
                             </select>
                         </div>
                         <div className={styles.imageContainer}>
                             <Image
                                 className={styles.roundedFormImage}
                                 src={britoFormImage}
-                                alt={text.altImageText}
+                                alt={'Form image'}
                             />
                         </div>
 
                         <FormInput
                             name='linkedinProfileLink'
                             fieldStyle={styles.linkedinField}
-                            labelContent={labels.linkedinLabel}
-                            labelStyle={styles.labelForm}
-                            inputStyle={styles.inputForm}
+                            labelContent={fields.linkedin.label}
                             placeholder='Paste your profile link'
                             value={formValues.linkedinProfileLink}
                             onChange={handleChange}
@@ -196,19 +207,16 @@ const Form = (props) => {
 
                         <FormInput
                             name='email'
-                            type='email'
                             mandatory='yes'
                             fieldStyle={styles.emailField}
-                            labelContent={labels.emailLabel}
-                            labelStyle={styles.labelForm}
-                            inputStyle={styles.inputForm}
+                            labelContent={fields.email.label}
                             placeholder='E.g. john@gmail.com'
                             value={formValues.email}
                             onChange={handleChange}
                         />
 
                         <button className={styles.sendButton} type='button' onClick={handleSubmit}>
-                            {text.sendButtonText}
+                            {fields.sendButton}
                         </button>
                         {subscriptionModalOpen && (
                             <Modal className={styles.subscriptionModalContainer}>
@@ -225,13 +233,13 @@ const Form = (props) => {
                                 />
                                 <div className={styles.subscriptionModalTextDescriptionContainer}>
                                     <h1 className={styles.subscriptionModalTitle}>
-                                        {text.subscriptionModal.title}
+                                        {fields.subscriptionModal.title}
                                     </h1>
                                     <p className={styles.subscriptionModalDescription}>
-                                        {text.subscriptionModal.firstLine}
+                                        {fields.subscriptionModal.approval}
                                     </p>
                                     <p className={styles.subscriptionModalDescription}></p>
-                                    {text.subscriptionModal.secondLine}
+                                    {fields.subscriptionModal.notification}
                                     <button
                                         type='button'
                                         className={styles.continueBrowsingButton}
@@ -239,7 +247,7 @@ const Form = (props) => {
                                             setSubscriptionModalOpen(!subscriptionModalOpen)
                                         }
                                     >
-                                        {text.subscriptionModal.continueBrowsingButton}
+                                        {fields.subscriptionModal.continueBrowsing}
                                     </button>
                                 </div>
                             </Modal>
