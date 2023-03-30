@@ -1,15 +1,12 @@
 import { AboutUs, Banner, ContactUs, Hero, Board, Form } from '@/components'
 import labels from '@/constants/labels.en'
+import getAboutUs from '@/services/getAboutUs'
 
 const HomePage = ({ data, socialMedia }) => {
     return (
         <>
             <Hero {...data.hero} />
-            <AboutUs
-                banner={labels.aboutUs}
-                vectorCard={labels.vectorCard}
-                membersImage={labels.membersImage}
-            />
+            <AboutUs {...getAboutUs(data['about_us'])} />
             <Banner {...data['our-mission']} />
             <Banner {...data['our-vision']} />
             <Board title='Our Board' cards={labels.card_data} />

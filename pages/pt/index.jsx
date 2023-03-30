@@ -4,9 +4,13 @@ import getHomePage from '@/services/getHomepage'
 import getNavigation from '@/services/getNavigation'
 import getSocialMedia from '@/services/getSocialMedia'
 const Home = ({ pageData, navigation, socialMedia }) => {
+    const homePageProps = {
+        ...pageData.data,
+        socialMedia,
+    }
     return (
         <AppLayout content={{ navigation, socialMedia, footerContent: labels.footerContent }}>
-            <HomePage data={pageData.data} socialMedia={socialMedia} />
+            <HomePage {...homePageProps} />
         </AppLayout>
     )
 }

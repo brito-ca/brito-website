@@ -1,4 +1,4 @@
-import icons from './icons'
+import icons from './lib/icons'
 
 const Icon = (props) => {
     const { variant } = props
