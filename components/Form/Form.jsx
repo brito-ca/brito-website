@@ -32,33 +32,7 @@ const Form = (props) => {
 
     const handleSubmit = async (event) => {
         event.preventDefault()
-        const formDataJSON = JSON.stringify(formValues)
-        const api = 'http://localhost:3002/api/member'
-        const options = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: formDataJSON,
-        }
-
-        const res = await fetch(api, options)
-        if (res.status === 200) {
-            setSubscriptionModalOpen(!subscriptionModalOpen)
-            setFormValues({
-                fullName: '',
-                expertise: '',
-                company: '',
-                immigrationStatus: '',
-                resideInCanada: 'yes',
-                province: '',
-                city: '',
-                linkedinProfileLink: '',
-                email: '',
-            })
-        } else {
-            alert('Something went wrong. Please try again.')
-        }
+        setSubscriptionModalOpen(!subscriptionModalOpen)
     }
 
     const [subscriptionModalOpen, setSubscriptionModalOpen] = useState(false)
