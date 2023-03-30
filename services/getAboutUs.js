@@ -5,11 +5,7 @@ const getAboutUs = (data) => {
         title,
         description,
     }
-    const cards = [
-        { icon: 'shield', value: numbers.years, description: 'Years in operation' },
-        { icon: 'suitcase', value: numbers.events, description: 'Network events' },
-        { icon: 'group', value: numbers.participants, description: 'Participants' },
-    ]
+    const cards = Object.values(numbers)
     return {
         banner: banner,
         cards,
