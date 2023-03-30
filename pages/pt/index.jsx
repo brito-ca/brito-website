@@ -12,7 +12,7 @@ const Home = ({ pageData, navigation, socialMedia }) => {
 }
 
 export async function getStaticProps() {
-    const pageData = await getHomePage('en')
+    const pageData = await getHomePage('pt')
     const navigation = await getNavigation()
     const socialMedia = await getSocialMedia()
     return {
