@@ -2,17 +2,18 @@ import { AboutUs, Banner, ContactUs, Hero, Board, Form } from '@/components'
 import labels from '@/constants/labels.en'
 import getAboutUs from '@/services/getAboutUs'
 
-const HomePage = ({ data, socialMedia }) => {
+const HomePage = ({ data }) => {
+    console.log(data)
     return (
         <>
             <Hero {...data.hero} />
             <AboutUs {...getAboutUs(data['about_us'])} />
             <Banner {...data['our-mission']} />
             <Banner {...data['our-vision']} />
-            <Board title='Our Board' cards={labels.card_data} />
+            {/* <Board title='Our Board' cards={labels.card_data} /> */}
             <Banner {...data['join-us']} />
-            <Form {...labels.form} />
-            <ContactUs
+            {/* <Form {...labels.form} /> */}
+            {/* <ContactUs
                 id={labels.contactUs.id}
                 title={labels.contactUs.title}
                 chat={labels.chat.title}
@@ -22,7 +23,7 @@ const HomePage = ({ data, socialMedia }) => {
                 city={labels.location.city}
                 visit={labels.media.visit}
                 socialMedia={socialMedia}
-            />
+            /> */}
         </>
     )
 }
