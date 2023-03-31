@@ -20,14 +20,14 @@ const Languages = (props) => {
                 en
             </Link>
             <Link
-                href='/'
+                href='/pt'
                 className={`uppercase horizontal-margin-xs ${isSelected(fakeLng, 'pt')}`}
                 onClick={() => setFakeLng('pt')}
             >
                 pt
             </Link>
             <Link
-                href='/'
+                href='/fr'
                 className={`uppercase ${isSelected(fakeLng, 'fr')}`}
                 onClick={() => setFakeLng('fr')}
             >

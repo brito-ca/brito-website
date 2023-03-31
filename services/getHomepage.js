@@ -1,5 +1,7 @@
+import { HOMEPAGE_API_URL } from '@/constants/app'
+
 const getHomePage = async (locale) => {
-    const results = await fetch(`https://brito.it/wp-json/wp/v2/homepage`)
+    const results = await fetch(HOMEPAGE_API_URL)
     const result = await results.json()
     const localeData = result.find((item) => item.slug === locale)
     const { id, slug, acf } = localeData
