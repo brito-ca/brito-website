@@ -37,19 +37,6 @@ const ContactUs = (props) => {
                         </a>
                     ))}
                 </div>
-
-                {/* <div className='vertical-padding'>
-                    {socialMedia.map((a) => (
-                        <a
-                            key={a.id}
-                            href={a.link}
-                            aria-label={`${a.id} link`}
-                            className={'horizontal-padding'}
-                        >
-                            <Icon variant={a.icon} />
-                        </a>
-                    ))}
-                </div> */}
                 <div className={styles.britologo}></div>
             </div>
         </div>
