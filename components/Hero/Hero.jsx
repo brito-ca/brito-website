@@ -1,8 +1,9 @@
+import useMedia from '@/hooks/useMedia'
 import styles from '@/styles/Hero.module.css'
-import Image from 'next/image'
 
 const Hero = (props) => {
     const { title, description, image } = props
+    const { data: imageProps, isLoading } = useMedia(image)
     return (
         <div className={styles.container}>
             <div className={styles.hero_container}>
@@ -14,14 +15,7 @@ const Hero = (props) => {
                 </div>
             </div>
             <div className={styles.crop_img_banner}>
-                <Image
-                    className={styles.img_banner}
-                    src={image.src}
-                    alt={image.alt}
-                    width={image.width}
-                    height={image.height}
-                    priority
-                />
+                {isLoading ? <>...</> : <img className={styles.img_banner} {...imageProps} />}
             </div>
         </div>
     )

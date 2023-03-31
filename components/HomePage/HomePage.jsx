@@ -1,9 +1,7 @@
 import { AboutUs, Banner, ContactUs, Hero, Board, Form } from '@/components'
-import labels from '@/constants/labels.en'
 import getAboutUs from '@/services/getAboutUs'
 
 const HomePage = ({ data }) => {
-    console.log(data)
     return (
         <>
             <Hero {...data.hero} />
