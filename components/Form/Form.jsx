@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { RadioButton, Popover, Icon, Modal, FormInput } from '@/components'
 import styles from '../../styles/Form.module.css'
 import britoFormImage from '../../public/images/brito-group-image-form.svg'
-import closeModalIcon from '../../public/images/close-modal-icon.svg'
 import logo from '../../public/images/logo-small.svg'
 
 const Form = (props) => {
@@ -69,7 +68,7 @@ const Form = (props) => {
                                 name='company'
                                 fieldStyle={styles.companyField}
                                 labelContent={fields.company.label}
-                                placeholder='E.g. TD bank'
+                                placeholder={fields.company.placeholder}
                                 value={formValues.company}
                                 onChange={handleChange}
                             />
@@ -172,7 +171,7 @@ const Form = (props) => {
                             name='linkedinProfileLink'
                             fieldStyle={styles.linkedinField}
                             labelContent={fields.linkedin.label}
-                            placeholder='Paste your profile link'
+                            placeholder={fields.linkedin.placeholder}
                             value={formValues.linkedinProfileLink}
                             onChange={handleChange}
                         />
@@ -182,7 +181,7 @@ const Form = (props) => {
                             mandatory='yes'
                             fieldStyle={styles.emailField}
                             labelContent={fields.email.label}
-                            placeholder='E.g. john@gmail.com'
+                            placeholder={fields.email.placeholder}
                             value={formValues.email}
                             onChange={handleChange}
                         />
@@ -190,40 +189,34 @@ const Form = (props) => {
                         <button className={styles.sendButton} type='button' onClick={handleSubmit}>
                             {fields.sendButton}
                         </button>
-                        {subscriptionModalOpen && (
-                            <Modal className={styles.subscriptionModalContainer}>
-                                <Image
-                                    src={closeModalIcon}
-                                    alt='X icon to close upload photo field'
-                                    className={styles.closeModalIcon}
+                        <Modal
+                            className={styles.subscriptionModalContainer}
+                            isOpen={subscriptionModalOpen}
+                            setIsOpen={setSubscriptionModalOpen}
+                        >
+                            <Image
+                                src={logo}
+                                alt="Brito's logo"
+                                className={styles.logoSubscriptionModal}
+                            />
+                            <div className={styles.subscriptionModalTextDescriptionContainer}>
+                                <h1 className={styles.subscriptionModalTitle}>
+                                    {fields.subscriptionModal.title}
+                                </h1>
+                                <p className={styles.subscriptionModalDescription}>
+                                    {fields.subscriptionModal.approval}
+                                </p>
+                                <p className={styles.subscriptionModalDescription}></p>
+                                {fields.subscriptionModal.notification}
+                                <button
+                                    type='button'
+                                    className={styles.continueBrowsingButton}
                                     onClick={() => setSubscriptionModalOpen(!subscriptionModalOpen)}
-                                />
-                                <Image
-                                    src={logo}
-                                    alt="Brito's logo"
-                                    className={styles.logoSubscriptionModal}
-                                />
-                                <div className={styles.subscriptionModalTextDescriptionContainer}>
-                                    <h1 className={styles.subscriptionModalTitle}>
-                                        {fields.subscriptionModal.title}
-                                    </h1>
-                                    <p className={styles.subscriptionModalDescription}>
-                                        {fields.subscriptionModal.approval}
-                                    </p>
-                                    <p className={styles.subscriptionModalDescription}></p>
-                                    {fields.subscriptionModal.notification}
-                                    <button
-                                        type='button'
-                                        className={styles.continueBrowsingButton}
-                                        onClick={() =>
-                                            setSubscriptionModalOpen(!subscriptionModalOpen)
-                                        }
-                                    >
-                                        {fields.subscriptionModal.continueBrowsing}
-                                    </button>
-                                </div>
-                            </Modal>
-                        )}
+                                >
+                                    {fields.subscriptionModal.continueBrowsing}
+                                </button>
+                            </div>
+                        </Modal>
                     </div>
                 </form>
             </div>
