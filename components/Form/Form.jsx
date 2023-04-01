@@ -1,12 +1,9 @@
-import Image from 'next/image'
 import { useState } from 'react'
-import { RadioButton, Popover, Icon } from '@/components'
+import { RadioButton, Popover, Icon, Image, FormInput, Modal } from '@/components'
 import styles from '../../styles/Form.module.css'
 import britoFormImage from '../../public/images/brito-group-image-form.svg'
 import closeModalIcon from '../../public/images/close-modal-icon.svg'
 import logo from '../../public/images/logo-small.svg'
-import FormInput from '../FormInput/FormInput'
-import Modal from '../Modal/Modal'
 
 const Form = (props) => {
     const { labels, text } = props
