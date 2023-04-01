@@ -1,9 +1,7 @@
 import styles from '@/styles/Header.module.css'
-import Image from 'next/image'
-import smallLogo from '../../public/images/logo-small.svg'
 import Link from 'next/link'
 import { useState } from 'react'
-import { Icon, Nav, Languages } from '@/components'
+import { Icon, Nav, Languages, Logo } from '@/components'
 
 const Header = (props) => {
     const { navigation, languages } = props
@@ -12,7 +10,7 @@ const Header = (props) => {
     return (
         <div className={`${styles.header} flex-row-space-between`}>
             <Link href='/'>
-                <Image className={styles.logo} alt='logo small' src={smallLogo} />
+                <Logo />
             </Link>
             <div className='flex-row-space-between'>
                 <Nav

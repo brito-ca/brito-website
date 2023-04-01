@@ -12,15 +12,18 @@ const getHomePage = async (locale) => {
     const result = await results.json()
     const localeData = result.find((item) => item.slug === locale)
     const { id, slug, acf } = localeData
+    const navigation = await getMenu(`navigation-${locale}`)
     return {
         id,
         language: slug,
         meta: {},
         header: {
-            navigation: await getMenu(`navigation-${locale}`),
+            navigation,
             languages: await getLanguage(),
         },
-        footer: {},
+        footer: {
+            navigation,
+        },
         socialMedia: await getSocialMedia(),
         blocks: {
             ourBoard: {
