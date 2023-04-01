@@ -2,7 +2,6 @@ import { AppLayout, HomePage } from '@/components'
 import { LOCALE_EN } from '@/constants/app'
 import getHomePage from '@/services/getHomepage'
 const Home = ({ pageData }) => {
-    console.log(pageData)
     return (
         <AppLayout content={pageData}>
             <HomePage data={pageData.blocks} />

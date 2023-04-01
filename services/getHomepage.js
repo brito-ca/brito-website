@@ -16,7 +16,7 @@ const getHomePage = async (locale) => {
         language: slug,
         meta: {},
         header: {
-            navigation: await getMenu('navigation'),
+            navigation: await getMenu(`navigation-${locale}`),
         },
         footer: {},
         socialMedia: await getSocialMedia(),
@@ -29,7 +29,10 @@ const getHomePage = async (locale) => {
             aboutUs: await getAboutUs(acf['about_us']),
             ourMission: acf['our-mission'],
             ourVision: acf['our-vision'],
-            joinUs: acf['join-us'],
+            joinUs: {
+                id: 'join-us',
+                ...acf['join-us'],
+            },
             contactUs: await getContactUs(acf['contact_us']),
         },
     }

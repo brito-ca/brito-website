@@ -9,7 +9,8 @@ const roboto = Roboto({
 })
 
 const AppLayout = (props) => {
-    const { children, header, footer, meta } = props
+    const { children, content } = props
+    const { header, footer, meta } = content
     return (
         <>
             <Head>
