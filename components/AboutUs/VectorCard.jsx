@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import { Image } from '@/components'
 import styles from '@/styles/AboutUs.module.css'
 
 const VectorCard = (props) => {
