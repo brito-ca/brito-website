@@ -5,6 +5,7 @@ import getContactUs from './getContactUs'
 import getHero from './getHero'
 import getMenu from './getMenu'
 import getSocialMedia from './getSocialMedia'
+import getLanguage from './getLanguage'
 
 const getHomePage = async (locale) => {
     const results = await fetch(HOMEPAGE_API_URL)
@@ -17,6 +18,7 @@ const getHomePage = async (locale) => {
         meta: {},
         header: {
             navigation: await getMenu(`navigation-${locale}`),
+            languages: await getLanguage(),
         },
         footer: {},
         socialMedia: await getSocialMedia(),

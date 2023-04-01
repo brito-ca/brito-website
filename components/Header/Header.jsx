@@ -6,7 +6,7 @@ import { useState } from 'react'
 import { Icon, Nav, Languages } from '@/components'
 
 const Header = (props) => {
-    const { navigation } = props
+    const { navigation, languages } = props
     const [modalOpen, setModalOpen] = useState(false)
 
     return (
@@ -19,7 +19,10 @@ const Header = (props) => {
                     className={`${styles.nav} body1 horizontal-margin-lg`}
                     navigation={navigation}
                 />
-                <Languages className={`${styles.languages} horizontal-margin`} />
+                <Languages
+                    languages={languages}
+                    className={`${styles.languages} horizontal-margin`}
+                />
             </div>
 
             <div className={styles.menuIcon} onClick={() => setModalOpen(!modalOpen)}>

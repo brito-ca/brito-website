@@ -43,6 +43,7 @@
     --base-font-size: 16px;
     --spacing-unit: 16px;
 
+    --margin-xxs: calc(0.25 * var(--spacing-unit));
     --margin-xs: calc(0.5 * var(--spacing-unit));
     --margin-sm: var(--spacing-unit);
     --margin-md: calc(2 * var(--spacing-unit));
@@ -220,6 +221,10 @@ button.outline:disabled {
 
 .no-margin {
     margin: 0;
+}
+
+.margin-xxs {
+    margin: var(--margin-xxs);
 }
 
 .margin-xs {
