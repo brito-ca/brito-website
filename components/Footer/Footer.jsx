@@ -1,10 +1,8 @@
-import Image from 'next/image'
 import britoFlag from '../../public/images/brito-logo-1.svg'
 import britoWordMark from '../../public/images/brito-logo-2.svg'
 import styles from '@/styles/Footer.module.css'
-import { Nav } from '@/components'
+import { Nav, Image, Modal } from '@/components'
 import { useState } from 'react'
-import Modal from '../Modal/Modal'
 import labels from '@/constants/labels.en'
 
 const Footer = (props) => {
