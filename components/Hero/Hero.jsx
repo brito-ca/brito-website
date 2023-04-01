@@ -1,9 +1,7 @@
-import useMedia from '@/hooks/useMedia'
 import styles from '@/styles/Hero.module.css'
 
 const Hero = (props) => {
     const { title, description, image } = props
-    const { data: imageProps, isLoading } = useMedia(image)
     return (
         <div className={styles.container}>
             <div className={styles.hero_container}>
@@ -15,7 +13,7 @@ const Hero = (props) => {
                 </div>
             </div>
             <div className={styles.crop_img_banner}>
-                {isLoading ? <>...</> : <img className={styles.img_banner} {...imageProps} />}
+                <img className={styles.img_banner} {...image} lazy />
             </div>
         </div>
     )

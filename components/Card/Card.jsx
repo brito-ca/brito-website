@@ -1,5 +1,4 @@
 import { Icon } from '@/components'
-import Image from 'next/image'
 import styles from '@/styles/Board.module.css'
 
 const Card = (props) => {
@@ -7,7 +6,7 @@ const Card = (props) => {
     return (
         <div className={styles.card_box}>
             <div className={styles.image_box}>
-                <Image src={image.src} alt={image.alt} width={image.width} height={image.height} />
+                <img {...image} />
             </div>
             <div className={styles.center_box}>
                 <div className={styles.title_box}>

@@ -1,17 +1,17 @@
 import { AboutUs, Banner, ContactUs, Hero, Board, Form } from '@/components'
-import getAboutUs from '@/services/getAboutUs'
 
 const HomePage = ({ data }) => {
     return (
         <>
             <Hero {...data.hero} />
-            <AboutUs {...getAboutUs(data['about_us'])} />
-            <Banner {...data['our-mission']} />
-            <Banner {...data['our-vision']} />
-            {/* <Board title='Our Board' cards={labels.card_data} /> */}
-            <Banner {...data['join-us']} />
-            {/* <Form {...labels.form} /> */}
-            {/* <ContactUs
+            <AboutUs {...data.aboutUs} />
+            <Banner {...data.ourMission} />
+            <Banner {...data.ourVision} />
+            <Board {...data.ourBoard} />
+            <Banner {...data.joinUs} />
+            {/* 
+            <Form {...labels.form} />
+            <ContactUs
                 id={labels.contactUs.id}
                 title={labels.contactUs.title}
                 chat={labels.chat.title}

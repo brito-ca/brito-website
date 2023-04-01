@@ -1,13 +1,12 @@
-import useMedia from '@/hooks/useMedia'
+import getMedia from './getMedia'
 
 const getHero = async (data) => {
     const { title, description, image } = data
-    const { data: imageData } = useMedia(image)
     return {
         id: 'hero',
         title,
         description,
-        image: imageData,
+        image: await getMedia(image),
     }
 }
 
