@@ -24,6 +24,9 @@
     background-color: var(--neutral-white);
     height: 904px;
 }
+.socialContainer {
+    gap: calc(1.4 * var(--spacing-unit));
+}
 @media only screen and (max-width: 600px) {
     .maple {
         background-image: none;
