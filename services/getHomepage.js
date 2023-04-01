@@ -1,7 +1,10 @@
 import { HOMEPAGE_API_URL } from '@/constants/app'
 import getAboutUs from './getAboutUs'
 import getBoard from './getBoard'
+import getContactUs from './getContactUs'
 import getHero from './getHero'
+import getMenu from './getMenu'
+import getSocialMedia from './getSocialMedia'
 
 const getHomePage = async (locale) => {
     const results = await fetch(HOMEPAGE_API_URL)
@@ -11,7 +14,12 @@ const getHomePage = async (locale) => {
     return {
         id,
         language: slug,
-        data: acf,
+        meta: {},
+        header: {
+            navigation: await getMenu('navigation'),
+        },
+        footer: {},
+        socialMedia: await getSocialMedia(),
         blocks: {
             ourBoard: {
                 title: acf['our-board'].title,
@@ -22,6 +30,7 @@ const getHomePage = async (locale) => {
             ourMission: acf['our-mission'],
             ourVision: acf['our-vision'],
             joinUs: acf['join-us'],
+            contactUs: await getContactUs(acf['contact_us']),
         },
     }
 }

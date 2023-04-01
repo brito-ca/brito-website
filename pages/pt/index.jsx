@@ -1,26 +1,19 @@
 import { AppLayout, HomePage } from '@/components'
-import labels from '@/constants/labels.en'
+import { LOCALE_PT } from '@/constants/app'
 import getHomePage from '@/services/getHomepage'
-import getNavigation from '@/services/getNavigation'
-const Home = ({ pageData, navigation, socialMedia }) => {
-    const homePageProps = {
-        ...pageData.data,
-        socialMedia,
-    }
+const Home = ({ pageData }) => {
     return (
-        <AppLayout content={{ navigation, footerContent: labels.footerContent }}>
-            <HomePage {...homePageProps} />
+        <AppLayout content={pageData}>
+            <HomePage data={pageData.blocks} />
         </AppLayout>
     )
 }
 
 export async function getStaticProps() {
-    const pageData = await getHomePage('pt')
-    const navigation = await getNavigation()
+    const pageData = await getHomePage(LOCALE_PT)
     return {
         props: {
             pageData,
-            navigation,
         },
         revalidate: 30,
     }

@@ -6,6 +6,7 @@ import { useState } from 'react'
 import { Icon, Nav, Languages } from '@/components'
 
 const Header = (props) => {
+    return <>Header</>
     const { navigation } = props
     const [modalOpen, setModalOpen] = useState(false)
 

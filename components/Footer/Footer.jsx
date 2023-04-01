@@ -5,8 +5,8 @@ import styles from '@/styles/Footer.module.css'
 import { Icon, Nav } from '@/components'
 
 const Footer = (props) => {
+    return <>Footer</>
     const { footerContent, navigation, socialMedia } = props
-
     return (
         <>
             <div className={styles.footerContainer}>

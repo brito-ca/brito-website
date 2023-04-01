@@ -1,27 +1,19 @@
 import { AboutUs, Banner, ContactUs, Hero, Board, Form } from '@/components'
 
 const HomePage = ({ data }) => {
+    const { hero, aboutUs, ourMission, ourVision, ourBoard, joinUs, contactUs } = data
     return (
         <>
-            <Hero {...data.hero} />
-            <AboutUs {...data.aboutUs} />
-            <Banner {...data.ourMission} />
-            <Banner {...data.ourVision} />
-            <Board {...data.ourBoard} />
-            <Banner {...data.joinUs} />
+            <Hero {...hero} />
+            <AboutUs {...aboutUs} />
+            <Banner {...ourMission} />
+            <Banner {...ourVision} />
+            <Board {...ourBoard} />
+            <Banner {...joinUs} />
+            <ContactUs {...contactUs} />
             {/* 
             <Form {...labels.form} />
-            <ContactUs
-                id={labels.contactUs.id}
-                title={labels.contactUs.title}
-                chat={labels.chat.title}
-                descriptionChat={labels.chat.description}
-                email={labels.email}
-                basedin={labels.location.basedin}
-                city={labels.location.city}
-                visit={labels.media.visit}
-                socialMedia={socialMedia}
-            /> */}
+             */}
         </>
     )
 }
