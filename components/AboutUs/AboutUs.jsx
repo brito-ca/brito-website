@@ -1,10 +1,9 @@
-import Banner from '@/components/Banner/Banner'
-import VectorCard from '@/components/AboutUs/VectorCard'
-import Image from 'next/image'
+import { Banner, VectorCard, Image } from '@/components'
 import styles from '@/styles/AboutUs.module.css'
 
 const AboutUs = (props) => {
     const { banner, vectorCard, membersImage } = props
+
     return (
         <div id={banner.id}>
             <div className={styles.aboutUsBanner}>
@@ -21,7 +20,7 @@ const AboutUs = (props) => {
                 ))}
             </div>
             <div className={styles.aboutUsImage}>
-                <Image priority alt={membersImage.alt} {...membersImage} />
+                <Image alt={membersImage.alt} {...membersImage} />
             </div>
         </div>
     )
