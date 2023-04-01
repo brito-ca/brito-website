@@ -1,5 +1,4 @@
-import { Icon } from '@/components'
-import Image from 'next/image'
+import { Icon, Image } from '@/components'
 import styles from '@/styles/Board.module.css'
 
 const Card = (props) => {
@@ -31,4 +30,5 @@ const Card = (props) => {
         </div>
     )
 }
+
 export default Card

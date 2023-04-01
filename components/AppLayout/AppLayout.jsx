@@ -31,4 +31,5 @@ const AppLayout = (props) => {
         </>
     )
 }
+
 export default AppLayout

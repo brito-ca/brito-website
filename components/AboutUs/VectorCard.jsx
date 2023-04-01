@@ -3,6 +3,7 @@ import styles from '@/styles/AboutUs.module.css'
 
 const VectorCard = (props) => {
     const { image, value, description } = props
+
     return (
         <div className={styles.vectorContainer}>
             <Image alt={description} src={image.src} width={image.width} height={image.height} />
@@ -11,4 +12,5 @@ const VectorCard = (props) => {
         </div>
     )
 }
+
 export default VectorCard
