@@ -1,11 +1,13 @@
 import { HOMEPAGE_API_URL } from '@/constants/app'
-import getAboutUs from './getAboutUs'
-import getBoard from './getBoard'
-import getContactUs from './getContactUs'
-import getHero from './getHero'
-import getMenu from './getMenu'
-import getSocialMedia from './getSocialMedia'
-import getLanguage from './getLanguage'
+import {
+    getAboutUs,
+    getBoard,
+    getContactUs,
+    getHero,
+    getLanguage,
+    getMenu,
+    getSocialMedia,
+} from '@/services'
 
 const getHomePage = async (locale) => {
     const results = await fetch(HOMEPAGE_API_URL)
