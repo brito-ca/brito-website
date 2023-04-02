@@ -1,8 +1,8 @@
-.labelRadioButton {
+.labelCheckbox {
     margin-left: 5px;
 }
 
-.radioButton {
+.checkbox {
     width: 100%;
 
     display: flex;

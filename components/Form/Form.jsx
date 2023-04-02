@@ -1,27 +1,32 @@
 import Image from 'next/image'
 import { useState } from 'react'
-import { RadioButton, Popover, Icon } from '@/components'
+import { Popover, Icon, Modal, FormInput, Checkbox } from '@/components'
 import styles from '../../styles/Form.module.css'
 import britoFormImage from '../../public/images/brito-group-image-form.svg'
-import closeModalIcon from '../../public/images/close-modal-icon.svg'
 import logo from '../../public/images/logo-small.svg'
-import FormInput from '../FormInput/FormInput'
-import Modal from '../Modal/Modal'
 
 const Form = (props) => {
     const { fields } = props
-
     const [formValues, setFormValues] = useState({
-        fullName: '',
+        full_name: '',
         expertise: '',
         company: '',
-        immigrationStatus: '',
-        resideInCanada: 'yes',
+        residein_canada: false,
         province: '',
         city: '',
-        linkedinProfileLink: '',
+        immigration_status: '',
+        linkedin_profile: '',
         email: '',
     })
+
+    const handleResideInCanada = () => {
+        setResideInCanada(!resideInCanada)
+        setFormValues({
+            ...formValues,
+            province: 'Alberta',
+            residein_canada: !resideInCanada,
+        })
+    }
 
     const handleChange = (e) => {
         setFormValues({
@@ -32,8 +37,9 @@ const Form = (props) => {
 
     const handleSubmit = async (event) => {
         event.preventDefault()
+
         const formDataJSON = JSON.stringify(formValues)
-        const api = 'http://localhost:3002/api/member'
+        const api = 'https://brito.it/wp-json/wp/v2/member'
         const options = {
             method: 'POST',
             headers: {
@@ -46,23 +52,26 @@ const Form = (props) => {
         if (res.status === 200) {
             setSubscriptionModalOpen(!subscriptionModalOpen)
             setFormValues({
-                fullName: '',
+                full_name: '',
                 expertise: '',
                 company: '',
-                immigrationStatus: '',
-                resideInCanada: 'yes',
+                residein_canada: false,
                 province: '',
                 city: '',
-                linkedinProfileLink: '',
+                immigration_status: '',
+                linkedin_profile: '',
                 email: '',
             })
         } else {
-            alert('Something went wrong. Please try again.')
+            alert(
+                `Error: ${res.status} ${res.statusText}  \nSomething went wrong. Please try again.`
+            )
         }
     }
 
     const [subscriptionModalOpen, setSubscriptionModalOpen] = useState(false)
     const [immigrationStatusPopover, setImmigrationStatusPopover] = useState(false)
+    const [resideInCanada, setResideInCanada] = useState(false)
 
     return (
         <div>
@@ -77,7 +86,7 @@ const Form = (props) => {
                     <div className={styles.formSections}>
                         <div className={styles.primaryInformation}>
                             <FormInput
-                                name='fullName'
+                                name='full_name'
                                 mandatory='yes'
                                 fieldStyle={styles.fullNameField}
                                 labelContent={fields.fullName.label}
@@ -105,21 +114,12 @@ const Form = (props) => {
                             <label className={styles.labelForm}>
                                 {fields.resideInCanada.label}
                             </label>
-                            <RadioButton
-                                name='resideInCanada'
-                                onChange={handleChange}
+                            <Checkbox
+                                name='residein_canada'
+                                onChange={handleResideInCanada}
                                 id='1'
-                                isSelected={formValues.resideInCanada === 'yes'}
                                 label='Yes'
-                                value='yes'
-                            />
-                            <RadioButton
-                                name='resideInCanada'
-                                onChange={handleChange}
-                                id='2'
-                                isSelected={formValues.resideInCanada === 'no'}
-                                label='No'
-                                value='no'
+                                value={resideInCanada}
                             />
                         </div>
                         <div className={styles.provinceField}>
@@ -128,7 +128,7 @@ const Form = (props) => {
                             </label>
 
                             <select
-                                disabled={formValues.resideInCanada === 'no'}
+                                disabled={!formValues.residein_canada}
                                 name='province'
                                 value={formValues.province}
                                 onChange={handleChange}
@@ -144,7 +144,7 @@ const Form = (props) => {
                             </select>
                         </div>
                         <FormInput
-                            disabled={formValues.resideInCanada === 'no'}
+                            disabled={!formValues.residein_canada}
                             name='city'
                             fieldStyle={styles.cityField}
                             labelContent={fields.city.label}
@@ -170,9 +170,9 @@ const Form = (props) => {
                             </label>
 
                             <select
-                                disabled={formValues.resideInCanada === 'no'}
-                                name='immigrationStatus'
-                                value={formValues.immigrationStatus}
+                                disabled={!formValues.residein_canada}
+                                name='immigration_status'
+                                value={formValues.immigration_status}
                                 onChange={handleChange}
                                 id='immigration-status'
                                 className={styles.inputForm}
@@ -197,7 +197,7 @@ const Form = (props) => {
                         </div>
 
                         <FormInput
-                            name='linkedinProfileLink'
+                            name='linkedin_profile'
                             fieldStyle={styles.linkedinField}
                             labelContent={fields.linkedin.label}
                             placeholder='Paste your profile link'
@@ -220,12 +220,12 @@ const Form = (props) => {
                         </button>
                         {subscriptionModalOpen && (
                             <Modal className={styles.subscriptionModalContainer}>
-                                <Image
+                                {/* <Image
                                     src={closeModalIcon}
                                     alt='X icon to close upload photo field'
                                     className={styles.closeModalIcon}
                                     onClick={() => setSubscriptionModalOpen(!subscriptionModalOpen)}
-                                />
+                                /> */}
                                 <Image
                                     src={logo}
                                     alt="Brito's logo"

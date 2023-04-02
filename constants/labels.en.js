@@ -119,8 +119,7 @@ const labels = {
             },
             immigrationStatus: {
                 label: "What's your current status?",
-                values: [
-                    "Citizen",
+                values: [                    
                     "Permanent Resident",
                     "Student",
                     "Temporary"
