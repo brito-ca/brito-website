@@ -37,36 +37,37 @@ const Form = (props) => {
 
     const handleSubmit = async (event) => {
         event.preventDefault()
+        setSubscriptionModalOpen(!subscriptionModalOpen)
 
-        const formDataJSON = JSON.stringify(formValues)
-        const api = 'https://brito.it/wp-json/wp/v2/member'
-        const options = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: formDataJSON,
-        }
+        // const formDataJSON = JSON.stringify(formValues)
+        // const api = 'https://brito.it/wp-json/wp/v2/member'
+        // const options = {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: formDataJSON,
+        // }
 
-        const res = await fetch(api, options)
-        if (res.status === 200) {
-            setSubscriptionModalOpen(!subscriptionModalOpen)
-            setFormValues({
-                full_name: '',
-                expertise: '',
-                company: '',
-                residein_canada: false,
-                province: '',
-                city: '',
-                immigration_status: '',
-                linkedin_profile: '',
-                email: '',
-            })
-        } else {
-            alert(
-                `Error: ${res.status} ${res.statusText}  \nSomething went wrong. Please try again.`
-            )
-        }
+        // const res = await fetch(api, options)
+        // if (res.status === 200) {
+        //     setSubscriptionModalOpen(!subscriptionModalOpen)
+        //     setFormValues({
+        //         full_name: '',
+        //         expertise: '',
+        //         company: '',
+        //         residein_canada: false,
+        //         province: '',
+        //         city: '',
+        //         immigration_status: '',
+        //         linkedin_profile: '',
+        //         email: '',
+        //     })
+        // } else {
+        //     alert(
+        //         `Error: ${res.status} ${res.statusText}  \nSomething went wrong. Please try again.`
+        //     )
+        // }
     }
 
     const [subscriptionModalOpen, setSubscriptionModalOpen] = useState(false)
