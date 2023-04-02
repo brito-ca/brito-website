@@ -13,7 +13,7 @@ const Hero = (props) => {
                 </div>
             </div>
             <div className={styles.crop_img_banner}>
-                <img className={styles.img_banner} {...image} lazy />
+                <img className={styles.img_banner} {...image} />
             </div>
         </div>
     )

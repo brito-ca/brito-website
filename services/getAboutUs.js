@@ -1,5 +1,7 @@
-const getAboutUs = (data) => {
-    const { title, description, numbers } = data
+import getMedia from './getMedia'
+
+const getAboutUs = async (data) => {
+    const { title, description, numbers, image } = data
     const banner = {
         id: 'about-us',
         title,
@@ -9,7 +11,7 @@ const getAboutUs = (data) => {
     return {
         banner: banner,
         cards,
-        membersImage: {},
+        image: await getMedia(image),
     }
 }
 
