@@ -48,7 +48,7 @@
     --margin-md: calc(2 * var(--spacing-unit));
     --margin-lg: calc(4 * var(--spacing-unit));
 
-    --padding-xs: calc(0.6 * var(--spacing-unit));
+    --padding-xs: calc(0.5 * var(--spacing-unit));
     --padding-sm: var(--spacing-unit);
     --padding-md: calc(2 * var(--spacing-unit));
     --padding-lg: calc(4 * var(--spacing-unit));
@@ -148,6 +148,7 @@ button {
     border-radius: 40px;
     border: 1px solid;
     line-height: 24px;
+    cursor: pointer;
 }
 
 button.primary {
@@ -355,6 +356,20 @@ button.outline:disabled {
     flex-direction: column;
     align-content: flex-start;
     justify-content: flex-start;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.flex-column-space-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* https://www.browserstack.com/guide/what-are-css-and-media-query-breakpoints */

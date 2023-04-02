@@ -1,7 +1,5 @@
-import { AppLayout, Placeholder, Hero, Board, Form } from '@/components'
-import Banner from '@/components/Banner/Banner'
+import { AboutUs, Banner, ContactUs, AppLayout, Hero, Board, Form } from '@/components'
 import labels from '@/constants/labels.en'
-import ContactUs from '@/components/ContactUs/ContactUs'
 import styles from '@/styles/AppLayout.module.css'
 
 const navigation = [
@@ -17,13 +15,17 @@ const socialMedia = [
 
 export default function Home() {
     return (
-        <AppLayout navigation={navigation}>
+        <AppLayout content={{ navigation, socialMedia, footerContent: labels.footerContent }}>
             <Hero
                 title={labels.welcomeToBrito.title}
                 description={labels.welcomeToBrito.description}
                 image={labels.heroImage}
             />
-            <Placeholder id={labels.aboutUs.id} title={labels.aboutUs.title} />
+            <AboutUs
+                banner={labels.aboutUs}
+                vectorCard={labels.vectorCard}
+                membersImage={labels.membersImage}
+            />
             <div className={styles.logoOnmission}>
                 <Banner
                     title={labels.ourMission.title}
