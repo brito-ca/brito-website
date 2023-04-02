@@ -6,7 +6,7 @@ const VectorCard = (props) => {
 
     return (
         <div className={styles.vectorContainer}>
-            <Image alt={description} src={image.src} width={image.width} height={image.height} />
+            <Image alt={description} {...image} />
             <h1>{value}</h1>
             <p>{description}</p>
         </div>
