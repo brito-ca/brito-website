@@ -1,12 +1,9 @@
-import Image from 'next/image'
 import { useState } from 'react'
-import { Popover, Icon, Modal, FormInput, Checkbox } from '@/components'
+import { Popover, Icon, Modal, FormInput, Checkbox, Image } from '@/components'
 import styles from '../../styles/Form.module.css'
-import britoFormImage from '../../public/images/brito-group-image-form.svg'
-import logo from '../../public/images/logo-small.svg'
 
 const Form = (props) => {
-    const { fields } = props
+    const { fields, image, smallLogo } = props
     const [formValues, setFormValues] = useState({
         full_name: '',
         expertise: '',
@@ -78,8 +75,8 @@ const Form = (props) => {
         <div>
             <Image
                 className={`${styles.mobileFormImage} ${styles.roundedFormImage} vertical-margin-md`}
-                src={britoFormImage}
-                alt={'Brito group form image'}
+                alt={image.alt}
+                {...image}
             />
             <div className={styles.formContainer}>
                 <h4 className={styles.formTitle}>{fields.title}</h4>
@@ -190,11 +187,7 @@ const Form = (props) => {
                             </select>
                         </div>
                         <div className={styles.imageContainer}>
-                            <Image
-                                className={styles.roundedFormImage}
-                                src={britoFormImage}
-                                alt={'Form image'}
-                            />
+                            <Image className={styles.roundedFormImage} alt={image.alt} {...image} />
                         </div>
 
                         <FormInput
@@ -225,9 +218,9 @@ const Form = (props) => {
                             setIsOpen={setSubscriptionModalOpen}
                         >
                             <Image
-                                src={logo}
-                                alt="Brito's logo"
                                 className={styles.logoSubscriptionModal}
+                                alt={smallLogo.alt}
+                                {...smallLogo}
                             />
                             <div className={styles.subscriptionModalTextDescriptionContainer}>
                                 <h1 className={styles.subscriptionModalTitle}>
