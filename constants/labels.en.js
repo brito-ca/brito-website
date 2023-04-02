@@ -197,6 +197,7 @@ const labels = {
             statusInformationPopover:
                 "This status assists Brito in identifying suitable projects and job opportunities based on his type of visa. Some visas only permit 20 hours of work, and holding citizenship is a requirement for certain government positions, enhancing one's chances of securing a job.",
         },
+        image: { alt: "Brito's menbers meeting", src: '/images/brito-group-image-form.svg' },
     },
     termAndconditions: `<h3>Terms and Conditions</h3>
 

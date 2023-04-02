@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import { RadioButton, Popover, Icon, Image, FormInput, Modal } from '@/components'
 import styles from '../../styles/Form.module.css'
-import britoFormImage from '../../public/images/brito-group-image-form.svg'
 import closeModalIcon from '../../public/images/close-modal-icon.svg'
 
 const Form = (props) => {
-    const { labels, text, smallLogo } = props
+    const { labels, text, image, smallLogo } = props
 
     const [formValues, setFormValues] = useState({
         fullName: '',
@@ -41,8 +40,8 @@ const Form = (props) => {
         <div>
             <Image
                 className={`${styles.mobileFormImage} ${styles.roundedFormImage} vertical-margin-md`}
-                src={britoFormImage}
-                alt={text.altImageText}
+                alt={image.alt}
+                {...image}
             />
             <div className={styles.formContainer}>
                 <h4 className={styles.formTitle}>{text.title}</h4>
@@ -172,11 +171,7 @@ const Form = (props) => {
                             </select>
                         </div>
                         <div className={styles.imageContainer}>
-                            <Image
-                                className={styles.roundedFormImage}
-                                src={britoFormImage}
-                                alt={text.altImageText}
-                            />
+                            <Image className={styles.roundedFormImage} alt={image.alt} {...image} />
                         </div>
 
                         <FormInput
@@ -215,9 +210,9 @@ const Form = (props) => {
                                     onClick={() => setSubscriptionModalOpen(!subscriptionModalOpen)}
                                 />
                                 <Image
+                                    className={styles.logoSubscriptionModal}
                                     alt={smallLogo.alt}
                                     {...smallLogo}
-                                    className={styles.logoSubscriptionModal}
                                 />
                                 <div className={styles.subscriptionModalTextDescriptionContainer}>
                                     <h1 className={styles.subscriptionModalTitle}>
