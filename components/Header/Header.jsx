@@ -1,18 +1,16 @@
 import styles from '@/styles/Header.module.css'
-import Image from 'next/image'
-import smallLogo from '../../public/images/logo-small.svg'
 import Link from 'next/link'
 import { useState } from 'react'
-import { Icon, Nav, Languages } from '@/components'
+import { Icon, Nav, Languages, Image } from '@/components'
 
 const Header = (props) => {
-    const { navigation } = props
+    const { navigation, content } = props
     const [modalOpen, setModalOpen] = useState(false)
 
     return (
         <div className={`${styles.header} flex-row-space-between`}>
             <Link href='/'>
-                <Image className={styles.logo} alt='logo small' src={smallLogo} />
+                <Image className={styles.logo} alt={content.image.alt} {...content.image} />
             </Link>
             <div className='flex-row-space-between'>
                 <Nav

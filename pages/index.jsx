@@ -15,7 +15,14 @@ const socialMedia = [
 
 export default function Home() {
     return (
-        <AppLayout content={{ navigation, socialMedia, footerContent: labels.footerContent }}>
+        <AppLayout
+            content={{
+                navigation,
+                header: labels.header,
+                socialMedia,
+                footerContent: labels.footerContent,
+            }}
+        >
             <Hero
                 title={labels.welcomeToBrito.title}
                 description={labels.welcomeToBrito.description}

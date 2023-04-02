@@ -10,6 +10,7 @@ const roboto = Roboto({
 
 const AppLayout = (props) => {
     const { children, content } = props
+
     return (
         <>
             <Head>
@@ -20,7 +21,7 @@ const AppLayout = (props) => {
             </Head>
             <div className={`${roboto.className} ${styles.container}`}>
                 <FloatingActionButton />
-                <Header navigation={content.navigation} />
+                <Header navigation={content.navigation} content={content.header} />
                 <main className={styles.main}>{children}</main>
                 <Footer
                     footerContent={content.footerContent}
