@@ -1,5 +1,5 @@
 import styles from '@/styles/Hero.module.css'
-import Image from 'next/image'
+import { Image } from '@/components'
 
 const Hero = (props) => {
     const { title, description, image } = props
@@ -14,16 +14,10 @@ const Hero = (props) => {
                 </div>
             </div>
             <div className={styles.crop_img_banner}>
-                <Image
-                    className={styles.img_banner}
-                    src={image.src}
-                    alt={image.alt}
-                    width={image.width}
-                    height={image.height}
-                    priority
-                />
+                <Image className={styles.img_banner} alt={image.alt} {...image} />
             </div>
         </div>
     )
 }
+
 export default Hero
