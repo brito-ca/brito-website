@@ -27,6 +27,8 @@ const AppLayout = (props) => {
                     footerContent={content.footerContent}
                     navigation={content.navigation}
                     socialMedia={content.socialMedia}
+                    britoFlag={content.britoFlag}
+                    britoWorkMark={content.britoWorkMark}
                 />
             </div>
         </>

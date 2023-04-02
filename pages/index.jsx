@@ -21,6 +21,8 @@ export default function Home() {
                 smallLogo: labels.smallLogo,
                 socialMedia,
                 footerContent: labels.footerContent,
+                britoFlag: labels.britoFlag,
+                britoWorkMark: labels.britoWorkMark,
             }}
         >
             <Hero

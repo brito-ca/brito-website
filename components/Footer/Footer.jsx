@@ -1,12 +1,10 @@
-import britoFlag from '../../public/images/brito-logo-1.svg'
-import britoWordMark from '../../public/images/brito-logo-2.svg'
 import styles from '@/styles/Footer.module.css'
 import { Nav, Image, Modal } from '@/components'
 import { useState } from 'react'
 import labels from '@/constants/labels.en'
 
 const Footer = (props) => {
-    const { footerContent, navigation } = props
+    const { footerContent, britoFlag, britoWorkMark, navigation } = props
     const [termsModalisOpen, setTermsModalOpen] = useState(false)
     const [privacyModalisOpen, setPrivacyModalOpen] = useState(false)
 
@@ -20,16 +18,8 @@ const Footer = (props) => {
             <div className={styles.footerContainer}>
                 <div className={`${styles.footerLogoContainer} flex-column-center`}>
                     <div className='flex-column-space-between'>
-                        <Image
-                            alt={footerContent.altFlag}
-                            src={britoFlag}
-                            className={styles.logo}
-                        />
-                        <Image
-                            alt={footerContent.altWordmark}
-                            src={britoWordMark}
-                            className={styles.logo}
-                        />
+                        <Image className={styles.logo} alt={britoFlag.alt} {...britoFlag} />
+                        <Image className={styles.logo} alt={britoWorkMark.alt} {...britoWorkMark} />
                         <p className={'vertical-padding'}>{footerContent.description}</p>
                     </div>
                 </div>

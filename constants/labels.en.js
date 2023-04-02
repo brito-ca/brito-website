@@ -1,5 +1,7 @@
 const labels = {
     smallLogo: { alt: "Brito's logo", src: '/images/logo-small.svg' },
+    britoFlag: { alt: "Brito's flag", src: '/images/brito-logo-1.svg' },
+    britoWorkMark: { alt: "Brito's work mark", src: '/images/brito-logo-2.svg' },
     aboutUs: {
         id: 'about-us',
         navTitle: 'About',
