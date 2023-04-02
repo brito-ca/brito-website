@@ -15,7 +15,16 @@ const socialMedia = [
 
 export default function Home() {
     return (
-        <AppLayout content={{ navigation, socialMedia, footerContent: labels.footerContent }}>
+        <AppLayout
+            content={{
+                navigation,
+                smallLogo: labels.smallLogo,
+                socialMedia,
+                footerContent: labels.footerContent,
+                britoFlag: labels.britoFlag,
+                britoWorkMark: labels.britoWorkMark,
+            }}
+        >
             <Hero
                 title={labels.welcomeToBrito.title}
                 description={labels.welcomeToBrito.description}
@@ -42,7 +51,7 @@ export default function Home() {
                     description={labels.joinUs.description}
                 />
             </div>
-            <Form {...labels.form} />
+            <Form {...labels.form} smallLogo={labels.smallLogo} />
             <ContactUs
                 id={labels.contactUs.id}
                 title={labels.contactUs.title}

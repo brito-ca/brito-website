@@ -1,6 +1,8 @@
 import styles from '@/styles/Banner.module.css'
+
 const Banner = (props) => {
     const { id, title, description } = props
+
     return (
         <div id={id} className='flex-row-center'>
             <div className={styles.banner}>
@@ -12,4 +14,5 @@ const Banner = (props) => {
         </div>
     )
 }
+
 export default Banner

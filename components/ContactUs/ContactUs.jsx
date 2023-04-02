@@ -42,4 +42,5 @@ const ContactUs = (props) => {
         </div>
     )
 }
+
 export default ContactUs
