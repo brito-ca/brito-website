@@ -1,7 +1,5 @@
 const labels = {
-    header: {
-        image: { alt: 'logo BrITo small', src: '/images/logo-small.svg' },
-    },
+    smallLogo: { alt: "Brito's logo", src: '/images/logo-small.svg' },
     aboutUs: {
         id: 'about-us',
         navTitle: 'About',

@@ -3,10 +3,9 @@ import { RadioButton, Popover, Icon, Image, FormInput, Modal } from '@/component
 import styles from '../../styles/Form.module.css'
 import britoFormImage from '../../public/images/brito-group-image-form.svg'
 import closeModalIcon from '../../public/images/close-modal-icon.svg'
-import logo from '../../public/images/logo-small.svg'
 
 const Form = (props) => {
-    const { labels, text } = props
+    const { labels, text, smallLogo } = props
 
     const [formValues, setFormValues] = useState({
         fullName: '',
@@ -216,8 +215,8 @@ const Form = (props) => {
                                     onClick={() => setSubscriptionModalOpen(!subscriptionModalOpen)}
                                 />
                                 <Image
-                                    src={logo}
-                                    alt="Brito's logo"
+                                    alt={smallLogo.alt}
+                                    {...smallLogo}
                                     className={styles.logoSubscriptionModal}
                                 />
                                 <div className={styles.subscriptionModalTextDescriptionContainer}>

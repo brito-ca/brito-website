@@ -4,13 +4,13 @@ import { useState } from 'react'
 import { Icon, Nav, Languages, Image } from '@/components'
 
 const Header = (props) => {
-    const { navigation, content } = props
+    const { navigation, smallLogo } = props
     const [modalOpen, setModalOpen] = useState(false)
 
     return (
         <div className={`${styles.header} flex-row-space-between`}>
             <Link href='/'>
-                <Image className={styles.logo} alt={content.image.alt} {...content.image} />
+                <Image className={styles.logo} alt={smallLogo.alt} {...smallLogo} />
             </Link>
             <div className='flex-row-space-between'>
                 <Nav

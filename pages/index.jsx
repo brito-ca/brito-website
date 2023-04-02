@@ -18,7 +18,7 @@ export default function Home() {
         <AppLayout
             content={{
                 navigation,
-                header: labels.header,
+                smallLogo: labels.smallLogo,
                 socialMedia,
                 footerContent: labels.footerContent,
             }}
@@ -49,7 +49,7 @@ export default function Home() {
                     description={labels.joinUs.description}
                 />
             </div>
-            <Form {...labels.form} />
+            <Form {...labels.form} smallLogo={labels.smallLogo} />
             <ContactUs
                 id={labels.contactUs.id}
                 title={labels.contactUs.title}
