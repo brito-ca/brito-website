@@ -2,7 +2,7 @@ import getPage from './getPage'
 
 const getFooter = async (data) => {
     const { links, ...rest } = data
-    const pageLinks = await Promise.all(links.map(async (item) => await getPage(item)))
+    const pageLinks = links ? await Promise.all(links.map(async (item) => await getPage(item))) : []
     return {
         id: 'footer',
         ...rest,

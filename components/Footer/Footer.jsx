@@ -34,7 +34,7 @@ const Footer = (props) => {
             <div className={styles?.footerBottom}>
                 <p className={styles?.footerBottomItem}>{content?.copyright}</p>
                 <p className={styles?.footerBottomItem}>{content?.rights}</p>
-                {links.map((link) => {
+                {links?.map((link) => {
                     return (
                         <div key={link.id} className={styles?.footerBottomItem}>
                             <a href='#' id={link.id} onClick={(e) => handleModal(e)}>

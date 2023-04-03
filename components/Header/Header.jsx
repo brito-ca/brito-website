@@ -2,14 +2,15 @@ import styles from '@/styles/Header.module.css'
 import Link from 'next/link'
 import { useState } from 'react'
 import { Icon, Nav, Languages, Logo } from '@/components'
+import { useRouter } from 'next/router'
 
 const Header = (props) => {
     const { navigation, languages } = props
     const [modalOpen, setModalOpen] = useState(false)
-
+    const router = useRouter()
     return (
         <div className={`${styles.header} flex-row-space-between`}>
-            <Link href='/'>
+            <Link href={router.pathname}>
                 <Logo />
             </Link>
             <div className='flex-row-space-between'>
