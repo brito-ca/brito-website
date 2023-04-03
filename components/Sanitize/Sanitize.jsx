@@ -1,11 +1,9 @@
-import * as DOMPurify from 'dompurify';
+import sanitizeHtml from 'sanitize-html'
 
 const Sanitize = (props) => {
     const {input} = props;
     return(
-        <div dangerouslySetInnerHTML={{
-            __html: DOMPurify.sanitize(input)
-      }} />
+       sanitizeHtml(input)
     );
     
 }; export default Sanitize
