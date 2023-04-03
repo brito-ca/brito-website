@@ -1,5 +1,4 @@
-import Banner from '@/components/Banner/Banner'
-import VectorCard from '@/components/AboutUs/VectorCard'
+import { Banner, VectorCard, Image } from '@/components'
 import styles from '@/styles/AboutUs.module.css'
 
 const AboutUs = (props) => {
@@ -20,9 +19,10 @@ const AboutUs = (props) => {
                 ))}
             </div>
             <div className={styles.aboutUsImage}>
-                <img {...image} />
+                <Image alt={image.alt} {...image} />
             </div>
         </div>
     )
 }
+
 export default AboutUs

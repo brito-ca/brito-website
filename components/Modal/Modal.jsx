@@ -2,7 +2,7 @@ import styles from './Modal.module.css'
 import { Icon } from '../index'
 
 const Modal = (props) => {
-    const { isOpen, setIsOpen, children, modalId, id } = props
+    const { isOpen, setIsOpen, children, modalId, id, actions } = props
 
     if (isOpen && modalId === id)
         return (
@@ -12,11 +12,7 @@ const Modal = (props) => {
                         <Icon variant='close' onClick={() => setIsOpen(false)} />
                     </div>
                     {children}
-                    <div className={styles.actions}>
-                        <button className='button primary' onClick={() => setIsOpen(false)}>
-                            OK
-                        </button>
-                    </div>
+                    {actions && <div className={styles.actions}>{actions}</div>}
                 </div>
             </div>
         )

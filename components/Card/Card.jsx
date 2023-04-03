@@ -1,4 +1,4 @@
-import { Icon } from '@/components'
+import { Icon, Image } from '@/components'
 import styles from '@/styles/Board.module.css'
 
 const Card = (props) => {
@@ -6,7 +6,7 @@ const Card = (props) => {
     return (
         <div className={styles.card_box}>
             <div className={styles.image_box}>
-                <img {...image} />
+                <Image {...image} alt={image.alt} />
             </div>
             <div className={styles.center_box}>
                 <div className={styles.title_box}>
@@ -30,4 +30,5 @@ const Card = (props) => {
         </div>
     )
 }
+
 export default Card

@@ -11,4 +11,5 @@ const VectorCard = (props) => {
         </div>
     )
 }
+
 export default VectorCard

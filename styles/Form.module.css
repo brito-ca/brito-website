@@ -50,6 +50,7 @@
 
 .roundedFormImage {
     width: 100%;
+    height: auto;
     border-radius: 50%;
 }
 
@@ -93,6 +94,8 @@
 
     padding: 0.5rem var(--padding-sm);
     margin: var(--margin-lg) 0 var(--margin-md) 0;
+
+    cursor: pointer;
 }
 
 .infoIcon {
@@ -103,13 +106,6 @@
 /* Image on top of Form disapears if screen size if bigger than 768px */
 .mobileFormImage {
     display: none;
-}
-
-.closeModalIcon {
-    position: absolute;
-    right: 0;
-    margin: var(--margin-xs) var(--margin-sm) 0 0;
-    width: 1.75rem;
 }
 
 @media (max-width: 600px) {
@@ -190,6 +186,8 @@
     margin: var(--margin-md) auto var(--margin-sm) auto;
 
     display: block !important;
+
+    cursor: pointer;
 }
 
 .subscriptionModalContainer {
@@ -199,18 +197,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto);
-
-    text-align: center;
 }
 
 .logoSubscriptionModal {
-    grid-column: 1 / 5;
-    grid-row: 1 / 2;
-
     width: 220px;
     height: 220px;
 
-    margin: var(--margin-sm) auto 0 auto;
+    display: flex;
+    margin: 0 auto;
 }
 
 .subscriptionModalTextDescriptionContainer {
@@ -222,23 +216,15 @@
     color: var(--primary-white);
 
     padding: var(--padding-sm);
-
-    border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px;
 }
 
 .subscriptionModalTitle {
     font-weight: 500;
     font-size: 26px;
-    line-height: 38px;
 
     margin: var(--margin-sm);
 }
 
 .subscriptionModalDescription {
     padding: 0.15rem;
-}
-
-.continueBrowsingButton {
-    display: none;
 }

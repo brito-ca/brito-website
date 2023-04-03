@@ -1,3 +1,4 @@
+import { Image } from '@/components'
 import styles from '@/styles/Hero.module.css'
 
 const Hero = (props) => {
@@ -13,9 +14,10 @@ const Hero = (props) => {
                 </div>
             </div>
             <div className={styles.crop_img_banner}>
-                <img className={styles.img_banner} {...image} />
+                <Image className={styles.img_banner} {...image} alt={image?.alt} />
             </div>
         </div>
     )
 }
+
 export default Hero
