@@ -1,0 +1,14 @@
+.labelCheckbox {
+    margin-left: 5px;
+}
+
+.checkbox {
+    width: 100%;
+
+    display: flex;
+
+    margin-top: var(--margin-sm);
+    margin-bottom: var(--margin-xs);
+
+    color: var(--primary-white);
+}

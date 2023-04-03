@@ -25,15 +25,15 @@ const ContactUs = (props) => {
             </div>
             <div className={styles.marg_lg + ' padding'}>
                 <h3 className={styles.subtitle}>{visit}</h3>
-                <div className='vertical-padding'>
-                    {socialMedia.map((a) => (
+                <div className={`${styles.socialContainer} flex-row-start`}>
+                    {socialMedia.map((media) => (
                         <a
-                            key={a.id}
-                            href={a.link}
-                            aria-label={`${a.id} link`}
-                            className={'horizontal-padding'}
+                            key={media.id}
+                            href={media.link}
+                            target='_blank'
+                            rel='noopener noreferrer'
                         >
-                            <Icon variant={a.icon} />
+                            <Icon className={styles.icon} variant={media.icon} />
                         </a>
                     ))}
                 </div>
@@ -42,4 +42,5 @@ const ContactUs = (props) => {
         </div>
     )
 }
+
 export default ContactUs

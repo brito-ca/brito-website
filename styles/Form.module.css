@@ -1,37 +1,33 @@
 .formContainer {
-    background: var(--secundary-green);
+    background: var(--secondary-green);
     padding: var(--padding-sm) var(--padding-md);
 }
 
 .formTitle {
     text-align: center;
     color: var(--primary-white);
-
-    padding: var(--padding-lg) 0px var(--padding-md) 0;
+    padding-top: var(--padding-md);
 }
 
 .labelForm {
-    width: 300px;
-    height: 24px;
+    width: 100%;
 
     display: flex;
-    align-items: center;
 
-    margin-top: 1.5rem;
-    margin-bottom: 2px;
+    margin-top: var(--margin-sm);
+    margin-bottom: var(--margin-xs);
 
     color: var(--primary-white);
 }
 
 .inputForm {
-    padding: 0.5rem 0.75rem;
+    padding: var(--padding-xs);
+    border-radius: var(--radius-xs);
 
     width: 100%;
-    height: 2.5rem;
 
-    border: 1px solid #9b9b9f;
-    border-radius: 5px;
     background-color: var(--primary-white);
+    border: 1px solid var(--neutral-medium);
 }
 
 .formSections {
@@ -45,10 +41,6 @@
 .primaryInformation {
     grid-column: 1 / 5;
     grid-row: 1 / 2;
-    margin-top: 40px;
-}
-.labelRadioButton {
-    margin-left: '5px' !important;
 }
 
 .imageContainer {
@@ -58,304 +50,111 @@
 
 .roundedFormImage {
     width: 100%;
-    border-radius: 50%;
     height: auto;
+    border-radius: 50%;
+}
+
+.provinceField {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+}
+
+.cityField {
+    grid-row: 2 / 3;
+    grid-column: 4 / 9;
+    margin-left: var(--margin-sm);
 }
 
 .immigrationStatusSection {
     grid-column: 1 / 9;
-    grid-row: 2 / 3;
-}
-
-.immigrationStatusList {
-    width: 100%;
-    padding: 0.5rem 0.75rem;
-
-    background: #f5f5fa;
-
-    border: 1px solid #929bc6;
-    border-radius: 5px;
-    color: #272424;
-    font-size: 13px;
+    grid-row: 3 / 4;
 }
 
 .linkedinField {
-    grid-column: 1 / 4;
-    grid-row: 3 / 4;
+    grid-column: 4 / 9;
+    grid-row: 4 / 5;
+    margin-left: var(--margin-sm);
 }
 
 .emailField {
-    grid-column: 5 / 9;
-    grid-row: 3 / 4;
-}
-
-.uploadPhotoField {
+    grid-row: 4 / 5;
     grid-column: 1 / 4;
-    grid-row: 4 / 5;
-}
-
-.fileChosenBox {
-    grid-row: 4 / 5;
-    grid-column: 2 / 6;
-
-    height: 42px;
-    font-size: 14px;
-
-    /* Distancing from button before breakpoint */
-    margin-left: 85px;
-
-    color: var(--primary-white);
-    border: 1px solid #f5f5fa;
-    border-radius: 8px;
-    padding: 0 10px;
-
-    /* center p on div */
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.chosenBoxText {
-    padding: 0;
-}
-
-.chooseFileButton {
-    color: #022777;
-    background: #f5f5fa;
-
-    padding: 8px 2rem;
-    margin-top: var(--margin-sm);
-
-    border-radius: 8px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-    font-size: 18px;
 }
 
 .sendButton {
     grid-row: 5 / 6;
     grid-column: 8 / 9;
 
-    font-size: 20px;
-    color: #022777;
+    font-size: 1rem;
+    color: var(--secondary-blue);
+    background: var(--primary-white);
 
-    background: #f5f5fa;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 40px;
+    border-radius: var(--radius-lg);
 
-    padding: 8px 16px;
-    margin-bottom: 3rem;
-}
+    padding: 0.5rem var(--padding-sm);
+    margin: var(--margin-lg) 0 var(--margin-md) 0;
 
-.mandatoryFieldSpan {
-    color: var(--secundary-red-warning);
-    margin-left: 4px;
+    cursor: pointer;
 }
 
 .infoIcon {
-    margin-left: 0.5rem;
+    margin-left: var(--margin-xs);
+    display: inline;
 }
 
-@media (max-width: 768px) {
+/* Image on top of Form disapears if screen size if bigger than 768px */
+.mobileFormImage {
+    display: none;
+}
+
+@media (max-width: 600px) {
     .primaryInformation {
         grid-column: 1 / 9;
+        grid-row: 1 / 2;
     }
 
     .imageContainer {
-        visibility: hidden;
+        display: none;
     }
 
-    .linkedinField {
+    .provinceField {
         grid-column: 1 / 9;
+        grid-row: 2 / 3;
     }
 
-    .emailField {
+    .cityField {
+        grid-column: 1 / 9;
+        grid-row: 3 / 4;
+        margin-left: 0;
+    }
+    .immigrationStatusSection {
         grid-column: 1 / 9;
         grid-row: 4 / 5;
     }
 
-    .uploadPhotoField {
-        grid-column: 1/ 5;
+    .linkedinField {
+        grid-column: 1 / 9;
         grid-row: 5 / 6;
-        margin-right: 1rem;
+        margin-left: 0;
     }
 
-    .chooseFileButton {
-        padding: 0;
-        width: 100%;
-
-        background: #022777;
-        color: var(--primary-white);
-
-        font-style: normal;
-        font-size: 16px;
-        border-radius: 0;
-        border: none;
-        height: 40px;
-    }
-
-    .fileChosenBox {
-        grid-row: 5 / 6;
-        grid-column: 5 / 9;
-        margin-left: 1rem;
-
-        height: 40px;
-
-        border-radius: 0;
-        text-align: center;
-
-        font-style: normal;
-        font-weight: 300;
-        font-size: 14px;
+    .emailField {
+        grid-column: 1 / 9;
+        grid-row: 6 / 7;
     }
 
     .sendButton {
         grid-row: 7 / 8;
         grid-column: 1 / 9;
 
-        margin-top: 40px;
-
-        border-radius: 0;
-
-        width: 100%;
-        height: 4rem;
-        margin-bottom: 3rem;
-    }
-}
-
-.profilePictureModal {
-    width: 500px;
-    height: 590px;
-
-    display: grid;
-    grid-template-columns: repeat(8, auto);
-    grid-template-rows: repeat(4, auto);
-    align-content: center;
-    align-items: center;
-
-    padding: 0 3rem;
-    margin: 2rem;
-}
-
-.profilePictureModalTitle {
-    grid-row: 1 / 2;
-    grid-column: 1 / 9;
-
-    color: #022777;
-    font-size: 28px;
-
-    margin-top: 2rem;
-}
-
-.profilePictureModalDescription {
-    grid-row: 2 / 3;
-    grid-column: 1 / 9;
-    line-height: 24px;
-    color: #525252;
-    margin: 1.25rem 0;
-}
-
-.profilePictureAvatar {
-    grid-row: 3 / 4;
-    grid-column: 1 / 9;
-
-    margin: 0 auto 1.5rem auto;
-    width: 280px;
-    height: 280px;
-}
-
-.profilePictureModalSaveButton {
-    width: 146px;
-    height: 40px;
-    background: #022777;
-    border-radius: 40px;
-    margin: 1rem 0;
-
-    padding: 0;
-    font-size: 20px;
-
-    grid-row: 4 / 5;
-    grid-column: 2 / 4;
-}
-
-.profilePictureModalChangeButton {
-    width: 146px;
-    height: 40px;
-    border-radius: 40px !important;
-    border: 3px solid #022777;
-    border-radius: 4px;
-    background-color: #fff;
-    color: #022777;
-
-    padding: 0;
-    font-size: 20px;
-
-    grid-row: 4 / 5;
-    grid-column: 5 / 8;
-}
-
-.closeProfilePictureModalIcon {
-    position: absolute;
-    right: 0;
-    margin: 0 21px 0 0;
-
-    width: 30px;
-}
-
-.closeSubscriptionModalIcon {
-    position: absolute;
-    right: 0;
-    margin: 10px 21px 0 0;
-
-    width: 30px;
-}
-
-@media (max-width: 600px) {
-    .profilePictureModal {
-        width: 310px;
-        height: 667px;
-
-        text-align: center;
-        justify-content: center;
-        justify-items: center;
-
-        margin: 0;
+        margin-top: var(--margin-md);
+        border-radius: var(--radius-sm);
+        padding: var(--padding-sm);
     }
 
-    .profilePictureModalTitle {
-        grid-row: 1 / 2;
-        grid-column: 2 / 8;
-
-        color: #022777;
-
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
-    }
-
-    .profilePictureAvatar {
-        width: 187px;
-        height: 187px;
-    }
-
-    .profilePictureModalSaveButton {
-        width: 263px;
-        height: 56px;
-
-        border-radius: 4px;
-
-        grid-row: 4 / 5;
-        grid-column: 1 / 9;
-    }
-
-    .profilePictureModalChangeButton {
-        width: 263px;
-        height: 56px;
-
-        border-radius: 4px !important;
-
-        grid-row: 5 / 6;
-        grid-column: 1 / 9;
+    .mobileFormImage {
+        display: block !important;
     }
 
     .subscriptionModalContainer {
@@ -364,7 +163,7 @@
     }
 
     .subscriptionModalTextDescriptionContainer {
-        padding: 4rem 2.5rem !important;
+        padding: var(--padding-md) var(--padding-md) !important;
     }
 
     .subscriptionModalTitle {
@@ -372,25 +171,23 @@
     }
 
     .continueBrowsingButton {
-        width: 263px;
-        height: 56px;
-
         width: 236px;
-        height: 56px;
-
-        border: 1px solid #1a1a1a;
-        border-radius: 4px;
-
-        background-color: #fff;
-        color: #022777;
-
-        padding: 0;
-        font-size: 20px;
-
-        margin-top: 2rem;
-
-        display: block !important;
     }
+}
+
+.continueBrowsingButton {
+    border: 1px solid #1a1a1a;
+    border-radius: var(--radius-lg);
+    color: var(--primary-blue);
+
+    padding: var(--padding-xs) var(--padding-md);
+    font-size: 1rem;
+
+    margin: var(--margin-md) auto var(--margin-sm) auto;
+
+    display: block !important;
+
+    cursor: pointer;
 }
 
 .subscriptionModalContainer {
@@ -400,73 +197,34 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto);
-
-    text-align: center;
-    /* justify-items: center; */
 }
 
 .logoSubscriptionModal {
-    grid-column: 1 / 5;
-    grid-row: 1 / 2;
-
     width: 220px;
     height: 220px;
 
-    margin: 30px auto 0 auto;
+    display: flex;
+    margin: 0 auto;
 }
 
 .subscriptionModalTextDescriptionContainer {
     grid-column: 1 / 5;
     grid-row: 2 / 3;
-
-    background: #022777;
-    color: var(--primary-white);
-
     text-align: center;
 
-    padding-bottom: 90px;
-    padding-top: 20px;
-    border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px;
+    background: var(--primary-blue);
+    color: var(--primary-white);
+
+    padding: var(--padding-sm);
 }
 
 .subscriptionModalTitle {
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 38px;
+    font-weight: 500;
+    font-size: 26px;
 
-    margin: 3rem 1rem 3rem 1rem;
+    margin: var(--margin-sm);
 }
 
 .subscriptionModalDescription {
     padding: 0.15rem;
-}
-
-.continueBrowsingButton {
-    display: none;
-}
-
-.backdrop {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    height: 100vh;
-    width: 100%;
-    background-color: var(--modal-backdrop);
-    backdrop-filter: blur(5px);
-}
-
-.menuModal {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-    background-color: var(--neutral-white);
-
-    z-index: 9 !important;
-
-    border-radius: 20px;
 }

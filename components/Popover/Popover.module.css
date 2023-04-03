@@ -1,79 +1,53 @@
-.popoverContainer {
-    position: relative;
-    display: inline-block;
-
-    margin-left: 4px;
-}
-
 .popover {
-    position: relative;
+    position: absolute;
+    z-index: 1;
+    transform: translateY(-55%);
+
+    margin-left: 1.75rem;
+
+    /* Style , Fonts */
+    background-color: #525252;
+    border-radius: 20px;
+    text-align: center;
+    width: 280px;
 }
 
-.popover::after {
-    background-color: #525252;
-    border-radius: 10px;
-    color: #fff;
-    display: none;
-    padding: 10px 15px;
+.popoverArrow {
     position: absolute;
-    text-align: center;
-    z-index: 999;
+    width: 0;
+    height: 0;
 
-    width: 280px;
+    bottom: 50%;
+    right: 100%;
+    transform: translateY(50%);
 
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #525252 transparent transparent;
+}
+
+.popoverContent {
+    padding: 10px;
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
+    color: var(--primary-color);
 }
 
-.popover.top::after {
-    content: "This status assists Brito in identifying suitable projects and job opportunities based on his type of visa. Some visas only permit 20 hours of work, and holding citizenship is a requirement for certain government positions, enhancing one's chances of securing a job.";
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, calc(-100% - 10px));
-}
+@media (max-width: 600px) {
+    .popover {
+        transform: translateY(-115%);
+        left: 50%;
+        margin-left: -140px;
+    }
 
-.popover.bottom::after {
-    content: 'bottom';
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, calc(100% + 10px));
-}
+    .popoverArrow {
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
 
-.popover.right::after {
-    content: 'right';
-    top: 0;
-    right: 0;
-    transform: translateX(calc(100% + 10px));
-}
-
-.popover:hover::after {
-    display: block;
-}
-
-/* This creates the arrow */
-.popover::before {
-    background-color: #525252;
-    content: ' ';
-    display: none;
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    z-index: 999;
-}
-
-.popover:hover::before {
-    display: block;
-}
-
-.popover.top::before {
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
-}
-
-.popover.right::before {
-    top: 50%;
-    right: 0;
-    transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+        border-style: solid;
+        border-width: 10px 10px 10px 10px;
+        border-color: transparent #525252 transparent transparent;
+    }
 }

@@ -1,4 +1,4 @@
-import { FloatingActionButton, Header, Footer, Placeholder } from '@/components'
+import { FloatingActionButton, Header, Footer } from '@/components'
 import styles from '@/styles/AppLayout.module.css'
 import Head from 'next/head'
 import { Roboto } from '@next/font/google'
@@ -9,7 +9,8 @@ const roboto = Roboto({
 })
 
 const AppLayout = (props) => {
-    const { children, navigation } = props
+    const { children, content } = props
+
     return (
         <>
             <Head>
@@ -20,13 +21,18 @@ const AppLayout = (props) => {
             </Head>
             <div className={`${roboto.className} ${styles.container}`}>
                 <FloatingActionButton />
-                <Header navigation={navigation} />
-                <main className={styles.backgroundLogo}>{children}</main>
-                <Footer>
-                    <Placeholder title='Footer' />
-                </Footer>
+                <Header navigation={content.navigation} smallLogo={content.smallLogo} />
+                <main className={styles.main}>{children}</main>
+                <Footer
+                    footerContent={content.footerContent}
+                    navigation={content.navigation}
+                    socialMedia={content.socialMedia}
+                    britoFlag={content.britoFlag}
+                    britoWorkMark={content.britoWorkMark}
+                />
             </div>
         </>
     )
 }
+
 export default AppLayout
