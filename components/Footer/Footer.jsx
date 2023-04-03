@@ -6,9 +6,11 @@ const Footer = (props) => {
     const { content, navigation } = props
     const { title, description, links } = content
     const [isModalOpen, setIsModalOpen] = useState(false)
+    const [modalId, setModalId] = useState()
 
     const handleModal = (e) => {
         e.preventDefault()
+        setModalId(parseInt(e.target.id))
         setIsModalOpen(true)
     }
 
@@ -38,13 +40,17 @@ const Footer = (props) => {
                 </div>
                 <div className='links'>
                     {links.map((link) => {
-                        console.log(link)
                         return (
                             <div className='link' key={link.id}>
-                                <a href='#' onClick={(e) => handleModal(e)}>
+                                <a href='#' id={link.id} onClick={(e) => handleModal(e)}>
                                     {link.title}
                                 </a>
-                                <Modal id={link.id} isOpen={isModalOpen} setIsOpen={setIsModalOpen}>
+                                <Modal
+                                    id={link.id}
+                                    isOpen={isModalOpen}
+                                    setIsOpen={setIsModalOpen}
+                                    modalId={modalId}
+                                >
                                     <h3>{link.title}</h3>
                                     <div dangerouslySetInnerHTML={{ __html: link.content }} />
                                 </Modal>
