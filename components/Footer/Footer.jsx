@@ -31,33 +31,27 @@ const Footer = (props) => {
                     />
                 </div>
             </div>
-            <div
-                className={`${styles?.footerBottom} vertical-padding flex-row-space-between body5`}
-            >
-                <p>{content?.copyright}</p>
-                <div className='flex-row-center'>
-                    <p>{content?.rights}</p>
-                </div>
-                <div className='links'>
-                    {links.map((link) => {
-                        return (
-                            <div className='link' key={link.id}>
-                                <a href='#' id={link.id} onClick={(e) => handleModal(e)}>
-                                    {link.title}
-                                </a>
-                                <Modal
-                                    id={link.id}
-                                    isOpen={isModalOpen}
-                                    setIsOpen={setIsModalOpen}
-                                    modalId={modalId}
-                                >
-                                    <h3>{link.title}</h3>
-                                    <div dangerouslySetInnerHTML={{ __html: link.content }} />
-                                </Modal>
-                            </div>
-                        )
-                    })}
-                </div>
+            <div className={styles?.footerBottom}>
+                <p className={styles?.footerBottomItem}>{content?.copyright}</p>
+                <p className={styles?.footerBottomItem}>{content?.rights}</p>
+                {links.map((link) => {
+                    return (
+                        <div key={link.id} className={styles?.footerBottomItem}>
+                            <a href='#' id={link.id} onClick={(e) => handleModal(e)}>
+                                {link.title}
+                            </a>
+                            <Modal
+                                id={link.id}
+                                isOpen={isModalOpen}
+                                setIsOpen={setIsModalOpen}
+                                modalId={modalId}
+                            >
+                                <h3>{link.title}</h3>
+                                <div dangerouslySetInnerHTML={{ __html: link.content }} />
+                            </Modal>
+                        </div>
+                    )
+                })}
             </div>
         </>
     )

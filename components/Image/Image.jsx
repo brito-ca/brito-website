@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 const Image = (props) => {
     const { alt, ...restProps } = props
-    // eslint-disable-next-line @next/next/no-img-element
     return <img alt={alt} {...restProps} />
 }
 

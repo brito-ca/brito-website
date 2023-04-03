@@ -11,9 +11,6 @@ const HomePage = ({ data }) => {
             <Board {...ourBoard} />
             <Banner {...joinUs} />
             <ContactUs {...contactUs} />
-            {/* 
-            <Form {...labels.form} />
-             */}
         </>
     )
 }

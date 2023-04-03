@@ -41,6 +41,9 @@
     --menu-border: rgba(155, 155, 159, 0.5);
 
     --base-font-size: 16px;
+    --font-b2: 1.125rem;
+    --font-weight-normal: 400;
+    
     --spacing-unit: 16px;
 
     --margin-xxs: calc(0.25 * var(--spacing-unit));
@@ -58,6 +61,8 @@
     --radius-sm: calc(0.6 * var(--spacing-unit));
     --radius-md: var(--spacing-unit);
     --radius-lg: calc(2 * var(--spacing-unit));
+
+    --strong-line: 3px solid var(--neutral-medium-light);
 }
 
 html {
