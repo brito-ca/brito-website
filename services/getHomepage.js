@@ -8,6 +8,7 @@ import {
     getMenu,
     getSocialMedia,
 } from '@/services'
+import getFooter from './getFooter'
 
 const getHomePage = async (locale) => {
     const results = await fetch(HOMEPAGE_API_URL)
@@ -24,6 +25,7 @@ const getHomePage = async (locale) => {
             languages: await getLanguage(),
         },
         footer: {
+            content: await getFooter(acf.footer),
             navigation,
         },
         socialMedia: await getSocialMedia(),

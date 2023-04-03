@@ -20,18 +20,12 @@ const Footer = (props) => {
                     />
                 </div>
             </div>
-            <div className={`${styles.footerBottom} vertical-padding flex-row-space-between body5`}>
+            <div
+                className={`${styles?.footerBottom} vertical-padding flex-row-space-between body5`}
+            >
                 <p>{content?.copyright}</p>
                 <div className='flex-row-center'>
                     <p>{content?.rights}</p>
-                    <p>|</p>
-                    <p>
-                        <a href={content?.terms.href}>{content?.terms.text}</a>
-                    </p>
-                    <p>|</p>
-                    <p>
-                        <a href={content?.privacy.href}>{content?.privacy.text}</a>
-                    </p>
                 </div>
             </div>
         </>

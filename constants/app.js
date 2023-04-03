@@ -1,6 +1,7 @@
 export const APP_URL = 'https://brito.it'
 export const API_URL = `${APP_URL}/wp-json/wp/v2`
 export const HOMEPAGE_API_URL = `${API_URL}/homepage`
+export const PAGE_API_URL = `${API_URL}/pages`
 export const MEDIA_API_URL = `${API_URL}/media`
 export const BOARD_API_URL = `${API_URL}/board`
 export const LANGUAGES_API_URL = `${API_URL}/language`
