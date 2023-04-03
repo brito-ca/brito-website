@@ -13,12 +13,11 @@
 
 .modal {
     background-color: var(--primary-white);
-    padding: var(--padding-md);
-    padding-top: calc(2 * var(--padding-md));
     overflow-y: scroll;
     max-height: 95vh;
     max-width: 95vw;
     position: relative;
+    border-radius: 2rem;
 }
 
 .button {

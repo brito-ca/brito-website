@@ -1,22 +1,29 @@
 import { useState } from 'react'
-import { RadioButton, Popover, Icon, Image, FormInput, Modal } from '@/components'
+import { Popover, Icon, Modal, FormInput, Checkbox, Image } from '@/components'
 import styles from '../../styles/Form.module.css'
-import closeModalIcon from '../../public/images/close-modal-icon.svg'
 
 const Form = (props) => {
-    const { labels, text, image, smallLogo } = props
-
+    const { fields, image, smallLogo } = props
     const [formValues, setFormValues] = useState({
-        fullName: '',
+        full_name: '',
         expertise: '',
         company: '',
-        immigrationStatus: '',
-        resideInCanada: 'yes',
+        residein_canada: false,
         province: '',
         city: '',
-        linkedinProfileLink: '',
+        immigration_status: '',
+        linkedin_profile: '',
         email: '',
     })
+
+    const handleResideInCanada = () => {
+        setResideInCanada(!resideInCanada)
+        setFormValues({
+            ...formValues,
+            province: 'Alberta',
+            residein_canada: !resideInCanada,
+        })
+    }
 
     const handleChange = (e) => {
         setFormValues({
@@ -25,16 +32,44 @@ const Form = (props) => {
         })
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        //Opens up modal - implement a loading mechanism that awaits for the sucessfull post request and a visual reprensetation of the loading ( forgot the name of it)
+    const handleSubmit = async (event) => {
+        event.preventDefault()
         setSubscriptionModalOpen(!subscriptionModalOpen)
-        // ** Line below is for testing purposes **
-        // console.log(formValues)
+
+        // const formDataJSON = JSON.stringify(formValues)
+        // const api = 'https://brito.it/wp-json/wp/v2/member'
+        // const options = {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: formDataJSON,
+        // }
+
+        // const res = await fetch(api, options)
+        // if (res.status === 200) {
+        //     setSubscriptionModalOpen(!subscriptionModalOpen)
+        //     setFormValues({
+        //         full_name: '',
+        //         expertise: '',
+        //         company: '',
+        //         residein_canada: false,
+        //         province: '',
+        //         city: '',
+        //         immigration_status: '',
+        //         linkedin_profile: '',
+        //         email: '',
+        //     })
+        // } else {
+        //     alert(
+        //         `Error: ${res.status} ${res.statusText}  \nSomething went wrong. Please try again.`
+        //     )
+        // }
     }
 
     const [subscriptionModalOpen, setSubscriptionModalOpen] = useState(false)
     const [immigrationStatusPopover, setImmigrationStatusPopover] = useState(false)
+    const [resideInCanada, setResideInCanada] = useState(false)
 
     return (
         <div>
@@ -44,17 +79,15 @@ const Form = (props) => {
                 {...image}
             />
             <div className={styles.formContainer}>
-                <h4 className={styles.formTitle}>{text.title}</h4>
+                <h4 className={styles.formTitle}>{fields.title}</h4>
                 <form method='post'>
                     <div className={styles.formSections}>
                         <div className={styles.primaryInformation}>
                             <FormInput
-                                name='fullName'
+                                name='full_name'
                                 mandatory='yes'
                                 fieldStyle={styles.fullNameField}
-                                labelContent={labels.fullNameLabel}
-                                labelStyle={styles.labelForm}
-                                inputStyle={styles.inputForm}
+                                labelContent={fields.fullName.label}
                                 placeholder='E.g Amanda Costa'
                                 value={formValues.fullName}
                                 onChange={handleChange}
@@ -62,9 +95,7 @@ const Form = (props) => {
                             <FormInput
                                 name='expertise'
                                 fieldStyle={styles.expertiseField}
-                                labelContent={labels.expertiseLabel}
-                                labelStyle={styles.labelForm}
-                                inputStyle={styles.inputForm}
+                                labelContent={fields.expertise.label}
                                 placeholder='E.g. UX Designer'
                                 value={formValues.expertise}
                                 onChange={handleChange}
@@ -72,39 +103,30 @@ const Form = (props) => {
                             <FormInput
                                 name='company'
                                 fieldStyle={styles.companyField}
-                                labelContent={labels.companyLabel}
-                                labelStyle={styles.labelForm}
-                                inputStyle={styles.inputForm}
-                                placeholder='E.g. TD bank'
+                                labelContent={fields.company.label}
+                                placeholder={fields.company.placeholder}
                                 value={formValues.company}
                                 onChange={handleChange}
                             />
 
-                            <label className={styles.labelForm}>{labels.resideInCanadaLabel}</label>
-                            <RadioButton
-                                name='resideInCanada'
-                                onChange={handleChange}
+                            <label className={styles.labelForm}>
+                                {fields.resideInCanada.label}
+                            </label>
+                            <Checkbox
+                                name='residein_canada'
+                                onChange={handleResideInCanada}
                                 id='1'
-                                isSelected={formValues.resideInCanada === 'yes'}
                                 label='Yes'
-                                value='yes'
-                            />
-                            <RadioButton
-                                name='resideInCanada'
-                                onChange={handleChange}
-                                id='2'
-                                isSelected={formValues.resideInCanada === 'no'}
-                                label='No'
-                                value='no'
+                                value={resideInCanada}
                             />
                         </div>
                         <div className={styles.provinceField}>
                             <label htmlFor='province' className={styles.labelForm}>
-                                {labels.provinceLabel}
+                                {fields.province.label}
                             </label>
 
                             <select
-                                disabled={formValues.resideInCanada === 'no'}
+                                disabled={!formValues.residein_canada}
                                 name='province'
                                 value={formValues.province}
                                 onChange={handleChange}
@@ -112,7 +134,7 @@ const Form = (props) => {
                                 className={styles.inputForm}
                                 required
                             >
-                                {text.provinces.map((province) => (
+                                {fields.province.provinces.map((province) => (
                                     <option key={province.code} value={province.name}>
                                         {province.name}
                                     </option>
@@ -120,19 +142,17 @@ const Form = (props) => {
                             </select>
                         </div>
                         <FormInput
-                            disabled={formValues.resideInCanada === 'no'}
+                            disabled={!formValues.residein_canada}
                             name='city'
                             fieldStyle={styles.cityField}
-                            labelContent={labels.cityLabel}
-                            labelStyle={styles.labelForm}
-                            inputStyle={styles.inputForm}
+                            labelContent={fields.city.label}
                             value={formValues.city}
                             placeholder='E.g. Ottawa'
                             onChange={handleChange}
                         />
                         <div className={styles.immigrationStatusSection}>
                             <label htmlFor='immigration-status' className={styles.labelForm}>
-                                {labels.statusLabel}
+                                {fields.immigrationStatus.label}
                                 <span
                                     className={styles.infoIcon}
                                     onMouseEnter={() => setImmigrationStatusPopover(true)}
@@ -141,33 +161,29 @@ const Form = (props) => {
                                     <Icon variant={'exclamation'} className={styles.infoIcon} />
                                     {immigrationStatusPopover && (
                                         <Popover>
-                                            <p>{text.statusInformationPopover}</p>
+                                            <p>{fields.statusInformationPopover}</p>
                                         </Popover>
                                     )}
                                 </span>
                             </label>
 
                             <select
-                                disabled={formValues.resideInCanada === 'no'}
-                                name='immigrationStatus'
-                                value={formValues.immigrationStatus}
+                                disabled={!formValues.residein_canada}
+                                name='immigration_status'
+                                value={formValues.immigration_status}
                                 onChange={handleChange}
                                 id='immigration-status'
                                 className={styles.inputForm}
                                 required
                             >
                                 <option value='' disabled>
-                                    {text.immigrationStatus.select}
+                                    Select
                                 </option>
-                                <option key={3} value='Permanent Resident'>
-                                    {text.immigrationStatus.permanentResident}
-                                </option>
-                                <option key={2} value='Student'>
-                                    {text.immigrationStatus.student}
-                                </option>
-                                <option key={1} value='Temporary'>
-                                    {text.immigrationStatus.temporary}
-                                </option>
+                                {fields.immigrationStatus.values.map((value) => (
+                                    <option key={value} value={value}>
+                                        {value}
+                                    </option>
+                                ))}
                             </select>
                         </div>
                         <div className={styles.imageContainer}>
@@ -175,66 +191,55 @@ const Form = (props) => {
                         </div>
 
                         <FormInput
-                            name='linkedinProfileLink'
+                            name='linkedin_profile'
                             fieldStyle={styles.linkedinField}
-                            labelContent={labels.linkedinLabel}
-                            labelStyle={styles.labelForm}
-                            inputStyle={styles.inputForm}
-                            placeholder='Paste your profile link'
+                            labelContent={fields.linkedin.label}
+                            placeholder={fields.linkedin.placeholder}
                             value={formValues.linkedinProfileLink}
                             onChange={handleChange}
                         />
 
                         <FormInput
                             name='email'
-                            type='email'
                             mandatory='yes'
                             fieldStyle={styles.emailField}
-                            labelContent={labels.emailLabel}
-                            labelStyle={styles.labelForm}
-                            inputStyle={styles.inputForm}
-                            placeholder='E.g. john@gmail.com'
+                            labelContent={fields.email.label}
+                            placeholder={fields.email.placeholder}
                             value={formValues.email}
                             onChange={handleChange}
                         />
 
                         <button className={styles.sendButton} type='button' onClick={handleSubmit}>
-                            {text.sendButtonText}
+                            {fields.sendButton}
                         </button>
-                        {subscriptionModalOpen && (
-                            <Modal className={styles.subscriptionModalContainer}>
-                                <Image
-                                    src={closeModalIcon}
-                                    alt='X icon to close upload photo field'
-                                    className={styles.closeModalIcon}
+                        <Modal
+                            className={styles.subscriptionModalContainer}
+                            isOpen={subscriptionModalOpen}
+                            setIsOpen={setSubscriptionModalOpen}
+                        >
+                            <Image
+                                className={styles.logoSubscriptionModal}
+                                alt={smallLogo.alt}
+                                {...smallLogo}
+                            />
+                            <div className={styles.subscriptionModalTextDescriptionContainer}>
+                                <h1 className={styles.subscriptionModalTitle}>
+                                    {fields.subscriptionModal.title}
+                                </h1>
+                                <p className={styles.subscriptionModalDescription}>
+                                    {fields.subscriptionModal.approval}
+                                </p>
+                                <p className={styles.subscriptionModalDescription}></p>
+                                {fields.subscriptionModal.notification}
+                                <button
+                                    type='button'
+                                    className={styles.continueBrowsingButton}
                                     onClick={() => setSubscriptionModalOpen(!subscriptionModalOpen)}
-                                />
-                                <Image
-                                    className={styles.logoSubscriptionModal}
-                                    alt={smallLogo.alt}
-                                    {...smallLogo}
-                                />
-                                <div className={styles.subscriptionModalTextDescriptionContainer}>
-                                    <h1 className={styles.subscriptionModalTitle}>
-                                        {text.subscriptionModal.title}
-                                    </h1>
-                                    <p className={styles.subscriptionModalDescription}>
-                                        {text.subscriptionModal.firstLine}
-                                    </p>
-                                    <p className={styles.subscriptionModalDescription}></p>
-                                    {text.subscriptionModal.secondLine}
-                                    <button
-                                        type='button'
-                                        className={styles.continueBrowsingButton}
-                                        onClick={() =>
-                                            setSubscriptionModalOpen(!subscriptionModalOpen)
-                                        }
-                                    >
-                                        {text.subscriptionModal.continueBrowsingButton}
-                                    </button>
-                                </div>
-                            </Modal>
-                        )}
+                                >
+                                    {fields.subscriptionModal.continueBrowsing}
+                                </button>
+                            </div>
+                        </Modal>
                     </div>
                 </form>
             </div>
