@@ -1,4 +1,4 @@
-import { AboutUs, Banner, ContactUs, AppLayout, Hero, Board, Form } from '@/components'
+import { AboutUs, Banner, ContactUs, AppLayout, Hero, Board, Form, Sanitize } from '@/components'
 import labels from '@/constants/labels.en'
 import styles from '@/styles/AppLayout.module.css'
 
@@ -26,9 +26,9 @@ export default function Home() {
             }}
         >
             <Hero
-                title={labels.welcomeToBrito.title}
-                description={labels.welcomeToBrito.description}
-                image={labels.heroImage}
+                title={<Sanitize input={labels.welcomeToBrito.title} />}
+                description={<Sanitize input={labels.welcomeToBrito.description} />}
+                image={<Sanitize input={labels.heroImage} />}
             />
             <AboutUs
                 banner={labels.aboutUs}
