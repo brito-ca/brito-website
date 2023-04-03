@@ -12,7 +12,7 @@ const Modal = (props) => {
                 <div className={styles.button}>
                     <Icon variant='close' onClick={() => setIsOpen(false)} />
                 </div>
-                <div className={'content'} dangerouslySetInnerHTML={{ __html: children }} />
+                {children}
                 <div className={styles.actions}>
                     <button className='button primary' onClick={() => setIsOpen(false)}>
                         OK

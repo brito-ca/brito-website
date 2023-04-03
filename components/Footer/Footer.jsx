@@ -1,19 +1,28 @@
 import styles from '@/styles/Footer.module.css'
-import { Logo, Nav } from '@/components'
+import { Logo, Modal, Nav } from '@/components'
+import { useState } from 'react'
 
 const Footer = (props) => {
     const { content, navigation } = props
+    const { title, description, links } = content
+    const [isModalOpen, setIsModalOpen] = useState(false)
+
+    const handleModal = (e) => {
+        e.preventDefault()
+        setIsModalOpen(true)
+    }
+
     return (
         <>
             <div className={styles.footerContainer}>
                 <div className={`${styles.footerLogoContainer} flex-column-center`}>
                     <div className='flex-column-space-between'>
                         <Logo size='lg' />
-                        <p className={'vertical-padding'}>{content?.description}</p>
+                        <p className={'vertical-padding'}>{description}</p>
                     </div>
                 </div>
                 <div className={styles.footerNav}>
-                    <h5>{content?.title}</h5>
+                    <h5>{title}</h5>
                     <Nav
                         className={`${styles.nav} body3 flex-column-start`}
                         navigation={navigation}
@@ -26,6 +35,22 @@ const Footer = (props) => {
                 <p>{content?.copyright}</p>
                 <div className='flex-row-center'>
                     <p>{content?.rights}</p>
+                </div>
+                <div className='links'>
+                    {links.map((link) => {
+                        console.log(link)
+                        return (
+                            <div className='link' key={link.id}>
+                                <a href='#' onClick={(e) => handleModal(e)}>
+                                    {link.title}
+                                </a>
+                                <Modal id={link.id} isOpen={isModalOpen} setIsOpen={setIsModalOpen}>
+                                    <h3>{link.title}</h3>
+                                    <div dangerouslySetInnerHTML={{ __html: link.content }} />
+                                </Modal>
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
         </>
