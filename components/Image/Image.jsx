@@ -1,7 +1,12 @@
-/* eslint-disable @next/next/no-img-element */
+import sanitize from 'sanitize-html'
+
 const Image = (props) => {
-    const { alt, ...restProps } = props
-    return <img alt={alt} {...restProps} />
+    const { alt, src, ...restProps } = props
+
+    return (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img alt={sanitize(alt)} src={sanitize(src)} {...restProps} />
+    )
 }
 
 export default Image

@@ -34,7 +34,7 @@
     gap: calc(1.4 * var(--spacing-unit));
 }
 
-.footerBottom, 
+.footerBottom,
 .footerBottom a {
     font-size: var(--font-b2);
     font-weight: var(--font-weight-normal);

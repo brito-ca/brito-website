@@ -45,7 +45,7 @@
     --font-b3: 1.5rem;
     --font-b4: 1rem;
     --font-weight-normal: 400;
-    
+
     --spacing-unit: 16px;
     --spacing-xs: calc(var(--spacing-unit) / 3);
     --spacing-sm: calc(var(--spacing-unit) / 2);
