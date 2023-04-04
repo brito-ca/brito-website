@@ -1,5 +1,5 @@
 import { AppLayout, HomePage } from '@/components'
-import { LOCALE_EN } from '@/constants/app'
+import { LOCALE_FR } from '@/constants/app'
 import getHomePage from '@/services/getHomepage'
 const Home = ({ pageData }) => {
     return (
@@ -10,7 +10,7 @@ const Home = ({ pageData }) => {
 }
 
 export async function getStaticProps() {
-    const pageData = await getHomePage(LOCALE_EN)
+    const pageData = await getHomePage(LOCALE_FR)
     return {
         props: {
             pageData,

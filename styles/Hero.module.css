@@ -1,7 +1,6 @@
 .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 600px;
     justify-content: center;
     overflow: hidden;
     padding-bottom: var(--spacing-unit);
@@ -42,11 +41,14 @@
     box-shadow: calc(0 * var(--spacing-unit)) calc(0.625 * var(--spacing-unit))
         calc(1.25 * var(--spacing-unit)) calc(0.625 * var(--spacing-unit)) rgba(0, 0, 0, 0.25);
     object-fit: cover;
+    width: 900px;
+    height: 900px;
 }
 
 @media only screen and (max-width: 600px) {
     .container {
         justify-content: center;
+        grid-template-columns: 1fr;
         padding: calc(0 * var(--spacing-unit));
         gap: calc(0 * var(--spacing-unit));
     }
