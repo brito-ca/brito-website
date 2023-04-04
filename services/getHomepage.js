@@ -19,7 +19,10 @@ const getHomePage = async (locale) => {
     return {
         id,
         language: slug,
-        meta: {},
+        meta: {
+            title: acf.meta?.title,
+            description: acf.meta?.description,
+        },
         header: {
             navigation,
             languages: await getLanguage(),

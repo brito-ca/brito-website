@@ -11,10 +11,11 @@ const roboto = Roboto({
 const AppLayout = (props) => {
     const { children, content } = props
     const { header, footer, meta } = content
+    const { title, description } = meta
     return (
         <>
             <Head>
-                <title>{meta?.title}</title>
+                <title>{`${title} ${description && `- ${description}`}`}</title>
                 <meta name='description' content={meta?.description} />
                 <meta name='viewport' content='width=device-width, initial-scale=1' />
                 <link rel='icon' href='/favicon.ico' />
