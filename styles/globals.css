@@ -41,8 +41,19 @@
     --menu-border: rgba(155, 155, 159, 0.5);
 
     --base-font-size: 16px;
+    --font-b2: 1.125rem;
+    --font-b3: 1.5rem;
+    --font-b4: 1rem;
+    --font-weight-normal: 400;
+    
     --spacing-unit: 16px;
+    --spacing-xs: calc(var(--spacing-unit) / 3);
+    --spacing-sm: calc(var(--spacing-unit) / 2);
+    --spacing-md: calc(2 * var(--spacing-unit));
+    --spacing-lg: calc(3 * var(--spacing-unit));
+    --spacing-xl: calc(4 * var(--spacing-unit));
 
+    --margin-xxs: calc(0.25 * var(--spacing-unit));
     --margin-xs: calc(0.5 * var(--spacing-unit));
     --margin-sm: var(--spacing-unit);
     --margin-md: calc(2 * var(--spacing-unit));
@@ -57,6 +68,8 @@
     --radius-sm: calc(0.6 * var(--spacing-unit));
     --radius-md: var(--spacing-unit);
     --radius-lg: calc(2 * var(--spacing-unit));
+
+    --strong-line: 3px solid var(--neutral-medium-light);
 }
 
 html {
@@ -221,6 +234,10 @@ button.outline:disabled {
 
 .no-margin {
     margin: 0;
+}
+
+.margin-xxs {
+    margin: var(--margin-xxs);
 }
 
 .margin-xs {
