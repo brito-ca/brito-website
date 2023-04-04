@@ -22,7 +22,15 @@
 }
 
 .content {
-    padding: var(--padding-md);
+    text-align: left;
+}
+
+.content h3, 
+.content h4, 
+.content strong, 
+.content p {
+    display: inline-block;
+    padding-bottom: var(--spacing-unit);
 }
 
 .button {
@@ -42,5 +50,9 @@
     .modal {
         max-width: 80vw;
         max-height: 90vh;
+    }
+
+    .content {
+        padding: var(--padding-md);
     }
 }
