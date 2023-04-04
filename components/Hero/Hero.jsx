@@ -9,14 +9,10 @@ const Hero = (props) => {
         <div className={styles.container}>
             <div className={styles.hero_container}>
                 <div className={styles.welcome_box}>
-                    <h3 className={styles.welcome_text}>
-                        {sanitize(title)}
-                    </h3>
+                    <h3 className={styles.welcome_text}>{sanitize(title)}</h3>
                 </div>
                 <div className='body1'>
-                    <p className={styles.intro_text}>
-                        {sanitize(description)}
-                    </p>
+                    <p className={styles.intro_text}>{sanitize(description)}</p>
                 </div>
             </div>
             <div className={styles.crop_img_banner}>
