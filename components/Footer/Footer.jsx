@@ -1,16 +1,17 @@
 import styles from '@/styles/Footer.module.css'
-import { Nav, Image, Modal } from '@/components'
+import { Logo, Modal, Nav } from '@/components'
 import { useState } from 'react'
-import labels from '@/constants/labels.en'
 
 const Footer = (props) => {
-    const { footerContent, britoFlag, britoWorkMark, navigation } = props
-    const [termsModalisOpen, setTermsModalOpen] = useState(false)
-    const [privacyModalisOpen, setPrivacyModalOpen] = useState(false)
+    const { content, navigation } = props
+    const { title, description, links } = content
+    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [modalId, setModalId] = useState()
 
-    const handleTermsModal = (e, setIsOpen) => {
+    const handleModal = (e) => {
         e.preventDefault()
-        setIsOpen(true)
+        setModalId(parseInt(e.target.id))
+        setIsModalOpen(true)
     }
 
     return (
@@ -18,42 +19,39 @@ const Footer = (props) => {
             <div className={styles.footerContainer}>
                 <div className={`${styles.footerLogoContainer} flex-column-center`}>
                     <div className='flex-column-space-between'>
-                        <Image className={styles.logo} alt={britoFlag.alt} {...britoFlag} />
-                        <Image className={styles.logo} alt={britoWorkMark.alt} {...britoWorkMark} />
-                        <p className={'vertical-padding'}>{footerContent.description}</p>
+                        <Logo size='lg' />
+                        <p className={'vertical-padding'}>{description}</p>
                     </div>
                 </div>
                 <div className={styles.footerNav}>
-                    <h5>{footerContent.header}</h5>
+                    <h5>{title}</h5>
                     <Nav
                         className={`${styles.nav} body3 flex-column-start`}
                         navigation={navigation}
                     />
                 </div>
             </div>
-            <div className={`${styles.footerBottom} vertical-padding flex-row-space-between body5`}>
-                <p>{footerContent.copyright}</p>
-                <div className='flex-row-center'>
-                    <p>{footerContent.rights}</p>
-                    <p>|</p>
-                    <p>
-                        <a onClick={(e) => handleTermsModal(e, setTermsModalOpen)} href='#'>
-                            {footerContent.terms.text}
-                        </a>
-                        <Modal isOpen={termsModalisOpen} setIsOpen={setTermsModalOpen}>
-                            {labels.termAndconditions}
-                        </Modal>
-                    </p>
-                    <p>|</p>
-                    <p>
-                        <a onClick={(e) => handleTermsModal(e, setPrivacyModalOpen)} href='#'>
-                            {footerContent.privacy.text}
-                        </a>
-                        <Modal isOpen={privacyModalisOpen} setIsOpen={setPrivacyModalOpen}>
-                            {labels.privacyPolicy}
-                        </Modal>
-                    </p>
-                </div>
+            <div className={styles?.footerBottom}>
+                <p className={styles?.footerBottomItem}>{content?.copyright}</p>
+                <p className={styles?.footerBottomItem}>{content?.rights}</p>
+                {links?.map((link) => {
+                    return (
+                        <div key={link.id} className={styles?.footerBottomItem}>
+                            <a href='#' id={link.id} onClick={(e) => handleModal(e)}>
+                                {link.title}
+                            </a>
+                            <Modal
+                                id={link.id}
+                                isOpen={isModalOpen}
+                                setIsOpen={setIsModalOpen}
+                                modalId={modalId}
+                            >
+                                <h3>{link.title}</h3>
+                                <div dangerouslySetInnerHTML={{ __html: link.content }} />
+                            </Modal>
+                        </div>
+                    )
+                })}
             </div>
         </>
     )

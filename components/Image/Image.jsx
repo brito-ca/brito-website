@@ -1,15 +1,11 @@
 import sanitize from 'sanitize-html'
 
 const Image = (props) => {
-    const { alt, src, width, height } = props
-    // eslint-disable-next-line @next/next/no-img-element
+    const { alt, src, ...restProps } = props
+
     return (
-        <img
-            alt={sanitize(alt)}
-            src={sanitize(src)}
-            width={sanitize(width)}
-            height={sanitize(height)}
-        />
+        // eslint-disable-next-line @next/next/no-img-element
+        <img alt={sanitize(alt)} src={sanitize(src)} {...restProps} />
     )
 }
 

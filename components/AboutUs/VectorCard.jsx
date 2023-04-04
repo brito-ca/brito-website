@@ -1,12 +1,11 @@
-import { Image } from '@/components'
+import { Icon } from '@/components'
 import styles from '@/styles/AboutUs.module.css'
 
 const VectorCard = (props) => {
-    const { image, value, description } = props
-
+    const { icon, value, description } = props
     return (
         <div className={styles.vectorContainer}>
-            <Image alt={description} {...image} />
+            <Icon variant={icon} />
             <h1>{value}</h1>
             <p>{description}</p>
         </div>

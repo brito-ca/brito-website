@@ -1,6 +1,6 @@
-import styles from '@/styles/Hero.module.css'
 import { Image } from '@/components'
 import sanitize from 'sanitize-html'
+import styles from '@/styles/Hero.module.css'
 
 const Hero = (props) => {
     const { title, description, image } = props
@@ -16,7 +16,7 @@ const Hero = (props) => {
                 </div>
             </div>
             <div className={styles.crop_img_banner}>
-                <Image className={styles.img_banner} {...image} />
+                <Image className={styles.img_banner} alt={image?.alt} {...image} />
             </div>
         </div>
     )

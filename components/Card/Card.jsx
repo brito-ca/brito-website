@@ -6,7 +6,7 @@ const Card = (props) => {
     return (
         <div className={styles.card_box}>
             <div className={styles.image_box}>
-                <Image alt={image.alt} {...image} />
+                <Image {...image} alt={image.alt} />
             </div>
             <div className={styles.center_box}>
                 <div className={styles.title_box}>

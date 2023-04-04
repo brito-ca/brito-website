@@ -10,9 +10,6 @@
     text-decoration: none;
     color: var(--primary-blue);
 }
-.mailimg svg {
-    visibility: hidden;
-}
 .marg_lg {
     margin: var(--margin-lg) 0;
 }
@@ -27,6 +24,17 @@
 .socialContainer {
     gap: calc(1.4 * var(--spacing-unit));
 }
+
+.mailimg {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-unit);
+}
+
+.mailimg svg {
+    margin-top: var(--spacing-xs);
+}
+
 @media only screen and (max-width: 600px) {
     .maple {
         background-image: none;
@@ -46,9 +54,5 @@
     }
     .mail {
         text-decoration: underline;
-        padding: 0 var(--padding-sm);
-    }
-    .mailimg svg {
-        visibility: visible;
     }
 }
