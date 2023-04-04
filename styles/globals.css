@@ -47,6 +47,8 @@
     --font-weight-normal: 400;
     
     --spacing-unit: 16px;
+    --spacing-xs: calc(var(--spacing-unit) / 3);
+    --spacing-sm: calc(var(--spacing-unit) / 2);
     --spacing-md: calc(2 * var(--spacing-unit));
     --spacing-lg: calc(3 * var(--spacing-unit));
     --spacing-xl: calc(4 * var(--spacing-unit));
