@@ -1,3 +1,4 @@
+import sanitize from 'sanitize-html'
 import getPage from './getPage'
 
 const getFooter = async (data) => {
@@ -9,7 +10,7 @@ const getFooter = async (data) => {
         links: pageLinks?.map((link) => {
             return {
                 id: link?.id,
-                content: link.content.rendered,
+                content: sanitize(link.content.rendered),
                 title: link.title.rendered,
             }
         }),

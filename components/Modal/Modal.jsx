@@ -1,8 +1,13 @@
 import styles from './Modal.module.css'
 import { Icon } from '../index'
+import { useEffect } from 'react'
 
 const Modal = (props) => {
     const { isOpen, setIsOpen, children, modalId, id, actions } = props
+
+    useEffect(() => {
+        document.body.style.overflow = !isOpen ? 'scroll' : 'hidden'
+    }, [isOpen])
 
     if (isOpen && modalId === id)
         return (

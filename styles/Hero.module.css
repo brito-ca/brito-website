@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: calc(15 * var(--spacing-unit));
+    padding: calc(15 * var(--spacing-unit)) 0 0 var(--spacing-xl);
     gap: calc(5 * var(--spacing-unit));
 }
 
@@ -54,7 +54,7 @@
     }
 
     .hero_container {
-        padding-top: calc(2.19 * var(--spacing-unit));
+        padding: calc(2.19 * var(--spacing-unit)) var(--spacing-md) 0 var(--spacing-md);
         gap: calc(1.69 * var(--spacing-unit));
     }
 
