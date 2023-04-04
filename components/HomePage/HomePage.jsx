@@ -1,4 +1,4 @@
-import { AboutUs, Banner, ContactUs, Hero, Board, Form } from '@/components'
+import { AboutUs, Banner, ContactUs, Hero, Board } from '@/components'
 
 const HomePage = ({ data }) => {
     const { hero, aboutUs, ourMission, ourVision, ourBoard, joinUs, contactUs } = data

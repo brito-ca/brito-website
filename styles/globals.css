@@ -42,9 +42,14 @@
 
     --base-font-size: 16px;
     --font-b2: 1.125rem;
+    --font-b3: 1.5rem;
+    --font-b4: 1rem;
     --font-weight-normal: 400;
     
     --spacing-unit: 16px;
+    --spacing-md: calc(2 * var(--spacing-unit));
+    --spacing-lg: calc(3 * var(--spacing-unit));
+    --spacing-xl: calc(4 * var(--spacing-unit));
 
     --margin-xxs: calc(0.25 * var(--spacing-unit));
     --margin-xs: calc(0.5 * var(--spacing-unit));

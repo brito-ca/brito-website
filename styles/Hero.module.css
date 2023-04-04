@@ -1,7 +1,6 @@
 .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 600px;
     justify-content: center;
     overflow: hidden;
     padding-bottom: var(--spacing-unit);
@@ -49,6 +48,7 @@
 @media only screen and (max-width: 600px) {
     .container {
         justify-content: center;
+        grid-template-columns: 1fr;
         padding: calc(0 * var(--spacing-unit));
         gap: calc(0 * var(--spacing-unit));
     }
