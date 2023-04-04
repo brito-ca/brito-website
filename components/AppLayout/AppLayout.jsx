@@ -22,7 +22,7 @@ const AppLayout = (props) => {
             <div className={`${roboto.className} ${styles.container}`}>
                 <FloatingActionButton />
                 <Header {...header} />
-                <main>{children}</main>
+                <main className={styles.main}>{children}</main>
                 <Footer {...footer} />
             </div>
         </>
