@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Popover, Icon, Modal, FormInput, Checkbox, Image, Logo } from '@/components'
 import styles from '../../styles/Form.module.css'
+import { MEMBER_API_URL } from '@/constants/app'
+import { encode } from 'base-64'
 
 const Form = (props) => {
     const {
@@ -13,6 +15,7 @@ const Form = (props) => {
         send_response_title,
         send_response_description,
     } = props
+
     const [formValues, setFormValues] = useState({
         full_name: '',
         expertise: '',
@@ -43,21 +46,32 @@ const Form = (props) => {
 
     const handleSubmit = async (event) => {
         event.preventDefault()
-        setSubscriptionModalOpen(!subscriptionModalOpen)
 
-        const formDataJSON = JSON.stringify(formValues)
-        const api = 'https://brito.it/wp-json/wp/v2/member'
+        const formDataJSON = JSON.stringify({
+            title: formValues.full_name,
+            acf: {
+                full_name: formValues.full_name,
+                expertise: formValues.expertise,
+                company: formValues.company,
+                residing_canada: formValues.residein_canada,
+                province: formValues.province,
+                city: formValues.city,
+                immigration_status: formValues.immigration_status,
+                linkedin_profile: formValues.linkedin_profile,
+                email: formValues.email,
+            },
+        })
         const options = {
             method: 'POST',
             headers: {
+                Authorization: 'Basic ' + encode(process.env.API_USER + ':' + process.env.API_PWD),
                 'Content-Type': 'application/json',
             },
             body: formDataJSON,
         }
+        console.log(MEMBER_API_URL)
 
-        //process.env.API_USER
-
-        const res = await fetch(api, options)
+        const res = await fetch(MEMBER_API_URL, options)
         if (res.status === 200) {
             setSubscriptionModalOpen(!subscriptionModalOpen)
             setFormValues({
