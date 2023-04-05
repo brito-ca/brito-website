@@ -8,6 +8,7 @@ export const LANGUAGES_API_URL = `${API_URL}/language`
 export const FIELDS_API_URL = `${API_URL}/field`
 export const MENU_NAVIGATION_API_URL = `${API_URL}/menu`
 export const SOCIAL_MEDIA_API_URL = `${API_URL}/socialmedia`
+export const MEMBER_API_URL = `${API_URL}/member`
 export const LOCALE_EN = `en`
 export const LOCALE_FR = `fr`
 export const LOCALE_PT = `pt`

@@ -1,10 +1,18 @@
 import { useState } from 'react'
-import { Popover, Icon, Modal, FormInput, Checkbox, Image } from '@/components'
+import { Popover, Icon, Modal, FormInput, Checkbox, Image, Logo } from '@/components'
 import styles from '../../styles/Form.module.css'
-import labels from '@/constants/labels.en'
 
 const Form = (props) => {
-    const { id, fields, image, smallLogo } = props
+    const {
+        id,
+        fields,
+        image,
+        title,
+        button_submit,
+        send_response_button,
+        send_response_title,
+        send_response_description,
+    } = props
     const [formValues, setFormValues] = useState({
         full_name: '',
         expertise: '',
@@ -32,45 +40,50 @@ const Form = (props) => {
             [e.target.name]: e.target.value,
         })
     }
+    console.log(process.env.API_USER)
 
     const handleSubmit = async (event) => {
         event.preventDefault()
         setSubscriptionModalOpen(!subscriptionModalOpen)
 
-        // const formDataJSON = JSON.stringify(formValues)
-        // const api = 'https://brito.it/wp-json/wp/v2/member'
-        // const options = {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //     },
-        //     body: formDataJSON,
-        // }
+        const formDataJSON = JSON.stringify(formValues)
+        const api = 'https://brito.it/wp-json/wp/v2/member'
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: formDataJSON,
+        }
 
-        // const res = await fetch(api, options)
-        // if (res.status === 200) {
-        //     setSubscriptionModalOpen(!subscriptionModalOpen)
-        //     setFormValues({
-        //         full_name: '',
-        //         expertise: '',
-        //         company: '',
-        //         residein_canada: false,
-        //         province: '',
-        //         city: '',
-        //         immigration_status: '',
-        //         linkedin_profile: '',
-        //         email: '',
-        //     })
-        // } else {
-        //     alert(
-        //         `Error: ${res.status} ${res.statusText}  \nSomething went wrong. Please try again.`
-        //     )
-        // }
+        //process.env.API_USER
+
+        const res = await fetch(api, options)
+        if (res.status === 200) {
+            setSubscriptionModalOpen(!subscriptionModalOpen)
+            setFormValues({
+                full_name: '',
+                expertise: '',
+                company: '',
+                residein_canada: false,
+                province: '',
+                city: '',
+                immigration_status: '',
+                linkedin_profile: '',
+                email: '',
+            })
+        } else {
+            alert(
+                `Error: ${res.status} ${res.statusText}  \nSomething went wrong. Please try again.`
+            )
+        }
     }
 
     function getField(fields, id) {
         return fields.find((item) => item?.id === id) || {}
     }
+
+    // console.log(fields)
 
     const [immigrationStatusPopover, setImmigrationStatusPopover] = useState(false)
     const [subscriptionModalOpen, setSubscriptionModalOpen] = useState(false)
@@ -84,7 +97,7 @@ const Form = (props) => {
                 {...image}
             />
             <div className={styles.formContainer}>
-                <h4 className={styles.formTitle}>{fields.title}</h4>
+                <h4 className={styles.formTitle}>{title}</h4>
                 <form method='post'>
                     <div className={styles.formSections}>
                         <div className={styles.primaryInformation}>
@@ -115,13 +128,13 @@ const Form = (props) => {
                             />
 
                             <label className={styles.labelForm}>
-                                {getField(fields, 'residein_canada').label}
+                                {getField(fields, 'resideInCanada').label}
                             </label>
                             <Checkbox
                                 name='residein_canada'
                                 onChange={handleResideInCanada}
                                 id='1'
-                                label='Yes'
+                                label={getField(fields, 'yes').label}
                                 value={resideInCanada}
                             />
                         </div>
@@ -158,8 +171,8 @@ const Form = (props) => {
                             onChange={handleChange}
                         />
                         <div className={styles.immigrationStatusSection}>
-                            <label htmlFor='immigration-status' className={styles.labelForm}>
-                                {getField(labels, 'immigration_status').label}
+                            <label htmlFor='immigrationStatus' className={styles.labelForm}>
+                                {getField(fields, 'immigrationStatus').label}
                                 <span
                                     className={styles.infoIcon}
                                     onMouseEnter={() => setImmigrationStatusPopover(true)}
@@ -168,13 +181,15 @@ const Form = (props) => {
                                     <Icon variant={'exclamation'} className={styles.infoIcon} />
                                     {immigrationStatusPopover && (
                                         <Popover>
-                                            <p>{fields.statusInformationPopover}</p>
+                                            <p>
+                                                {getField(fields, 'statusInformationPopover').label}
+                                            </p>
                                         </Popover>
                                     )}
                                 </span>
                             </label>
 
-                            {/* <select
+                            <select
                                 disabled={!formValues.residein_canada}
                                 name='immigration_status'
                                 value={formValues.immigration_status}
@@ -186,12 +201,14 @@ const Form = (props) => {
                                 <option value='' disabled>
                                     Select
                                 </option>
-                                {fields.immigrationStatus.values.map((value) => (
-                                    <option key={value} value={value}>
-                                        {value}
-                                    </option>
-                                ))}
-                            </select> */}
+                                {getField(fields, 'immigrationStatus')
+                                    .value.split(',')
+                                    .map((value) => (
+                                        <option key={value} value={value}>
+                                            {value}
+                                        </option>
+                                    ))}
+                            </select>
                         </div>
                         <div className={styles.imageContainer}>
                             <Image className={styles.roundedFormImage} alt={image.alt} {...image} />
@@ -217,36 +234,30 @@ const Form = (props) => {
                         />
 
                         <button className={styles.sendButton} type='button' onClick={handleSubmit}>
-                            {fields.sendButton}
+                            {button_submit}
                         </button>
-                        {/* <Modal
+                        <Modal
                             className={styles.subscriptionModalContainer}
                             isOpen={subscriptionModalOpen}
                             setIsOpen={setSubscriptionModalOpen}
                         >
-                            <Image
-                                className={styles.logoSubscriptionModal}
-                                alt={'smallLogo.alt'}
-                                {...smallLogo}
-                            />
+                            <Logo size='lg' />
                             <div className={styles.subscriptionModalTextDescriptionContainer}>
                                 <h1 className={styles.subscriptionModalTitle}>
-                                    {fields.subscriptionModal.title}
+                                    {send_response_title}
                                 </h1>
                                 <p className={styles.subscriptionModalDescription}>
-                                    {fields.subscriptionModal.approval}
+                                    {send_response_description}
                                 </p>
-                                <p className={styles.subscriptionModalDescription}></p>
-                                {fields.subscriptionModal.notification}
                                 <button
                                     type='button'
                                     className={styles.continueBrowsingButton}
                                     onClick={() => setSubscriptionModalOpen(!subscriptionModalOpen)}
                                 >
-                                    {fields.subscriptionModal.continueBrowsing}
+                                    {send_response_button}
                                 </button>
                             </div>
-                        </Modal> */}
+                        </Modal>
                     </div>
                 </form>
             </div>
