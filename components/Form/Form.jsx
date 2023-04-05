@@ -46,50 +46,53 @@ const Form = (props) => {
 
     const handleSubmit = async (event) => {
         event.preventDefault()
+        setSubscriptionModalOpen(!subscriptionModalOpen)
 
-        const formDataJSON = JSON.stringify({
-            title: formValues.full_name,
-            acf: {
-                full_name: formValues.full_name,
-                expertise: formValues.expertise,
-                company: formValues.company,
-                residing_canada: formValues.residein_canada,
-                province: formValues.province,
-                city: formValues.city,
-                immigration_status: formValues.immigration_status,
-                linkedin_profile: formValues.linkedin_profile,
-                email: formValues.email,
-            },
-        })
-        const options = {
-            method: 'POST',
-            headers: {
-                Authorization: 'Basic ' + encode(process.env.API_USER + ':' + process.env.API_PWD),
-                'Content-Type': 'application/json',
-            },
-            body: formDataJSON,
-        }
-        console.log(MEMBER_API_URL)
+        // const formDataJSON = JSON.stringify({
+        //     title: formValues.full_name,
+        //     acf: {
+        //         full_name: formValues.full_name,
+        //         expertise: formValues.expertise,
+        //         company: formValues.company,
+        //         residing_canada: formValues.residein_canada,
+        //         province: formValues.province,
+        //         city: formValues.city,
+        //         immigration_status: formValues.immigration_status,
+        //         linkedin_profile: formValues.linkedin_profile,
+        //         email: formValues.email,
+        //     },
+        // })
+        // console.log(formDataJSON)
+        // const options = {
+        //     method: 'POST',
+        //     headers: {
+        //         Authorization: 'Basic ' + encode(process.env.API_USER + ':' + process.env.API_PWD),
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: formDataJSON,
+        // }
+        // console.log(options)
+        // // console.log(fields)
 
-        const res = await fetch(MEMBER_API_URL, options)
-        if (res.status === 200) {
-            setSubscriptionModalOpen(!subscriptionModalOpen)
-            setFormValues({
-                full_name: '',
-                expertise: '',
-                company: '',
-                residein_canada: false,
-                province: '',
-                city: '',
-                immigration_status: '',
-                linkedin_profile: '',
-                email: '',
-            })
-        } else {
-            alert(
-                `Error: ${res.status} ${res.statusText}  \nSomething went wrong. Please try again.`
-            )
-        }
+        // const res = await fetch(MEMBER_API_URL, options)
+        // if (res.status === 200) {
+        //     setSubscriptionModalOpen(!subscriptionModalOpen)
+        //     setFormValues({
+        //         full_name: '',
+        //         expertise: '',
+        //         company: '',
+        //         residein_canada: false,
+        //         province: '',
+        //         city: '',
+        //         immigration_status: '',
+        //         linkedin_profile: '',
+        //         email: '',
+        //     })
+        // } else {
+        //     alert(
+        //         `Error: ${res.status} ${res.statusText}  \nSomething went wrong. Please try again.`
+        //     )
+        // }
     }
 
     function getField(fields, id) {
