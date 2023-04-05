@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Popover, Icon, Modal, FormInput, Checkbox, Image } from '@/components'
 import styles from '../../styles/Form.module.css'
+import labels from '@/constants/labels.en'
 
 const Form = (props) => {
     const { id, fields, image, smallLogo } = props
@@ -15,18 +16,6 @@ const Form = (props) => {
         linkedin_profile: '',
         email: '',
     })
-    /* 
-        How to use
-
-        getField(fields, 'city').label
-        getField(fields, 'city').placeholder
-        ....
-    */
-    function getField(fields, id) {
-        // TO DO
-        // find the field with the proper id
-        return fields.find((item) => item?.id === id) || {}
-    }
 
     const handleResideInCanada = () => {
         setResideInCanada(!resideInCanada)
@@ -43,7 +32,6 @@ const Form = (props) => {
             [e.target.name]: e.target.value,
         })
     }
-    console.log(fields)
 
     const handleSubmit = async (event) => {
         event.preventDefault()
@@ -80,12 +68,16 @@ const Form = (props) => {
         // }
     }
 
-    const [subscriptionModalOpen, setSubscriptionModalOpen] = useState(false)
+    function getField(fields, id) {
+        return fields.find((item) => item?.id === id) || {}
+    }
+
     const [immigrationStatusPopover, setImmigrationStatusPopover] = useState(false)
+    const [subscriptionModalOpen, setSubscriptionModalOpen] = useState(false)
     const [resideInCanada, setResideInCanada] = useState(false)
 
     return (
-        <div id={id}>
+        <div id={id} className='flex-row-center'>
             <Image
                 className={`${styles.mobileFormImage} ${styles.roundedFormImage} vertical-margin-md`}
                 alt={image.alt}
@@ -147,11 +139,13 @@ const Form = (props) => {
                                 className={styles.inputForm}
                                 required
                             >
-                                {getField(fields, 'province').value.map((province) => (
-                                    <option key={province.code} value={province.name}>
-                                        {province.name}
-                                    </option>
-                                ))}
+                                {getField(fields, 'province')
+                                    .value.split(',')
+                                    .map((province) => (
+                                        <option key={province} value={province}>
+                                            {province}
+                                        </option>
+                                    ))}
                             </select>
                         </div>
                         <FormInput
@@ -163,9 +157,9 @@ const Form = (props) => {
                             placeholder={getField(fields, 'city').placeholder}
                             onChange={handleChange}
                         />
-                        {/* <div className={styles.immigrationStatusSection}>
+                        <div className={styles.immigrationStatusSection}>
                             <label htmlFor='immigration-status' className={styles.labelForm}>
-                                {fields.immigrationStatus.label}
+                                {getField(labels, 'immigration_status').label}
                                 <span
                                     className={styles.infoIcon}
                                     onMouseEnter={() => setImmigrationStatusPopover(true)}
@@ -180,7 +174,7 @@ const Form = (props) => {
                                 </span>
                             </label>
 
-                            <select
+                            {/* <select
                                 disabled={!formValues.residein_canada}
                                 name='immigration_status'
                                 value={formValues.immigration_status}
@@ -197,8 +191,8 @@ const Form = (props) => {
                                         {value}
                                     </option>
                                 ))}
-                            </select>
-                        </div> */}
+                            </select> */}
+                        </div>
                         <div className={styles.imageContainer}>
                             <Image className={styles.roundedFormImage} alt={image.alt} {...image} />
                         </div>
