@@ -5,6 +5,7 @@ export const PAGE_API_URL = `${API_URL}/pages`
 export const MEDIA_API_URL = `${API_URL}/media`
 export const BOARD_API_URL = `${API_URL}/board`
 export const LANGUAGES_API_URL = `${API_URL}/language`
+export const FIELDS_API_URL = `${API_URL}/field`
 export const MENU_NAVIGATION_API_URL = `${API_URL}/menu`
 export const SOCIAL_MEDIA_API_URL = `${API_URL}/socialmedia`
 export const LOCALE_EN = `en`

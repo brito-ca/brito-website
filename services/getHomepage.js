@@ -7,6 +7,7 @@ import {
     getLanguage,
     getMenu,
     getSocialMedia,
+    getForm
 } from '@/services'
 import getFooter from './getFooter'
 
@@ -46,6 +47,7 @@ const getHomePage = async (locale) => {
                 ...acf['join-us'],
             },
             contactUs: await getContactUs(acf['contact_us']),
+            form: await getForm(acf['form']),
         },
     }
 }
