@@ -3,7 +3,7 @@ import { Popover, Icon, Modal, FormInput, Checkbox, Image } from '@/components'
 import styles from '../../styles/Form.module.css'
 
 const Form = (props) => {
-    const { fields, image, smallLogo } = props
+    const { id, fields, image, smallLogo } = props
     const [formValues, setFormValues] = useState({
         full_name: '',
         expertise: '',
@@ -15,6 +15,19 @@ const Form = (props) => {
         linkedin_profile: '',
         email: '',
     })
+
+    /* 
+        How to use
+
+        getField(fields, 'city').label
+        getField(fields, 'city').placeholder
+        ....
+    */
+    function getField(fields, id) {
+        // TO DO
+        // find the field with the proper id
+        return fields.find((item) => item?.id === id) || {}
+    }
 
     const handleResideInCanada = () => {
         setResideInCanada(!resideInCanada)
@@ -72,7 +85,7 @@ const Form = (props) => {
     const [resideInCanada, setResideInCanada] = useState(false)
 
     return (
-        <div>
+        <div id={id}>
             <Image
                 className={`${styles.mobileFormImage} ${styles.roundedFormImage} vertical-margin-md`}
                 alt={image.alt}
@@ -88,7 +101,7 @@ const Form = (props) => {
                                 mandatory='yes'
                                 fieldStyle={styles.fullNameField}
                                 labelContent={fields.fullName.label}
-                                placeholder='E.g Amanda Costa'
+                                placeholder={getField(fields, 'fullname').placeholder}
                                 value={formValues.fullName}
                                 onChange={handleChange}
                             />
