@@ -45,54 +45,56 @@ const Form = (props) => {
     }
 
     const handleSubmit = async (event) => {
+        console.log(event)
+
         event.preventDefault()
-        setSubscriptionModalOpen(!subscriptionModalOpen)
 
-        // const formDataJSON = JSON.stringify({
-        //     title: formValues.full_name,
-        //     acf: {
-        //         full_name: formValues.full_name,
-        //         expertise: formValues.expertise,
-        //         company: formValues.company,
-        //         residing_canada: formValues.residein_canada,
-        //         province: formValues.province,
-        //         city: formValues.city,
-        //         immigration_status: formValues.immigration_status,
-        //         linkedin_profile: formValues.linkedin_profile,
-        //         email: formValues.email,
-        //     },
-        // })
-        // console.log(formDataJSON)
-        // const options = {
-        //     method: 'POST',
-        //     headers: {
-        //         Authorization: 'Basic ' + encode(process.env.API_USER + ':' + process.env.API_PWD),
-        //         'Content-Type': 'application/json',
-        //     },
-        //     body: formDataJSON,
-        // }
-        // console.log(options)
-        // // console.log(fields)
+        const formData = {
+            title: formValues.full_name,
+            acf: {
+                full_name: formValues.full_name,
+                expertise: formValues.expertise,
+                company: formValues.company,
+                residing_canada: formValues.residein_canada,
+                province: formValues.province,
+                city: formValues.city,
+                immigration_status: formValues.immigration_status || 'N/A',
+                linkedin_profile: formValues.linkedin_profile,
+                email: formValues.email,
+            },
+        }
 
-        // const res = await fetch(MEMBER_API_URL, options)
-        // if (res.status === 200) {
-        //     setSubscriptionModalOpen(!subscriptionModalOpen)
-        //     setFormValues({
-        //         full_name: '',
-        //         expertise: '',
-        //         company: '',
-        //         residein_canada: false,
-        //         province: '',
-        //         city: '',
-        //         immigration_status: '',
-        //         linkedin_profile: '',
-        //         email: '',
-        //     })
-        // } else {
-        //     alert(
-        //         `Error: ${res.status} ${res.statusText}  \nSomething went wrong. Please try again.`
-        //     )
-        // }
+        const options = {
+            method: 'POST',
+            headers: {
+                "Authorization": 'Basic ' + encode(process.env.API_USER + ':' + process.env.API_PWD),
+                "Content-Type": 'application/json',
+            },
+            body: JSON.stringify(
+                { ...formData }
+            ),
+        }
+        console.log(JSON.stringify(formData))
+
+        const res = await fetch(MEMBER_API_URL, options)
+        if (res.status === 200 || res.status === 201) {
+            setSubscriptionModalOpen(!subscriptionModalOpen)
+            setFormValues({
+                full_name: '',
+                expertise: '',
+                company: '',
+                residein_canada: false,
+                province: '',
+                city: '',
+                immigration_status: '',
+                linkedin_profile: '',
+                email: '',
+            })
+        } else {
+            alert(
+                `Error: ${res.status} ${res.statusText}  \nSomething went wrong. Please try again.`
+            )
+        }
     }
 
     function getField(fields, id) {
@@ -114,12 +116,12 @@ const Form = (props) => {
             />
             <div className={styles.formContainer}>
                 <h4 className={styles.formTitle}>{title}</h4>
-                <form method='post'>
+                <form onSubmit={(e) => handleSubmit(e)} method='post'>
                     <div className={styles.formSections}>
                         <div className={styles.primaryInformation}>
                             <FormInput
                                 name='full_name'
-                                mandatory='yes'
+                                required='yes'
                                 fieldStyle={styles.fullNameField}
                                 labelContent={getField(fields, 'fullname').label}
                                 placeholder={getField(fields, 'fullname').placeholder}
@@ -179,6 +181,7 @@ const Form = (props) => {
                         </div>
                         <FormInput
                             disabled={!formValues.residein_canada}
+                            required="required"
                             name='city'
                             fieldStyle={styles.cityField}
                             labelContent={getField(fields, 'city').label}
@@ -188,7 +191,7 @@ const Form = (props) => {
                         />
                         <div className={styles.immigrationStatusSection}>
                             <label htmlFor='immigrationStatus' className={styles.labelForm}>
-                                {getField(fields, 'immigrationStatus').label}
+                                {getField(fields, 'immigrationStatus').label.trim()}
                                 <span
                                     className={styles.infoIcon}
                                     onMouseEnter={() => setImmigrationStatusPopover(true)}
@@ -220,8 +223,8 @@ const Form = (props) => {
                                 {getField(fields, 'immigrationStatus')
                                     .value.split(',')
                                     .map((value) => (
-                                        <option key={value} value={value}>
-                                            {value}
+                                        <option key={value} value={value.trim()}>
+                                            {value.trim()}
                                         </option>
                                     ))}
                             </select>
@@ -232,6 +235,7 @@ const Form = (props) => {
 
                         <FormInput
                             name='linkedin_profile'
+                            type='url'
                             fieldStyle={styles.linkedinField}
                             labelContent={getField(fields, 'linkedin').label}
                             placeholder={getField(fields, 'linkedin').placeholder}
@@ -241,7 +245,8 @@ const Form = (props) => {
 
                         <FormInput
                             name='email'
-                            mandatory='yes'
+                            type='email'
+                            required='required'
                             fieldStyle={styles.emailField}
                             labelContent={getField(fields, 'email').label}
                             placeholder={getField(fields, 'email').placeholder}
@@ -249,9 +254,7 @@ const Form = (props) => {
                             onChange={handleChange}
                         />
 
-                        <button className={styles.sendButton} type='button' onClick={handleSubmit}>
-                            {button_submit}
-                        </button>
+                        <input type='submit' className={styles.sendButton} value={button_submit} />
                         <Modal
                             className={styles.subscriptionModalContainer}
                             isOpen={subscriptionModalOpen}

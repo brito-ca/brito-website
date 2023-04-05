@@ -10,8 +10,8 @@ const HomePage = ({ data }) => {
             <Banner {...ourVision} />
             <Board {...ourBoard} />
             <Banner {...joinUs} />
-            <ContactUs {...contactUs} />
             <Form {...form} />
+            <ContactUs {...contactUs} />
         </>
     )
 }
