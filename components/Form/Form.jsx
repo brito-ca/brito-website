@@ -65,12 +65,10 @@ const Form = (props) => {
         const options = {
             method: 'POST',
             headers: {
-                "Authorization": 'Basic ' + encode(process.env.API_USER + ':' + process.env.API_PWD),
-                "Content-Type": 'application/json',
+                Authorization: 'Basic ' + encode(process.env.API_USER + ':' + process.env.API_PWD),
+                'Content-Type': 'application/json',
             },
-            body: JSON.stringify(
-                { ...formData }
-            ),
+            body: JSON.stringify({ ...formData }),
         }
 
         const res = await fetch(MEMBER_API_URL, options)
@@ -178,7 +176,7 @@ const Form = (props) => {
                         </div>
                         <FormInput
                             disabled={!formValues.residein_canada}
-                            required="required"
+                            required='required'
                             name='city'
                             fieldStyle={styles.cityField}
                             labelContent={getField(fields, 'city').label}
