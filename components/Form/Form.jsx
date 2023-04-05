@@ -15,7 +15,6 @@ const Form = (props) => {
         linkedin_profile: '',
         email: '',
     })
-
     /* 
         How to use
 
@@ -44,6 +43,7 @@ const Form = (props) => {
             [e.target.name]: e.target.value,
         })
     }
+    console.log(fields)
 
     const handleSubmit = async (event) => {
         event.preventDefault()
@@ -100,7 +100,7 @@ const Form = (props) => {
                                 name='full_name'
                                 mandatory='yes'
                                 fieldStyle={styles.fullNameField}
-                                labelContent={fields.fullName.label}
+                                labelContent={getField(fields, 'fullname').label}
                                 placeholder={getField(fields, 'fullname').placeholder}
                                 value={formValues.fullName}
                                 onChange={handleChange}
@@ -108,22 +108,22 @@ const Form = (props) => {
                             <FormInput
                                 name='expertise'
                                 fieldStyle={styles.expertiseField}
-                                labelContent={fields.expertise.label}
-                                placeholder='E.g. UX Designer'
+                                labelContent={getField(fields, 'expertise').label}
+                                placeholder={getField(fields, 'expertise').placeholder}
                                 value={formValues.expertise}
                                 onChange={handleChange}
                             />
                             <FormInput
                                 name='company'
                                 fieldStyle={styles.companyField}
-                                labelContent={fields.company.label}
-                                placeholder={fields.company.placeholder}
+                                labelContent={getField(fields, 'company').label}
+                                placeholder={getField(fields, 'company').placeholder}
                                 value={formValues.company}
                                 onChange={handleChange}
                             />
 
                             <label className={styles.labelForm}>
-                                {fields.resideInCanada.label}
+                                {getField(fields, 'residein_canada').label}
                             </label>
                             <Checkbox
                                 name='residein_canada'
@@ -135,7 +135,7 @@ const Form = (props) => {
                         </div>
                         <div className={styles.provinceField}>
                             <label htmlFor='province' className={styles.labelForm}>
-                                {fields.province.label}
+                                {getField(fields, 'province').label}
                             </label>
 
                             <select
@@ -147,7 +147,7 @@ const Form = (props) => {
                                 className={styles.inputForm}
                                 required
                             >
-                                {fields.province.provinces.map((province) => (
+                                {getField(fields, 'province').value.map((province) => (
                                     <option key={province.code} value={province.name}>
                                         {province.name}
                                     </option>
@@ -158,12 +158,12 @@ const Form = (props) => {
                             disabled={!formValues.residein_canada}
                             name='city'
                             fieldStyle={styles.cityField}
-                            labelContent={fields.city.label}
+                            labelContent={getField(fields, 'city').label}
                             value={formValues.city}
-                            placeholder='E.g. Ottawa'
+                            placeholder={getField(fields, 'city').placeholder}
                             onChange={handleChange}
                         />
-                        <div className={styles.immigrationStatusSection}>
+                        {/* <div className={styles.immigrationStatusSection}>
                             <label htmlFor='immigration-status' className={styles.labelForm}>
                                 {fields.immigrationStatus.label}
                                 <span
@@ -198,7 +198,7 @@ const Form = (props) => {
                                     </option>
                                 ))}
                             </select>
-                        </div>
+                        </div> */}
                         <div className={styles.imageContainer}>
                             <Image className={styles.roundedFormImage} alt={image.alt} {...image} />
                         </div>
@@ -206,8 +206,8 @@ const Form = (props) => {
                         <FormInput
                             name='linkedin_profile'
                             fieldStyle={styles.linkedinField}
-                            labelContent={fields.linkedin.label}
-                            placeholder={fields.linkedin.placeholder}
+                            labelContent={getField(fields, 'linkedin').label}
+                            placeholder={getField(fields, 'linkedin').placeholder}
                             value={formValues.linkedinProfileLink}
                             onChange={handleChange}
                         />
@@ -216,8 +216,8 @@ const Form = (props) => {
                             name='email'
                             mandatory='yes'
                             fieldStyle={styles.emailField}
-                            labelContent={fields.email.label}
-                            placeholder={fields.email.placeholder}
+                            labelContent={getField(fields, 'email').label}
+                            placeholder={getField(fields, 'email').placeholder}
                             value={formValues.email}
                             onChange={handleChange}
                         />
@@ -225,14 +225,14 @@ const Form = (props) => {
                         <button className={styles.sendButton} type='button' onClick={handleSubmit}>
                             {fields.sendButton}
                         </button>
-                        <Modal
+                        {/* <Modal
                             className={styles.subscriptionModalContainer}
                             isOpen={subscriptionModalOpen}
                             setIsOpen={setSubscriptionModalOpen}
                         >
                             <Image
                                 className={styles.logoSubscriptionModal}
-                                alt={smallLogo.alt}
+                                alt={'smallLogo.alt'}
                                 {...smallLogo}
                             />
                             <div className={styles.subscriptionModalTextDescriptionContainer}>
@@ -252,7 +252,7 @@ const Form = (props) => {
                                     {fields.subscriptionModal.continueBrowsing}
                                 </button>
                             </div>
-                        </Modal>
+                        </Modal> */}
                     </div>
                 </form>
             </div>
