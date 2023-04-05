@@ -45,8 +45,6 @@ const Form = (props) => {
     }
 
     const handleSubmit = async (event) => {
-        console.log(event)
-
         event.preventDefault()
 
         const formData = {
@@ -74,7 +72,6 @@ const Form = (props) => {
                 { ...formData }
             ),
         }
-        console.log(JSON.stringify(formData))
 
         const res = await fetch(MEMBER_API_URL, options)
         if (res.status === 200 || res.status === 201) {
