@@ -40,7 +40,6 @@ const Form = (props) => {
             [e.target.name]: e.target.value,
         })
     }
-    console.log(process.env.API_USER)
 
     const handleSubmit = async (event) => {
         event.preventDefault()
