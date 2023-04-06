@@ -166,10 +166,6 @@
         padding: var(--padding-md) var(--padding-md) !important;
     }
 
-    .subscriptionModalTitle {
-        display: none;
-    }
-
     .continueBrowsingButton {
         width: 236px;
     }
