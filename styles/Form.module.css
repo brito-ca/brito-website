@@ -93,7 +93,7 @@
     border-radius: var(--radius-lg);
 
     padding: 0.5rem var(--padding-sm);
-    margin: var(--margin-lg) 0 var(--margin-md) 0;
+    margin: var(--margin-md) 0 var(--margin-md) 0;
 
     cursor: pointer;
 }
@@ -166,10 +166,6 @@
         padding: var(--padding-md) var(--padding-md) !important;
     }
 
-    .subscriptionModalTitle {
-        display: none;
-    }
-
     .continueBrowsingButton {
         width: 236px;
     }
@@ -204,6 +200,7 @@
     height: 220px;
 
     display: flex;
+    justify-content: center;
     margin: 0 auto;
 }
 
@@ -221,10 +218,5 @@
 .subscriptionModalTitle {
     font-weight: 500;
     font-size: 26px;
-
-    margin: var(--margin-sm);
-}
-
-.subscriptionModalDescription {
-    padding: 0.15rem;
+    margin: var(--margin-sm) var(--margin-sm) var(--margin-md);
 }

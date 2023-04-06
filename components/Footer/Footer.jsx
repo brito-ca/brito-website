@@ -44,10 +44,12 @@ const Footer = (props) => {
                                 id={link.id}
                                 isOpen={isModalOpen}
                                 setIsOpen={setIsModalOpen}
-                                modalId={modalId}
+                                modalId={modalId}                               
                             >
+                                <div className='padding-lg'>                                
                                 <h3>{link.title}</h3>
                                 <div dangerouslySetInnerHTML={{ __html: link.content }} />
+                                </div>
                             </Modal>
                         </div>
                     )

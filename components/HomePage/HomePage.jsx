@@ -1,7 +1,7 @@
-import { AboutUs, Banner, ContactUs, Hero, Board } from '@/components'
+import { AboutUs, Banner, ContactUs, Hero, Board, Form } from '@/components'
 
 const HomePage = ({ data }) => {
-    const { hero, aboutUs, ourMission, ourVision, ourBoard, joinUs, contactUs } = data
+    const { hero, aboutUs, ourMission, ourVision, ourBoard, joinUs, contactUs, form } = data
     return (
         <>
             <Hero {...hero} />
@@ -10,6 +10,7 @@ const HomePage = ({ data }) => {
             <Banner {...ourVision} />
             <Board {...ourBoard} />
             <Banner {...joinUs} />
+            <Form {...form} />
             <ContactUs {...contactUs} />
         </>
     )

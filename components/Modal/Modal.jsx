@@ -16,7 +16,9 @@ const Modal = (props) => {
                     <div className={styles.button}>
                         <Icon variant='close' onClick={() => setIsOpen(false)} />
                     </div>
-                    <div className={styles.content}>{children}</div>
+                    <div className={styles.content}>
+                        {children}
+                    </div>
                     {actions && <div className={styles.actions}>{actions}</div>}
                 </div>
             </div>
