@@ -71,22 +71,21 @@ const Form = (props) => {
             body: JSON.stringify(
                 { ...formData }
             ),
-        }
+        }        
 
         const res = await fetch(MEMBER_API_URL, options)
-        if (res.status === 200 || res.status === 201) {
+        if (res.status === 200 || res.status === 201) {            
             setSubscriptionModalOpen(!subscriptionModalOpen)
             setFormValues({
                 full_name: '',
                 expertise: '',
-                company: '',
-                residein_canada: false,
+                company: '',                
                 province: '',
                 city: '',
                 immigration_status: '',
                 linkedin_profile: '',
                 email: '',
-            })
+            })            
         } else {
             alert(
                 `Error: ${res.status} ${res.statusText}  \nSomething went wrong. Please try again.`
@@ -96,9 +95,7 @@ const Form = (props) => {
 
     function getField(fields, id) {
         return fields.find((item) => item?.id === id) || {}
-    }
-
-    // console.log(fields)
+    }    
 
     const [immigrationStatusPopover, setImmigrationStatusPopover] = useState(false)
     const [subscriptionModalOpen, setSubscriptionModalOpen] = useState(false)
@@ -122,7 +119,7 @@ const Form = (props) => {
                                 fieldStyle={styles.fullNameField}
                                 labelContent={getField(fields, 'fullname').label}
                                 placeholder={getField(fields, 'fullname').placeholder}
-                                value={formValues.fullName}
+                                value={formValues.full_name}
                                 onChange={handleChange}
                             />
                             <FormInput
@@ -236,7 +233,7 @@ const Form = (props) => {
                             fieldStyle={styles.linkedinField}
                             labelContent={getField(fields, 'linkedin').label}
                             placeholder={getField(fields, 'linkedin').placeholder}
-                            value={formValues.linkedinProfileLink}
+                            value={formValues.linkedin_profile}
                             onChange={handleChange}
                         />
 
