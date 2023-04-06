@@ -7,7 +7,7 @@ import {
     getLanguage,
     getMenu,
     getSocialMedia,
-    getForm
+    getForm,
 } from '@/services'
 import getFooter from './getFooter'
 
