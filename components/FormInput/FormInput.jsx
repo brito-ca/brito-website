@@ -17,7 +17,7 @@ const FormInput = (props) => {
         <div className={fieldStyle}>
             <label className={styles.labelForm}>
                 {labelContent}
-                {required && <span className={styles.mandatoryFieldSpan}>*</span>}
+                {required && !disabled && <span className={styles.mandatoryFieldSpan}>*</span>}
             </label>
             <input
                 type={type}

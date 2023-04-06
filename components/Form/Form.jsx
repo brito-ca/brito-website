@@ -16,6 +16,8 @@ const Form = (props) => {
         send_response_description,
     } = props
 
+    const [isSubmitting, setSubmission] = useState(false);
+
     const [formValues, setFormValues] = useState({
         full_name: '',
         expertise: '',
@@ -45,6 +47,8 @@ const Form = (props) => {
     }
 
     const handleSubmit = async (event) => {
+        setSubmission(true);
+
         event.preventDefault()
 
         const formData = {
@@ -89,6 +93,8 @@ const Form = (props) => {
                 `Error: ${res.status} ${res.statusText}  \nSomething went wrong. Please try again.`
             )
         }
+
+        setSubmission(false);
     }
 
     function getField(fields, id) {
@@ -246,7 +252,8 @@ const Form = (props) => {
                             onChange={handleChange}
                         />
 
-                        <input type='submit' className={styles.sendButton} value={button_submit} />
+                        <input type='submit' className={styles.sendButton} value={!isSubmitting ? button_submit : '...'} disabled={isSubmitting} />
+
                         <Modal
                             className={styles.subscriptionModalContainer}
                             isOpen={subscriptionModalOpen}
