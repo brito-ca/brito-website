@@ -45,6 +45,7 @@ const Footer = (props) => {
                                 isOpen={isModalOpen}
                                 setIsOpen={setIsModalOpen}
                                 modalId={modalId}
+                                modalPadding
                             >
                                 <h3>{link.title}</h3>
                                 <div dangerouslySetInnerHTML={{ __html: link.content }} />
