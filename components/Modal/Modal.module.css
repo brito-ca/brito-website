@@ -17,12 +17,23 @@
     max-width: 95vw;
     position: relative;
     border-radius: 2rem;
-    padding: var(--padding-md);
-    overflow: auto;
+    padding: var(--padding-sm) ;
+    padding-top: var(--padding-lg);
 }
 
 .content {
-    padding: var(--padding-md);
+    text-align: left;
+    height: 70vh;
+    overflow-y: scroll;
+    padding: 0 var(--padding-sm);
+}
+
+.content h3, 
+.content h4, 
+.content strong, 
+.content p {
+    display: inline-block;
+    padding-bottom: var(--spacing-unit);
 }
 
 .button {
@@ -42,5 +53,6 @@
     .modal {
         max-width: 80vw;
         max-height: 90vh;
+        padding: var(--padding-lg);
     }
 }
