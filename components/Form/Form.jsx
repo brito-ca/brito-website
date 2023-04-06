@@ -72,18 +72,18 @@ const Form = (props) => {
         }
 
         const res = await fetch(MEMBER_API_URL, options)
-        if (res.status === 200 || res.status === 201) {            
+        if (res.status === 200 || res.status === 201) {
             setSubscriptionModalOpen(!subscriptionModalOpen)
             setFormValues({
                 full_name: '',
                 expertise: '',
-                company: '',                
+                company: '',
                 province: '',
                 city: '',
                 immigration_status: '',
                 linkedin_profile: '',
                 email: '',
-            })            
+            })
         } else {
             alert(
                 `Error: ${res.status} ${res.statusText}  \nSomething went wrong. Please try again.`
@@ -93,7 +93,7 @@ const Form = (props) => {
 
     function getField(fields, id) {
         return fields.find((item) => item?.id === id) || {}
-    }    
+    }
 
     const [immigrationStatusPopover, setImmigrationStatusPopover] = useState(false)
     const [subscriptionModalOpen, setSubscriptionModalOpen] = useState(false)
