@@ -29,12 +29,21 @@ const Form = (props) => {
     })
 
     const handleResideInCanada = () => {
+        if (resideInCanada) {
+            setFormValues({
+                ...formValues,
+                province: '',
+                city: '',
+                immigration_status: ''
+            })
+        } else {            
+            setFormValues({
+                ...formValues,
+                province: 'Alberta',
+                residein_canada: !resideInCanada,
+            })
+        }
         setResideInCanada(!resideInCanada)
-        setFormValues({
-            ...formValues,
-            province: 'Alberta',
-            residein_canada: !resideInCanada,
-        })
     }
 
     const handleChange = (e) => {
@@ -155,7 +164,8 @@ const Form = (props) => {
                             </label>
 
                             <select
-                                disabled={!formValues.residein_canada}
+                                disabled={!resideInCanada}
+                                required={resideInCanada}
                                 name='province'
                                 value={formValues.province}
                                 onChange={handleChange}
@@ -172,8 +182,8 @@ const Form = (props) => {
                             </select>
                         </div>
                         <FormInput
-                            disabled={!formValues.residein_canada}
-                            required={formValues.residein_canada}
+                            disabled={!resideInCanada}
+                            required={resideInCanada}
                             name='city'
                             fieldStyle={styles.cityField}
                             labelContent={getField(fields, 'city').label}
@@ -201,8 +211,8 @@ const Form = (props) => {
                             </label>
 
                             <select
-                                disabled={!formValues.residein_canada}
-                                required={formValues.residein_canada}
+                                disabled={!resideInCanada}
+                                required={resideInCanada}
                                 name='immigration_status'
                                 value={formValues.immigration_status}
                                 onChange={handleChange}
