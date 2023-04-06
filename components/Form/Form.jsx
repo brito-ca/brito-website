@@ -72,6 +72,7 @@ const Form = (props) => {
         }
 
         const res = await fetch(MEMBER_API_URL, options)
+        .then()
         if (res.status === 200 || res.status === 201) {
             setSubscriptionModalOpen(!subscriptionModalOpen)
             setFormValues({
@@ -159,8 +160,7 @@ const Form = (props) => {
                                 value={formValues.province}
                                 onChange={handleChange}
                                 id='province'
-                                className={styles.inputForm}
-                                required
+                                className={styles.inputForm}                                
                             >
                                 {getField(fields, 'province')
                                     .value.split(',')
@@ -173,7 +173,7 @@ const Form = (props) => {
                         </div>
                         <FormInput
                             disabled={!formValues.residein_canada}
-                            required='required'
+                            required={formValues.residein_canada}
                             name='city'
                             fieldStyle={styles.cityField}
                             labelContent={getField(fields, 'city').label}
@@ -202,12 +202,12 @@ const Form = (props) => {
 
                             <select
                                 disabled={!formValues.residein_canada}
+                                required={formValues.residein_canada}
                                 name='immigration_status'
                                 value={formValues.immigration_status}
                                 onChange={handleChange}
                                 id='immigration-status'
                                 className={styles.inputForm}
-                                required
                             >
                                 <option value='' disabled>
                                     Select
@@ -238,7 +238,7 @@ const Form = (props) => {
                         <FormInput
                             name='email'
                             type='email'
-                            required='required'
+                            required='yes'
                             fieldStyle={styles.emailField}
                             labelContent={getField(fields, 'email').label}
                             placeholder={getField(fields, 'email').placeholder}
