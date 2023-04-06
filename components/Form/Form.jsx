@@ -106,7 +106,7 @@ const Form = (props) => {
     }
 
     const [immigrationStatusPopover, setImmigrationStatusPopover] = useState(false)
-    const [subscriptionModalOpen, setSubscriptionModalOpen] = useState(false)
+    const [subscriptionModalOpen, setSubscriptionModalOpen] = useState(true)
     const [resideInCanada, setResideInCanada] = useState(false)
 
     return (
