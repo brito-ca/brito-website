@@ -7,8 +7,8 @@ select:required:invalid {
     color: gray;
 }
 
-select:disabled,
-input:disabled {
+input:disabled,
+select:disabled {
     background: rgba(170, 170, 170, 0.9);
     opacity: inherit;
 }
