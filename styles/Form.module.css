@@ -30,6 +30,11 @@
     border: 1px solid var(--neutral-medium);
 }
 
+select:disabled.inputForm {
+    background: rgba(170, 170, 170, 0.9);
+    opacity: inherit;
+}
+
 .formSections {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
