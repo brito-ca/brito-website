@@ -7,10 +7,10 @@ select:required:invalid {
     color: gray;
 }
 
-input:disabled, 
-    select:disabled {
-    background-color: rgb(170, 170, 170);
-    opacity: 0.9;
+input:disabled,
+select:disabled {
+    background: rgba(170, 170, 170, 0.9);
+    opacity: inherit;
 }
 
 option[value=''][disabled] {

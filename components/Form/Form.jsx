@@ -16,7 +16,7 @@ const Form = (props) => {
         send_response_description,
     } = props
 
-    const [isSubmitting, setSubmission] = useState(false);
+    const [isSubmitting, setSubmission] = useState(false)
 
     const [formValues, setFormValues] = useState({
         full_name: '',
@@ -36,9 +36,9 @@ const Form = (props) => {
                 ...formValues,
                 province: '',
                 city: '',
-                immigration_status: ''
+                immigration_status: '',
             })
-        } else {            
+        } else {
             setFormValues({
                 ...formValues,
                 province: 'Alberta',
@@ -56,7 +56,7 @@ const Form = (props) => {
     }
 
     const handleSubmit = async (event) => {
-        setSubmission(true);
+        setSubmission(true)
 
         event.preventDefault()
 
@@ -103,13 +103,12 @@ const Form = (props) => {
             )
         }
 
-        setSubmission(false);
+        setSubmission(false)
     }
 
     function getField(fields, id) {
         return fields.find((item) => item?.id === id) || {}
     }
-    
 
     const [immigrationStatusPopover, setImmigrationStatusPopover] = useState(false)
     const [subscriptionModalOpen, setSubscriptionModalOpen] = useState(false)
@@ -117,179 +116,184 @@ const Form = (props) => {
 
     return (
         <div id={id} className='flex-row-center'>
-        <Image
-            className={`${styles.mobileFormImage} ${styles.roundedFormImage} vertical-margin-md`}
-            alt={image.alt}
-            {...image}
-        />
-        <div className={styles.formContainer}>
-            <h4 className={styles.formTitle}>{title}</h4>
-            <form onSubmit={(e) => handleSubmit(e)} method='post'>
-                <div className={styles.formSections}>
-                    <div className={styles.primaryInformation}>
+            <Image
+                className={`${styles.mobileFormImage} ${styles.roundedFormImage} vertical-margin-md`}
+                alt={image.alt}
+                {...image}
+            />
+            <div className={styles.formContainer}>
+                <h4 className={styles.formTitle}>{title}</h4>
+                <form onSubmit={(e) => handleSubmit(e)} method='post'>
+                    <div className={styles.formSections}>
+                        <div className={styles.primaryInformation}>
+                            <FormInput
+                                name='full_name'
+                                required='yes'
+                                fieldStyle={styles.fullNameField}
+                                labelContent={getField(fields, 'fullname').label}
+                                placeholder={getField(fields, 'fullname').placeholder}
+                                value={formValues.full_name}
+                                onChange={handleChange}
+                            />
+                            <FormInput
+                                name='expertise'
+                                fieldStyle={styles.expertiseField}
+                                labelContent={getField(fields, 'expertise').label}
+                                placeholder={getField(fields, 'expertise').placeholder}
+                                value={formValues.expertise}
+                                onChange={handleChange}
+                            />
+                            <FormInput
+                                name='company'
+                                fieldStyle={styles.companyField}
+                                labelContent={getField(fields, 'company').label}
+                                placeholder={getField(fields, 'company').placeholder}
+                                value={formValues.company}
+                                onChange={handleChange}
+                            />
+
+                            <label className={styles.labelForm}>
+                                {getField(fields, 'resideInCanada').label}
+                            </label>
+                            <Checkbox
+                                name='residein_canada'
+                                onChange={handleResideInCanada}
+                                id='1'
+                                label={getField(fields, 'yes').label}
+                                value={resideInCanada}
+                            />
+                        </div>
+                        <div className={styles.provinceField}>
+                            <label htmlFor='province' className={styles.labelForm}>
+                                {getField(fields, 'province').label}
+                            </label>
+
+                            <select
+                                disabled={!resideInCanada}
+                                required={resideInCanada}
+                                name='province'
+                                value={formValues.province}
+                                onChange={handleChange}
+                                id='province'
+                                className={styles.inputForm}
+                            >
+                                {getField(fields, 'province')
+                                    .value.split(',')
+                                    .map((province) => (
+                                        <option key={province} value={province}>
+                                            {province}
+                                        </option>
+                                    ))}
+                            </select>
+                        </div>
                         <FormInput
-                            name='full_name'
+                            disabled={!resideInCanada}
+                            required={resideInCanada}
+                            name='city'
+                            fieldStyle={styles.cityField}
+                            labelContent={getField(fields, 'city').label}
+                            value={formValues.city}
+                            placeholder={getField(fields, 'city').placeholder}
+                            onChange={handleChange}
+                        />
+                        <div className={styles.immigrationStatusSection}>
+                            <label htmlFor='immigrationStatus' className={styles.labelForm}>
+                                {getField(fields, 'immigrationStatus').label.trim()}
+                                <span
+                                    className={styles.infoIcon}
+                                    onMouseEnter={() => setImmigrationStatusPopover(true)}
+                                    onMouseLeave={() => setImmigrationStatusPopover(false)}
+                                >
+                                    <Icon variant={'exclamation'} className={styles.infoIcon} />
+                                    {immigrationStatusPopover && (
+                                        <Popover>
+                                            <p>
+                                                {getField(fields, 'statusInformationPopover').label}
+                                            </p>
+                                        </Popover>
+                                    )}
+                                </span>
+                            </label>
+
+                            <select
+                                disabled={!resideInCanada}
+                                required={resideInCanada}
+                                name='immigration_status'
+                                value={formValues.immigration_status}
+                                onChange={handleChange}
+                                id='immigration-status'
+                                className={styles.inputForm}
+                            >
+                                <option value='' disabled>
+                                    Select
+                                </option>
+                                {getField(fields, 'immigrationStatus')
+                                    .value.split(',')
+                                    .map((value) => (
+                                        <option key={value} value={value.trim()}>
+                                            {value.trim()}
+                                        </option>
+                                    ))}
+                            </select>
+                        </div>
+                        <div className={styles.imageContainer}>
+                            <Image className={styles.roundedFormImage} alt={image.alt} {...image} />
+                        </div>
+
+                        <FormInput
+                            name='linkedin_profile'
+                            type='url'
+                            fieldStyle={styles.linkedinField}
+                            labelContent={getField(fields, 'linkedin').label}
+                            placeholder={getField(fields, 'linkedin').placeholder}
+                            value={formValues.linkedin_profile}
+                            onChange={handleChange}
+                        />
+
+                        <FormInput
+                            name='email'
+                            type='email'
                             required='yes'
-                            fieldStyle={styles.fullNameField}
-                            labelContent={getField(fields, 'fullname').label}
-                            placeholder={getField(fields, 'fullname').placeholder}
-                            value={formValues.full_name}
-                            onChange={handleChange}
-                        />
-                        <FormInput
-                            name='expertise'
-                            fieldStyle={styles.expertiseField}
-                            labelContent={getField(fields, 'expertise').label}
-                            placeholder={getField(fields, 'expertise').placeholder}
-                            value={formValues.expertise}
-                            onChange={handleChange}
-                        />
-                        <FormInput
-                            name='company'
-                            fieldStyle={styles.companyField}
-                            labelContent={getField(fields, 'company').label}
-                            placeholder={getField(fields, 'company').placeholder}
-                            value={formValues.company}
+                            fieldStyle={styles.emailField}
+                            labelContent={getField(fields, 'email').label}
+                            placeholder={getField(fields, 'email').placeholder}
+                            value={formValues.email}
                             onChange={handleChange}
                         />
 
-                        <label className={styles.labelForm}>
-                            {getField(fields, 'resideInCanada').label}
-                        </label>
-                        <Checkbox
-                            name='residein_canada'
-                            onChange={handleResideInCanada}
-                            id='1'
-                            label={getField(fields, 'yes').label}
-                            value={resideInCanada}
+                        <input
+                            type='submit'
+                            className={styles.sendButton}
+                            value={!isSubmitting ? button_submit : '...'}
+                            disabled={isSubmitting}
                         />
-                    </div>
-                    <div className={styles.provinceField}>
-                        <label htmlFor='province' className={styles.labelForm}>
-                            {getField(fields, 'province').label}
-                        </label>
 
-                        <select
-                            disabled={!resideInCanada}
-                            required={resideInCanada}
-                            name='province'
-                            value={formValues.province}
-                            onChange={handleChange}
-                            id='province'
-                            className={styles.inputForm}                                
+                        <Modal
+                            className={styles.subscriptionModalContainer}
+                            isOpen={subscriptionModalOpen}
+                            setIsOpen={setSubscriptionModalOpen}
                         >
-                            {getField(fields, 'province')
-                                .value.split(',')
-                                .map((province) => (
-                                    <option key={province} value={province}>
-                                        {province}
-                                    </option>
-                                ))}
-                        </select>
+                            <div className={styles.logoSubscriptionModal}>
+                                <Logo size='lg' />
+                            </div>
+                            <div className={styles.subscriptionModalTextDescriptionContainer}>
+                                <h1 className={styles.subscriptionModalTitle}>
+                                    {send_response_title}
+                                </h1>
+                                <p>{send_response_description}</p>
+                                <button
+                                    type='button'
+                                    className={styles.continueBrowsingButton}
+                                    onClick={() => setSubscriptionModalOpen(!subscriptionModalOpen)}
+                                >
+                                    {send_response_button}
+                                </button>
+                            </div>
+                        </Modal>
                     </div>
-                    <FormInput
-                        disabled={!resideInCanada}
-                        required={resideInCanada}
-                        name='city'
-                        fieldStyle={styles.cityField}
-                        labelContent={getField(fields, 'city').label}
-                        value={formValues.city}
-                        placeholder={getField(fields, 'city').placeholder}
-                        onChange={handleChange}
-                    />
-                    <div className={styles.immigrationStatusSection}>
-                        <label htmlFor='immigrationStatus' className={styles.labelForm}>
-                            {getField(fields, 'immigrationStatus').label.trim()}
-                            <span
-                                className={styles.infoIcon}
-                                onMouseEnter={() => setImmigrationStatusPopover(true)}
-                                onMouseLeave={() => setImmigrationStatusPopover(false)}
-                            >
-                                <Icon variant={'exclamation'} className={styles.infoIcon} />
-                                {immigrationStatusPopover && (
-                                    <Popover>
-                                        <p>
-                                            {getField(fields, 'statusInformationPopover').label}
-                                        </p>
-                                    </Popover>
-                                )}
-                            </span>
-                        </label>
-
-                        <select
-                            disabled={!resideInCanada}
-                            required={resideInCanada}
-                            name='immigration_status'
-                            value={formValues.immigration_status}
-                            onChange={handleChange}
-                            id='immigration-status'
-                            className={styles.inputForm}
-                        >
-                            <option value='' disabled>
-                                Select
-                            </option>
-                            {getField(fields, 'immigrationStatus')
-                                .value.split(',')
-                                .map((value) => (
-                                    <option key={value} value={value.trim()}>
-                                        {value.trim()}
-                                    </option>
-                                ))}
-                        </select>
-                    </div>
-                    <div className={styles.imageContainer}>
-                        <Image className={styles.roundedFormImage} alt={image.alt} {...image} />
-                    </div>
-
-                    <FormInput
-                        name='linkedin_profile'
-                        type='url'
-                        fieldStyle={styles.linkedinField}
-                        labelContent={getField(fields, 'linkedin').label}
-                        placeholder={getField(fields, 'linkedin').placeholder}
-                        value={formValues.linkedin_profile}
-                        onChange={handleChange}
-                    />
-
-                    <FormInput
-                        name='email'
-                        type='email'
-                        required='yes'
-                        fieldStyle={styles.emailField}
-                        labelContent={getField(fields, 'email').label}
-                        placeholder={getField(fields, 'email').placeholder}
-                        value={formValues.email}
-                        onChange={handleChange}
-                    />
-
-                    <input type='submit' className={styles.sendButton} value={!isSubmitting ? button_submit : '...'} disabled={isSubmitting} />
-
-                    <Modal
-                        className={styles.subscriptionModalContainer}
-                        isOpen={subscriptionModalOpen}
-                        setIsOpen={setSubscriptionModalOpen}
-                    >
-                        <div className={styles.logoSubscriptionModal}>
-                            <Logo size='lg' />
-                        </div>
-                        <div className={styles.subscriptionModalTextDescriptionContainer}>
-                            <h1 className={styles.subscriptionModalTitle}>
-                                {send_response_title}
-                            </h1>
-                            <p>{send_response_description}</p>
-                            <button
-                                type='button'
-                                className={styles.continueBrowsingButton}
-                                onClick={() => setSubscriptionModalOpen(!subscriptionModalOpen)}
-                            >
-                                {send_response_button}
-                            </button>
-                        </div>
-                    </Modal>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
-    </div>
     )
 }
 export default Form
