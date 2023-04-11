@@ -4,13 +4,18 @@
     https://stackoverflow.com/questions/5805059/how-do-i-make-a-placeholder-for-a-select-box/5805194#5805194
 */
 select:required:invalid {
-    color: gray;
+    color: var(--disabled-placeholder-color);
 }
 
 input:disabled,
 select:disabled {
-    background: rgba(170, 170, 170, 0.9);
+    background-color: var(--disabled-background);
     opacity: inherit;
+}
+
+input:disabled::placeholder,
+select:disabled::placeholder {
+    color: var(--disabled-placeholder-color);
 }
 
 select,
@@ -28,5 +33,5 @@ option[value=''][disabled] {
 }
 
 option {
-    color: black;
+    color: var(--neutral-black);
 }
