@@ -39,6 +39,8 @@
 
     --modal-backdrop: rgba(0, 0, 0, 0.5);
     --menu-border: rgba(155, 155, 159, 0.5);
+    --disabled-background: rgba(170, 170, 170, 0.9);
+    --disabled-placeholder-color: #777777;
 
     --base-font-size: 16px;
     --font-b2: 1.125rem;
