@@ -2,7 +2,7 @@ import { Icon, Image } from '@/components'
 import styles from '@/styles/Board.module.css'
 
 const Card = (props) => {
-    const { image, title, description, email } = props
+    const { image, title, description, email, linkedin } = props
     return (
         <div className={styles.card_box}>
             <div className={styles.image_box}>
@@ -18,7 +18,14 @@ const Card = (props) => {
             </div>
             <div className={styles.bottom_box}>
                 <div className={styles.linkedin_box}>
-                    <Icon variant='linkedinCard' />
+                    <a
+                        key='linkedin'
+                        href={linkedin}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                    >
+                        <Icon variant='linkedinCard' />
+                    </a>
                 </div>
                 <div className={styles.email_box}>
                     <div className={styles.line}>

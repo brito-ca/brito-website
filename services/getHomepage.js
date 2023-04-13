@@ -36,7 +36,7 @@ const getHomePage = async (locale) => {
         blocks: {
             ourBoard: {
                 title: acf['our-board'].title,
-                cards: await getBoard(locale),
+                cards: await getBoard(acf['our-board'].members),
             },
             hero: await getHero(acf.hero),
             aboutUs: await getAboutUs(acf['about_us']),

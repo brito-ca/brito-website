@@ -1,10 +1,14 @@
 import { BOARD_API_URL } from '@/constants/app'
 import getMedia from './getMedia'
 
-const getBoard = async (locale) => {
+const getBoard = async (members) => {
     const results = await fetch(BOARD_API_URL)
     const result = await results.json()
-    const data = result.filter((item) => item.slug.includes(locale))
+    const data = members 
+        ? members.map((member) => {
+            return result.find((item) => item.id == member)
+        }) 
+        : []
     const cards = await Promise.all(
         data.map(async (item) => {
             return {
