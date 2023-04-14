@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Popover, Icon, Modal, FormInput, Checkbox, Image, Logo } from '@/components'
+import { Popover, Icon, Modal, FormInput, Checkbox, Image, Logo, Snackbar } from '@/components'
 import styles from '../../styles/Form.module.css'
 import { MEMBER_API_URL } from '@/constants/app'
 import { encode } from 'base-64'
@@ -55,6 +55,11 @@ const Form = (props) => {
         })
     }
 
+    const [errorMsg, setErrorMsg] = useState({
+        isOpen: false,
+        message: ''
+    })
+
     const handleSubmit = async (event) => {
         setSubmission(true)
 
@@ -84,24 +89,36 @@ const Form = (props) => {
             body: JSON.stringify({ ...formData }),
         }
 
-        const res = await fetch(MEMBER_API_URL, options)
-        if (res.status === 200 || res.status === 201) {
-            setSubscriptionModalOpen(!subscriptionModalOpen)
-            setFormValues({
-                full_name: '',
-                expertise: '',
-                company: '',
-                province: '',
-                city: '',
-                immigration_status: '',
-                linkedin_profile: '',
-                email: '',
-            })
-        } else {
-            alert(
-                `Error: ${res.status} ${res.statusText}  \nSomething went wrong. Please try again.`
-            )
-        }
+        fetch(MEMBER_API_URL, options).then(
+            (res) => {
+                if (res.status === 200 || res.status === 201) {
+                    setSubscriptionModalOpen(!subscriptionModalOpen)
+                    setFormValues({
+                        full_name: '',
+                        expertise: '',
+                        company: '',
+                        province: '',
+                        city: '',
+                        immigration_status: '',
+                        linkedin_profile: '',
+                        email: '',
+                    })
+                } else {
+                    res.json().then((error) => {
+                        setErrorMsg(p => {
+                            return { ...p, message: error.data.params.acf, isOpen: true }
+                        })
+                        //setErrorMsgOpen(true)
+                    })
+                }
+            }
+        ).catch(
+            (error) => {
+                setErrorMsg(p => {
+                    return { ...p, message: error, isOpen: true }
+                })
+            }
+        )
 
         setSubmission(false)
     }
@@ -293,6 +310,16 @@ const Form = (props) => {
                     </div>
                 </form>
             </div>
+
+            {errorMsg.isOpen ?
+                (<Snackbar
+                    isOpen={errorMsg.isOpen}
+                    message={errorMsg.message}
+                    setIsOpen={setErrorMsg}
+                    type='danger'
+                />) : ''
+            }
+
         </div>
     )
 }
