@@ -18,12 +18,7 @@ const Card = (props) => {
             </div>
             <div className={styles.bottom_box}>
                 <div className={styles.linkedin_box}>
-                    <a
-                        key='linkedin'
-                        href={linkedin}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                    >
+                    <a key='linkedin' href={linkedin} target='_blank' rel='noopener noreferrer'>
                         <Icon variant='linkedinCard' />
                     </a>
                 </div>
