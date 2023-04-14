@@ -3,6 +3,12 @@ import { Popover, Icon, Modal, FormInput, Checkbox, Image, Logo, Snackbar } from
 import styles from '../../styles/Form.module.css'
 import { MEMBER_API_URL } from '@/constants/app'
 import { encode } from 'base-64'
+import { Roboto } from '@next/font/google'
+
+const roboto = Roboto({
+    subsets: ['latin'],
+    weight: ['300', '400', '500', '700'],
+})
 
 const Form = (props) => {
     const {
@@ -111,6 +117,8 @@ const Form = (props) => {
                         //setErrorMsgOpen(true)
                     })
                 }
+
+                setSubmission(false)
             }
         ).catch(
             (error) => {
@@ -119,8 +127,6 @@ const Form = (props) => {
                 })
             }
         )
-
-        setSubmission(false)
     }
 
     function getField(fields, id) {
@@ -192,7 +198,7 @@ const Form = (props) => {
                                 value={formValues.province}
                                 onChange={handleChange}
                                 id='province'
-                                className={styles.inputForm}
+                                className={`${roboto.className} ${styles.inputForm}`}
                             >
                                 {getField(fields, 'province')
                                     .value.split(',')
@@ -239,7 +245,7 @@ const Form = (props) => {
                                 value={formValues.immigration_status}
                                 onChange={handleChange}
                                 id='immigration-status'
-                                className={styles.inputForm}
+                                className={`${roboto.className} ${styles.inputForm}`}
                             >
                                 <option value='' disabled>
                                     Select
@@ -280,7 +286,7 @@ const Form = (props) => {
 
                         <input
                             type='submit'
-                            className={styles.sendButton}
+                            className={`${roboto.className} ${styles.sendButton}`}
                             value={!isSubmitting ? button_submit : '...'}
                             disabled={isSubmitting}
                         />
@@ -300,7 +306,7 @@ const Form = (props) => {
                                 <p>{send_response_description}</p>
                                 <button
                                     type='button'
-                                    className={styles.continueBrowsingButton}
+                                    className={`${roboto.className} ${styles.continueBrowsingButton}`}
                                     onClick={() => setSubscriptionModalOpen(!subscriptionModalOpen)}
                                 >
                                     {send_response_button}
