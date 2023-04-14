@@ -9,15 +9,37 @@ const Modal = (props) => {
         document.body.style.overflow = !isOpen ? 'scroll' : 'hidden'
     }, [isOpen])
 
+    useEffect(() => {
+        function handleEscapeKey(event) {
+            if (event.code === 'Escape') {
+                setIsOpen(false)
+            }
+        }
+
+        document.addEventListener('keydown', handleEscapeKey)
+        return () => document.removeEventListener('keydown', handleEscapeKey)
+    }, [])
+
     if (isOpen && modalId === id)
         return (
-            <div className={styles.container}>
-                <div className={styles.modal}>
-                    <div className={styles.button}>
-                        <Icon variant='close' onClick={() => setIsOpen(false)} />
+            <div
+                onClick={() => {
+                    setIsOpen(false)
+                }}
+            >
+                <div className={styles.container}>
+                    <div
+                        className={styles.modal}
+                        onClick={(e) => {
+                            e.stopPropagation()
+                        }}
+                    >
+                        <div className={styles.button}>
+                            <Icon variant='close' onClick={() => setIsOpen(false)} />
+                        </div>
+                        <div className={styles.content}>{children}</div>
+                        {actions && <div className={styles.actions}>{actions}</div>}
                     </div>
-                    <div className={styles.content}>{children}</div>
-                    {actions && <div className={styles.actions}>{actions}</div>}
                 </div>
             </div>
         )
