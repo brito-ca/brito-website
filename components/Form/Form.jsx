@@ -57,7 +57,7 @@ const Form = (props) => {
 
     const [errorMsg, setErrorMsg] = useState({
         isOpen: false,
-        message: ''
+        message: '',
     })
 
     const handleSubmit = async (event) => {
@@ -89,8 +89,8 @@ const Form = (props) => {
             body: JSON.stringify({ ...formData }),
         }
 
-        fetch(MEMBER_API_URL, options).then(
-            (res) => {
+        fetch(MEMBER_API_URL, options)
+            .then((res) => {
                 if (res.status === 200 || res.status === 201) {
                     setSubscriptionModalOpen(!subscriptionModalOpen)
                     setFormValues({
@@ -105,20 +105,18 @@ const Form = (props) => {
                     })
                 } else {
                     res.json().then((error) => {
-                        setErrorMsg(p => {
+                        setErrorMsg((p) => {
                             return { ...p, message: error.data.params.acf, isOpen: true }
                         })
                         //setErrorMsgOpen(true)
                     })
                 }
-            }
-        ).catch(
-            (error) => {
-                setErrorMsg(p => {
+            })
+            .catch((error) => {
+                setErrorMsg((p) => {
                     return { ...p, message: error, isOpen: true }
                 })
-            }
-        )
+            })
 
         setSubmission(false)
     }
@@ -311,15 +309,16 @@ const Form = (props) => {
                 </form>
             </div>
 
-            {errorMsg.isOpen ?
-                (<Snackbar
+            {errorMsg.isOpen ? (
+                <Snackbar
                     isOpen={errorMsg.isOpen}
                     message={errorMsg.message}
                     setIsOpen={setErrorMsg}
                     type='danger'
-                />) : ''
-            }
-
+                />
+            ) : (
+                ''
+            )}
         </div>
     )
 }

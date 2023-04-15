@@ -5,12 +5,26 @@ const Snackbar = (props) => {
     const { isOpen, setIsOpen, type, message } = props
 
     useEffect(() => {
-        setTimeout(() => { setIsOpen(p => { return { ...p, isOpen: false } }) }, 2900)
-    }, [])
+        const setTimeoutId = setTimeout(() => {
+            setIsOpen((p) => {
+                return { ...p, isOpen: false }
+            })
+        }, 2900)
+
+        return () => {
+            clearInterval(setTimeoutId)
+        }
+    }, [setIsOpen])
 
     if (isOpen) {
         return (
-            <div className={[styles.snackbar, type == 'danger' ? styles.danger : styles.alert].join(" ")}>{message}</div>
+            <div
+                className={[styles.snackbar, type == 'danger' ? styles.danger : styles.alert].join(
+                    ' '
+                )}
+            >
+                {message}
+            </div>
         )
     }
 }
