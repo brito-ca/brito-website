@@ -4,6 +4,9 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    border-top: var(--strong-line);
+    padding-top: calc(2 * var(--spacing-unit));
+    margin-top: calc(2 * var(--spacing-unit));
 }
 
 .footerLogoContainer {
@@ -47,7 +50,6 @@
     gap: var(--spacing-unit);
     padding: var(--spacing-unit) 0;
     border-top: var(--strong-line);
-    margin-top: calc(6 * var(--spacing-unit));
 }
 .footerBottom p {
     padding: 0;

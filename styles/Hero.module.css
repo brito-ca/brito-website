@@ -25,11 +25,10 @@
 }
 
 .intro_text {
-    color: var(--neutral-dark);
+    color: var(--neutral-medium-dark);
     text-align: justify;
     font-size: calc(1.75 * var(--spacing-unit));
     margin-bottom: calc(2 * var(--spacing-unit));
-    width: calc(31.6875 * var(--spacing-unit));
 }
 
 .crop_img_banner {

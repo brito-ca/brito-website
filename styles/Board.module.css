@@ -17,6 +17,7 @@
     padding: calc(5.75 * var(--spacing-unit)) var(--spacing-unit) calc(6.75 * var(--spacing-unit))
         var(--spacing-unit);
     gap: calc(1.75 * var(--spacing-unit));
+    max-width: 1200px;
 }
 
 .card_box {

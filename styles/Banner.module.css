@@ -9,7 +9,7 @@
 }
 .descriptionBanner {
     padding: var(--padding-sm);
-    color: var(--neutral-dark);
+    color: var(--neutral-medium-dark);
     text-align: justify;
 }
 

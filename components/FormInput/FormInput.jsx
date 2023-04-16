@@ -1,4 +1,10 @@
 import styles from './FormInput.module.css'
+import { Roboto } from '@next/font/google'
+
+const roboto = Roboto({
+    subsets: ['latin'],
+    weight: ['300', '400', '500', '700'],
+})
 
 const FormInput = (props) => {
     const {
@@ -25,7 +31,7 @@ const FormInput = (props) => {
                 disabled={disabled}
                 name={name}
                 placeholder={placeholder}
-                className={styles.inputForm}
+                className={`${roboto.className} ${styles.inputForm}`}
                 value={value}
                 onChange={onChange}
             />
