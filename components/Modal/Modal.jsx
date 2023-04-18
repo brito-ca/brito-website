@@ -18,7 +18,7 @@ const Modal = (props) => {
 
         document.addEventListener('keydown', handleEscapeKey)
         return () => document.removeEventListener('keydown', handleEscapeKey)
-    }, [])
+    }, [setIsOpen])
 
     if (isOpen && modalId === id)
         return (

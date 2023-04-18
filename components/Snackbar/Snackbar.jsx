@@ -10,7 +10,7 @@ const Snackbar = (props) => {
                 return { ...p, isOpen: false }
             })
         }, 2900)
-    }, [])
+    }, [setIsOpen])
 
     if (isOpen) {
         return (
