@@ -109,6 +109,7 @@ const Form = (props) => {
                         linkedin_profile: '',
                         email: '',
                     })
+                    setResideInCanada(false)
                 } else {
                     res.json().then((error) => {
                         setErrorMsg((p) => {
@@ -136,16 +137,16 @@ const Form = (props) => {
     const [resideInCanada, setResideInCanada] = useState(false)
 
     return (
-        <div id={id} className='flex-row-center'>
+        <div id={id}>
             <Image
                 className={`${styles.mobileFormImage} ${styles.roundedFormImage} vertical-margin-md`}
                 alt={image.alt}
                 {...image}
             />
             <div className={styles.formContainer}>
-                <h4 className={styles.formTitle}>{title}</h4>
                 <form onSubmit={(e) => handleSubmit(e)} method='post'>
-                    <div className={styles.formSections}>
+                    <h4 className={styles.formTitle}>{title}</h4>
+                    <div className={`${styles.formSections} ${styles.box}`}>
                         <div className={styles.primaryInformation}>
                             <FormInput
                                 name='full_name'
@@ -228,9 +229,9 @@ const Form = (props) => {
                                     <Icon variant={'exclamation'} className={styles.infoIcon} />
                                     {immigrationStatusPopover && (
                                         <Popover>
-                                            <p>
+                                            <>
                                                 {getField(fields, 'statusInformationPopover').label}
-                                            </p>
+                                            </>
                                         </Popover>
                                     )}
                                 </span>

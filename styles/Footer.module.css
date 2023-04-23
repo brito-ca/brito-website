@@ -1,3 +1,7 @@
+.container {
+    flex-wrap: wrap;
+}
+
 .footerContainer {
     display: flex;
     flex-direction: row;
@@ -6,7 +10,10 @@
     justify-content: space-between;
     border-top: var(--strong-line);
     padding-top: calc(2 * var(--spacing-unit));
-    margin-top: calc(2 * var(--spacing-unit));
+    margin-top: var(--spacing-unit);
+    margin-bottom: var(--spacing-unit);
+    max-width: 1140px;
+    width: 100%;
 }
 
 .footerLogoContainer {
@@ -39,7 +46,7 @@
 
 .footerBottom,
 .footerBottom a {
-    font-size: var(--font-b2);
+    font-size: var(--font-b4);
     font-weight: var(--font-weight-normal);
     text-decoration: none;
     color: var(--primary-blue);

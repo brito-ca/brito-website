@@ -1,4 +1,4 @@
-import styles from './Popover.module.css'
+import styles from '../../styles/Popover.module.css'
 
 export function Popover(props) {
     const { children } = props

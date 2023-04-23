@@ -18,16 +18,6 @@ select:disabled::placeholder {
     color: var(--disabled-placeholder-color);
 }
 
-select,
-input[type='text'],
-input[type='button'],
-input[type='submit'] {
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    -webkit-appearance: none;
-    appearance: none;
-}
-
 option[value=''][disabled] {
     display: none;
 }

@@ -1,5 +1,6 @@
 .banner {
-    padding: var(--padding-md);
+    padding-bottom: var(--padding-md);
+    max-width: 1140px;
 }
 .titleBanner {
     padding: var(--padding-lg);

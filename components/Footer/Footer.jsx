@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 const Footer = (props) => {
     const { content, navigation } = props
-    const { title, description, links } = content
+    const { description, links } = content
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [modalId, setModalId] = useState()
 
@@ -15,20 +15,16 @@ const Footer = (props) => {
     }
 
     return (
-        <>
+        <div className={`${styles.container} flex-column-center`}>
             <div className={styles.footerContainer}>
-                <div className={`${styles.footerLogoContainer} flex-column-center`}>
+                <div className={`${styles.footerLogoContainer}`}>
                     <div className='flex-column-space-between'>
                         <Logo size='lg' />
                         <p className={'vertical-padding'}>{description}</p>
                     </div>
                 </div>
                 <div className={styles.footerNav}>
-                    <h5>{title}</h5>
-                    <Nav
-                        className={`${styles.nav} body3 flex-column-start`}
-                        navigation={navigation}
-                    />
+                    <Nav className={`${styles.nav} body3`} navigation={navigation} />
                 </div>
             </div>
             <div className={styles?.footerBottom}>
@@ -55,7 +51,7 @@ const Footer = (props) => {
                     )
                 })}
             </div>
-        </>
+        </div>
     )
 }
 

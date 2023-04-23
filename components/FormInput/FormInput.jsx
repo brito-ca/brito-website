@@ -1,4 +1,4 @@
-import styles from './FormInput.module.css'
+import styles from '../../styles/FormInput.module.css'
 import { Roboto } from '@next/font/google'
 
 const roboto = Roboto({

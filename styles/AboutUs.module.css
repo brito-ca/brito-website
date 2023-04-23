@@ -1,3 +1,7 @@
+.pull_up {
+    margin-top: -130px;
+}
+
 .vectorContainer {
     display: flex;
     flex-direction: column;
@@ -12,6 +16,8 @@
 
 .iconsContainer {
     padding: 0 var(--padding-lg) var(--padding-lg) var(--padding-lg);
+    max-width: 1140px;
+    width: 100%;
 }
 
 .aboutUsImage img {
@@ -20,6 +26,9 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .pull_up {
+        margin-top: 0px;
+    }
     .vectorContainer {
         display: flex;
         flex-direction: column;

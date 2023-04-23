@@ -1,4 +1,10 @@
+.box {
+    max-width: 1200px;
+}
+
 .formContainer {
+    display: flex;
+    justify-content: center;
     background: var(--secondary-green);
     padding: var(--padding-sm) var(--padding-md);
 }

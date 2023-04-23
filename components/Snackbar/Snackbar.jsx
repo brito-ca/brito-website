@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import styles from './Snackbar.module.css'
+import styles from '../../styles/Snackbar.module.css'
 
 const Snackbar = (props) => {
     const { isOpen, setIsOpen, type, message } = props

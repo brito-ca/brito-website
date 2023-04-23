@@ -2,9 +2,12 @@
     text-align: center;
     color: var(--primary-blue);
     padding: var(--padding-lg);
+    margin-top: var(--padding-lg);
+    border-top: var(--strong-line);
 }
 .subtitle {
     color: var(--primary-blue);
+    margin-left: 15px;
 }
 .mail {
     text-decoration: none;
@@ -18,20 +21,25 @@
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: 825px;
-    background-color: var(--neutral-white);
+    /* background-color: var(--neutral-white); */
     height: 904px;
+    max-width: 1140px;
+    width: 100%;
 }
 .socialContainer {
     gap: calc(1.4 * var(--spacing-unit));
+    margin-top: 10px;
+    margin-left: calc(2 * var(--spacing-unit));
 }
 
-.mailimg {
+.mailing {
     display: flex;
     align-items: center;
     gap: var(--spacing-unit);
+    margin-left: var(--spacing-unit);
 }
 
-.mailimg svg {
+.mailing svg {
     margin-top: var(--spacing-xs);
 }
 

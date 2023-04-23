@@ -4,14 +4,12 @@ import { Card } from '@/components'
 const Board = (props) => {
     const { cards, title } = props
     return (
-        <div className='flex-row-center'>
-            <div className={styles.container}>
-                <h3 className={styles.title}>{title}</h3>
-                <div className={styles.board_box}>
-                    {cards?.map((card, index) => (
-                        <Card key={index} {...card} />
-                    ))}
-                </div>
+        <div className={styles.container}>
+            <h3 className={styles.title}>{title}</h3>
+            <div className={styles.board_box}>
+                {cards?.map((card, index) => (
+                    <Card key={index} {...card} />
+                ))}
             </div>
         </div>
     )
