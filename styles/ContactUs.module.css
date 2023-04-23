@@ -7,7 +7,7 @@
 }
 .subtitle {
     color: var(--primary-blue);
-    margin-left: 15px;
+    margin-left: var(--padding-sm);
 }
 .mail {
     text-decoration: none;
@@ -43,6 +43,10 @@
     margin-top: var(--spacing-xs);
 }
 
+.padding {
+    padding: var(--padding-sm);
+}
+
 @media only screen and (max-width: 600px) {
     .maple {
         background-image: none;
@@ -62,5 +66,8 @@
     }
     .mail {
         text-decoration: underline;
+    }
+    .padding {
+        padding: 0;
     }
 }

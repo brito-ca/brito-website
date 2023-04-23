@@ -10,7 +10,7 @@ const ContactUs = (props) => {
                 <div>
                     <h2 className={styles.title}>{title}</h2>
                 </div>
-                <div className='padding'>
+                <div className={styles.padding}>
                     <h3 className={styles.subtitle}>{chat}</h3>
                     <p className='body2'>{descriptionChat}</p>
                 </div>
@@ -20,13 +20,13 @@ const ContactUs = (props) => {
                         {email}
                     </a>
                 </div>
-                <div className='padding'>
+                <div className={styles.padding}>
                     <div className={styles.marg_lg}>
                         <h3 className={styles.subtitle}>{basedin}</h3>
                         <p className='body2'>{city}</p>
                     </div>
                 </div>
-                <div className={'padding'}>
+                <div className={styles.padding}>
                     <h3 className={styles.subtitle}>{visit}</h3>
                     <div className={`${styles.socialContainer} flex-row-start`}>
                         {socialMedia.map((media) => (
