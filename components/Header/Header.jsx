@@ -11,7 +11,7 @@ const Header = (props) => {
     return (
         <div className={`${styles.header} flex-row-space-between`}>
             <Link href={router.pathname}>
-                <Logo />
+                <Logo size='lg' />
             </Link>
             <div className='flex-row-space-between'>
                 <Nav

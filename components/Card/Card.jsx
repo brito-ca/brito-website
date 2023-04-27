@@ -22,12 +22,12 @@ const Card = (props) => {
                         <Icon variant='linkedinCard' />
                     </a>
                 </div>
-                <div className={styles.email_box}>
+                <a href={`mailto:${email}`} className={styles.email_box}>
                     <div className={styles.line}>
                         <Icon variant='mailCard' />
                     </div>
                     <p className='no-padding'>{email}</p>
-                </div>
+                </a>
             </div>
         </div>
     )

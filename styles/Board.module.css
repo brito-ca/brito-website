@@ -64,6 +64,9 @@
     flex-direction: row;
     justify-content: flex-end;
     gap: calc(1.25 * var(--spacing-unit));
+    text-decoration: none;
+    color: var(--button-bg-outline-disabled);
+    font-size: var(--base-font-size);
 }
 
 .line {
