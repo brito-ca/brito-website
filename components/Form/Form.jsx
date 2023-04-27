@@ -31,7 +31,7 @@ const Form = (props) => {
         residein_canada: false,
         province: '',
         city: '',
-        immigration_status: '',
+        residency_status: '',
         linkedin_profile: '',
         email: '',
     })
@@ -42,7 +42,7 @@ const Form = (props) => {
                 ...formValues,
                 province: '',
                 city: '',
-                immigration_status: '',
+                residency_status: '',
             })
         } else {
             setFormValues({
@@ -80,7 +80,7 @@ const Form = (props) => {
                 residing_canada: formValues.residein_canada,
                 province: formValues.province,
                 city: formValues.city,
-                immigration_status: formValues.immigration_status || 'N/A',
+                residency_status: formValues.residency_status || 'N/A',
                 linkedin_profile: formValues.linkedin_profile,
                 email: formValues.email,
             },
@@ -105,7 +105,7 @@ const Form = (props) => {
                         company: '',
                         province: '',
                         city: '',
-                        immigration_status: '',
+                        residency_status: '',
                         linkedin_profile: '',
                         email: '',
                     })
@@ -240,8 +240,8 @@ const Form = (props) => {
                             <select
                                 disabled={!resideInCanada}
                                 required={resideInCanada}
-                                name='immigration_status'
-                                value={formValues.immigration_status}
+                                name='residency_status'
+                                value={formValues.residency_status}
                                 onChange={handleChange}
                                 id='immigration-status'
                                 className={`${roboto.className} ${styles.inputForm}`}
