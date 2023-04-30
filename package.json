@@ -12,15 +12,19 @@
     },
     "dependencies": {
         "@next/font": "13.1.6",
+        "base-64": "^1.0.0",
         "eslint-config-next": "13.1.6",
         "next": "13.1.6",
         "react": "18.2.0",
-        "react-dom": "18.2.0"
+        "react-dom": "18.2.0",
+        "sanitize-html": "^2.10.0",
+        "swr": "^2.1.1"
     },
     "devDependencies": {
         "eslint": "^8.35.0",
         "eslint-config-prettier": "^8.6.0",
         "eslint-plugin-react": "^7.32.2",
-        "eslint-plugin-react-hooks": "^4.6.0"
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "prettier": "2.8.4"
     }
 }

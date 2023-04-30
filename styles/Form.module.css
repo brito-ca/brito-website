@@ -1,0 +1,232 @@
+.box {
+    max-width: 1200px;
+}
+
+.formContainer {
+    display: flex;
+    justify-content: center;
+    background: var(--secondary-green);
+    padding: var(--padding-sm) var(--padding-md);
+}
+
+.formTitle {
+    text-align: center;
+    color: var(--primary-white);
+    padding-top: var(--padding-md);
+}
+
+.labelForm {
+    width: 100%;
+
+    display: flex;
+
+    margin-top: var(--margin-sm);
+    margin-bottom: var(--margin-xs);
+
+    color: var(--primary-white);
+}
+
+.selectStyle {    
+    height: 31px;
+}
+
+.inputForm {
+    padding: var(--padding-xs);
+    border-radius: var(--radius-xs);
+
+    width: 100%;
+
+    background-color: var(--primary-white);
+    border: 1px solid var(--neutral-medium);
+}
+
+.formSections {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, auto);
+    justify-content: space-around;
+    align-items: end;
+}
+
+.primaryInformation {
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+}
+
+.imageContainer {
+    grid-column: 6 / 9;
+    grid-row: 1 / 2;
+}
+
+.roundedFormImage {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.provinceField {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+}
+
+.cityField {
+    grid-row: 2 / 3;
+    grid-column: 4 / 9;
+    margin-left: var(--margin-sm);
+}
+
+.immigrationStatusSection {
+    grid-column: 1 / 9;
+    grid-row: 3 / 4;
+}
+
+.linkedinField {
+    grid-column: 4 / 9;
+    grid-row: 4 / 5;
+    margin-left: var(--margin-sm);
+}
+
+.emailField {
+    grid-row: 4 / 5;
+    grid-column: 1 / 4;
+}
+
+.sendButton {
+    grid-row: 5 / 6;
+    grid-column: 8 / 9;
+
+    font-size: 1rem;
+    color: var(--secondary-blue);
+    background: var(--primary-white);
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: var(--radius-lg);
+
+    padding: 0.5rem var(--padding-sm);
+    margin: var(--margin-md) 0 var(--margin-md) 0;
+
+    cursor: pointer;
+}
+
+.infoIcon {
+    margin-left: var(--margin-xs);
+    display: inline;
+}
+
+/* Image on top of Form disapears if screen size if bigger than 768px */
+.mobileFormImage {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .primaryInformation {
+        grid-column: 1 / 9;
+        grid-row: 1 / 2;
+    }
+
+    .imageContainer {
+        display: none;
+    }
+
+    .provinceField {
+        grid-column: 1 / 9;
+        grid-row: 2 / 3;
+    }
+
+    .cityField {
+        grid-column: 1 / 9;
+        grid-row: 3 / 4;
+        margin-left: 0;
+    }
+    .immigrationStatusSection {
+        grid-column: 1 / 9;
+        grid-row: 4 / 5;
+    }
+
+    .linkedinField {
+        grid-column: 1 / 9;
+        grid-row: 5 / 6;
+        margin-left: 0;
+    }
+
+    .emailField {
+        grid-column: 1 / 9;
+        grid-row: 6 / 7;
+    }
+
+    .sendButton {
+        grid-row: 7 / 8;
+        grid-column: 1 / 9;
+
+        margin-top: var(--margin-md);
+        border-radius: var(--radius-sm);
+        padding: var(--padding-sm);
+    }
+
+    .mobileFormImage {
+        display: block !important;
+    }
+
+    .subscriptionModalContainer {
+        width: 320px !important;
+        height: 470px;
+    }
+
+    .subscriptionModalTextDescriptionContainer {
+        padding: var(--padding-md) var(--padding-md) !important;
+    }
+
+    .continueBrowsingButton {
+        width: 236px;
+    }
+}
+
+.continueBrowsingButton {
+    border: 1px solid #1a1a1a;
+    border-radius: var(--radius-lg);
+    color: var(--primary-blue);
+
+    padding: var(--padding-xs) var(--padding-md);
+    font-size: 1rem;
+
+    margin: var(--margin-md) auto var(--margin-sm) auto;
+
+    display: block !important;
+
+    cursor: pointer;
+}
+
+.subscriptionModalContainer {
+    width: 500px;
+    height: 590px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+}
+
+.logoSubscriptionModal {
+    width: 220px;
+    height: 220px;
+
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.subscriptionModalTextDescriptionContainer {
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+    text-align: center;
+
+    background: var(--primary-blue);
+    color: var(--primary-white);
+
+    padding: var(--padding-sm);
+}
+
+.subscriptionModalTitle {
+    font-weight: 500;
+    font-size: 26px;
+    margin: var(--margin-sm) var(--margin-sm) var(--margin-md);
+}

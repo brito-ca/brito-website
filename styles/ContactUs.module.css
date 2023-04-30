@@ -1,0 +1,73 @@
+.title {
+    text-align: center;
+    color: var(--primary-blue);
+    padding: var(--padding-lg);
+    margin-top: var(--padding-lg);
+    border-top: var(--strong-line);
+}
+.subtitle {
+    color: var(--primary-blue);
+    margin-left: var(--padding-sm);
+}
+.mail {
+    text-decoration: none;
+    color: var(--primary-blue);
+}
+.marg_lg {
+    margin: var(--margin-lg) 0;
+}
+.maple {
+    background-image: url(/vector2.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 825px;
+    /* background-color: var(--neutral-white); */
+    height: 904px;
+    max-width: 1140px;
+    width: 100%;
+}
+.socialContainer {
+    gap: calc(1.4 * var(--spacing-unit));
+    margin-top: 10px;
+    margin-left: calc(2 * var(--spacing-unit));
+}
+
+.mailing {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-unit);
+    margin-left: var(--spacing-unit);
+}
+
+.mailing svg {
+    margin-top: var(--spacing-xs);
+}
+
+.padding {
+    padding: var(--padding-sm);
+}
+
+@media only screen and (max-width: 600px) {
+    .maple {
+        background-image: none;
+        background-color: unset;
+        height: 705px;
+    }
+    .britologo {
+        background-image: url(/britologohalf.png);
+        background-size: 424px;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        height: 476px;
+    }
+    .title {
+        text-align: center;
+        padding: var(--padding-sm);
+    }
+    .mail {
+        text-decoration: underline;
+    }
+    .padding {
+        padding: 0;
+    }
+}

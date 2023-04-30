@@ -1,0 +1,129 @@
+.container {
+    flex-wrap: wrap;
+}
+
+.footerContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-top: var(--strong-line);
+    padding-top: calc(2 * var(--spacing-unit));
+    margin-top: var(--spacing-unit);
+    margin-bottom: var(--spacing-unit);
+    max-width: 1140px;
+    width: 100%;
+}
+
+.footerLogoContainer {
+    width: 40%;
+}
+
+.footerNav {
+    width: 60%;
+    padding-left: calc(10 * var(--spacing-unit));
+}
+
+.nav a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.footerNav h5 {
+    color: var(--primary-blue);
+    padding-left: var(--spacing-unit);
+}
+
+.footerNav a {
+    width: fit-content;
+}
+
+.socialContainer {
+    gap: calc(1.4 * var(--spacing-unit));
+}
+
+.footerBottom,
+.footerBottom a {
+    font-size: var(--font-b4);
+    font-weight: var(--font-weight-normal);
+    text-decoration: none;
+    color: var(--primary-blue);
+}
+
+.footerBottom {
+    display: flex;
+    gap: var(--spacing-unit);
+    padding: var(--spacing-unit) 0;
+    border-top: var(--strong-line);
+}
+.footerBottom p {
+    padding: 0;
+}
+
+.footerBottomItem:first-child {
+    margin-right: auto;
+}
+
+.footerBottomItem:not(:first-child):not(:last-child) {
+    position: relative;
+    padding-right: var(--spacing-unit);
+}
+
+.footerBottomItem:not(:first-child)::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 20px;
+    background-color: var(--neutral-black);
+}
+
+@media only screen and (max-width: 600px) {
+    .footerContainer {
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .footerLogoContainer {
+        width: 100%;
+    }
+
+    .footerNav {
+        width: 100%;
+        margin-top: var(--spacing-unit);
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav a {
+        margin: var(--spacing-unit);
+    }
+    .footerBottom {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: var(--spacing-md);
+        gap: var(--spacing-md);
+        margin-top: var(--spacing-md);
+    }
+
+    .footerBottomItem {
+        width: 100%;
+        text-align: center;
+    }
+    .footerBottomItem::after {
+        display: none;
+    }
+}

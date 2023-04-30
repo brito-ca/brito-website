@@ -1,0 +1,28 @@
+/* Solution for select list from Form.jsx 'Immigration Status' without the use of Javascript 
+    sources :
+    https://stackoverflow.com/questions/17603055/placeholder-for-select-tag
+    https://stackoverflow.com/questions/5805059/how-do-i-make-a-placeholder-for-a-select-box/5805194#5805194
+*/
+
+select:required:invalid {
+    color: var(--disabled-placeholder-color);
+}
+
+input:disabled,
+select:disabled {
+    background-color: var(--disabled-background);
+    opacity: inherit;
+}
+
+input:disabled::placeholder,
+select:disabled::placeholder {
+    color: var(--disabled-placeholder-color);
+}
+
+option[value=''][disabled] {
+    display: none;
+}
+
+option {
+    color: var(--neutral-black);
+}

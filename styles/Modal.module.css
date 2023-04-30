@@ -1,0 +1,58 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999999;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--modal-backdrop);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background-color: var(--primary-white);
+    max-height: 95vh;
+    max-width: 95vw;
+    position: relative;
+    border-radius: 2rem;
+    overflow: auto;
+}
+
+.content {
+    text-align: left;
+}
+
+.content h3,
+.content h4,
+.content strong,
+.content p {
+    display: inline-block;
+    padding-bottom: var(--spacing-unit);
+}
+
+.modalPadding {
+    padding: var(--padding-md);
+    height: 70vh;
+}
+
+.button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: var(--padding-md);
+    cursor: pointer;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 700px) {
+    .modal {
+        max-width: 80vw;
+        max-height: 90vh;
+    }
+}
