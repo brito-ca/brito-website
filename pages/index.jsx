@@ -1,22 +1,25 @@
-import { AppLayout, HomePage } from '@/components'
-import { LOCALE_EN } from '@/constants/app'
-import getHomePage from '@/services/getHomepage'
-const Home = ({ pageData }) => {
+const Home = () => {
     return (
-        <AppLayout content={pageData}>
-            <HomePage data={pageData.blocks} />
-        </AppLayout>
+        <main style={styles.main}>
+            <img
+                style={styles.image}
+                src='https://res.cloudinary.com/dw2wjwhuv/image/upload/v1682864265/1681826552889_n2hbaj.jpg'
+            />
+        </main>
     )
 }
 
-export async function getStaticProps() {
-    const pageData = await getHomePage(LOCALE_EN)
-    return {
-        props: {
-            pageData,
-        },
-        revalidate: 30,
-    }
-}
-
 export default Home
+
+const styles = {
+    main: {
+        backgroundColor: 'black',
+        height: '100vh',
+        textAlign: 'center',
+    },
+    image: {
+        maxWidth: '100%',
+        height: 'auto',
+        margin: '0 auto',
+    },
+}
