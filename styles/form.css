@@ -4,16 +4,6 @@
     https://stackoverflow.com/questions/5805059/how-do-i-make-a-placeholder-for-a-select-box/5805194#5805194
 */
 
-select,
-input[type="text"],
-input[type="button"],
-input[type="submit"] {
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    -webkit-appearance: none;
-    appearance: none;    
-}
-
 select:required:invalid {
     color: var(--disabled-placeholder-color);
 }

@@ -26,6 +26,10 @@
     color: var(--primary-white);
 }
 
+.selectStyle {    
+    height: 31px;
+}
+
 .inputForm {
     padding: var(--padding-xs);
     border-radius: var(--radius-xs);

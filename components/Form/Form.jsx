@@ -197,7 +197,7 @@ const Form = (props) => {
                                 value={formValues.province}
                                 onChange={handleChange}
                                 id='province'
-                                className={`${roboto.className} ${styles.inputForm}`}
+                                className={`${styles.selectStyle} ${roboto.className} ${styles.inputForm}`}
                             >
                                 {getField(fields, 'province')
                                     .value.split(',')
@@ -244,7 +244,7 @@ const Form = (props) => {
                                 value={formValues.residency_status}
                                 onChange={handleChange}
                                 id='immigration-status'
-                                className={`${roboto.className} ${styles.inputForm}`}
+                                className={`${styles.selectStyle} ${roboto.className} ${styles.inputForm}`}
                             >
                                 <option value='' disabled>
                                     Select
