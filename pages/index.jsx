@@ -1,11 +1,20 @@
+import Head from 'next/head'
+
 const Home = () => {
     return (
-        <main style={styles.main}>
-            <img
-                style={styles.image}
-                src='https://res.cloudinary.com/dw2wjwhuv/image/upload/v1682864265/1681826552889_n2hbaj.jpg'
-            />
-        </main>
+        <>
+            <Head>
+                <title>Brito - Brazilian IT Ottawa</title>
+                <meta name='viewport' content='width=device-width, initial-scale=1' />
+                <link rel='icon' href='/favicon.svg' />
+            </Head>
+            <main style={styles.main}>
+                <img
+                    style={styles.image}
+                    src='https://res.cloudinary.com/dw2wjwhuv/image/upload/v1682864265/1681826552889_n2hbaj.jpg'
+                />
+            </main>
+        </>
     )
 }
 
