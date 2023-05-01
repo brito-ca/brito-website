@@ -1,17 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
 :root {
     --primary-green: #0d712e;
     --primary-yellow: #ffd900;
     --primary-blue: #022777;
     --primary-white: #f5f5fa;
 
-    --secundary-blue: #1c3183;
-    --secundary-dark-green: #00450e;
-    --secundary-green: #0b6128;
-    --secundary-light-green: #069736;
-    --secundary-yellow: #1c3183;
-    --secundary-red-warning: #ed3233;
+    --secondary-blue: #1c3183;
+    --secondary-dark-green: #00450e;
+    --secondary-green: #0b6128;
+    --secondary-light-green: #069736;
+    --secondary-yellow: #1c3183;
+    --secondary-red-warning: #ed3233;
 
     --tertiary-light-blue: #b0c4d5;
     --tertiary-dark-blue: #104b7e;
@@ -19,7 +17,7 @@
     --tertiary-background: rgba(194, 18, 18, 0.15);
 
     --neutral-black: #1a1a1a;
-    --neutral-dark: #525252;
+    --neutral-dark: #39393d;
     --neutral-medium-dark: #525252;
     --neutral-medium: #9b9b9f;
     --neutral-medium-light: #c7c8d0;
@@ -31,35 +29,63 @@
     --button-primary-outline: #eeeff4;
     --button-primary-outline-hover: #374399;
     --button-primary-outline-active: #002167;
-    --button-secundary: #0d712e;
-    --button-secundary-hover: #348145;
-    --button-secundary-outline: #0d712e;
-    --button-secundary-outline-active: #00450e;
+    --button-secondary: #0d712e;
+    --button-secondary-hover: #348145;
+    --button-secondary-outline: #0d712e;
+    --button-secondary-outline-active: #00450e;
     --button-text-disabled: #39393d;
     --button-outline-disabled: #989799;
     --button-bg-outline-disabled: #f5f5f5;
 
-    --base-font-size: 1rem;
-    --spacing-unit: 16px;
+    --modal-backdrop: rgba(0, 0, 0, 0.5);
+    --menu-border: rgba(155, 155, 159, 0.5);
+    --disabled-background: rgba(170, 170, 170, 0.9);
+    --disabled-placeholder-color: #777777;
 
+    --base-font-size: 16px;
+    --font-b2: 1.125rem;
+    --font-b3: 1.5rem;
+    --font-b4: 1rem;
+    --font-weight-normal: 400;
+
+    --spacing-unit: 16px;
+    --spacing-xs: calc(var(--spacing-unit) / 3);
+    --spacing-sm: calc(var(--spacing-unit) / 2);
+    --spacing-md: calc(2 * var(--spacing-unit));
+    --spacing-lg: calc(3 * var(--spacing-unit));
+    --spacing-xl: calc(4 * var(--spacing-unit));
+
+    --margin-xxs: calc(0.25 * var(--spacing-unit));
+    --margin-xs: calc(0.5 * var(--spacing-unit));
     --margin-sm: var(--spacing-unit);
     --margin-md: calc(2 * var(--spacing-unit));
     --margin-lg: calc(4 * var(--spacing-unit));
 
+    --padding-xs: calc(0.5 * var(--spacing-unit));
     --padding-sm: var(--spacing-unit);
     --padding-md: calc(2 * var(--spacing-unit));
     --padding-lg: calc(4 * var(--spacing-unit));
+
+    --radius-xs: calc(0.3 * var(--spacing-unit));
+    --radius-sm: calc(0.6 * var(--spacing-unit));
+    --radius-md: var(--spacing-unit);
+    --radius-lg: calc(2 * var(--spacing-unit));
+
+    --strong-line: 3px solid var(--neutral-medium-light);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: var(--base-font-size);
 }
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    font-size: var(--base-font-size);
 }
 
 .display,
@@ -105,10 +131,12 @@ p {
 
 .body1 {
     font-size: 2rem;
+    white-space: pre-line;
 }
 
 .body2 {
     font-size: 1.5rem;
+    padding: var(--spacing-unit);
 }
 
 .body3 {
@@ -137,6 +165,7 @@ button {
     border-radius: 40px;
     border: 1px solid;
     line-height: 24px;
+    cursor: pointer;
 }
 
 button.primary {
@@ -167,32 +196,32 @@ button.primary.outline:active {
     border-color: var(--button-primary-outline-active);
 }
 
-button.secundary {
-    background-color: var(--button-secundary);
+button.secondary {
+    background-color: var(--button-secondary);
 }
 
-button.secundary:hover {
-    background-color: var(--button-secundary-hover);
+button.secondary:hover {
+    background-color: var(--button-secondary-hover);
 }
 
-button.secundary:active {
-    background-color: var(--button-secundary-outline-active);
+button.secondary:active {
+    background-color: var(--button-secondary-outline-active);
 }
 
-button.secundary.outline {
-    color: var(--button-secundary-outline);
+button.secondary.outline {
+    color: var(--button-secondary-outline);
     background-color: var(--button-primary-outline);
-    border-color: var(--button-secundary-outline);
+    border-color: var(--button-secondary-outline);
 }
 
-button.secundary.outline:hover {
-    color: var(--button-secundary-hover);
-    border-color: var(--button-secundary-hover);
+button.secondary.outline:hover {
+    color: var(--button-secondary-hover);
+    border-color: var(--button-secondary-hover);
 }
 
-button.secundary.outline:active {
-    color: var(--button-secundary-outline-active);
-    border-color: var(--button-secundary-outline-active);
+button.secondary.outline:active {
+    color: var(--button-secondary-outline-active);
+    border-color: var(--button-secondary-outline-active);
 }
 
 button:disabled {
@@ -211,38 +240,95 @@ button.outline:disabled {
     margin: 0;
 }
 
+.margin-xxs {
+    margin: var(--margin-xxs);
+}
+
+.margin-xs {
+    margin: var(--margin-xs);
+}
+
 .margin {
     margin: var(--margin-sm);
+}
+
+.margin-lg {
+    margin: var(--margin-lg);
+}
+
+.horizontal-margin-xs {
+    margin: 0 var(--margin-xs);
 }
 
 .horizontal-margin {
     margin: 0 var(--margin-sm);
 }
 
+.horizontal-margin-lg {
+    margin: 0 var(--margin-lg);
+}
+
+.vertical-margin-xs {
+    margin: var(--margin-xs) 0;
+}
+
 .vertical-margin {
     margin: var(--margin-sm) 0;
+}
+
+.vertical-margin-md {
+    margin: var(--margin-md) 0;
+}
+
+.vertical-margin-lg {
+    margin: var(--margin-lg) 0;
 }
 
 .no-padding {
     padding: 0;
 }
 
+.padding-xs {
+    padding: var(--padding-xs);
+}
+
 .padding {
     padding: var(--padding-sm);
+}
+
+.padding-lg {
+    padding: var(--padding-lg);
+}
+
+.horizontal-padding-xs {
+    padding: 0 var(--padding-xs);
 }
 
 .horizontal-padding {
     padding: 0 var(--padding-sm);
 }
 
+.horizontal-padding-lg {
+    padding: 0 var(--padding-lg);
+}
+
+.vertical-padding-sx {
+    padding: var(--padding-sx) 0;
+}
+
 .vertical-padding {
     padding: var(--padding-sm) 0;
+}
+
+.vertical-padding-lg {
+    padding: var(--padding-lg) 0;
 }
 
 .flex-row-start {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: flex-start;
 }
 
@@ -250,6 +336,7 @@ button.outline:disabled {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: flex-end;
 }
 
@@ -257,6 +344,7 @@ button.outline:disabled {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
 }
 
@@ -264,6 +352,7 @@ button.outline:disabled {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -271,6 +360,7 @@ button.outline:disabled {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-around;
 }
 
@@ -278,7 +368,29 @@ button.outline:disabled {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-evenly;
+}
+
+.flex-column-start {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.flex-column-space-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* https://www.browserstack.com/guide/what-are-css-and-media-query-breakpoints */
@@ -309,23 +421,23 @@ button.outline:disabled {
         font-size: 1.5rem;
     }
 
-    .b1 {
+    .body1 {
         font-size: 1.75rem;
     }
 
-    .b2 {
+    .body2 {
         font-size: 1.125rem;
     }
 
-    .b3 {
+    .body3 {
         font-size: 1rem;
     }
 
-    .b4 {
+    .body4 {
         font-size: 1rem;
     }
 
-    .b5 {
+    .body5 {
         font-size: 0.875rem;
     }
 
@@ -333,4 +445,18 @@ button.outline:disabled {
     a {
         font-size: 1.25rem;
     }
+}
+
+div::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px var(--neutral-medium-light);
+    border-radius: 5px;
+}
+
+div::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+}
+
+div::-webkit-scrollbar {
+    width: 0em;
+    border-radius: 5px;
 }

@@ -1,7 +1,26 @@
 .container {
     padding: var(--padding-sm);
-    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+}
+
+.main {
+    background-image: url(../public/images/background-logo.svg);
+    background-size: contain;
+    background-repeat: space;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding-top: var(--padding-sm);
+    }
+
+    .rectangle4 {
+        background-image: url(/Rectangle4.png);
+        height: 2px;
+        background-size: 470px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 }

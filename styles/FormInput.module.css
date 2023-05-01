@@ -1,0 +1,25 @@
+.labelForm {
+    width: 100%;
+
+    display: flex;
+
+    margin-top: var(--margin-sm);
+    margin-bottom: var(--margin-xs);
+
+    color: var(--primary-white);
+}
+
+.inputForm {
+    padding: var(--padding-xs);
+    border-radius: var(--radius-xs);
+
+    width: 100%;
+
+    background-color: var(--primary-white);
+    border: 1px solid var(--neutral-medium);
+}
+
+.mandatoryFieldSpan {
+    color: var(--secondary-red-warning);
+    margin-left: 4px;
+}

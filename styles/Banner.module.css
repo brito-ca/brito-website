@@ -1,12 +1,26 @@
 .banner {
-    padding: var(--padding-md);
+    padding-bottom: var(--padding-md);
+    max-width: 1140px;
 }
 .titleBanner {
+    padding: var(--padding-lg);
     text-align: center;
     color: var(--primary-blue);
+    font-size: calc(3.12 * var(--spacing-unit));
 }
 .descriptionBanner {
     padding: var(--padding-sm);
-    color: var(--neutral-dark);
+    color: var(--neutral-medium-dark);
     text-align: justify;
+}
+
+@media only screen and (max-width: 600px) {
+    .titleBanner {
+        padding: var(--padding-md);
+        font-size: calc(2 * var(--spacing-unit));
+    }
+    .banner {
+        padding: 0;
+        margin-bottom: calc(2.75 * var(--spacing-unit));
+    }
 }
