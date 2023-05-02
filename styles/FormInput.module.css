@@ -10,6 +10,9 @@
 }
 
 .inputForm {
+    font-size: var(--base-font-size);
+    height: var(--height-xl);
+
     padding: var(--padding-xs);
     border-radius: var(--radius-xs);
 
