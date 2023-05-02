@@ -19,7 +19,7 @@ const Footer = (props) => {
             <div className={styles.footerContainer}>
                 <div className={`${styles.footerLogoContainer}`}>
                     <div className='flex-column-space-between'>
-                        <Logo size='lg' />
+                        <Logo />
                         <p className={'vertical-padding'}>{description}</p>
                     </div>
                 </div>
