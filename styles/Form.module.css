@@ -7,7 +7,9 @@
     justify-content: center;
     background: var(--secondary-green);
     padding: var(--padding-sm) var(--padding-md);
+    
 }
+
 
 .formTitle {
     text-align: center;
@@ -27,7 +29,8 @@
 }
 
 .selectStyle {    
-    height: 31px;
+    font-size: var(--base-font-size);
+    height: var(--height-xl);
 }
 
 .inputForm {

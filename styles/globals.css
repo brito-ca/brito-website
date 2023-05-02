@@ -42,7 +42,7 @@
     --disabled-background: rgba(170, 170, 170, 0.9);
     --disabled-placeholder-color: #777777;
 
-    --base-font-size: 16px;
+    --base-font-size: 1rem;
     --font-b2: 1.125rem;
     --font-b3: 1.5rem;
     --font-b4: 1rem;
@@ -72,6 +72,11 @@
     --radius-lg: calc(2 * var(--spacing-unit));
 
     --strong-line: 3px solid var(--neutral-medium-light);
+
+    --height-sm: 1rem;
+    --height-md: 1.5rem;
+    --height-lg: 2rem;
+    --height-xl: 2.5rem;
 }
 
 html {
