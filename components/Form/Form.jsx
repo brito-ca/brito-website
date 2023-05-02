@@ -296,7 +296,7 @@ const Form = (props) => {
                             setIsOpen={setSubscriptionModalOpen}
                         >
                             <div className={styles.logoSubscriptionModal}>
-                                <Logo size='lg' />
+                                <Logo />
                             </div>
                             <div className={styles.subscriptionModalTextDescriptionContainer}>
                                 <h1 className={styles.subscriptionModalTitle}>
