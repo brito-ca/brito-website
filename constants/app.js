@@ -1,4 +1,4 @@
-export const APP_URL = 'https://brito.it/cms'
+export const APP_URL = process.env.NEXT_PUBLIC_CMS_URL
 export const API_URL = `${APP_URL}/wp-json/wp/v2`
 export const HOMEPAGE_API_URL = `${API_URL}/homepage`
 export const PAGE_API_URL = `${API_URL}/pages`
@@ -9,6 +9,7 @@ export const FIELDS_API_URL = `${API_URL}/field`
 export const MENU_NAVIGATION_API_URL = `${API_URL}/menu`
 export const SOCIAL_MEDIA_API_URL = `${API_URL}/socialmedia`
 export const MEMBER_API_URL = `${API_URL}/member`
+export const EVENTS_API_URL = `${API_URL}/event`
 export const LOCALE_EN = `en`
 export const LOCALE_FR = `fr`
 export const LOCALE_PT = `pt`
