@@ -8,6 +8,7 @@ import {
     getMenu,
     getSocialMedia,
     getForm,
+    getEvents,
 } from '@/services'
 import getFooter from './getFooter'
 
@@ -46,6 +47,7 @@ const getHomePage = async (locale) => {
                 id: 'join-us',
                 ...acf['join-us'],
             },
+            events: await getEvents(acf['events']),
             contactUs: await getContactUs(acf['contact_us']),
             form: await getForm(acf['form']),
         },

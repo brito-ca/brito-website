@@ -1,7 +1,8 @@
 import { AboutUs, Banner, ContactUs, Hero, Board, Form } from '@/components'
+import Events from '../Events/Events'
 
-const HomePage = ({ data }) => {
-    const { hero, aboutUs, ourMission, ourVision, ourBoard, joinUs, contactUs, form } = data
+const HomePage = ({ data, pageLocale }) => {
+    const { hero, aboutUs, ourMission, ourVision, ourBoard, joinUs, events, contactUs, form } = data
     return (
         <>
             <Hero {...hero} />
@@ -11,6 +12,7 @@ const HomePage = ({ data }) => {
             <Board {...ourBoard} />
             <Banner {...joinUs} />
             <Form {...form} />
+            <Events {...events} pageLocale={pageLocale} />
             <ContactUs {...contactUs} />
         </>
     )
