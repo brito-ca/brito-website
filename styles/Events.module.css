@@ -80,15 +80,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 120px;
+    gap: .5rem;
+    min-width: 120px;
     padding: 8px;
     border-radius: 16px;
     margin: 24px 0;
     font-size: 14px;
   }
   
-  .event .event_right .event_timing img {
-    height: 20px;
+  .event .event_right .event_timing svg {
+    width: 26px;
     padding-right: 8px;
   }
   

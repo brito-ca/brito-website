@@ -1,4 +1,4 @@
-export const APP_URL = 'https://brito-it.cxmbrasil.com/admin'
+export const APP_URL = process.env.NEXT_PUBLIC_CMS_URL
 export const API_URL = `${APP_URL}/wp-json/wp/v2`
 export const HOMEPAGE_API_URL = `${API_URL}/homepage`
 export const PAGE_API_URL = `${API_URL}/pages`
