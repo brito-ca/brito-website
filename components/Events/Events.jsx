@@ -64,8 +64,8 @@ const Events = (props) => {
 
                                             <div className={styles.timerow}>
                                                 <div className={styles.event_timing}>
-                                                    {event.time.slice(0, 5)}
                                                     <Icon variant='clock' />
+                                                    {event.time.slice(0, 5)}
                                                 </div>
                                                 <div className={styles.event_details}>
                                                     <a
