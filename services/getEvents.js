@@ -10,7 +10,7 @@ const getEvents = async (data) => {
         let _when = event.acf.date
         var eventDate = new Date(_when.slice(0, 4), _when.slice(4, 6) - 1, _when.slice(6))
 
-        return eventDate >= ms
+        return eventDate.getTime() + 1 * 24 * 3600 * 1000 >= ms
     }
 
     const x = result ? result.filter(isFuture) : []
