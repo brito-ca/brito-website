@@ -26,6 +26,14 @@ const Events = (props) => {
 
     const sortByDate = (array, key) => array.sort((a, b) => new Date(a[key]) - new Date(b[key]))
 
+    const sortedEvents = (events) => {
+        const currentDate = new Date(Date.now()).toISOString()
+        const futureEvents = events.filter(
+            (event) => new Date(event.date).toISOString() > currentDate
+        )
+        return sortByDate(futureEvents, 'date')
+    }
+
     return (
         <div id={id} className='flex-row-center'>
             <div className={styles.event_container}>
@@ -39,16 +47,14 @@ const Events = (props) => {
                 {allEvents?.map((event) => (
                     <section key={event.year}>
                         <h3 className={styles.year}>{event.year}</h3>
-                        {sortByDate(event.data, 'date').map((event) => {
+                        {sortedEvents(event.data).map((event) => {
                             const eventDate = new Date(event.date)
                             return (
                                 <section key={event.id}>
                                     <div className={styles.event}>
                                         <div className={styles.event_left}>
                                             <div className={styles.event_date}>
-                                                <div className={styles.date}>
-                                                    {eventDate.getDate()}
-                                                </div>
+                                                <div className={styles.date}>{event.day}</div>
                                                 <div className={styles.month}>
                                                     {getMonth(eventDate)}
                                                 </div>
